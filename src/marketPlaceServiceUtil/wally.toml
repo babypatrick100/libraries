@@ -1,0 +1,11 @@
+[package]
+name = "bubshayz/marketplaceserviceutil"
+description = "An utility module for working with [MarketplaceService](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService)."
+authors = ["bubshayz"]
+version = "1.4.0"
+license = "MIT"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+Promise = "evaera/promise@4"

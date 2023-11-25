@@ -1,0 +1,8 @@
+[package]
+name = "bubshayz/matrixutil"
+description = "An utility module for working with matrixes."
+authors = ["bubshayz"]
+license = "MIT"
+version = "1.6.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"

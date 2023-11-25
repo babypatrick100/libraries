@@ -1,0 +1,11 @@
+[package]
+name = "bubshayz/instancetrackerutil"
+description = "A simple utility module for working with instances and their properties."
+authors = ["bubshayz"]
+license = "MIT"
+version = "7.3.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+Property = "bubshayz/property@3"

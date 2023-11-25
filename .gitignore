@@ -1,0 +1,7 @@
+build
+node_modules
+roblox.toml 
+.moonwave
+aftman.toml
+sourcemap.json
+.vscode

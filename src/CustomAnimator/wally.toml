@@ -1,0 +1,12 @@
+[package]
+name = "bubshayz/customanimator"
+description = "A simple class for working with animations."
+authors = ["bubshayz"]
+license = "MIT"
+version = "1.7.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+Promise = "evaera/promise@4"
+Signal = "sleitnick/signal@1"

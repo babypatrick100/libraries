@@ -1,0 +1,6 @@
+{
+  "name": "libraries",
+  "tree": {
+    "$path": "src"
+  }
+}

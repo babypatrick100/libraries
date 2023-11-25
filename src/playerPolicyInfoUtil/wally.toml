@@ -1,0 +1,11 @@
+[package]
+name = "bubshayz/playerpolicyinfoutil"
+description = "A very simple utility module for retrieving a player's policy info safely."
+authors = ["bubshayz"]
+version = "1.3.0"
+license = "MIT"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+Promise = "evaera/promise@4"

@@ -1,0 +1,11 @@
+[package]
+name = "bubshayz/rain"
+description = "Rain module by builthomas, heavily modified and refactored by bubshayz."
+authors = ["bubshayz", "buildthomas"]
+version = "1.4.0"
+license = "MIT"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+Property = "bubshayz/property@3"

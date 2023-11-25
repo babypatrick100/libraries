@@ -1,0 +1,8 @@
+[package]
+name = "bubshayz/stringutil"
+description = "A simple utility module for working with strings."
+authors = ["bubshayz"]
+version = "1.0.0"
+license = "MIT"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"

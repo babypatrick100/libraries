@@ -1,0 +1,11 @@
+[package]
+name = "bubshayz/badgeserviceutil"
+description = "An utility module for working with BadgeService."
+authors = ["bubshayz"]
+license = "MIT"
+version = "1.2.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+Promise = "evaera/promise@4"

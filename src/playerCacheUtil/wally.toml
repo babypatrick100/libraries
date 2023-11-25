@@ -1,0 +1,8 @@
+[package]
+name = "bubshayz/playercacheutil"
+description = "A very simple utility module for storing in data per player in an unique way."
+authors = ["bubshayz"]
+version = "1.4.0"
+license = "MIT"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"

@@ -1,0 +1,11 @@
+[package]
+name = "bubshayz/coreguiutil"
+description = "A simple utility module for working with CoreGui's API."
+authors = ["bubshayz"]
+version = "1.2.0"
+license = "MIT"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+Promise = "evaera/promise@4"

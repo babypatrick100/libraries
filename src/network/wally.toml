@@ -1,0 +1,16 @@
+[package]
+name = "bubshayz/network"
+description = "An advanced network module for easy server-client communication."
+authors = ["bubshayz"]
+license = "MIT"
+version = "8.1.1"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+Signal = "sleitnick/signal@1"
+Property = "bubshayz/property@3"
+Promise = "evaera/promise@4"
+Janitor = "howmanysmall/janitor@1"
+serializerUtil = "bubshayz/serializerutil@1"
+Sift = "csqrl/sift@0"

@@ -1,0 +1,11 @@
+[package]
+name = "bubshayz/handlerhookerutil"
+description = "A simple utility module for working with handlers."
+authors = ["bubshayz"]
+license = "MIT"
+version = "1.5.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+Promise = "evaera/promise@4"

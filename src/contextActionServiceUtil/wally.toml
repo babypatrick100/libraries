@@ -1,0 +1,8 @@
+[package]
+name = "bubshayz/contextactionserviceutil"
+description = "A simple utility module for working with ContextActionService."
+authors = ["bubshayz"]
+version = "1.1.0"
+license = "MIT"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"

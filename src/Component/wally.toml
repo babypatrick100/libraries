@@ -1,0 +1,14 @@
+[package]
+name = "bubshayz/component"
+description = "Component class by Sleitnick, modified by bubshayz."
+version = "1.6.0"
+license = "MIT"
+authors = ["bubshayz"]
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+Signal = "sleitnick/signal@1"
+Symbol = "sleitnick/symbol@2"
+Trove = "sleitnick/trove@1"
+Promise = "evaera/promise@4"
