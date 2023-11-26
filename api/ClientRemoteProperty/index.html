@@ -6,8 +6,8 @@
 <title data-rh="true">ClientRemoteProperty | libraries</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://bubshurb.github.io/libraries/api/ClientRemoteProperty"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="ClientRemoteProperty | libraries"><meta data-rh="true" name="description" content="The clientside counterpart of [RemoteProperty]. A client remote property 
 in layman&#x27;s terms is just an object connected to a serverside remote property."><meta data-rh="true" property="og:description" content="The clientside counterpart of [RemoteProperty]. A client remote property 
 in layman&#x27;s terms is just an object connected to a serverside remote property."><link data-rh="true" rel="icon" href="/libraries/icon.ico"><link data-rh="true" rel="canonical" href="https://bubshurb.github.io/libraries/api/ClientRemoteProperty"><link data-rh="true" rel="alternate" href="https://bubshurb.github.io/libraries/api/ClientRemoteProperty" hreflang="en"><link data-rh="true" rel="alternate" href="https://bubshurb.github.io/libraries/api/ClientRemoteProperty" hreflang="x-default"><link rel="stylesheet" href="/libraries/assets/css/styles.a5aeb1da.css">
-<link rel="preload" href="/libraries/assets/js/runtime~main.c911230e.js" as="script">
-<link rel="preload" href="/libraries/assets/js/main.d0bcddd1.js" as="script">
+<link rel="preload" href="/libraries/assets/js/runtime~main.68e95735.js" as="script">
+<link rel="preload" href="/libraries/assets/js/main.142b87d2.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -39,13 +39,16 @@ in layman&#x27;s terms is just an object connected to a serverside remote proper
 	
 <span class="token keyword">end</span><span class="token punctuation">)</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="valuePromise"><code style="text-decoration:none">valuePromise</code><a href="#valuePromise" class="hash-link" aria-label="Direct link to valuePromise" title="Direct link to valuePromise">​</a></h3><span class="docTag__6UZ" style="border-color:#ff793f;color:#ff793f">ClientRemoteProperty instance</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/network/client/ClientRemoteProperty.luau#L127"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ClientRemoteProperty<!-- -->:</code><code class="green_DgR4">valuePromise</code><code>(</code><code>valuePredicate<!-- -->: </code><code class="purple_ieR2">(</code><code class="green_DgR4">(</code><div class="inset_uKQm"><code>newValue<!-- -->: </code><code class="blue_P4bS">any</code><code class="green_DgR4">,</code></div><div class="inset_uKQm"><code>oldValue<!-- -->: </code><code class="blue_P4bS">any</code></div><code class="green_DgR4">)</code><code class="green_DgR4"> → </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">)</code><code class="blue_P4bS">?</code><code>) → </code><code>(</code><code>)</code></div><div>
-<p>Returns a promise which is resolved with a non-nil value of the client remote property.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="valuePromise"><code style="text-decoration:none">valuePromise</code><a href="#valuePromise" class="hash-link" aria-label="Direct link to valuePromise" title="Direct link to valuePromise">​</a></h3><span class="docTag__6UZ" style="border-color:#ff793f;color:#ff793f">ClientRemoteProperty instance</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/network/client/ClientRemoteProperty.luau#L128"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ClientRemoteProperty<!-- -->:</code><code class="green_DgR4">valuePromise</code><code>(</code><code>valuePredicate<!-- -->: </code><code class="purple_ieR2">(</code><code class="green_DgR4">(</code><div class="inset_uKQm"><code>newValue<!-- -->: </code><code class="blue_P4bS">any</code><code class="green_DgR4">,</code></div><div class="inset_uKQm"><code>oldValue<!-- -->: </code><code class="blue_P4bS">any</code></div><code class="green_DgR4">)</code><code class="green_DgR4"> → </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">)</code><code class="blue_P4bS">?</code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>
+  Returns a promise which is resolved with a non-nil value of the client remote property, given
+  that <code>valuePredicate</code> is not passed.
+</p>
 <pre class="language-lua"><code class="language-lua">clientRemoteProperty<span class="token punctuation">:</span><span class="token function">valuePromise</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token function">andThen</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>
 	<span class="token function">print</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span> 
 <span class="token keyword">end</span><span class="token punctuation">)</span>
 </code></pre>
-<p><code>valuePredicate</code> (an optional predicate), allows you to filter out values:</p>
+<p><code>valuePredicate</code> (an optional predicate) can be passed, which allows you to filter out values:</p>
 <pre class="language-lua"><code class="language-lua">clientRemoteProperty<span class="token punctuation">:</span><span class="token function">valuePromise</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>newValue<span class="token punctuation">,</span> oldValue<span class="token punctuation">)</span> 
 	<span class="token function">print</span><span class="token punctuation">(</span>newValue<span class="token punctuation">,</span> oldValue<span class="token punctuation">)</span>
 	<span class="token keyword">return</span> oldValue <span class="token operator">==</span> <span class="token number">1</span>
@@ -61,7 +64,7 @@ clientRemoteProperty<span class="token punctuation">:</span><span class="token f
 <span class="token comment">-- 2, 1</span>
 <span class="token comment">-- 2</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="set"><code style="text-decoration:none">set</code><a href="#set" class="hash-link" aria-label="Direct link to set" title="Direct link to set">​</a></h3><span class="docTag__6UZ" style="border-color:#ff793f;color:#ff793f">ClientRemoteProperty instance</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/network/client/ClientRemoteProperty.luau#L170"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ClientRemoteProperty<!-- -->:</code><code class="green_DgR4">set</code><code>(</code><code>value<!-- -->: </code><code class="blue_P4bS">any</code><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="set"><code style="text-decoration:none">set</code><a href="#set" class="hash-link" aria-label="Direct link to set" title="Direct link to set">​</a></h3><span class="docTag__6UZ" style="border-color:#ff793f;color:#ff793f">ClientRemoteProperty instance</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/network/client/ClientRemoteProperty.luau#L171"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ClientRemoteProperty<!-- -->:</code><code class="green_DgR4">set</code><code>(</code><code>value<!-- -->: </code><code class="blue_P4bS">any</code><code>) → </code><code>(</code><code>)</code></div><div>
 <p>Invokes the serverside remote property (to which this client remote propert is connected to), to set the value for the client to <code>value</code>.</p>
 <div class="admonition admonition-warning alert alert--danger">
   <div class="admonition-heading">
@@ -108,7 +111,7 @@ clientRemoteProperty<span class="token punctuation">.</span>onUpdate<span class=
     </p>
   </div>
 </div>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="setPromise"><code style="text-decoration:none">setPromise</code><a href="#setPromise" class="hash-link" aria-label="Direct link to setPromise" title="Direct link to setPromise">​</a></h3><span class="docTag__6UZ" style="border-color:#ff793f;color:#ff793f">ClientRemoteProperty instance</span><span class="docTag__6UZ" style="border-color:#70cc00;color:#70cc00">Advanced</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/network/client/ClientRemoteProperty.luau#L217"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ClientRemoteProperty<!-- -->:</code><code class="green_DgR4">setPromise</code><code>(</code><code>value<!-- -->: </code><code class="blue_P4bS">any</code><code>) → </code><code class="blue_P4bS">Promise</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="setPromise"><code style="text-decoration:none">setPromise</code><a href="#setPromise" class="hash-link" aria-label="Direct link to setPromise" title="Direct link to setPromise">​</a></h3><span class="docTag__6UZ" style="border-color:#ff793f;color:#ff793f">ClientRemoteProperty instance</span><span class="docTag__6UZ" style="border-color:#70cc00;color:#70cc00">Advanced</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/network/client/ClientRemoteProperty.luau#L218"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ClientRemoteProperty<!-- -->:</code><code class="green_DgR4">setPromise</code><code>(</code><code>value<!-- -->: </code><code class="blue_P4bS">any</code><code>) → </code><code class="blue_P4bS">Promise</code></div><div>
 <p>
   Works the same as <a href="/libraries/api/ClientRemoteProperty#ClientRemoteProperty#set">ClientRemoteProperty:set</a>, but returns a <a href="https://eryn.io/roblox-lua-promise/" target="_blank">promise</a> which is resolved once
   the server has set the value for the client to <code>value</code>.
@@ -155,7 +158,7 @@ clientRemoteProperty<span class="token punctuation">:</span><span class="token f
 	<span class="token comment">-- Server rejected the request</span>
 <span class="token keyword">end</span><span class="token punctuation">)</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="destroy"><code style="text-decoration:none">destroy</code><a href="#destroy" class="hash-link" aria-label="Direct link to destroy" title="Direct link to destroy">​</a></h3><span class="docTag__6UZ" style="border-color:#ff793f;color:#ff793f">ClientRemoteProperty instance</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/network/client/ClientRemoteProperty.luau#L268"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ClientRemoteProperty<!-- -->:</code><code class="green_DgR4">destroy</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="destroy"><code style="text-decoration:none">destroy</code><a href="#destroy" class="hash-link" aria-label="Direct link to destroy" title="Direct link to destroy">​</a></h3><span class="docTag__6UZ" style="border-color:#ff793f;color:#ff793f">ClientRemoteProperty instance</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/network/client/ClientRemoteProperty.luau#L269"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ClientRemoteProperty<!-- -->:</code><code class="green_DgR4">destroy</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
 <p>Destroys the client remote property and renders it unusable.</p>
 </div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
     &quot;functions&quot;: [
@@ -245,7 +248,7 @@ clientRemoteProperty<span class="token punctuation">:</span><span class="token f
         },
         {
             &quot;name&quot;: &quot;valuePromise&quot;,
-            &quot;desc&quot;: &quot;Returns a promise which is resolved with a non-nil value of the client remote property.\n\n```lua\nclientRemoteProperty:valuePromise():andThen(function(value)\n\tprint(value) \nend)\n```\n\n`valuePredicate` (an optional predicate), allows you to filter out values:\n\n```lua\nclientRemoteProperty:valuePromise(function(newValue, oldValue) \n\tprint(newValue, oldValue)\n\treturn oldValue == 1\nend):andThen(function(value)\n\tprint(value) \nend)\n\nclientRemoteProperty:set(1) \nclientRemoteProperty:set(2) \n\n-- Output:\n-- 1, nil\n-- 2, 1\n-- 2\n```&quot;,
+            &quot;desc&quot;: &quot;Returns a promise which is resolved with a non-nil value of the client remote property, given\nthat `valuePredicate` is not passed.\n\n```lua\nclientRemoteProperty:valuePromise():andThen(function(value)\n\tprint(value) \nend)\n```\n\n`valuePredicate` (an optional predicate) can be passed, which allows you to filter out values:\n\n```lua\nclientRemoteProperty:valuePromise(function(newValue, oldValue) \n\tprint(newValue, oldValue)\n\treturn oldValue == 1\nend):andThen(function(value)\n\tprint(value) \nend)\n\nclientRemoteProperty:set(1) \nclientRemoteProperty:set(2) \n\n-- Output:\n-- 1, nil\n-- 2, 1\n-- 2\n```&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;valuePredicate&quot;,
@@ -259,7 +262,7 @@ clientRemoteProperty<span class="token punctuation">:</span><span class="token f
                 &quot;ClientRemoteProperty instance&quot;
             ],
             &quot;source&quot;: {
-                &quot;line&quot;: 127,
+                &quot;line&quot;: 128,
                 &quot;path&quot;: &quot;src/network/client/ClientRemoteProperty.luau&quot;
             }
         },
@@ -279,7 +282,7 @@ clientRemoteProperty<span class="token punctuation">:</span><span class="token f
                 &quot;ClientRemoteProperty instance&quot;
             ],
             &quot;source&quot;: {
-                &quot;line&quot;: 170,
+                &quot;line&quot;: 171,
                 &quot;path&quot;: &quot;src/network/client/ClientRemoteProperty.luau&quot;
             }
         },
@@ -305,7 +308,7 @@ clientRemoteProperty<span class="token punctuation">:</span><span class="token f
                 &quot;Advanced&quot;
             ],
             &quot;source&quot;: {
-                &quot;line&quot;: 217,
+                &quot;line&quot;: 218,
                 &quot;path&quot;: &quot;src/network/client/ClientRemoteProperty.luau&quot;
             }
         },
@@ -319,7 +322,7 @@ clientRemoteProperty<span class="token punctuation">:</span><span class="token f
                 &quot;ClientRemoteProperty instance&quot;
             ],
             &quot;source&quot;: {
-                &quot;line&quot;: 268,
+                &quot;line&quot;: 269,
                 &quot;path&quot;: &quot;src/network/client/ClientRemoteProperty.luau&quot;
             }
         },
@@ -331,7 +334,7 @@ clientRemoteProperty<span class="token punctuation">:</span><span class="token f
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;private&quot;: true,
             &quot;source&quot;: {
-                &quot;line&quot;: 276,
+                &quot;line&quot;: 277,
                 &quot;path&quot;: &quot;src/network/client/ClientRemoteProperty.luau&quot;
             }
         },
@@ -343,7 +346,7 @@ clientRemoteProperty<span class="token punctuation">:</span><span class="token f
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;private&quot;: true,
             &quot;source&quot;: {
-                &quot;line&quot;: 323,
+                &quot;line&quot;: 324,
                 &quot;path&quot;: &quot;src/network/client/ClientRemoteProperty.luau&quot;
             }
         }
@@ -382,7 +385,7 @@ clientRemoteProperty<span class="token punctuation">:</span><span class="token f
         &quot;path&quot;: &quot;src/network/client/ClientRemoteProperty.luau&quot;
     }
 }</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a><ul><li><a href="#ClientRemoteProperty" class="table-of-contents__link toc-highlight">ClientRemoteProperty</a></li></ul></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a><ul><li><a href="#onUpdate" class="table-of-contents__link toc-highlight">onUpdate</a></li></ul></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#destroy" class="table-of-contents__link toc-highlight">:destroy</a></li><li><a href="#get" class="table-of-contents__link toc-highlight">:get</a></li><li><a href="#observe" class="table-of-contents__link toc-highlight">:observe</a></li><li><a href="#set" class="table-of-contents__link toc-highlight">:set</a></li><li><a href="#setPromise" class="table-of-contents__link toc-highlight">:setPromise</a></li><li><a href="#valuePromise" class="table-of-contents__link toc-highlight">:valuePromise</a></li><li><a href="#is" class="table-of-contents__link toc-highlight">.is</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 bubshurb. Built with Moonwave and Docusaurus</div></div></div></footer></div>
-<script src="/libraries/assets/js/runtime~main.c911230e.js"></script>
-<script src="/libraries/assets/js/main.d0bcddd1.js"></script>
+<script src="/libraries/assets/js/runtime~main.68e95735.js"></script>
+<script src="/libraries/assets/js/main.142b87d2.js"></script>
 </body>
 </html>
