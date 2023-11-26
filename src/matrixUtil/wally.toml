@@ -1,8 +1,0 @@
-[package]
-name = "bub/matrixutil"
-description = "An utility module for working with matrixes."
-authors = ["bub"]
-license = "MIT"
-version = "1.6.0"
-registry = "https://github.com/UpliftGames/wally-index"
-realm = "shared"

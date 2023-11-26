@@ -1,8 +1,0 @@
-[package]
-name = "bub/throttleutil"
-description = "A simple utility module which implements a similar functionality of Matter.useThrottle."
-authors = ["bub"]
-version = "1.3.3"
-license = "MIT"
-registry = "https://github.com/UpliftGames/wally-index"
-realm = "shared"

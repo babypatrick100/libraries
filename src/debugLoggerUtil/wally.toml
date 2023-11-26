@@ -1,8 +1,0 @@
-[package]
-name = "bub/debugloggerutil"
-description = "A simple utility module for debug logging."
-authors = ["bub"]
-license = "MIT"
-version = "1.1.2"
-registry = "https://github.com/UpliftGames/wally-index"
-realm = "shared"

@@ -1,8 +1,0 @@
-[package]
-name = "bub/colorsequenceutil"
-description = "A simple utility module for working with color sequences."
-authors = ["bub"]
-version = "1.0.0"
-license = "MIT"
-registry = "https://github.com/UpliftGames/wally-index"
-realm = "shared"

@@ -1,8 +1,0 @@
-[package]
-name = "bub/instanceutil"
-description = "An utility module for working with instances."
-authors = ["bub"]
-license = "MIT"
-version = "1.9.0"
-registry = "https://github.com/UpliftGames/wally-index"
-realm = "shared"

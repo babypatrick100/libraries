@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="plugin-moonwave plugin-id-moonwave">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v2.3.1">
+<title data-rh="true">serializerUtil | libraries</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://bubshayz.github.io/libraries/api/serializerUtil"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="serializerUtil | libraries"><meta data-rh="true" name="description" content="A very simple utility for serializing and deserializing data types.
+
+:::note This utility supports the following data types: 
+- CFrame
+- Vector3
+- Vector2
+- BrickColor
+- Color3
+- Enum
+- EnumItem
+- Axes
+- CatalogSearchParams
+- ColorSequence
+- ColorSequenceKeypoint
+- NumberSequence
+- NumberSequenceKeypoint
+- Faces
+- Axes
+- NumberRange
+- PathWaypoint
+- Region3
+- Region3init16
+- TweenInfo
+- UDim
+- UDim2
+- Vector3int16
+- Vector2int16
+- Region3int16
+- Font
+- Rect
+- DateTime
+- PhysicalProperties
+:::"><meta data-rh="true" property="og:description" content="A very simple utility for serializing and deserializing data types.
+
+:::note This utility supports the following data types: 
+- CFrame
+- Vector3
+- Vector2
+- BrickColor
+- Color3
+- Enum
+- EnumItem
+- Axes
+- CatalogSearchParams
+- ColorSequence
+- ColorSequenceKeypoint
+- NumberSequence
+- NumberSequenceKeypoint
+- Faces
+- Axes
+- NumberRange
+- PathWaypoint
+- Region3
+- Region3init16
+- TweenInfo
+- UDim
+- UDim2
+- Vector3int16
+- Vector2int16
+- Region3int16
+- Font
+- Rect
+- DateTime
+- PhysicalProperties
+:::"><link data-rh="true" rel="icon" href="/libraries/icon.ico"><link data-rh="true" rel="canonical" href="https://bubshayz.github.io/libraries/api/serializerUtil"><link data-rh="true" rel="alternate" href="https://bubshayz.github.io/libraries/api/serializerUtil" hreflang="en"><link data-rh="true" rel="alternate" href="https://bubshayz.github.io/libraries/api/serializerUtil" hreflang="x-default"><link rel="stylesheet" href="/libraries/assets/css/styles.a5aeb1da.css">
+<link rel="preload" href="/libraries/assets/js/runtime~main.2e433151.js" as="script">
+<link rel="preload" href="/libraries/assets/js/main.139cf270.js" as="script">
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
+<div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/libraries/"><b class="navbar__title text--truncate">libraries</b></a><a class="navbar__item navbar__link" href="/libraries/docs/intro">Docs</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/libraries/api/">API</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/bubshayz/libraries" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="searchBox_ZlJk"><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input type="search" id="search_input_react" placeholder="Press S to Search..." aria-label="Search" class="navbar__search-input search-bar"></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0 docPageContainer_wNNk"><div class="docPage_Dpn1"><div class="docSidebarContainer_o_re"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/libraries/api/network">network</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/libraries/api/waitForUtil">waitForUtil</a></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/badgeServiceUtil">badge​Service​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/colorSequenceUtil">color​Sequence​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/colorUtil">color​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/Component">​Component</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/ContentProviderQueue">​Content​Provider​Queue</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/contextActionServiceUtil">context​Action​Service​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/coreGuiUtil">core​Gui​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/CustomAnimator">​Custom​Animator</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/dateUtil">date​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/debugLoggerUtil">debug​Logger​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/handlerHookerUtil">handler​Hooker​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/Hover">​Hover</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/instanceAttributeUtil">instance​Attribute​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/instanceReplicationUtil">instance​Replication​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/instanceTagUtil">instance​Tag​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/instanceTrackerUtil">instance​Tracker​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/instanceUtil">instance​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/marketPlaceServiceUtil">market​Place​Service​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/matrixUtil">matrix​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/matterEntityUtil">matter​Entity​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/numberUnitUtil">number​Unit​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/numberUtil">number​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/playerCacheUtil">player​Cache​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/playerCharacterUtil">player​Character​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/playerEventsUtil">player​Events​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/playerPolicyInfoUtil">player​Policy​Info​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/playersUtil">players​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/playerUtil">player​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/positionUtil">position​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/Property">​Property</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/rain">rain</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/rbxScriptSignalUtil">rbx​Script​Signal​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/schedulerUtil">scheduler​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/libraries/api/serializerUtil">serializer​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/soundUtil">sound​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/stringUtil">string​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/throttleUtil">throttle​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/toolUtil">tool​Util</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/libraries/api/windLines">wind​Lines</a></li></ul></nav></div></div><main class="docMainContainer_HJE1"><div class="container padding-vert--lg"><div class="row"><div class="col docItemCol_MU3C"><div class="docItemContainer_Wv98"><article><div class="member_J0w1 markdown"><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_oUs_"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><header><h1 class="docTitle_mZRt" style="text-decoration:none"><span style="display:inline-block">serializer</span><span style="display:inline-block">Util</span></h1><div class="luaClassTags_EipM"></div><div>
+<p>A very simple utility for serializing and deserializing data types.</p>
+<div class="admonition admonition-note alert alert--secondary">
+  <div class="admonition-heading">
+    <h5><span class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16">
+          <path d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path>
+        </svg></span>This utility supports the following data types:</h5>
+  </div>
+  <div class="admonition-content">
+    <ul>
+      <li>CFrame</li>
+      <li>Vector3</li>
+      <li>Vector2</li>
+      <li>BrickColor</li>
+      <li>Color3</li>
+      <li>Enum</li>
+      <li>EnumItem</li>
+      <li>Axes</li>
+      <li>CatalogSearchParams</li>
+      <li>ColorSequence</li>
+      <li>ColorSequenceKeypoint</li>
+      <li>NumberSequence</li>
+      <li>NumberSequenceKeypoint</li>
+      <li>Faces</li>
+      <li>Axes</li>
+      <li>NumberRange</li>
+      <li>PathWaypoint</li>
+      <li>Region3</li>
+      <li>Region3init16</li>
+      <li>TweenInfo</li>
+      <li>UDim</li>
+      <li>UDim2</li>
+      <li>Vector3int16</li>
+      <li>Vector2int16</li>
+      <li>Region3int16</li>
+      <li>Font</li>
+      <li>Rect</li>
+      <li>DateTime</li>
+      <li>PhysicalProperties</li>
+    </ul>
+  </div>
+</div>
+</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="types">Types<a href="#types" class="hash-link" aria-label="Direct link to Types" title="Direct link to Types">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="ClassDataType"><code style="text-decoration:none">ClassDataType</code><a href="#ClassDataType" class="hash-link" aria-label="Direct link to ClassDataType" title="Direct link to ClassDataType">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshayz/libraries/blob/main/src/serializerUtil/init.luau#L43"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code class="purple_ieR2">type</code> <code>ClassDataType<!-- --> = </code> <code class="purple_ieR2">{</code><div class="inset_uKQm"><code>valueType<!-- -->: </code><code class="blue_P4bS">any</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>serializer<!-- -->: </code><code class="green_DgR4">(</code><div class="inset_uKQm"><code>value<!-- -->: </code><code class="blue_P4bS">any</code><code class="green_DgR4">,</code></div><div class="inset_uKQm"><code>intermediateSerializedData<!-- -->: </code><code class="yellow_QJap">{</code><code class="yellow_QJap">}</code></div><code class="green_DgR4">)</code><code class="green_DgR4"> → </code><code class="green_DgR4">(</code><code class="green_DgR4">)</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>deserializer<!-- -->: </code><code class="green_DgR4">(</code><code>serializedData<!-- -->: </code><code class="yellow_QJap">{</code><code class="yellow_QJap">}</code><code class="green_DgR4">)</code><code class="green_DgR4"> → </code><code class="green_DgR4">(</code><code class="green_DgR4">)</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"></div><code class="purple_ieR2">}</code></div><div></div><h2 class="anchor anchorWithStickyNavbar_LWe7" id="properties">Properties<a href="#properties" class="hash-link" aria-label="Direct link to Properties" title="Direct link to Properties">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="customValueType"><code style="text-decoration:none">customValueType</code><a href="#customValueType" class="hash-link" aria-label="Direct link to customValueType" title="Direct link to customValueType">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshayz/libraries/blob/main/src/serializerUtil/init.luau#L58"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>serializerUtil<!-- -->.<!-- -->customValueType<!-- -->:<!-- --> </code> <code class="blue_P4bS">string</code></div><div>
+<p>
+  A constant to be used as a key in tables, to represent some type which this utility
+  can easily know about when serializing and deserializing values.
+</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> spmeTable <span class="token operator">=</span> <span class="token punctuation">{</span>
+	<span class="token comment">-- Allow the serializer utility module to know the "type" of this table</span>
+	<span class="token punctuation">[</span>serializerUtil<span class="token punctuation">.</span>customValueType<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"uniqueType"</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</div><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="serialize"><code style="text-decoration:none">serialize</code><a href="#serialize" class="hash-link" aria-label="Direct link to serialize" title="Direct link to serialize">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshayz/libraries/blob/main/src/serializerUtil/init.luau#L96"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>serializerUtil<!-- -->.</code><code class="green_DgR4">serialize</code><code>(</code><code>value<!-- -->: </code><code class="blue_P4bS">any</code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Serializes the given vale, if it can be serialized. If it can't be serialized, then the value it self is returned.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> serializedValue <span class="token operator">=</span> serializerUtil<span class="token punctuation">.</span><span class="token function">serializer</span><span class="token punctuation">(</span><span class="token number">150</span><span class="token punctuation">)</span>
+<span class="token function">print</span><span class="token punctuation">(</span>serializedValue<span class="token punctuation">)</span> <span class="token comment">--> 150 (can't serialize a number!)</span>
+<span class="token keyword">local</span> serializedValue <span class="token operator">=</span> serializerUtil<span class="token punctuation">.</span><span class="token function">serializer</span><span class="token punctuation">(</span>CFrame<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token function">print</span><span class="token punctuation">(</span>serializedValue<span class="token punctuation">)</span> <span class="token comment">--> {...} (serialized data)</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="deserialize"><code style="text-decoration:none">deserialize</code><a href="#deserialize" class="hash-link" aria-label="Direct link to deserialize" title="Direct link to deserialize">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshayz/libraries/blob/main/src/serializerUtil/init.luau#L123"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>serializerUtil<!-- -->.</code><code class="green_DgR4">deserialize</code><code>(</code><code>serializedData<!-- -->: </code><code class="blue_P4bS">any</code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>
+  Deserializes the given serialized value, if it can be deserialized. If it can't be deserialized, then the value
+  it self is returned.
+</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> serializedValue <span class="token operator">=</span> serializerUtil<span class="token punctuation">.</span><span class="token function">serializer</span><span class="token punctuation">(</span>CFrame<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token function">print</span><span class="token punctuation">(</span>serializerUtil<span class="token punctuation">.</span><span class="token function">deserialize</span><span class="token punctuation">(</span>serializedValue<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> CFrame (5,5,5) </span>
+<span class="token function">print</span><span class="token punctuation">(</span>serializerUtil<span class="token punctuation">.</span><span class="token function">deserialize</span><span class="token punctuation">(</span><span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 15 (Can't deserialize a non-serialized value)</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="addClassDataType"><code style="text-decoration:none">addClassDataType</code><a href="#addClassDataType" class="hash-link" aria-label="Direct link to addClassDataType" title="Direct link to addClassDataType">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshayz/libraries/blob/main/src/serializerUtil/init.luau#L195"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>serializerUtil<!-- -->.</code><code class="green_DgR4">addClassDataType</code><code>(</code><code>classDataType<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/libraries/api/serializerUtil#ClassDataType">ClassDataType</a></code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>
+  Adds a class data type to the serializer. A class data type (in the context of this utility) is simply
+  an object which you can use to add your own custom serializers and deserializers.
+</p>
+<pre class="language-lua"><code class="language-lua"><span class="token comment">-- In this project X, we have a funny which we would like to serialize</span>
+<span class="token comment">-- and deserialize according to how our game is structured;</span>
+<span class="token keyword">local</span> someUniqueTable <span class="token operator">=</span> <span class="token punctuation">{</span>
+	<span class="token punctuation">[</span>serializerUtil<span class="token punctuation">.</span>customValueType<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"TheUniqueTable"</span>
+<span class="token punctuation">}</span>
+
+serializerUtil<span class="token punctuation">.</span><span class="token function">addClassDataType</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+	valueType <span class="token operator">=</span> <span class="token string">"TheUniqueTable"</span><span class="token punctuation">,</span>
+	serializer <span class="token operator">=</span> <span class="token punctuation">{</span>
+		run <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>uniqueTable<span class="token punctuation">,</span> intermediateSerializedData<span class="token punctuation">)</span>
+			intermediateSerializedData<span class="token punctuation">.</span>component <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">}</span>
+		<span class="token keyword">end</span><span class="token punctuation">,</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
+	deserializer <span class="token operator">=</span> <span class="token punctuation">{</span>
+		run <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>serializedUniqueTable<span class="token punctuation">)</span>
+			<span class="token keyword">return</span> serializedUniqueTable<span class="token punctuation">.</span>component
+		<span class="token keyword">end</span><span class="token punctuation">,</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">local</span> serializedTable <span class="token operator">=</span> serializerUtil<span class="token punctuation">.</span><span class="token function">serialize</span><span class="token punctuation">(</span>someUniqueTable<span class="token punctuation">)</span>
+<span class="token function">print</span><span class="token punctuation">(</span>serializerUtil<span class="token punctuation">.</span><span class="token function">deserialize</span><span class="token punctuation">(</span>serializedTable<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> {1, 2, 3, 4, 5, 6}</span>
+</code></pre>
+<div class="admonition admonition-tip alert alert--success">
+  <div class="admonition-heading">
+    <h5><span class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16">
+          <path d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path>
+        </svg></span>Override default data types</h5>
+  </div>
+  <div class="admonition-content">
+    <p>
+      Currently this utility supports a lot of data types to serialize and serialize - however
+      you can override them too with your own serializers and deserializers for them, for e.g:
+    </p>
+    <pre class="language-lua"><code class="language-lua"><span class="token comment">-- Let's just override the serializer and deserializer for the `Vector3` data type</span>
+<span class="token comment">-- in favour of our own:</span>
+serializerUtil<span class="token punctuation">.</span><span class="token function">addClassDataType</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+	valueType <span class="token operator">=</span> <span class="token string">"Vector3"</span><span class="token punctuation">,</span>
+	serializer <span class="token operator">=</span> <span class="token punctuation">{</span>
+		run <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>vector3<span class="token punctuation">,</span> intermediateSerializedData<span class="token punctuation">)</span>
+			intermediateSerializedData<span class="token punctuation">.</span>components <span class="token operator">=</span> <span class="token punctuation">{</span>vector3<span class="token punctuation">.</span>X<span class="token punctuation">,</span> vector3<span class="token punctuation">.</span>Y<span class="token punctuation">,</span> vector3<span class="token punctuation">.</span>Z<span class="token punctuation">}</span>
+		<span class="token keyword">end</span><span class="token punctuation">,</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
+	deserializer <span class="token operator">=</span> <span class="token punctuation">{</span>
+		run <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>serializedVector3<span class="token punctuation">)</span>
+			<span class="token keyword">return</span> Vector3<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span>table<span class="token punctuation">.</span><span class="token function">unpack</span><span class="token punctuation">(</span>serializedVector3<span class="token punctuation">.</span>components<span class="token punctuation">)</span><span class="token punctuation">)</span>
+		<span class="token keyword">end</span><span class="token punctuation">,</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+    <p>
+      This gives you flexibility to append your own serializer and deserializer for specific data types
+      as per your game's need!
+    </p>
+  </div>
+</div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="addClassDataTypes"><code style="text-decoration:none">addClassDataTypes</code><a href="#addClassDataTypes" class="hash-link" aria-label="Direct link to addClassDataTypes" title="Direct link to addClassDataTypes">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshayz/libraries/blob/main/src/serializerUtil/init.luau#L245"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>serializerUtil<!-- -->.</code><code class="green_DgR4">addClassDataTypes</code><code>(</code><code>classDataTypes<!-- -->: </code><code class="purple_ieR2">{</code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/libraries/api/serializerUtil#ClassDataType">ClassDataType</a></code><code class="purple_ieR2">}</code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>
+  Shorthand for adding multiple class data types in 1 go. <a href="/libraries/api/serializerUtil#addClass">serializerUtil.addClass</a> is called
+  for every class data type in <code>classDataTypes</code>.
+</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> classDataTypes <span class="token operator">=</span> <span class="token punctuation">{</span>
+	<span class="token punctuation">{</span>
+		valueType <span class="token operator">=</span> <span class="token string">"Vector3"</span><span class="token punctuation">,</span>
+		serializer <span class="token operator">=</span> <span class="token punctuation">{</span>
+			run <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>vector3<span class="token punctuation">,</span> intermediateSerializedData<span class="token punctuation">)</span>
+				intermediateSerializedData<span class="token punctuation">.</span>components <span class="token operator">=</span> <span class="token punctuation">{</span>vector3<span class="token punctuation">.</span>X<span class="token punctuation">,</span> vector3<span class="token punctuation">.</span>Y<span class="token punctuation">,</span> vector<span class="token punctuation">.</span>Z<span class="token punctuation">}</span>
+			<span class="token keyword">end</span><span class="token punctuation">,</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		deserializer <span class="token operator">=</span> <span class="token punctuation">{</span>
+			run <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>serializedVector3<span class="token punctuation">)</span>
+				<span class="token keyword">return</span> Vector3<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span>table<span class="token punctuation">.</span><span class="token function">unpack</span><span class="token punctuation">(</span>serializedVector3<span class="token punctuation">.</span>components<span class="token punctuation">)</span><span class="token punctuation">)</span>
+			<span class="token keyword">end</span><span class="token punctuation">,</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+	<span class="token punctuation">{</span>
+		valueType <span class="token operator">=</span> <span class="token string">"Vector2"</span><span class="token punctuation">,</span>
+		serializer <span class="token operator">=</span> <span class="token punctuation">{</span>
+			run <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>vector2<span class="token punctuation">,</span> intermediateSerializedData<span class="token punctuation">)</span>
+				intermediateSerializedData<span class="token punctuation">.</span>components <span class="token operator">=</span> <span class="token punctuation">{</span>vector2<span class="token punctuation">.</span>X<span class="token punctuation">,</span> vector2<span class="token punctuation">.</span>Y<span class="token punctuation">}</span>
+			<span class="token keyword">end</span><span class="token punctuation">,</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		deserializer <span class="token operator">=</span> <span class="token punctuation">{</span>
+			run <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>serializedVector2<span class="token punctuation">)</span>
+				<span class="token keyword">return</span> Vector2<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span>table<span class="token punctuation">.</span><span class="token function">unpack</span><span class="token punctuation">(</span>serializedVector2<span class="token punctuation">.</span>components<span class="token punctuation">)</span><span class="token punctuation">)</span>
+			<span class="token keyword">end</span><span class="token punctuation">,</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+serializerUtil<span class="token punctuation">.</span><span class="token function">addClassDataTypes</span><span class="token punctuation">(</span>classDataTypes<span class="token punctuation">)</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="serializeTableDeep"><code style="text-decoration:none">serializeTableDeep</code><a href="#serializeTableDeep" class="hash-link" aria-label="Direct link to serializeTableDeep" title="Direct link to serializeTableDeep">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshayz/libraries/blob/main/src/serializerUtil/init.luau#L261"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>serializerUtil<!-- -->.</code><code class="green_DgR4">serializeTableDeep</code><code>(</code><code>deserializedTable<!-- -->: </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">any</code><code>]</code></span><code>: </code><code class="blue_P4bS">any</code><code class="purple_ieR2">}</code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Deep serializes all keys and values in the given table via <a href="/libraries/api/serializerUtil#serialize">serializerUtil.serialize</a>.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> tabl <span class="token operator">=</span> <span class="token punctuation">{</span>bo <span class="token operator">=</span> Enum<span class="token punctuation">.</span>Keycode<span class="token punctuation">.</span>A<span class="token punctuation">}</span>
+<span class="token keyword">local</span> serializedTable <span class="token operator">=</span> serializerUtil<span class="token punctuation">.</span><span class="token function">serializeTableDeep</span><span class="token punctuation">(</span>tabl<span class="token punctuation">)</span>
+<span class="token function">print</span><span class="token punctuation">(</span>serializedTable<span class="token punctuation">)</span> <span class="token comment">--> {bo: {...}} (serialized)</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="deserializeTableDeep"><code style="text-decoration:none">deserializeTableDeep</code><a href="#deserializeTableDeep" class="hash-link" aria-label="Direct link to deserializeTableDeep" title="Direct link to deserializeTableDeep">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshayz/libraries/blob/main/src/serializerUtil/init.luau#L297"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>serializerUtil<!-- -->.</code><code class="green_DgR4">deserializeTableDeep</code><code>(</code><code>serializedTable<!-- -->: </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">any</code><code>]</code></span><code>: </code><code class="blue_P4bS">any</code><code class="purple_ieR2">}</code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Deep - deserializes all keys and values in the given table via <a href="/libraries/api/serializerUtil#deserialize">serializerUtil.deserialize</a>.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> tabl <span class="token operator">=</span> <span class="token punctuation">{</span>bo <span class="token operator">=</span> Enum<span class="token punctuation">.</span>Keycode<span class="token punctuation">.</span>A<span class="token punctuation">}</span>
+<span class="token keyword">local</span> serializedTable <span class="token operator">=</span> serializerUtil<span class="token punctuation">.</span><span class="token function">serializeTableDeep</span><span class="token punctuation">(</span>tabl<span class="token punctuation">)</span>
+<span class="token function">print</span><span class="token punctuation">(</span>serializerUtil<span class="token punctuation">.</span><span class="token function">deserializeTableDeep</span><span class="token punctuation">(</span>serializedTable<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> {bo: Enum.Keycode.A} (deserialized)</span>
+</code></pre>
+</div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
+    &quot;functions&quot;: [
+        {
+            &quot;name&quot;: &quot;serialize&quot;,
+            &quot;desc&quot;: &quot;Serializes the given vale, if it can be serialized. If it can&#x27;t be serialized, then the value it self is returned.\n\n```lua\nlocal serializedValue = serializerUtil.serializer(150)\nprint(serializedValue) --&gt; 150 (can&#x27;t serialize a number!)\nlocal serializedValue = serializerUtil.serializer(CFrame.new(5,5,5))\nprint(serializedValue) --&gt; {...} (serialized data)\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;value&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;any&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 96,
+                &quot;path&quot;: &quot;src/serializerUtil/init.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;deserialize&quot;,
+            &quot;desc&quot;: &quot;Deserializes the given serialized value, if it can be deserialized. If it can&#x27;t be deserialized, then the value\nit self is returned.\n\n```lua\nlocal serializedValue = serializerUtil.serializer(CFrame.new(5,5,5))\nprint(serializerUtil.deserialize(serializedValue)) --&gt; CFrame (5,5,5) \nprint(serializerUtil.deserialize(15)) --&gt; 15 (Can&#x27;t deserialize a non-serialized value)\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;serializedData&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;any&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 123,
+                &quot;path&quot;: &quot;src/serializerUtil/init.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;addClassDataType&quot;,
+            &quot;desc&quot;: &quot;Adds a class data type to the serializer. A class data type (in the context of this utility) is simply\nan object which you can use to add your own custom serializers and deserializers.\n\n```lua\n-- In this project X, we have a funny which we would like to serialize\n-- and deserialize according to how our game is structured;\nlocal someUniqueTable = {\n\t[serializerUtil.customValueType] = \&quot;TheUniqueTable\&quot;\n}\n\nserializerUtil.addClassDataType({\n\tvalueType = \&quot;TheUniqueTable\&quot;,\n\tserializer = {\n\t\trun = function(uniqueTable, intermediateSerializedData)\n\t\t\tintermediateSerializedData.component = {1, 2, 3, 4, 5, 6}\n\t\tend,\n\t},\n\tdeserializer = {\n\t\trun = function(serializedUniqueTable)\n\t\t\treturn serializedUniqueTable.component\n\t\tend,\n\t},\n})\n\nlocal serializedTable = serializerUtil.serialize(someUniqueTable)\nprint(serializerUtil.deserialize(serializedTable)) --&gt; {1, 2, 3, 4, 5, 6}\n```\n\n:::tip Override default data types\nCurrently this utility supports a lot of data types to serialize and serialize - however\nyou can override them too with your own serializers and deserializers for them, for e.g:\n\n```lua\n-- Let&#x27;s just override the serializer and deserializer for the `Vector3` data type\n-- in favour of our own:\nserializerUtil.addClassDataType({\n\tvalueType = \&quot;Vector3\&quot;,\n\tserializer = {\n\t\trun = function(vector3, intermediateSerializedData)\n\t\t\tintermediateSerializedData.components = {vector3.X, vector3.Y, vector3.Z}\n\t\tend,\n\t},\n\tdeserializer = {\n\t\trun = function(serializedVector3)\n\t\t\treturn Vector3.new(table.unpack(serializedVector3.components))\n\t\tend,\n\t},\n})\n```\n\nThis gives you flexibility to append your own serializer and deserializer for specific data types\nas per your game&#x27;s need!\n:::&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;classDataType&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;ClassDataType&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 195,
+                &quot;path&quot;: &quot;src/serializerUtil/init.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;addClassDataTypes&quot;,
+            &quot;desc&quot;: &quot;Shorthand for adding multiple class data types in 1 go. [serializerUtil.addClass] is called\nfor every class data type in `classDataTypes`.\n\n```lua\nlocal classDataTypes = {\n\t{\n\t\tvalueType = \&quot;Vector3\&quot;,\n\t\tserializer = {\n\t\t\trun = function(vector3, intermediateSerializedData)\n\t\t\t\tintermediateSerializedData.components = {vector3.X, vector3.Y, vector.Z}\n\t\t\tend,\n\t\t},\n\t\tdeserializer = {\n\t\t\trun = function(serializedVector3)\n\t\t\t\treturn Vector3.new(table.unpack(serializedVector3.components))\n\t\t\tend,\n\t\t},\n\t},\n\n\t{\n\t\tvalueType = \&quot;Vector2\&quot;,\n\t\tserializer = {\n\t\t\trun = function(vector2, intermediateSerializedData)\n\t\t\t\tintermediateSerializedData.components = {vector2.X, vector2.Y}\n\t\t\tend,\n\t\t},\n\t\tdeserializer = {\n\t\t\trun = function(serializedVector2)\n\t\t\t\treturn Vector2.new(table.unpack(serializedVector2.components))\n\t\t\tend,\n\t\t},\n\t}\n}\n\nserializerUtil.addClassDataTypes(classDataTypes)\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;classDataTypes&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;{ ClassDataType }&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 245,
+                &quot;path&quot;: &quot;src/serializerUtil/init.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;serializeTableDeep&quot;,
+            &quot;desc&quot;: &quot;Deep serializes all keys and values in the given table via [serializerUtil.serialize].\n\n```lua\nlocal tabl = {bo = Enum.Keycode.A}\nlocal serializedTable = serializerUtil.serializeTableDeep(tabl)\nprint(serializedTable) --&gt; {bo: {...}} (serialized)\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;deserializedTable&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;{ [any]: any }&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 261,
+                &quot;path&quot;: &quot;src/serializerUtil/init.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;deserializeTableDeep&quot;,
+            &quot;desc&quot;: &quot;Deep - deserializes all keys and values in the given table via [serializerUtil.deserialize].\n\n```lua\nlocal tabl = {bo = Enum.Keycode.A}\nlocal serializedTable = serializerUtil.serializeTableDeep(tabl)\nprint(serializerUtil.deserializeTableDeep(serializedTable)) --&gt; {bo: Enum.Keycode.A} (deserialized)\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;serializedTable&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;{ [any]: any }&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 297,
+                &quot;path&quot;: &quot;src/serializerUtil/init.luau&quot;
+            }
+        }
+    ],
+    &quot;properties&quot;: [
+        {
+            &quot;name&quot;: &quot;customValueType&quot;,
+            &quot;desc&quot;: &quot; \n\nA constant to be used as a key in tables, to represent some type which this utility\ncan easily know about when serializing and deserializing values.\n\n```lua\nlocal spmeTable = {\n\t-- Allow the serializer utility module to know the \&quot;type\&quot; of this table\n\t[serializerUtil.customValueType] = \&quot;uniqueType\&quot;\n}\n```&quot;,
+            &quot;lua_type&quot;: &quot;string&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 58,
+                &quot;path&quot;: &quot;src/serializerUtil/init.luau&quot;
+            }
+        }
+    ],
+    &quot;types&quot;: [
+        {
+            &quot;name&quot;: &quot;ClassDataType&quot;,
+            &quot;desc&quot;: &quot; &quot;,
+            &quot;lua_type&quot;: &quot;{valueType: any, serializer: (value: any, intermediateSerializedData: {}) -&gt; (), deserializer: (serializedData: {}) -&gt; (),}&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 43,
+                &quot;path&quot;: &quot;src/serializerUtil/init.luau&quot;
+            }
+        }
+    ],
+    &quot;name&quot;: &quot;serializerUtil&quot;,
+    &quot;desc&quot;: &quot;A very simple utility for serializing and deserializing data types.\n\n:::note This utility supports the following data types: \n- CFrame\n- Vector3\n- Vector2\n- BrickColor\n- Color3\n- Enum\n- EnumItem\n- Axes\n- CatalogSearchParams\n- ColorSequence\n- ColorSequenceKeypoint\n- NumberSequence\n- NumberSequenceKeypoint\n- Faces\n- Axes\n- NumberRange\n- PathWaypoint\n- Region3\n- Region3init16\n- TweenInfo\n- UDim\n- UDim2\n- Vector3int16\n- Vector2int16\n- Region3int16\n- Font\n- Rect\n- DateTime\n- PhysicalProperties\n:::&quot;,
+    &quot;source&quot;: {
+        &quot;line&quot;: 38,
+        &quot;path&quot;: &quot;src/serializerUtil/init.luau&quot;
+    }
+}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a><ul><li><a href="#ClassDataType" class="table-of-contents__link toc-highlight">ClassDataType</a></li></ul></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a><ul><li><a href="#customValueType" class="table-of-contents__link toc-highlight">customValueType</a></li></ul></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#addClassDataType" class="table-of-contents__link toc-highlight">.addClassDataType</a></li><li><a href="#addClassDataTypes" class="table-of-contents__link toc-highlight">.addClassDataTypes</a></li><li><a href="#deserialize" class="table-of-contents__link toc-highlight">.deserialize</a></li><li><a href="#deserializeTableDeep" class="table-of-contents__link toc-highlight">.deserializeTableDeep</a></li><li><a href="#serialize" class="table-of-contents__link toc-highlight">.serialize</a></li><li><a href="#serializeTableDeep" class="table-of-contents__link toc-highlight">.serializeTableDeep</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 bub. Built with Moonwave and Docusaurus</div></div></div></footer></div>
+<script src="/libraries/assets/js/runtime~main.2e433151.js"></script>
+<script src="/libraries/assets/js/main.139cf270.js"></script>
+</body>
+</html>
