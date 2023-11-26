@@ -1,7 +1,7 @@
 [package]
-name = "bubshayz/dateutil"
+name = "bub/dateutil"
 description = "An utility module for working with dates."
-authors = ["bubshayz"]
+authors = ["bub"]
 license = "MIT"
 version = "1.4.0"
 registry = "https://github.com/UpliftGames/wally-index"

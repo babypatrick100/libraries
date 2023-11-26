@@ -144,7 +144,7 @@ end
 	-- Client
 	-- Get the network of name "Test", dispatched to workspace
 	local testNetwork = network.client.fromParent("Test", workspace):expect()
-	print(testNetwork.method()) --> "hi, bubshayz!"
+	print(testNetwork.method()) --> "hi, bub!"
 	```
 
 	You can also pass in `timeout` which will result in the promise to be rejected (if it hasn't resolved in time).

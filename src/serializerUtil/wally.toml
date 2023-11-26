@@ -1,7 +1,7 @@
 [package]
-name = "bubshayz/serializerutil"
+name = "bub/serializerutil"
 description = "A very simple utility for serializing and deserializing data types."
-authors = ["bubshayz"]
+authors = ["bub"]
 version = "1.5.0"
 license = "MIT"
 registry = "https://github.com/UpliftGames/wally-index"

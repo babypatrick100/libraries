@@ -1,7 +1,7 @@
 [package]
-name = "bubshayz/stringutil"
+name = "bub/stringutil"
 description = "A simple utility module for working with strings."
-authors = ["bubshayz"]
+authors = ["bub"]
 version = "1.0.0"
 license = "MIT"
 registry = "https://github.com/UpliftGames/wally-index"

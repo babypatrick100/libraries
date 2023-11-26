@@ -1,9 +1,9 @@
 [package]
-name = "bubshayz/component"
-description = "Component class by Sleitnick, modified by bubshayz."
+name = "bub/component"
+description = "Component class by Sleitnick, modified by bub."
 version = "1.6.0"
 license = "MIT"
-authors = ["bubshayz"]
+authors = ["bub"]
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 

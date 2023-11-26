@@ -1,7 +1,7 @@
 [package]
-name = "bubshayz/contentproviderqueue"
+name = "bub/contentproviderqueue"
 description = "A simple class for working with ContentProvider."
-authors = ["bubshayz"]
+authors = ["bub"]
 license = "MIT"
 version = "1.7.0"
 registry = "https://github.com/UpliftGames/wally-index"
@@ -11,4 +11,4 @@ realm = "shared"
 Promise = "evaera/promise@4"
 Signal = "sleitnick/signal@1"
 Janitor = "howmanysmall/janitor@1"
-throttleUtil = "bubshayz/throttleutil@1"
+throttleUtil = "bub/throttleutil@1"

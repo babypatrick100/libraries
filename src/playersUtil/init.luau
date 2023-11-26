@@ -74,7 +74,7 @@ end
 
 	```lua
 	playersUtil.nameFromUserId(2981707497):andThen(function(userName)
-		print(userName) --> "bubshayz"
+		print(userName) --> "bub"
 	end)
 	```
 
@@ -119,7 +119,7 @@ end
 	:::
 
 	```lua
-	playersUtil.userIdFromName("bubshayz"):andThen(function(userId)
+	playersUtil.userIdFromName("bub"):andThen(function(userId)
 		print(userId) --> 2981707497
 	end)
 	```

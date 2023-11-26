@@ -1,7 +1,7 @@
 [package]
-name = "bubshayz/playercacheutil"
+name = "bub/playercacheutil"
 description = "A very simple utility module for storing in data per player in an unique way."
-authors = ["bubshayz"]
+authors = ["bub"]
 version = "1.4.0"
 license = "MIT"
 registry = "https://github.com/UpliftGames/wally-index"

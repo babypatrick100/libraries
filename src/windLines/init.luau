@@ -1,4 +1,4 @@
--- Original author: boatbomber, refactored and modified by bubshayz.
+-- Original author: boatbomber, refactored and modified by bub.
 
 --[=[
 	@interface WindLinesConfig  

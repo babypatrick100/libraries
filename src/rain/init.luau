@@ -1,7 +1,7 @@
 --[=[
     @class rain
 
-    Rain module by builthomas, *heavily modified and refactored by bubshayz*.
+    Rain module by builthomas, *heavily modified and refactored by bub*.
 ]=]
 
 --[[
@@ -1355,7 +1355,7 @@ end
 	@prop enabled Property
 	@within rain
 
-	A [Property](https://bubshayz.github.io/libraries/api/Property/) object that contains a value on whether the rain is enabled or not.
+	A [Property](https://bub.github.io/libraries/api/Property/) object that contains a value on whether the rain is enabled or not.
 ]=]
 
 rain.enabled = Property.new(not disabled)

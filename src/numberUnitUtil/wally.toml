@@ -1,7 +1,7 @@
 [package]
-name = "bubshayz/numberunitutil"
+name = "bub/numberunitutil"
 description = "An utility module for working with number units."
-authors = ["bubshayz"]
+authors = ["bub"]
 license = "MIT"
 version = "1.2.0"
 registry = "https://github.com/UpliftGames/wally-index"

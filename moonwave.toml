@@ -9,7 +9,7 @@ favicon = "/icon.ico"
 
 [footer]
 style = "dark"
-copyright = "Copyright © 2023 bubshayz. Built with Moonwave and Docusaurus"
+copyright = "Copyright © 2023 bub. Built with Moonwave and Docusaurus"
 
 [[classOrder]]
 section = "network"

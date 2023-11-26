@@ -1,7 +1,7 @@
 [package]
-name = "bubshayz/customanimator"
+name = "bub/customanimator"
 description = "A simple class for working with animations."
-authors = ["bubshayz"]
+authors = ["bub"]
 license = "MIT"
 version = "1.7.0"
 registry = "https://github.com/UpliftGames/wally-index"

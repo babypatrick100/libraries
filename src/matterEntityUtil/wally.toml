@@ -1,7 +1,7 @@
 [package]
-name = "bubshayz/matterentityutil"
+name = "bub/matterentityutil"
 description = "Utility module for working with matter entities."
-authors = ["bubshayz"]
+authors = ["bub"]
 license = "MIT"
 version = "1.4.0"
 registry = "https://github.com/UpliftGames/wally-index"

@@ -1,11 +1,11 @@
 [package]
-name = "bubshayz/toolutil"
+name = "bub/toolutil"
 description = "A simple utility module for working with tools.."
-authors = ["bubshayz"]
+authors = ["bub"]
 version = "1.2.0"
 license = "MIT"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 
 [dependencies]
-playerUtil = "bubshayz/playerutil@2"
+playerUtil = "bub/playerutil@2"

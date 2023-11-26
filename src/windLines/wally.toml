@@ -1,7 +1,7 @@
 [package]
-name = "bubshayz/windlines"
+name = "bub/windlines"
 description = "A module for creating wind line effects."
-authors = ["bubshayz", "boatbomber"]
+authors = ["bub", "boatbomber"]
 version = "2.1.0"
 license = "MIT"
 registry = "https://github.com/UpliftGames/wally-index"

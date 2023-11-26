@@ -33,21 +33,129 @@
 ]=]
 
 --[=[ 
-	@interface DefaultMiddleware 
+	@interface DefaultNetworkServerConfig 
 	@within NetworkServer
-	.AutomaticArgumentSerializationAndDeserialization string 
-	
-	- `AutomaticArgumentSerializationAndDeserialization`:
-		- Arguments and values sent across the network will be automatically serialized and deserialized respectively. The network
-		package uses the [serializerUtil](https://bubshayz.github.io/libraries/api/serializerUtil/) module behind the scenes to accomplish this.
+	.automaticArgumentSerializationAndDeserializationEnabled true
+	.promisifyCallbacks true
+]=]
 
-		- [RemoteProperty], [RemoteSignal], [ClientRemoteProperty] and [ClientRemoteSignal] bound to the network object will respect this feature.
+--[=[
+	@interface DefaultNetworkServerMiddleware
+	@within NetworkServer
+	.methodCallInbound {}
+	.methodCallOutbound {}
+	.valueDispatch {}
+]=]
 
-		:::note 
+--[=[ 
+	@interface NetworkServerConfig 
+	@within NetworkServer
+	.automaticArgumentSerializationAndDeserializationEnabled boolean -- determines whether or not values sent to clients by the remote signal be internally serialized/deserialized or not.
+	.promisifyCallbacks boolean -- determines whether or not a promise is returned to the client (resolved with the return values of the callback) whenever they call a serverside exposed callback
+
+	:::warning Remote Signal and Remote Property not subject to automatic serialization / deserialization!
+	[RemoteSignal] and [RemoteProperty] objects sent across the network by the network object will never be
+	serialized or deserialized, regardless of `automaticArgumentSerializationAndDeserializationEnabled`. They're
+	handled internally to ensure they are properly replicated across the network.
+	:::
+
+	- `automaticArgumentSerializationAndDeserializationEnabled` -> `true`
+		- Arguments and values sent across the network by the network object
+		will be automatically serialized and deserialized respectively, with the
+		help of an internal library, i.e [serializerUtil](https://bub.github.io/libraries/api/serializerUtil/).
+
+		::note Serialization and deserialization limitations!
 		While the serializer utility used to accomplish this supports a variety of data types, do keep in mind that not all data types
 		can be supported on the go for serialization and deserialization - check the above hyperlink to the serializer utility on how
 		many data types it supports.
 		::::
+
+		**See the type of the value of `abc` being `TweenInfo` on the client**:
+
+		```lua
+		-- Server
+		local Workspace = game:GetService("Workspace")
+
+		local testNetwork = network.Server.new("TestNetwork", nil, {
+			automaticArgumentSerializationAndDeserializationEnabled = true
+		})
+		testNetwork:append("abc", TweenInfo.new()) -- By default, TweenInfos
+		-- are not replicated properlty across the  network, but watch the magic!
+		testNetwork:dispatch(Workspace)
+
+		-- Client
+		local Workspace = game:GetService("Workspace")
+
+		local testNetwork = network.client.fromParent("TestNetwork", Workspace):expect()
+		print(typeof(testNetwork.abc)) --> "TweenInfo"
+		```
+	- `automaticArgumentSerializationAndDeserializationEnabled` -> `false`
+		- Arguments and values sent across the network will not be internally serialized
+		and deserialized. Using the same example as above:
+
+		**See the type of the value of `abc` being `table` on the client instead of `TweenInfo`**:
+
+		```lua
+		-- Server
+		local Workspace = game:GetService("Workspace")
+
+		local testNetwork = network.Server.new("TestNetwork", nil, {
+			automaticArgumentSerializationAndDeserializationEnabled = false
+		})
+		testNetwork:append("abc", TweenInfo.new())
+		testNetwork:dispatch(Workspace)
+
+		-- Client
+		local Workspace = game:GetService("Workspace")
+
+		local testNetwork = network.client.fromParent("abc", Workspace):expect()
+		print(typeof(testNetwork.abc)) --> "table"
+		```
+
+	- `promisifyCallbacks` -> `true`:
+
+		Serverside exposed callback called on the client will immediately return a promise which will be resolved
+		with the return values of the callback.
+
+		```lua
+		-- Server
+		local Workspace = game:GetService("Workspace")
+
+		local testNetwork = network.Server.new("TestNetwork", nil, {
+			promisifyCallbacks = true
+		})
+		testNetwork:append("method", function() return task.wait(5) end)
+		testNetwork:dispatch(Workspace)
+
+		-- Client
+		local Workspace = game:GetService("Workspace")
+
+		local testNetwork = network.client.fromParent("abc", Workspace):expect()
+		testNetwork.method():andThen(function(deltaTime)
+			print(typeof(deltaTime)) --> "number"
+		end)
+		```
+	- `promisifyCallbacks` -> `false`:
+	
+		Serverside exposed callback called on the client will **not** return a promise and instead
+		will yield the given thread until the callback has returned back to the caller.
+
+		```lua
+		-- Server
+		local Workspace = game:GetService("Workspace")
+
+		local testNetwork = network.Server.new("TestNetwork", nil, {
+			promisifyCallbacks = false
+		})
+		testNetwork:append("method", function() return task.wait(5) end)
+		testNetwork:dispatch(Workspace)
+
+		-- Client
+		local Workspace = game:GetService("Workspace")
+
+		local testNetwork = network.client.fromParent("abc", Workspace):expect()
+		print(typeof(testNetwork.method())) --> "number" (Thread is yielded for approx 5 seconds)
+		```
 ]=]
 
 --[=[ 
@@ -56,17 +164,20 @@
 ]=]
 
 --[=[
-	@interface Middleware
+	@interface NetworkServerMiddleware
 	@within NetworkServer
-	.methodCallInbound MethodCallInbound?
-	.methodCallOutbound MethodCallOutbound?
-	.valueDispatch ValueDispatch?
+	.methodCallInbound MethodCallInbound? -- Before a callback runs.
+	.methodCallOutbound MethodCallOutbound? -- After a callback has finished running.
+	.valueDispatch ValueDispatch? -- Affects the return value of the callbacks (to the clients) after they've run.
 
 	`methodCallInbound`, `methodCallOutbound` and `valueDispatch` must be an array of callbacks, if specified. 
 
-	:::warning Yielding is not allowed
-	Middleware callbacks aren't allowed to yield. If they do so, their thread will be closed and an error will be outputted, but
-	other callbacks will not be affected.
+	:::warning Yielding in middleware callbacks is not allowed
+	Middleware callbacks aren't allowed to yield. If they do so, their thread will be closed via
+	[coroutine.close](https://create.roblox.com/docs/reference/engine/libraries/coroutine#close) and an
+	error will be outputted in the console.
+
+	Yielding, (especially in network-related code) results in weird bugs and behavior which can be hard to track down!
 	:::
 
 	### `methodCallInbound` 
@@ -96,7 +207,7 @@
 	-- Server
 	local Workspace = game:GetService("Workspace")
 
-	local testNetwork = Network.Server.new("TestNetwork", {methodCallInbound = {
+	local testNetwork = network.Server.new("TestNetwork", {methodCallInbound = {
 		function(_, _, arguments) 
 			arguments[2] = "test"
 		end
@@ -234,7 +345,7 @@
 	   
 	}
 
-	local testNetwork = Network.Server.new("TestNetwork", {valueDispatch = valueDispatchCallbacks})
+	local testNetwork = network.Server.new("TestNetwork", {valueDispatch = valueDispatchCallbacks})
 	testNetwork:append("someValue", 5)
 	testNetwork:dispatch(Workspace)
 
@@ -261,7 +372,7 @@
 		end
 	}
 
-	local testNetwork = Network.Server.new("TestNetwork", {valueDispatch = valueDispatchCallbacks})
+	local testNetwork = network.Server.new("TestNetwork", {valueDispatch = valueDispatchCallbacks})
 	testNetwork:append("someValue", 5)
 	testNetwork:dispatch(Workspace)
 
@@ -277,7 +388,7 @@
 	- If any of the callbacks return a `nil` value, then the value will not be replicated to the client. For e.g:
 
 	```lua
-		local Workspace = game:GetService("Workspace")
+	local Workspace = game:GetService("Workspace")
 	
 	-- Server
 	local valueDispatchCallbacks = {
@@ -287,7 +398,7 @@
 	   
 	}
 
-	local testNetwork = Network.Server.new("TestNetwork", {valueDispatch = valueDispatchCallbacks})
+	local testNetwork = network.Server.new("TestNetwork", {valueDispatch = valueDispatchCallbacks})
 	testNetwork:append("someValue", 5)
 	testNetwork:dispatch(Workspace)
 
@@ -313,15 +424,15 @@ local RemoteProperty = require(script.RemoteProperty)
 local sharedEnums = require(script.Parent.sharedEnums)
 local sharedTypes = require(script.Parent.sharedTypes)
 
-local DEFAULT_MIDDLEWARES_TEMPLATE = {
+local DEFAULT_MIDDLEWARE_TEMPLATE = {
 	methodCallOutbound = {},
 	methodCallInbound = {},
 	valueDispatch = {},
-	default = {},
 }
 
-local DEFAULT_MIDDLEWARE = table.freeze({
-	AutomaticArgumentSerializationAndDeserialization = "AutomaticArgumentSerializationAndDeserialization",
+local DEFAULT_CONFIG_TEMPLATE = table.freeze({
+	automaticArgumentSerializationAndDeserializationEnabled = true,
+	promisifyCallbacks = true,
 })
 
 local networks = {}
@@ -330,9 +441,78 @@ local onNetworkCreated = Signal.new()
 local NetworkServer = {
 	RemoteProperty = RemoteProperty,
 	RemoteSignal = RemoteSignal,
-	DefaultMiddleware = DEFAULT_MIDDLEWARE,
 	__index = {},
 }
+
+type NetworkServerMiddleware = {
+	methodCallOutbound: {
+		(
+			methodName: string,
+			client: Player,
+			args: { any },
+			methodResponse: any
+		) -> any
+	}?,
+
+	methodCallInbound: { (methodName: string, client: Player, args: { any }) -> boolean }?,
+}
+type NetworkServerConfig = {
+	automaticArgumentSerializationAndDeserializationEnabled: boolean,
+	promisifyCallbacks: boolean
+}
+
+--[=[
+	Creates and returns a new network object of `name`.
+
+	```lua
+	-- Server:
+	local network = NetworkServer.new("Test")
+	network:append("key", "some value")
+	network:dispatch(game:GetService("ReplicatedStorage"))
+
+	-- Client:
+	local network = network.Client.fromParent("Test", game:GetService("ReplicatedStorage")):expect()
+	print(network.key) --> "some value"
+	```
+
+	- If the 2nd parameter `middleware` is not specified, then it will default to [DefaultNetworkServerMiddleware] instead.
+	- If the 3rd parameter `config` is not specified, then it will default to [DefaultNetworkServerConfig] instead.
+
+	:::warning Network object will initially not be accessible to the client!
+	The network object will initially not be accessible to the client. You need to call [NetworkServer:dispatch] 
+	to render the network object accessible to the client!
+	:::
+]=]
+
+function NetworkServer.new(
+	name: string,
+	middleware: NetworkServerMiddleware?,
+	config: NetworkServerConfig?
+): NetworkServer
+	assert(networks[name] == nil, string.format('Network "%s" already exists!', name))
+
+	if middleware ~= nil then
+		middleware = Sift.Dictionary.mergeDeep(DEFAULT_MIDDLEWARE_TEMPLATE, middleware)
+	else
+		middleware = Sift.Dictionary.copyDeep(DEFAULT_MIDDLEWARE_TEMPLATE)
+	end
+
+	if config ~= nil then
+		config = Sift.Dictionary.mergeDeep(DEFAULT_CONFIG_TEMPLATE, config)
+	else
+		config = Sift.Dictionary.copyDeep(DEFAULT_CONFIG_TEMPLATE)
+	end
+
+	local self = setmetatable({
+		_name = name,
+		_janitor = Janitor.new(),
+		_middleware = middleware,
+		_config = config,
+	}, NetworkServer)
+
+	self:_init()
+	return self
+end
 
 --[=[
 	@return NetworkServer?
@@ -387,83 +567,6 @@ function NetworkServer.fromNamePromise(name: string)
 end
 
 --[=[
-	@param middlewares {DefaultMiddleware | Middleware?}?
-	@return NetworkServer
-
-	Creates and returns a new network object of `name`.
-
-	```lua
-	-- Server:
-	local network = NetworkServer.new("Test")
-	network:append("key", "some value")
-	network:dispatch(game:GetService("ReplicatedStorage"))
-
-	-- Client:
-	local network = network.Client.fromParent("Test", game:GetService("ReplicatedStorage")):expect()
-	print(network.key) --> "some value"
-	```
-	
-	The 2nd argument, `middlewares` can be passed which can be used by the network object as
-	it's middleware. Middlewares allow  you to determine the behavior of network objects *globally*, 
-	so they affect the functions, remote signals and remote properties bound to the network object as a whole.
-
-	```lua
-	local network = NetworkServer.new(
-		"Test", 
-		{
-			-- Can pass in default middlewares too, in this case, let's pass in a default middleware
-			-- for automatic serialization and deserialization of arguments sent across the network:
-			default = {NetworkServer.DefaultMiddleware.AutomaticArgumentSerializationAndDeserialization}, 
-		}
-	)
-
-	-- Normally, you can't send in TweenInfo objects across the network. In order to do so, you would
-	-- need to serialize them! Now that we have set a default middleware for serialization and deserialiation,
-	-- this will be done automatically for us!
-	network:append("key", TweenInfo.new(5))
-	network:dispatch(game:GetService("ReplicatedStorage"))
-
-	-- Client:
-	local network = network.Client.fromParent("Test", game:GetService("ReplicatedStorage")):expect()
-	print(typeof(network.key)) --> "TweenInfo"
-	```
-	
-	:::note Precaution!
-	The network object will initially not be accessible to the client. You need to call [NetworkServer:dispatch] 
-	to render the network object accessible to the client!
-	:::
-]=]
-
-function NetworkServer.new(name: string, middlewares: { (Middleware | string)? }): NetworkServer
-	assert(networks[name] == nil, string.format('Network "%s" already exists!', name))
-
-	for key, middleware in middlewares do
-		if key ~= "default" then
-			continue
-		end
-
-		for _, defaultMiddleware in middleware do
-			assert(
-				NetworkServer.DefaultMiddleware[defaultMiddleware],
-				string.format(
-					'Default middleware "%s" in middlewares.default (#2nd argument to NetworkServer.new) is not a valid member of NetworkServer.DefaultMiddleware!',
-					tostring(middleware)
-				)
-			)
-		end
-	end
-
-	local self = setmetatable({
-		_name = name,
-		_janitor = Janitor.new(),
-		_middlewares = Sift.Dictionary.mergeDeep(DEFAULT_MIDDLEWARES_TEMPLATE, middlewares),
-	}, NetworkServer)
-
-	self:_init()
-	return self
-end
-
---[=[
 	Returns a boolean indicating if `self` is a network object or not.
 ]=]
 
@@ -492,7 +595,7 @@ end
 	-- Server
 	local Workspace = game:GetService("Workspace")
 
-	local testNetwork = Network.Server.new("TestNetwork")
+	local testNetwork = network.Server.new("TestNetwork")
 	testNetwork:append("key", "the value!")
 	testNetwork:dispatch(Workspace)
 
@@ -554,18 +657,14 @@ function NetworkServer.__index:destroy()
 	self._janitor:Destroy()
 end
 
+--[=[
+	@private
+]=]
+
 function NetworkServer.__index:_setupRemoteObject(
 	key: string,
 	value: RemoteProperty.RemoteProperty<any> | RemoteSignal.RemoteSignal
 )
-	local dispatcherRemoteFunction = value:dispatcherRemoteInstance()
-	dispatcherRemoteFunction:SetAttribute(
-		sharedEnums.Attribute.AutomaticSerializationAndDeserializationEnabled,
-		table.find(
-			self._middlewares.default,
-			NetworkServer.DefaultMiddleware.AutomaticArgumentSerializationAndDeserialization
-		) ~= nil
-	)
 	value:dispatch(key, self._networkFolder)
 
 	self._janitor:Add(function()
@@ -579,22 +678,31 @@ function NetworkServer.__index:_setupRemoteObject(
 	end)
 end
 
+--[=[
+	@private
+]=]
+
 function NetworkServer.__index:_setup(key: string, value: any)
+	assert(
+		self._networkFolder:FindFirstChild(key) == nil,
+		string.format('Attempt to append value of key "%s" again', key)
+	)
+
 	if RemoteSignal.is(value) or RemoteProperty.is(value) then
 		self:_setupRemoteObject(key, value)
 		return
 	end
 
 	local remoteFunction = Instance.new("RemoteFunction")
+	remoteFunction:SetAttribute(
+		sharedEnums.Attribute.AutomaticArgumentSerializationAndDeserializationEnabled,
+		self._config.automaticArgumentSerializationAndDeserializationEnabled
+	)
+	if typeof(value) == "function" then
+		remoteFunction:SetAttribute(sharedEnums.Attribute.Promisified, true)
+	end
 	remoteFunction.Name = key
 	remoteFunction:SetAttribute(sharedEnums.Attribute.ValueType, typeof(value))
-	remoteFunction:SetAttribute(
-		sharedEnums.Attribute.AutomaticSerializationAndDeserializationEnabled,
-		table.find(
-			self._middlewares.default,
-			NetworkServer.DefaultMiddleware.AutomaticArgumentSerializationAndDeserialization
-		) ~= nil
-	)
 	remoteFunction.Parent = self._networkFolder
 
 	function remoteFunction.OnServerInvoke(client: Player, serializedArgs: { any })
@@ -604,7 +712,7 @@ function NetworkServer.__index:_setup(key: string, value: any)
 		if typeof(value) == "function" then
 			local methodCallInboundMiddlewareAccumulatedResponses =
 				networkUtil.accumulatedResponseFromMiddlewareCallbacks(
-					self._middlewares.methodCallInbound,
+					self._middleware.methodCallInbound,
 					key,
 					client,
 					unpack(deserializedArgs)
@@ -623,9 +731,9 @@ function NetworkServer.__index:_setup(key: string, value: any)
 			local methodResponses = { value(client, unpack(deserializedArgs)) }
 			local methodCallOutboundMiddlewareAccumulatedResponses, methodCallOutboundMiddlewareResponsesAreValid =
 				networkUtil.truncateAccumulatedResponses(
-					self._middlewares.methodCallOutbound,
+					self._middleware.methodCallOutbound,
 					networkUtil.accumulatedResponseFromMiddlewareCallbacks(
-						self._middlewares.methodCallOutbound,
+						self._middleware.methodCallOutbound,
 						key,
 						client,
 						deserializedArgs,
@@ -644,9 +752,9 @@ function NetworkServer.__index:_setup(key: string, value: any)
 		else
 			local valueDispatchMiddlewareAccumulatedResponses, valueDispatchMiddlewareResponsesAreValid =
 				networkUtil.truncateAccumulatedResponses(
-					self._middlewares.valueDispatch,
+					self._middleware.valueDispatch,
 					networkUtil.accumulatedResponseFromMiddlewareCallbacks(
-						self._middlewares.valueDispatch,
+						self._middleware.valueDispatch,
 						client,
 						value
 					)
@@ -667,6 +775,10 @@ function NetworkServer.__index:_setup(key: string, value: any)
 	end)
 end
 
+--[=[
+	@private
+]=]
+
 function NetworkServer.__index:_init()
 	self:_setupNetworkFolder()
 	networks[self._name] = self
@@ -678,6 +790,10 @@ function NetworkServer.__index:_init()
 	end)
 end
 
+--[=[
+	@private
+]=]
+
 function NetworkServer.__index:_setupNetworkFolder()
 	local networkFolder = self._janitor:Add(Instance.new("Folder"))
 	networkFolder.Name = self._name
@@ -685,24 +801,13 @@ function NetworkServer.__index:_setupNetworkFolder()
 	self._networkFolder = networkFolder
 end
 
-export type Middleware = {
-	methodCallOutbound: {
-		(
-			methodName: string,
-			client: Player,
-			args: { any },
-			methodResponse: any
-		) -> any
-	}?,
-
-	methodCallInbound: { (methodName: string, client: Player, args: { any }) -> boolean }?,
-}
-
 export type NetworkServer = typeof(setmetatable(
 	{} :: {
 		_name: string,
 		_janitor: sharedTypes.Janitor,
-		_middlewares: typeof(DEFAULT_MIDDLEWARES_TEMPLATE),
+		_middleware: NetworkServerMiddleware,
+		_config: NetworkServerConfig,
+		_networkFolder: Folder,
 	},
 	NetworkServer
 ))

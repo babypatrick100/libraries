@@ -17,7 +17,7 @@
 	local Workspace = game:GetService("Workspace")
 
 	local testNetwork = network.client.fromParent("TestNetwork", Workspace):expect()
-	print(testNetwork.method()) --> "hi, bubshayz!"
+	print(testNetwork.method()) --> "hi, bub!"
 	```
 ]=]
 

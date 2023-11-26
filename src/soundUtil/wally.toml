@@ -1,7 +1,7 @@
 [package]
-name = "bubshayz/soundutil"
+name = "bub/soundutil"
 description = "A utility module for working with sounds."
-authors = ["bubshayz"]
+authors = ["bub"]
 version = "1.6.0"
 license = "MIT"
 registry = "https://github.com/UpliftGames/wally-index"

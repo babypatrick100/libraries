@@ -1,7 +1,7 @@
 [package]
-name = "bubshayz/coreguiutil"
+name = "bub/coreguiutil"
 description = "A simple utility module for working with CoreGui's API."
-authors = ["bubshayz"]
+authors = ["bub"]
 version = "1.2.0"
 license = "MIT"
 registry = "https://github.com/UpliftGames/wally-index"

@@ -1,7 +1,7 @@
 [package]
-name = "bubshayz/colorutil"
+name = "bub/colorutil"
 description = "A simple utility module for working with colors."
-authors = ["bubshayz"]
+authors = ["bub"]
 version = "1.0.0"
 license = "MIT"
 registry = "https://github.com/UpliftGames/wally-index"

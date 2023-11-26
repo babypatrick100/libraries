@@ -52,9 +52,18 @@ end
 ]=]
 
 function ClientRemoteSignal.__index:connect(callback: (...any) -> ()): RBXScriptConnection
-	return self._janitor:Add(self._remoteEvent.OnClientEvent:Connect(function(args)
+	local connection
+	connection = self._janitor:Add(self._remoteEvent.OnClientEvent:Connect(function(args)
+		-- Need to check for connection variable as it is possible it is nil - since
+		-- connected remote event callbacks are flushed.
+		if connection and not connection.Connected then
+			return
+		end
+
 		callback(networkUtil.deserializeAndUnpack(self._remoteEvent, args))
 	end))
+
+	return connection
 end
 
 --[=[
@@ -114,12 +123,8 @@ function ClientRemoteSignal.__index:destroy()
 end
 
 --[=[
-    @private
+	@private
 ]=]
-
-function ClientRemoteSignal.__index:dispatcherRemoteInstance()
-	return self._remoteEvent
-end
 
 function ClientRemoteSignal.__index:_init()
 	self._janitor:Add(function()
@@ -127,13 +132,23 @@ function ClientRemoteSignal.__index:_init()
 	end)
 end
 
+--[=[
+	@private
+]=]
+
 function ClientRemoteSignal:__tostring()
-	return string.format("[ClientRemoteSignal]: (%s)", self._remoteEvent.Name)
+	return string.format(
+		"[%s]: (%s)",
+		if self._remoteEvent:IsA("UnreliableRemoteEvent")
+			then "ClientRemoteSignal [UNRELIABLE]"
+			else "ClientRemoteSignal",
+		self._remoteEvent.Name
+	)
 end
 
 export type ClientRemoteSignal = typeof(setmetatable(
 	{} :: {
-		_remoteEvent: RemoteEvent,
+		_remoteEvent: RemoteEvent | UnreliableRemoteEvent,
 		_janitor: sharedTypes.Janitor,
 	},
 	ClientRemoteSignal

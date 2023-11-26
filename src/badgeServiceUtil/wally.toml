@@ -1,7 +1,7 @@
 [package]
-name = "bubshayz/badgeserviceutil"
+name = "bub/badgeserviceutil"
 description = "An utility module for working with BadgeService."
-authors = ["bubshayz"]
+authors = ["bub"]
 license = "MIT"
 version = "1.2.0"
 registry = "https://github.com/UpliftGames/wally-index"

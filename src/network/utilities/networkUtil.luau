@@ -1,29 +1,33 @@
 local packages = script.Parent.Parent.Parent
 local networkFolder = script.Parent.Parent
 
+local sharedTypes = require(script.Parent.Parent.sharedTypes)
 local serializerUtil = require(packages.serializerUtil)
 local sharedEnums = require(networkFolder.sharedEnums)
 
+local CALLBACK_ERROR_RESPONSE = {
+	yielded = "yielded",
+}
+
 local networkUtil = {}
 
-type Callback = (...any) -> ...any
-type AnyTable = { [any]: any }
-
-local function runCallbackNoYield(callback: Callback, ...: any)
-	local callbackResponse
+local function runCallbackNoYield(callback: sharedTypes.Callback, ...: any)
 	local args = { ... }
-
+	local executedSafely, callbackResponse = false, nil
+	local callbackTraceback
 	local thread = task.spawn(function()
-		callbackResponse = callback(table.unpack(args))
+		executedSafely, callbackResponse = pcall(function()
+			callbackTraceback = debug.traceback()
+			return callback(table.unpack(args))
+		end)
 	end)
 
-	local executedSafely = coroutine.status(thread) == "dead"
-
-	if not executedSafely then
+	if coroutine.status(thread) ~= "dead" then
 		coroutine.close(thread)
+		return false, CALLBACK_ERROR_RESPONSE.yielded, callbackTraceback
 	end
 
-	return executedSafely, callbackResponse
+	return executedSafely, callbackResponse, callbackTraceback
 end
 
 function networkUtil.safeInvokeClient(remoteFunction: RemoteFunction, player: Player, value: any)
@@ -33,12 +37,32 @@ function networkUtil.safeInvokeClient(remoteFunction: RemoteFunction, player: Pl
 	end)
 end
 
-function networkUtil.accumulatedResponseFromMiddlewareCallbacks(callbacks: { Callback }, ...: any)
+function networkUtil.accumulatedResponseFromMiddlewareCallbacks(
+	callbacks: { sharedTypes.Callback },
+	...: any
+)
 	local accumulatedResponses = {}
 
 	for _, callback in callbacks do
-		local didRunSafely, callbackResponse = runCallbackNoYield(callback, ...)
-		assert(didRunSafely, "middleware callback yielded! Middleware callbacks must never yield.")
+		local didRunSafely, callbackResponse, callbackTraceback = runCallbackNoYield(callback, ...)
+		if not didRunSafely then
+			if callbackResponse == CALLBACK_ERROR_RESPONSE.yielded then
+				error(
+					string.format(
+						"Middleware callback yielded. Middleware callbacks must never yield - thread has been closed. Traceback: \n\t%s",
+						callbackTraceback
+					)
+				)
+			else
+				error(
+					string.format(
+						"Middleware callback errored while running [%s]. Traceback: \n\t%s",
+						callbackResponse,
+						callbackTraceback
+					)
+				)
+			end
+		end
 
 		table.insert(accumulatedResponses, callbackResponse)
 	end
@@ -47,7 +71,7 @@ function networkUtil.accumulatedResponseFromMiddlewareCallbacks(callbacks: { Cal
 end
 
 function networkUtil.truncateAccumulatedResponses(
-	callbacks: { Callback },
+	callbacks: { sharedTypes.Callback },
 	accumulatedResponses: { any }
 )
 	return if #accumulatedResponses > 1 then accumulatedResponses else accumulatedResponses[1],
@@ -55,12 +79,12 @@ function networkUtil.truncateAccumulatedResponses(
 end
 
 function networkUtil.serializeGivenArgs(
-	remoteInstance: RemoteEvent | RemoteFunction,
+	remoteInstance: sharedTypes.RemoteInstance,
 	...: any
-): AnyTable
+): sharedTypes.SerializedArgs
 	if
 		not remoteInstance:GetAttribute(
-			sharedEnums.Attribute.AutomaticSerializationAndDeserializationEnabled
+			sharedEnums.Attribute.AutomaticArgumentSerializationAndDeserializationEnabled
 		)
 	then
 		return { ... }
@@ -70,12 +94,12 @@ function networkUtil.serializeGivenArgs(
 end
 
 function networkUtil.deserializeAndUnpack(
-	remoteInstance: RemoteFunction | RemoteEvent,
-	serializedArgs: AnyTable
+	remoteInstance: sharedTypes.RemoteInstance,
+	serializedArgs: sharedTypes.SerializedArgs
 ): ...any
 	if
 		not remoteInstance:GetAttribute(
-			sharedEnums.Attribute.AutomaticSerializationAndDeserializationEnabled
+			sharedEnums.Attribute.AutomaticArgumentSerializationAndDeserializationEnabled
 		)
 	then
 		return unpack(serializedArgs)

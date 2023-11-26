@@ -1,7 +1,7 @@
 [package]
-name = "bubshayz/instancetagutil"
+name = "bub/instancetagutil"
 description = "A utility module for working with instance tags."
-authors = ["bubshayz"]
+authors = ["bub"]
 license = "MIT"
 version = "1.4.0"
 registry = "https://github.com/UpliftGames/wally-index"

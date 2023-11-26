@@ -1,6 +1,6 @@
 -- Component
 -- Stephen Leitnick
--- Modifications by bubshayz
+-- Modifications by bub
 -- November 26, 2021
 
 type AncestorList = { Instance }

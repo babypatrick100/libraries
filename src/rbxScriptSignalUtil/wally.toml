@@ -1,7 +1,7 @@
 [package]
-name = "bubshayz/rbxscriptsignalutil"
+name = "bub/rbxscriptsignalutil"
 description = "An utility module for working with RBXScriptSignals."
-authors = ["bubshayz"]
+authors = ["bub"]
 license = "MIT"
 version = "1.0.0"
 registry = "https://github.com/UpliftGames/wally-index"

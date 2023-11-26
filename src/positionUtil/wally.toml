@@ -1,7 +1,7 @@
 [package]
-name = "bubshayz/positionutil"
+name = "bub/positionutil"
 description = "An utility module for working with position."
-authors = ["bubshayz"]
+authors = ["bub"]
 license = "MIT"
 version = "1.0.0"
 registry = "https://github.com/UpliftGames/wally-index"

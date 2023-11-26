@@ -13,13 +13,13 @@ as wally dependencies. For e.g, the following may be a `wally.toml` file for a p
 
 ```toml
 [package]
-name = "bubshayz/project"
+name = "bub/project"
 version = "1.0.0"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 
 [dependencies]
-numberUtil = "bubshayz/numberUtil@1.1.0"
+numberUtil = "bub/numberUtil@1.1.0"
 ```
 
 Now, to install these dependencies, run `wally install` within your project. Wally will then create a package folder in your directory with the installed dependencies. Then use [Rojo](https://rojo.space/) to sync in the package folder to Studio.

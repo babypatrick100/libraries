@@ -4,6 +4,7 @@ return table.freeze({
 		BoundToRemoteProperty = "BoundToRemoteProperty",
 		BoundToRemoteSignal = "BoundToRemoteSignal",
 		ValueType = "ValueType",
-		AutomaticSerializationAndDeserializationEnabled = "SerializationAndDeserializationEnabled",
+		AutomaticArgumentSerializationAndDeserializationEnabled = "AutomaticArgumentSerializationAndDeserializationEnabled",
+		Promisified = "Promisified",
 	},
 })
