@@ -10,8 +10,8 @@ and with automatic performance profiling."><meta data-rh="true" property="og:des
 
 A simple utility module for scheduling [RunService](https://create.roblox.com/docs/reference/engine/classes/RunService) events with minimal performance impacts
 and with automatic performance profiling."><link data-rh="true" rel="icon" href="/libraries/icon.ico"><link data-rh="true" rel="canonical" href="https://bubshurb.github.io/libraries/api/schedulerUtil"><link data-rh="true" rel="alternate" href="https://bubshurb.github.io/libraries/api/schedulerUtil" hreflang="en"><link data-rh="true" rel="alternate" href="https://bubshurb.github.io/libraries/api/schedulerUtil" hreflang="x-default"><link rel="stylesheet" href="/libraries/assets/css/styles.a5aeb1da.css">
-<link rel="preload" href="/libraries/assets/js/runtime~main.fb6ec03b.js" as="script">
-<link rel="preload" href="/libraries/assets/js/main.92988f13.js" as="script">
+<link rel="preload" href="/libraries/assets/js/runtime~main.171728c0.js" as="script">
+<link rel="preload" href="/libraries/assets/js/main.284c04c4.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -20,7 +20,7 @@ and with automatic performance profiling."><link data-rh="true" rel="icon" href=
   A simple utility module for scheduling <a href="https://create.roblox.com/docs/reference/engine/classes/RunService" target="_blank">RunService</a> events with minimal performance impacts
   and with automatic performance profiling.
 </p>
-</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="schedule"><code style="text-decoration:none">schedule</code><a href="#schedule" class="hash-link" aria-label="Direct link to schedule" title="Direct link to schedule">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/schedulerUtil/init.luau#L49"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>schedulerUtil<!-- -->.</code><code class="green_DgR4">schedule</code><code>(</code><div class="inset_uKQm"><div><code>runServiceEventName<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code></div><div><code>callbackIdentifier<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code></div><div><code>callback<!-- -->: </code><code class="purple_ieR2">(</code><code class="blue_P4bS">...any</code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code></div></div><code>) → </code><code>(</code><code>)</code></div><div>
+</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="schedule"><code style="text-decoration:none">schedule</code><a href="#schedule" class="hash-link" aria-label="Direct link to schedule" title="Direct link to schedule">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/schedulerUtil/init.luau#L52"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>schedulerUtil<!-- -->.</code><code class="green_DgR4">schedule</code><code>(</code><div class="inset_uKQm"><div><code>runServiceEventName<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code></div><div><code>callbackIdentifier<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code></div><div><code>callback<!-- -->: </code><code class="purple_ieR2">(</code><code class="blue_P4bS">...any</code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code></div></div><code>) → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code></div><div>
 <p>
   Schedules the given callback to be run during the given run service event. This is useful because
   this utility sets up all these events <strong>once</strong> and registers the given callbacks to be called during
@@ -31,14 +31,21 @@ and with automatic performance profiling."><link data-rh="true" rel="icon" href=
 	<span class="token keyword">local</span> sum <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">+</span> <span class="token number">2</span> <span class="token operator">*</span> deltaTime
 <span class="token keyword">end</span><span class="token punctuation">)</span>
 </code></pre>
+<p>
+  Additionally, this method also returns a cleanup function which upon being called, will call <a href="/libraries/api/schedulerUtil#unschedule">schedulerUtil.unschedule</a>
+  for the given scheduler.
+</p>
 <div class="admonition admonition-warning alert alert--danger">
   <div class="admonition-heading">
     <h5><span class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16">
           <path d="M5.05.31c.81 2.17.41 3.38-.52 4.31C3.55 5.67 1.98 6.45.9 7.98c-1.45 2.05-1.7 6.53 3.53 7.7-2.2-1.16-2.67-4.52-.3-6.61-.61 2.03.53 3.33 1.94 2.86 1.39-.47 2.3.53 2.27 1.67-.02.78-.31 1.44-1.13 1.81 3.42-.59 4.78-3.42 4.78-5.56 0-2.84-2.53-3.22-1.25-5.61-1.52.13-2.03 1.13-1.89 2.75.09 1.08-1.02 1.8-1.86 1.33-.67-.41-.66-1.19-.06-1.78C8.18 5.31 8.68 2.45 5.05.32L5.03.3l.02.01z"></path>
-        </svg></span>Yielding not allowed in scheduler callbacks</h5>
+        </svg></span>Yielding is not allowed</h5>
   </div>
   <div class="admonition-content">
-    <p>Scheduler callbacks can never yield. If they do so, an error will be outputted in the console.</p>
+    <p>
+      Scheduler callbacks can never yield. If they do so, an error will be outputted in the console. Yielding in code
+      that needs to run potentially every frame can result in weird bugs.
+    </p>
   </div>
 </div>
 <div class="admonition admonition-tip alert alert--success">
@@ -55,13 +62,13 @@ and with automatic performance profiling."><link data-rh="true" rel="icon" href=
     <p>Additionally, an warn is outputted in the console <em>every 10 seconds</em> whenever a scheduled callback takes longer than <code>0.4</code>seconds to run.</p>
   </div>
 </div>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="unschedule"><code style="text-decoration:none">unschedule</code><a href="#unschedule" class="hash-link" aria-label="Direct link to unschedule" title="Direct link to unschedule">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/schedulerUtil/init.luau#L81"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>schedulerUtil<!-- -->.</code><code class="green_DgR4">unschedule</code><code>(</code><div class="inset_uKQm"><div><code>runServiceEventName<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code></div><div><code>callbackIdentifier<!-- -->: </code><code class="blue_P4bS">string</code></div></div><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="unschedule"><code style="text-decoration:none">unschedule</code><a href="#unschedule" class="hash-link" aria-label="Direct link to unschedule" title="Direct link to unschedule">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/schedulerUtil/init.luau#L84"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>schedulerUtil<!-- -->.</code><code class="green_DgR4">unschedule</code><code>(</code><div class="inset_uKQm"><div><code>runServiceEventName<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code></div><div><code>callbackIdentifier<!-- -->: </code><code class="blue_P4bS">string</code></div></div><code>) → </code><code>(</code><code>)</code></div><div>
 <p>Deschedules the given RunService event bound callback.</p>
 </div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
     &quot;functions&quot;: [
         {
             &quot;name&quot;: &quot;schedule&quot;,
-            &quot;desc&quot;: &quot; \nSchedules the given callback to be run during the given run service event. This is useful because\nthis utility sets up all these events **once** and registers the given callbacks to be called during\neach event&#x27;s invocation point - this prevents you from initializing many different types of RunService\nevents.\n\n```lua\nschedulerUtil.schedule(schedulerUtil.RunServiceEvent.Heartbeat, \&quot;PerformMaths\&quot; function(deltaTime: number)\n\tlocal sum = 2 + 2 * deltaTime\nend)\n```\n\n:::warning Yielding not allowed in scheduler callbacks\nScheduler callbacks can never yield. If they do so, an error will be outputted in the console.\n:::\n\n:::tip Automatic performance profiling\nA profile is created for every scheduler callback using `debug.profilebegin(callbackIdentifier)`, which will allow you to easily monitor the performance\nof individual scheduler callbacks.\n\nAdditionally, an warn is outputted in the console *every 10 seconds* whenever a scheduled callback takes longer than `0.4`seconds to run.\n:::&quot;,
+            &quot;desc&quot;: &quot; \nSchedules the given callback to be run during the given run service event. This is useful because\nthis utility sets up all these events **once** and registers the given callbacks to be called during\neach event&#x27;s invocation point - this prevents you from initializing many different types of RunService\nevents.\n\n```lua\nschedulerUtil.schedule(schedulerUtil.RunServiceEvent.Heartbeat, \&quot;PerformMaths\&quot; function(deltaTime: number)\n\tlocal sum = 2 + 2 * deltaTime\nend)\n```\n\nAdditionally, this method also returns a cleanup function which upon being called, will call [schedulerUtil.unschedule]\nfor the given scheduler.\n\n:::warning Yielding is not allowed \nScheduler callbacks can never yield. If they do so, an error will be outputted in the console. Yielding in code\nthat needs to run potentially every frame can result in weird bugs.\n:::\n\n:::tip Automatic performance profiling\nA profile is created for every scheduler callback using `debug.profilebegin(callbackIdentifier)`, which will allow you to easily monitor the performance\nof individual scheduler callbacks.\n\nAdditionally, an warn is outputted in the console *every 10 seconds* whenever a scheduled callback takes longer than `0.4`seconds to run.\n:::&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;runServiceEventName&quot;,
@@ -79,10 +86,15 @@ and with automatic performance profiling."><link data-rh="true" rel="icon" href=
                     &quot;lua_type&quot;: &quot;(...any) -&gt; ()\n&quot;
                 }
             ],
-            &quot;returns&quot;: [],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;() -&gt; ()\n&quot;
+                }
+            ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 49,
+                &quot;line&quot;: 52,
                 &quot;path&quot;: &quot;src/schedulerUtil/init.luau&quot;
             }
         },
@@ -104,7 +116,7 @@ and with automatic performance profiling."><link data-rh="true" rel="icon" href=
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 81,
+                &quot;line&quot;: 84,
                 &quot;path&quot;: &quot;src/schedulerUtil/init.luau&quot;
             }
         }
@@ -118,7 +130,7 @@ and with automatic performance profiling."><link data-rh="true" rel="icon" href=
         &quot;path&quot;: &quot;src/schedulerUtil/init.luau&quot;
     }
 }</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#schedule" class="table-of-contents__link toc-highlight">.schedule</a></li><li><a href="#unschedule" class="table-of-contents__link toc-highlight">.unschedule</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 bubshurb. Built with Moonwave and Docusaurus</div></div></div></footer></div>
-<script src="/libraries/assets/js/runtime~main.fb6ec03b.js"></script>
-<script src="/libraries/assets/js/main.92988f13.js"></script>
+<script src="/libraries/assets/js/runtime~main.171728c0.js"></script>
+<script src="/libraries/assets/js/main.284c04c4.js"></script>
 </body>
 </html>
