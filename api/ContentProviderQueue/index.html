@@ -24,8 +24,8 @@ print(#contentProviderQueue:pendingInstances()) --&gt; 3
 contentProviderQueue:fullyProgressed():await() -- ensure all pending instances are preloaded
 print(#contentProviderQueue:pendingInstances()) --&gt; 0
 ```"><link data-rh="true" rel="icon" href="/libraries/icon.ico"><link data-rh="true" rel="canonical" href="https://bubshurb.github.io/libraries/api/ContentProviderQueue"><link data-rh="true" rel="alternate" href="https://bubshurb.github.io/libraries/api/ContentProviderQueue" hreflang="en"><link data-rh="true" rel="alternate" href="https://bubshurb.github.io/libraries/api/ContentProviderQueue" hreflang="x-default"><link rel="stylesheet" href="/libraries/assets/css/styles.e1adec2f.css">
-<link rel="preload" href="/libraries/assets/js/runtime~main.14baf321.js" as="script">
-<link rel="preload" href="/libraries/assets/js/main.56f398ca.js" as="script">
+<link rel="preload" href="/libraries/assets/js/runtime~main.221fc337.js" as="script">
+<link rel="preload" href="/libraries/assets/js/main.3d2c1188.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -37,39 +37,39 @@ contentProviderQueue<span class="token punctuation">:</span><span class="token f
 contentProviderQueue<span class="token punctuation">:</span><span class="token function">fullyProgressed</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token function">await</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">-- ensure all pending instances are preloaded</span>
 <span class="token function">print</span><span class="token punctuation">(</span><span class="token operator">#</span>contentProviderQueue<span class="token punctuation">:</span><span class="token function">pendingInstances</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 0</span>
 </code></pre>
-</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="types">Types<a href="#types" class="hash-link" aria-label="Direct link to Types" title="Direct link to Types">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="ContentProviderQueue"><code style="text-decoration:none">ContentProviderQueue</code><a href="#ContentProviderQueue" class="hash-link" aria-label="Direct link to ContentProviderQueue" title="Direct link to ContentProviderQueue">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/contentProviderQueue/init.luau#L63"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code class="purple_ieR2">type</code> <code>ContentProviderQueue<!-- --> = </code> <code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/libraries/api/ContentProviderQueue#ContentProviderQueue">ContentProviderQueue</a></code></div><div></div><h2 class="anchor anchorWithStickyNavbar_LWe7" id="properties">Properties<a href="#properties" class="hash-link" aria-label="Direct link to Properties" title="Direct link to Properties">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="onProgressed"><code style="text-decoration:none">onProgressed</code><a href="#onProgressed" class="hash-link" aria-label="Direct link to onProgressed" title="Direct link to onProgressed">​</a></h3><span class="docTag__6UZ" style="border-color:#70cc00;color:#70cc00">Read only</span><span class="docTag__6UZ" style="border-color:#2b8ab6;color:#2b8ab6">Signal</span><span class="docTag__6UZ" style="border-color:#ff5252;color:#ff5252">ContentProviderQueue Instance</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/contentProviderQueue/init.luau#L27"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->.<!-- -->onProgressed<!-- -->:<!-- --> </code> <code class="blue_P4bS">Signal</code><code class="op_lSLc">&lt;</code><code>instance<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance,<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>contentProviderId<!-- -->: </code><code class="blue_P4bS">string,</code><code>deltaTime<!-- -->: </code><code class="blue_P4bS">number,</code><code>status<!-- -->: </code><code class="blue_P4bS">Enum.AssetFetchStatus</code><code class="op_lSLc">&gt;</code></div><div>
+</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="types">Types<a href="#types" class="hash-link" aria-label="Direct link to Types" title="Direct link to Types">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="ContentProviderQueue"><code style="text-decoration:none">ContentProviderQueue</code><a href="#ContentProviderQueue" class="hash-link" aria-label="Direct link to ContentProviderQueue" title="Direct link to ContentProviderQueue">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/ContentProviderQueue/init.luau#L63"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code class="purple_ieR2">type</code> <code>ContentProviderQueue<!-- --> = </code> <code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/libraries/api/ContentProviderQueue#ContentProviderQueue">ContentProviderQueue</a></code></div><div></div><h2 class="anchor anchorWithStickyNavbar_LWe7" id="properties">Properties<a href="#properties" class="hash-link" aria-label="Direct link to Properties" title="Direct link to Properties">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="onInstancePreloaded"><code style="text-decoration:none">onInstancePreloaded</code><a href="#onInstancePreloaded" class="hash-link" aria-label="Direct link to onInstancePreloaded" title="Direct link to onInstancePreloaded">​</a></h3><span class="docTag__6UZ" style="border-color:#70cc00;color:#70cc00">Read only</span><span class="docTag__6UZ" style="border-color:#2b8ab6;color:#2b8ab6">Signal</span><span class="docTag__6UZ" style="border-color:#ff5252;color:#ff5252">ContentProviderQueue Instance</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/ContentProviderQueue/init.luau#L27"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->.<!-- -->onInstancePreloaded<!-- -->:<!-- --> </code> <code class="blue_P4bS">Signal</code><code class="op_lSLc">&lt;</code><code>instance<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance,<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>contentProviderId<!-- -->: </code><code class="blue_P4bS">string,</code><code>deltaTime<!-- -->: </code><code class="blue_P4bS">number,</code><code>status<!-- -->: </code><code class="blue_P4bS">Enum.AssetFetchStatus</code><code class="op_lSLc">&gt;</code></div><div>
 <p>
   A <a href="https://sleitnick.github.io/RbxUtil/api/Signal/" target="_blank">signal</a> which is fired whenever an instance in the content provider
-  queue object has being 'processed' by preloading.
+  queue has been preloaded.
 </p>
-<p><code>deltaTime</code> is the amount of time the instance took to be 'processsed' for preload.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="onProgressing"><code style="text-decoration:none">onProgressing</code><a href="#onProgressing" class="hash-link" aria-label="Direct link to onProgressing" title="Direct link to onProgressing">​</a></h3><span class="docTag__6UZ" style="border-color:#70cc00;color:#70cc00">Read only</span><span class="docTag__6UZ" style="border-color:#2b8ab6;color:#2b8ab6">Signal</span><span class="docTag__6UZ" style="border-color:#ff5252;color:#ff5252">ContentProviderQueue Instance</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/contentProviderQueue/init.luau#L38"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->.<!-- -->onProgressing<!-- -->:<!-- --> </code> <code class="blue_P4bS">Signal</code><code class="op_lSLc">&lt;</code><code>instance<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="op_lSLc">&gt;</code></div><div>
+<p><code>deltaTime</code> is the amount of time the instance took to be preloaded.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="onInstancePreloading"><code style="text-decoration:none">onInstancePreloading</code><a href="#onInstancePreloading" class="hash-link" aria-label="Direct link to onInstancePreloading" title="Direct link to onInstancePreloading">​</a></h3><span class="docTag__6UZ" style="border-color:#70cc00;color:#70cc00">Read only</span><span class="docTag__6UZ" style="border-color:#2b8ab6;color:#2b8ab6">Signal</span><span class="docTag__6UZ" style="border-color:#ff5252;color:#ff5252">ContentProviderQueue Instance</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/ContentProviderQueue/init.luau#L38"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->.<!-- -->onInstancePreloading<!-- -->:<!-- --> </code> <code class="blue_P4bS">Signal</code><code class="op_lSLc">&lt;</code><code>instance<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="op_lSLc">&gt;</code></div><div>
 <p>
   A <a href="https://sleitnick.github.io/RbxUtil/api/Signal/" target="_blank">signal</a> which is fired whenever an instance in the content provider
-  queue object is being preloaded.
+  queue is being preloaded.
 </p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="onAdded"><code style="text-decoration:none">onAdded</code><a href="#onAdded" class="hash-link" aria-label="Direct link to onAdded" title="Direct link to onAdded">​</a></h3><span class="docTag__6UZ" style="border-color:#70cc00;color:#70cc00">Read only</span><span class="docTag__6UZ" style="border-color:#2b8ab6;color:#2b8ab6">Signal</span><span class="docTag__6UZ" style="border-color:#ff5252;color:#ff5252">ContentProviderQueue Instance</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/contentProviderQueue/init.luau#L48"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->.<!-- -->onAdded<!-- -->:<!-- --> </code> <code class="blue_P4bS">Signal</code><code class="op_lSLc">&lt;</code><code>instance<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="op_lSLc">&gt;</code></div><div>
-<p>A <a href="https://sleitnick.github.io/RbxUtil/api/Signal/" target="_blank">signal</a> which is fired whenever an instance is added to the content provider queue object.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="onRemoved"><code style="text-decoration:none">onRemoved</code><a href="#onRemoved" class="hash-link" aria-label="Direct link to onRemoved" title="Direct link to onRemoved">​</a></h3><span class="docTag__6UZ" style="border-color:#70cc00;color:#70cc00">Read only</span><span class="docTag__6UZ" style="border-color:#2b8ab6;color:#2b8ab6">Signal</span><span class="docTag__6UZ" style="border-color:#ff5252;color:#ff5252">ContentProviderQueue Instance</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/contentProviderQueue/init.luau#L58"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->.<!-- -->onRemoved<!-- -->:<!-- --> </code> <code class="blue_P4bS">Signal</code><code class="op_lSLc">&lt;</code><code>instance<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="op_lSLc">&gt;</code></div><div>
-<p>A <a href="https://sleitnick.github.io/RbxUtil/api/Signal/" target="_blank">signal</a> which is fired whenever an instance is removed from the content provider queue object.</p>
-</div><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="new"><code style="text-decoration:none">new</code><a href="#new" class="hash-link" aria-label="Direct link to new" title="Direct link to new">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/contentProviderQueue/init.luau#L84"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->.</code><code class="green_DgR4">new</code><code>(</code><code>initialUpdateInterval<!-- -->: </code><code class="blue_P4bS">number?</code><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/libraries/api/ContentProviderQueue#ContentProviderQueue">ContentProviderQueue</a></code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="onInstanceAdded"><code style="text-decoration:none">onInstanceAdded</code><a href="#onInstanceAdded" class="hash-link" aria-label="Direct link to onInstanceAdded" title="Direct link to onInstanceAdded">​</a></h3><span class="docTag__6UZ" style="border-color:#70cc00;color:#70cc00">Read only</span><span class="docTag__6UZ" style="border-color:#2b8ab6;color:#2b8ab6">Signal</span><span class="docTag__6UZ" style="border-color:#ff5252;color:#ff5252">ContentProviderQueue Instance</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/ContentProviderQueue/init.luau#L48"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->.<!-- -->onInstanceAdded<!-- -->:<!-- --> </code> <code class="blue_P4bS">Signal</code><code class="op_lSLc">&lt;</code><code>instance<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="op_lSLc">&gt;</code></div><div>
+<p>A <a href="https://sleitnick.github.io/RbxUtil/api/Signal/" target="_blank">signal</a> which is fired whenever an instance is added to the content provider queue.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="onInstanceRemoved"><code style="text-decoration:none">onInstanceRemoved</code><a href="#onInstanceRemoved" class="hash-link" aria-label="Direct link to onInstanceRemoved" title="Direct link to onInstanceRemoved">​</a></h3><span class="docTag__6UZ" style="border-color:#70cc00;color:#70cc00">Read only</span><span class="docTag__6UZ" style="border-color:#2b8ab6;color:#2b8ab6">Signal</span><span class="docTag__6UZ" style="border-color:#ff5252;color:#ff5252">ContentProviderQueue Instance</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/ContentProviderQueue/init.luau#L58"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->.<!-- -->onInstanceRemoved<!-- -->:<!-- --> </code> <code class="blue_P4bS">Signal</code><code class="op_lSLc">&lt;</code><code>instance<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="op_lSLc">&gt;</code></div><div>
+<p>A <a href="https://sleitnick.github.io/RbxUtil/api/Signal/" target="_blank">signal</a> which is fired whenever an instance is removed from the content provider queue.</p>
+</div><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="new"><code style="text-decoration:none">new</code><a href="#new" class="hash-link" aria-label="Direct link to new" title="Direct link to new">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/ContentProviderQueue/init.luau#L88"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->.</code><code class="green_DgR4">new</code><code>(</code><code>initialUpdateInterval<!-- -->: </code><code class="blue_P4bS">number?</code><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/libraries/api/ContentProviderQueue#ContentProviderQueue">ContentProviderQueue</a></code></div><div>
 <p>
-  Creates a new content preloader queue object. An <code>initialUpdateInterval</code> argument can be passed
+  Creates a new content preloader queue. An <code>initialUpdateInterval</code> argument can be passed
   as the initial update interval of the queue.
 </p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="setUpdateInterval"><code style="text-decoration:none">setUpdateInterval</code><a href="#setUpdateInterval" class="hash-link" aria-label="Direct link to setUpdateInterval" title="Direct link to setUpdateInterval">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/contentProviderQueue/init.luau#L109"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">setUpdateInterval</code><code>(</code><code>updateInterval<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="setUpdateInterval"><code style="text-decoration:none">setUpdateInterval</code><a href="#setUpdateInterval" class="hash-link" aria-label="Direct link to setUpdateInterval" title="Direct link to setUpdateInterval">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/ContentProviderQueue/init.luau#L113"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">setUpdateInterval</code><code>(</code><code>updateInterval<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code>(</code><code>)</code></div><div>
 <p>
   Sets the update interval of the queue, i.e the interval at which the queue will preload
   each asset.
 </p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="add"><code style="text-decoration:none">add</code><a href="#add" class="hash-link" aria-label="Direct link to add" title="Direct link to add">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/contentProviderQueue/init.luau#L118"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">add</code><code>(</code><code>instance<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="add"><code style="text-decoration:none">add</code><a href="#add" class="hash-link" aria-label="Direct link to add" title="Direct link to add">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/ContentProviderQueue/init.luau#L122"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">add</code><code>(</code><code>instance<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>) → </code><code>(</code><code>)</code></div><div>
 <p>
   Adds the given instance to the content provider queue. If the given instance
   already exists, then the instance <strong>will not</strong> be readded again.
 </p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="addInstances"><code style="text-decoration:none">addInstances</code><a href="#addInstances" class="hash-link" aria-label="Direct link to addInstances" title="Direct link to addInstances">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/contentProviderQueue/init.luau#L132"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">addInstances</code><code>(</code><code>instances<!-- -->: </code><code class="purple_ieR2">{</code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="purple_ieR2">}</code><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="addInstances"><code style="text-decoration:none">addInstances</code><a href="#addInstances" class="hash-link" aria-label="Direct link to addInstances" title="Direct link to addInstances">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/ContentProviderQueue/init.luau#L136"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">addInstances</code><code>(</code><code>instances<!-- -->: </code><code class="purple_ieR2">{</code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="purple_ieR2">}</code><code>) → </code><code>(</code><code>)</code></div><div>
 <p>Adds all instances in <code>instances</code> to the content provider queue, via <a href="/libraries/api/ContentProviderQueue#ContentProviderQueue#add">ContentProviderQueue:add</a>.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="remove"><code style="text-decoration:none">remove</code><a href="#remove" class="hash-link" aria-label="Direct link to remove" title="Direct link to remove">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/contentProviderQueue/init.luau#L151"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">remove</code><code>(</code><code>instance<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="remove"><code style="text-decoration:none">remove</code><a href="#remove" class="hash-link" aria-label="Direct link to remove" title="Direct link to remove">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/ContentProviderQueue/init.luau#L155"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">remove</code><code>(</code><code>instance<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>) → </code><code>(</code><code>)</code></div><div>
 <p>
   Removes the instance from the given queue, if the instance was being preloaded, then it
   will be disregarded by the content provider queue.
@@ -80,33 +80,39 @@ contentProviderQueue<span class="token punctuation">:</span><span class="token f
 contentProviderQueue<span class="token punctuation">:</span><span class="token function">remove</span><span class="token punctuation">(</span>sound1<span class="token punctuation">)</span>
 <span class="token function">print</span><span class="token punctuation">(</span>pendingInstancescontentProviderQueue<span class="token punctuation">:</span><span class="token function">pendingInstances</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 0</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="progress"><code style="text-decoration:none">progress</code><a href="#progress" class="hash-link" aria-label="Direct link to progress" title="Direct link to progress">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/contentProviderQueue/init.luau#L167"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">progress</code><code>(</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
-<p>Returns a number from <code>0</code> to <code>1</code> indicating the progress of the content provider queue.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="fullyProgressed"><code style="text-decoration:none">fullyProgressed</code><a href="#fullyProgressed" class="hash-link" aria-label="Direct link to fullyProgressed" title="Direct link to fullyProgressed">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/contentProviderQueue/init.luau#L186"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">fullyProgressed</code><code>(</code><code>) → </code><code class="blue_P4bS">Promise</code><code class="op_lSLc">&lt;</code><code class="op_lSLc">&gt;</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="progress"><code style="text-decoration:none">progress</code><a href="#progress" class="hash-link" aria-label="Direct link to progress" title="Direct link to progress">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/ContentProviderQueue/init.luau#L172"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">progress</code><code>(</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>
+  Returns a number from <code>0</code> to <code>1</code> indicating the progress of the content provider queue (i.e ratio
+  of how many instances have been preloaded versus how many instances are <em>yet</em> to be preloaded).
+</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="fullyProgressed"><code style="text-decoration:none">fullyProgressed</code><a href="#fullyProgressed" class="hash-link" aria-label="Direct link to fullyProgressed" title="Direct link to fullyProgressed">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/ContentProviderQueue/init.luau#L191"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">fullyProgressed</code><code>(</code><code>) → </code><code class="blue_P4bS">Promise</code><code class="op_lSLc">&lt;</code><code class="op_lSLc">&gt;</code></div><div>
 <p>
   Returns a <a href="https://eryn.io/roblox-lua-promise/" target="_blank">promise</a> which is resolved once the content provider queue
   has fully progressed, i.e there are no more instances to preload.
 </p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="paused"><code style="text-decoration:none">paused</code><a href="#paused" class="hash-link" aria-label="Direct link to paused" title="Direct link to paused">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/contentProviderQueue/init.luau#L200"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">paused</code><code>(</code><code>) → </code><code class="blue_P4bS">boolean</code></div><div>
-<p>Returns a boolean indicating if the content provider queue object is paused or not.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="resume"><code style="text-decoration:none">resume</code><a href="#resume" class="hash-link" aria-label="Direct link to resume" title="Direct link to resume">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/contentProviderQueue/init.luau#L208"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">resume</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="paused"><code style="text-decoration:none">paused</code><a href="#paused" class="hash-link" aria-label="Direct link to paused" title="Direct link to paused">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/ContentProviderQueue/init.luau#L205"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">paused</code><code>(</code><code>) → </code><code class="blue_P4bS">boolean</code></div><div>
+<p>Returns a boolean indicating if the content provider queue is paused or not.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="resume"><code style="text-decoration:none">resume</code><a href="#resume" class="hash-link" aria-label="Direct link to resume" title="Direct link to resume">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/ContentProviderQueue/init.luau#L213"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">resume</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
 <p>Resumes the content provider queue.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="pause"><code style="text-decoration:none">pause</code><a href="#pause" class="hash-link" aria-label="Direct link to pause" title="Direct link to pause">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/contentProviderQueue/init.luau#L217"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">pause</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="pause"><code style="text-decoration:none">pause</code><a href="#pause" class="hash-link" aria-label="Direct link to pause" title="Direct link to pause">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/ContentProviderQueue/init.luau#L222"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">pause</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
 <p>
-  Pauses the content provider queue object. If any more instances are to be preloaded, they won't be
+  Pauses the content provider queue. If any more instances are to be preloaded, they won't be
   until the content provider object is resumed back.
 </p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="empty"><code style="text-decoration:none">empty</code><a href="#empty" class="hash-link" aria-label="Direct link to empty" title="Direct link to empty">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/contentProviderQueue/init.luau#L225"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">empty</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
-<p>Clears all instances to be preloaded from the content provider queue object, via <a href="/libraries/api/ContentProviderQueue#ContentProviderQueue#remove">ContentProviderQueue:remove</a>.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="pendingInstances"><code style="text-decoration:none">pendingInstances</code><a href="#pendingInstances" class="hash-link" aria-label="Direct link to pendingInstances" title="Direct link to pendingInstances">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/contentProviderQueue/init.luau#L235"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">pendingInstances</code><code>(</code><code>) → </code><code class="purple_ieR2">{</code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="purple_ieR2">}</code></div><div>
-<p>Returns a read only array of all instances, left to be preloaded in the content provider queue object.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="destroy"><code style="text-decoration:none">destroy</code><a href="#destroy" class="hash-link" aria-label="Direct link to destroy" title="Direct link to destroy">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/contentProviderQueue/init.luau#L243"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">destroy</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
-<p>Destroys the content provider queue object, and also empties it through <a href="/libraries/api/ContentProviderQueue#ContentProviderQueue#empty">ContentProviderQueue:empty</a>.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="empty"><code style="text-decoration:none">empty</code><a href="#empty" class="hash-link" aria-label="Direct link to empty" title="Direct link to empty">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/ContentProviderQueue/init.luau#L230"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">empty</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Clears all instances to be preloaded from the content provider queue, via <a href="/libraries/api/ContentProviderQueue#ContentProviderQueue#remove">ContentProviderQueue:remove</a>.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="pendingInstances"><code style="text-decoration:none">pendingInstances</code><a href="#pendingInstances" class="hash-link" aria-label="Direct link to pendingInstances" title="Direct link to pendingInstances">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/ContentProviderQueue/init.luau#L240"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">pendingInstances</code><code>(</code><code>) → </code><code class="purple_ieR2">{</code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="purple_ieR2">}</code></div><div>
+<p>Returns a read only array of all instances, yet to be preloaded in the content provider queue.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="destroy"><code style="text-decoration:none">destroy</code><a href="#destroy" class="hash-link" aria-label="Direct link to destroy" title="Direct link to destroy">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/ContentProviderQueue/init.luau#L249"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">destroy</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>
+  Destroys the content provider queue, empties it through <a href="/libraries/api/ContentProviderQueue#ContentProviderQueue#empty">ContentProviderQueue:empty</a> and renders
+  it unusable.
+</p>
 </div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
     &quot;functions&quot;: [
         {
             &quot;name&quot;: &quot;new&quot;,
-            &quot;desc&quot;: &quot;Creates a new content preloader queue object. An `initialUpdateInterval` argument can be passed\nas the initial update interval of the queue.&quot;,
+            &quot;desc&quot;: &quot;Creates a new content preloader queue. An `initialUpdateInterval` argument can be passed\nas the initial update interval of the queue.&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;initialUpdateInterval&quot;,
@@ -122,8 +128,8 @@ contentProviderQueue<span class="token punctuation">:</span><span class="token f
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 84,
-                &quot;path&quot;: &quot;src/contentProviderQueue/init.luau&quot;
+                &quot;line&quot;: 88,
+                &quot;path&quot;: &quot;src/ContentProviderQueue/init.luau&quot;
             }
         },
         {
@@ -139,8 +145,8 @@ contentProviderQueue<span class="token punctuation">:</span><span class="token f
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 109,
-                &quot;path&quot;: &quot;src/contentProviderQueue/init.luau&quot;
+                &quot;line&quot;: 113,
+                &quot;path&quot;: &quot;src/ContentProviderQueue/init.luau&quot;
             }
         },
         {
@@ -156,8 +162,8 @@ contentProviderQueue<span class="token punctuation">:</span><span class="token f
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 118,
-                &quot;path&quot;: &quot;src/contentProviderQueue/init.luau&quot;
+                &quot;line&quot;: 122,
+                &quot;path&quot;: &quot;src/ContentProviderQueue/init.luau&quot;
             }
         },
         {
@@ -173,8 +179,8 @@ contentProviderQueue<span class="token punctuation">:</span><span class="token f
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 132,
-                &quot;path&quot;: &quot;src/contentProviderQueue/init.luau&quot;
+                &quot;line&quot;: 136,
+                &quot;path&quot;: &quot;src/ContentProviderQueue/init.luau&quot;
             }
         },
         {
@@ -190,13 +196,13 @@ contentProviderQueue<span class="token punctuation">:</span><span class="token f
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 151,
-                &quot;path&quot;: &quot;src/contentProviderQueue/init.luau&quot;
+                &quot;line&quot;: 155,
+                &quot;path&quot;: &quot;src/ContentProviderQueue/init.luau&quot;
             }
         },
         {
             &quot;name&quot;: &quot;progress&quot;,
-            &quot;desc&quot;: &quot;Returns a number from `0` to `1` indicating the progress of the content provider queue.&quot;,
+            &quot;desc&quot;: &quot;Returns a number from `0` to `1` indicating the progress of the content provider queue (i.e ratio\nof how many instances have been preloaded versus how many instances are *yet* to be preloaded).&quot;,
             &quot;params&quot;: [],
             &quot;returns&quot;: [
                 {
@@ -206,8 +212,8 @@ contentProviderQueue<span class="token punctuation">:</span><span class="token f
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 167,
-                &quot;path&quot;: &quot;src/contentProviderQueue/init.luau&quot;
+                &quot;line&quot;: 172,
+                &quot;path&quot;: &quot;src/ContentProviderQueue/init.luau&quot;
             }
         },
         {
@@ -222,13 +228,13 @@ contentProviderQueue<span class="token punctuation">:</span><span class="token f
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 186,
-                &quot;path&quot;: &quot;src/contentProviderQueue/init.luau&quot;
+                &quot;line&quot;: 191,
+                &quot;path&quot;: &quot;src/ContentProviderQueue/init.luau&quot;
             }
         },
         {
             &quot;name&quot;: &quot;paused&quot;,
-            &quot;desc&quot;: &quot;Returns a boolean indicating if the content provider queue object is paused or not.&quot;,
+            &quot;desc&quot;: &quot;Returns a boolean indicating if the content provider queue is paused or not.&quot;,
             &quot;params&quot;: [],
             &quot;returns&quot;: [
                 {
@@ -238,8 +244,8 @@ contentProviderQueue<span class="token punctuation">:</span><span class="token f
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 200,
-                &quot;path&quot;: &quot;src/contentProviderQueue/init.luau&quot;
+                &quot;line&quot;: 205,
+                &quot;path&quot;: &quot;src/ContentProviderQueue/init.luau&quot;
             }
         },
         {
@@ -249,35 +255,35 @@ contentProviderQueue<span class="token punctuation">:</span><span class="token f
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 208,
-                &quot;path&quot;: &quot;src/contentProviderQueue/init.luau&quot;
+                &quot;line&quot;: 213,
+                &quot;path&quot;: &quot;src/ContentProviderQueue/init.luau&quot;
             }
         },
         {
             &quot;name&quot;: &quot;pause&quot;,
-            &quot;desc&quot;: &quot;Pauses the content provider queue object. If any more instances are to be preloaded, they won&#x27;t be\nuntil the content provider object is resumed back. &quot;,
+            &quot;desc&quot;: &quot;Pauses the content provider queue. If any more instances are to be preloaded, they won&#x27;t be\nuntil the content provider object is resumed back. &quot;,
             &quot;params&quot;: [],
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 217,
-                &quot;path&quot;: &quot;src/contentProviderQueue/init.luau&quot;
+                &quot;line&quot;: 222,
+                &quot;path&quot;: &quot;src/ContentProviderQueue/init.luau&quot;
             }
         },
         {
             &quot;name&quot;: &quot;empty&quot;,
-            &quot;desc&quot;: &quot;Clears all instances to be preloaded from the content provider queue object, via [ContentProviderQueue:remove].&quot;,
+            &quot;desc&quot;: &quot;Clears all instances to be preloaded from the content provider queue, via [ContentProviderQueue:remove].&quot;,
             &quot;params&quot;: [],
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 225,
-                &quot;path&quot;: &quot;src/contentProviderQueue/init.luau&quot;
+                &quot;line&quot;: 230,
+                &quot;path&quot;: &quot;src/ContentProviderQueue/init.luau&quot;
             }
         },
         {
             &quot;name&quot;: &quot;pendingInstances&quot;,
-            &quot;desc&quot;: &quot;Returns a read only array of all instances, left to be preloaded in the content provider queue object.&quot;,
+            &quot;desc&quot;: &quot;Returns a read only array of all instances, yet to be preloaded in the content provider queue.&quot;,
             &quot;params&quot;: [],
             &quot;returns&quot;: [
                 {
@@ -287,38 +293,38 @@ contentProviderQueue<span class="token punctuation">:</span><span class="token f
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 235,
-                &quot;path&quot;: &quot;src/contentProviderQueue/init.luau&quot;
+                &quot;line&quot;: 240,
+                &quot;path&quot;: &quot;src/ContentProviderQueue/init.luau&quot;
             }
         },
         {
             &quot;name&quot;: &quot;destroy&quot;,
-            &quot;desc&quot;: &quot;Destroys the content provider queue object, and also empties it through [ContentProviderQueue:empty].&quot;,
+            &quot;desc&quot;: &quot;Destroys the content provider queue, empties it through [ContentProviderQueue:empty] and renders\nit unusable.&quot;,
             &quot;params&quot;: [],
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 243,
-                &quot;path&quot;: &quot;src/contentProviderQueue/init.luau&quot;
+                &quot;line&quot;: 249,
+                &quot;path&quot;: &quot;src/ContentProviderQueue/init.luau&quot;
             }
         },
         {
             &quot;name&quot;: &quot;_init&quot;,
-            &quot;desc&quot;: &quot;Destroys the content provider queue object, empties it through [ContentProviderQueue:empty] and renders\nit unusable.&quot;,
+            &quot;desc&quot;: &quot;&quot;,
             &quot;params&quot;: [],
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;private&quot;: true,
             &quot;source&quot;: {
-                &quot;line&quot;: 254,
-                &quot;path&quot;: &quot;src/contentProviderQueue/init.luau&quot;
+                &quot;line&quot;: 257,
+                &quot;path&quot;: &quot;src/ContentProviderQueue/init.luau&quot;
             }
         }
     ],
     &quot;properties&quot;: [
         {
-            &quot;name&quot;: &quot;onProgressed&quot;,
-            &quot;desc&quot;: &quot; \n\nA [signal](https://sleitnick.github.io/RbxUtil/api/Signal/) which is fired whenever an instance in the content provider\nqueue object has being &#x27;processed&#x27; by preloading. \n\n`deltaTime` is the amount of time the instance took to be &#x27;processsed&#x27; for preload.&quot;,
+            &quot;name&quot;: &quot;onInstancePreloaded&quot;,
+            &quot;desc&quot;: &quot; \n\nA [signal](https://sleitnick.github.io/RbxUtil/api/Signal/) which is fired whenever an instance in the content provider\nqueue has been preloaded.\n\n`deltaTime` is the amount of time the instance took to be preloaded.&quot;,
             &quot;lua_type&quot;: &quot;Signal &lt;instance: Instance, contentProviderId: string, deltaTime: number, status: Enum.AssetFetchStatus&gt;&quot;,
             &quot;tags&quot;: [
                 &quot;Read only&quot;,
@@ -327,12 +333,12 @@ contentProviderQueue<span class="token punctuation">:</span><span class="token f
             ],
             &quot;source&quot;: {
                 &quot;line&quot;: 27,
-                &quot;path&quot;: &quot;src/contentProviderQueue/init.luau&quot;
+                &quot;path&quot;: &quot;src/ContentProviderQueue/init.luau&quot;
             }
         },
         {
-            &quot;name&quot;: &quot;onProgressing&quot;,
-            &quot;desc&quot;: &quot; \n\nA [signal](https://sleitnick.github.io/RbxUtil/api/Signal/) which is fired whenever an instance in the content provider\nqueue object is being preloaded.&quot;,
+            &quot;name&quot;: &quot;onInstancePreloading&quot;,
+            &quot;desc&quot;: &quot; \n\nA [signal](https://sleitnick.github.io/RbxUtil/api/Signal/) which is fired whenever an instance in the content provider\nqueue is being preloaded.&quot;,
             &quot;lua_type&quot;: &quot;Signal &lt;instance: Instance&gt;&quot;,
             &quot;tags&quot;: [
                 &quot;Read only&quot;,
@@ -341,12 +347,12 @@ contentProviderQueue<span class="token punctuation">:</span><span class="token f
             ],
             &quot;source&quot;: {
                 &quot;line&quot;: 38,
-                &quot;path&quot;: &quot;src/contentProviderQueue/init.luau&quot;
+                &quot;path&quot;: &quot;src/ContentProviderQueue/init.luau&quot;
             }
         },
         {
-            &quot;name&quot;: &quot;onAdded&quot;,
-            &quot;desc&quot;: &quot; \n\nA [signal](https://sleitnick.github.io/RbxUtil/api/Signal/) which is fired whenever an instance is added to the content provider queue object.&quot;,
+            &quot;name&quot;: &quot;onInstanceAdded&quot;,
+            &quot;desc&quot;: &quot; \n\nA [signal](https://sleitnick.github.io/RbxUtil/api/Signal/) which is fired whenever an instance is added to the content provider queue.&quot;,
             &quot;lua_type&quot;: &quot;Signal &lt;instance: Instance&gt;&quot;,
             &quot;tags&quot;: [
                 &quot;Read only&quot;,
@@ -355,12 +361,12 @@ contentProviderQueue<span class="token punctuation">:</span><span class="token f
             ],
             &quot;source&quot;: {
                 &quot;line&quot;: 48,
-                &quot;path&quot;: &quot;src/contentProviderQueue/init.luau&quot;
+                &quot;path&quot;: &quot;src/ContentProviderQueue/init.luau&quot;
             }
         },
         {
-            &quot;name&quot;: &quot;onRemoved&quot;,
-            &quot;desc&quot;: &quot; \n\nA [signal](https://sleitnick.github.io/RbxUtil/api/Signal/) which is fired whenever an instance is removed from the content provider queue object.&quot;,
+            &quot;name&quot;: &quot;onInstanceRemoved&quot;,
+            &quot;desc&quot;: &quot; \n\nA [signal](https://sleitnick.github.io/RbxUtil/api/Signal/) which is fired whenever an instance is removed from the content provider queue.&quot;,
             &quot;lua_type&quot;: &quot;Signal &lt;instance: Instance&gt;&quot;,
             &quot;tags&quot;: [
                 &quot;Read only&quot;,
@@ -369,7 +375,7 @@ contentProviderQueue<span class="token punctuation">:</span><span class="token f
             ],
             &quot;source&quot;: {
                 &quot;line&quot;: 58,
-                &quot;path&quot;: &quot;src/contentProviderQueue/init.luau&quot;
+                &quot;path&quot;: &quot;src/ContentProviderQueue/init.luau&quot;
             }
         }
     ],
@@ -380,7 +386,7 @@ contentProviderQueue<span class="token punctuation">:</span><span class="token f
             &quot;lua_type&quot;: &quot;ContentProviderQueue&quot;,
             &quot;source&quot;: {
                 &quot;line&quot;: 63,
-                &quot;path&quot;: &quot;src/contentProviderQueue/init.luau&quot;
+                &quot;path&quot;: &quot;src/ContentProviderQueue/init.luau&quot;
             }
         }
     ],
@@ -388,10 +394,10 @@ contentProviderQueue<span class="token punctuation">:</span><span class="token f
     &quot;desc&quot;: &quot; \n\nA simple class for working with [ContentProvider](https://create.roblox.com/docs/reference/engine/classes/ContentProvider).\n\n```lua\nlocal contentProviderQueue = ContentProviderQueue.new()\ncontentProviderQueue:addInstances({sound1, sound2, sound3})\nprint(#contentProviderQueue:pendingInstances()) --&gt; 3\ncontentProviderQueue:fullyProgressed():await() -- ensure all pending instances are preloaded\nprint(#contentProviderQueue:pendingInstances()) --&gt; 0\n```&quot;,
     &quot;source&quot;: {
         &quot;line&quot;: 14,
-        &quot;path&quot;: &quot;src/contentProviderQueue/init.luau&quot;
+        &quot;path&quot;: &quot;src/ContentProviderQueue/init.luau&quot;
     }
-}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a><ul><li><a href="#ContentProviderQueue" class="table-of-contents__link toc-highlight">ContentProviderQueue</a></li></ul></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a><ul><li><a href="#onAdded" class="table-of-contents__link toc-highlight">onAdded</a></li><li><a href="#onProgressed" class="table-of-contents__link toc-highlight">onProgressed</a></li><li><a href="#onProgressing" class="table-of-contents__link toc-highlight">onProgressing</a></li><li><a href="#onRemoved" class="table-of-contents__link toc-highlight">onRemoved</a></li></ul></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#add" class="table-of-contents__link toc-highlight">:add</a></li><li><a href="#addInstances" class="table-of-contents__link toc-highlight">:addInstances</a></li><li><a href="#destroy" class="table-of-contents__link toc-highlight">:destroy</a></li><li><a href="#empty" class="table-of-contents__link toc-highlight">:empty</a></li><li><a href="#fullyProgressed" class="table-of-contents__link toc-highlight">:fullyProgressed</a></li><li><a href="#pause" class="table-of-contents__link toc-highlight">:pause</a></li><li><a href="#paused" class="table-of-contents__link toc-highlight">:paused</a></li><li><a href="#pendingInstances" class="table-of-contents__link toc-highlight">:pendingInstances</a></li><li><a href="#progress" class="table-of-contents__link toc-highlight">:progress</a></li><li><a href="#remove" class="table-of-contents__link toc-highlight">:remove</a></li><li><a href="#resume" class="table-of-contents__link toc-highlight">:resume</a></li><li><a href="#setUpdateInterval" class="table-of-contents__link toc-highlight">:setUpdateInterval</a></li><li><a href="#new" class="table-of-contents__link toc-highlight">.new</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 bubshurb. Built with Moonwave and Docusaurus</div></div></div></footer></div>
-<script src="/libraries/assets/js/runtime~main.14baf321.js"></script>
-<script src="/libraries/assets/js/main.56f398ca.js"></script>
+}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a><ul><li><a href="#ContentProviderQueue" class="table-of-contents__link toc-highlight">ContentProviderQueue</a></li></ul></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a><ul><li><a href="#onInstanceAdded" class="table-of-contents__link toc-highlight">onInstanceAdded</a></li><li><a href="#onInstancePreloaded" class="table-of-contents__link toc-highlight">onInstancePreloaded</a></li><li><a href="#onInstancePreloading" class="table-of-contents__link toc-highlight">onInstancePreloading</a></li><li><a href="#onInstanceRemoved" class="table-of-contents__link toc-highlight">onInstanceRemoved</a></li></ul></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#add" class="table-of-contents__link toc-highlight">:add</a></li><li><a href="#addInstances" class="table-of-contents__link toc-highlight">:addInstances</a></li><li><a href="#destroy" class="table-of-contents__link toc-highlight">:destroy</a></li><li><a href="#empty" class="table-of-contents__link toc-highlight">:empty</a></li><li><a href="#fullyProgressed" class="table-of-contents__link toc-highlight">:fullyProgressed</a></li><li><a href="#pause" class="table-of-contents__link toc-highlight">:pause</a></li><li><a href="#paused" class="table-of-contents__link toc-highlight">:paused</a></li><li><a href="#pendingInstances" class="table-of-contents__link toc-highlight">:pendingInstances</a></li><li><a href="#progress" class="table-of-contents__link toc-highlight">:progress</a></li><li><a href="#remove" class="table-of-contents__link toc-highlight">:remove</a></li><li><a href="#resume" class="table-of-contents__link toc-highlight">:resume</a></li><li><a href="#setUpdateInterval" class="table-of-contents__link toc-highlight">:setUpdateInterval</a></li><li><a href="#new" class="table-of-contents__link toc-highlight">.new</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 bubshurb. Built with Moonwave and Docusaurus</div></div></div></footer></div>
+<script src="/libraries/assets/js/runtime~main.221fc337.js"></script>
+<script src="/libraries/assets/js/main.3d2c1188.js"></script>
 </body>
 </html>
