@@ -8,8 +8,8 @@
 A simple utility module for working with [CoreGui](https://create.roblox.com/docs/reference/engine/classes/CoreGui)&#x27;s API."><meta data-rh="true" property="og:description" content=" 
 
 A simple utility module for working with [CoreGui](https://create.roblox.com/docs/reference/engine/classes/CoreGui)&#x27;s API."><link data-rh="true" rel="icon" href="/libraries/icon.ico"><link data-rh="true" rel="canonical" href="https://bubshurb.github.io/libraries/api/coreGuiUtil"><link data-rh="true" rel="alternate" href="https://bubshurb.github.io/libraries/api/coreGuiUtil" hreflang="en"><link data-rh="true" rel="alternate" href="https://bubshurb.github.io/libraries/api/coreGuiUtil" hreflang="x-default"><link rel="stylesheet" href="/libraries/assets/css/styles.e1adec2f.css">
-<link rel="preload" href="/libraries/assets/js/runtime~main.2a339fba.js" as="script">
-<link rel="preload" href="/libraries/assets/js/main.b933aa40.js" as="script">
+<link rel="preload" href="/libraries/assets/js/runtime~main.78e729b1.js" as="script">
+<link rel="preload" href="/libraries/assets/js/main.282b52eb.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -30,12 +30,6 @@ A simple utility module for working with [CoreGui](https://create.roblox.com/doc
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token function">andThen</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
     <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Successfully set core AvatarContextMenuTheme"</span><span class="token punctuation">)</span>
 <span class="token keyword">end</span><span class="token punctuation">)</span>
-</code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="setCoreGuiEnabled"><code style="text-decoration:none">setCoreGuiEnabled</code><a href="#setCoreGuiEnabled" class="hash-link" aria-label="Direct link to setCoreGuiEnabled" title="Direct link to setCoreGuiEnabled">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/coreGuiUtil/init.luau#L58"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>coreGuiUtil<!-- -->.</code><code class="green_DgR4">setCoreGuiEnabled</code><code>(</code><div class="inset_uKQm"><div><code>gui<!-- -->: </code><code class="blue_P4bS">Enum.CoreGuiType</code><code>,</code></div><div><code>enabled<!-- -->: </code><code class="blue_P4bS">boolean</code></div></div><code>) → </code><code class="blue_P4bS">Promise</code><code class="op_lSLc">&lt;</code><code class="op_lSLc">&gt;</code></div><div>
-<p>Returns a <a href="https://eryn.io/roblox-lua-promise/" target="_blank">promise</a> which is resolved once <a href="https://create.roblox.com/docs/reference/engine/classes/StarterGui#SetCoreGuiEnabled" target="_blank">StarterGui:SetCoreGuiEnabled</a> has successfully executed.</p>
-<pre class="language-lua"><code class="language-lua">coreGuiUtil<span class="token punctuation">.</span><span class="token function">setCoreGuiEnabled</span><span class="token punctuation">(</span>Enum<span class="token punctuation">.</span>CoreGuiType<span class="token punctuation">.</span>Health<span class="token punctuation">,</span> <span class="token keyword">false</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token function">andThen</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Successfully disabled the Health core gui"</span><span class="token punctuation">)</span>
-<span class="token keyword">end</span><span class="token punctuation">)</span>    
 </code></pre>
 </div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
     &quot;functions&quot;: [
@@ -65,33 +59,6 @@ A simple utility module for working with [CoreGui](https://create.roblox.com/doc
                 &quot;line&quot;: 34,
                 &quot;path&quot;: &quot;src/coreGuiUtil/init.luau&quot;
             }
-        },
-        {
-            &quot;name&quot;: &quot;setCoreGuiEnabled&quot;,
-            &quot;desc&quot;: &quot;Returns a [promise](https://eryn.io/roblox-lua-promise/) which is resolved once [StarterGui:SetCoreGuiEnabled](https://create.roblox.com/docs/reference/engine/classes/StarterGui#SetCoreGuiEnabled) has successfully executed.\n\n```lua\ncoreGuiUtil.setCoreGuiEnabled(Enum.CoreGuiType.Health, false):andThen(function()\n    print(\&quot;Successfully disabled the Health core gui\&quot;)\nend)    \n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;gui&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;Enum.CoreGuiType&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;enabled&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;boolean&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;Promise&lt;&gt;&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 58,
-                &quot;path&quot;: &quot;src/coreGuiUtil/init.luau&quot;
-            }
         }
     ],
     &quot;properties&quot;: [],
@@ -102,8 +69,8 @@ A simple utility module for working with [CoreGui](https://create.roblox.com/doc
         &quot;line&quot;: 6,
         &quot;path&quot;: &quot;src/coreGuiUtil/init.luau&quot;
     }
-}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#setCore" class="table-of-contents__link toc-highlight">.setCore</a></li><li><a href="#setCoreGuiEnabled" class="table-of-contents__link toc-highlight">.setCoreGuiEnabled</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 bubshurb. Built with Moonwave and Docusaurus</div></div></div></footer></div>
-<script src="/libraries/assets/js/runtime~main.2a339fba.js"></script>
-<script src="/libraries/assets/js/main.b933aa40.js"></script>
+}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#setCore" class="table-of-contents__link toc-highlight">.setCore</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 bubshurb. Built with Moonwave and Docusaurus</div></div></div></footer></div>
+<script src="/libraries/assets/js/runtime~main.78e729b1.js"></script>
+<script src="/libraries/assets/js/main.282b52eb.js"></script>
 </body>
 </html>
