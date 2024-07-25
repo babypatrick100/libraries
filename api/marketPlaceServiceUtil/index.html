@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v2.3.1">
 <title data-rh="true">marketPlaceServiceUtil | libraries</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://bubshurb.github.io/libraries/api/marketPlaceServiceUtil"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="marketPlaceServiceUtil | libraries"><meta data-rh="true" name="description" content="An utility module for working with [MarketplaceService](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService)."><meta data-rh="true" property="og:description" content="An utility module for working with [MarketplaceService](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService)."><link data-rh="true" rel="icon" href="/libraries/icon.ico"><link data-rh="true" rel="canonical" href="https://bubshurb.github.io/libraries/api/marketPlaceServiceUtil"><link data-rh="true" rel="alternate" href="https://bubshurb.github.io/libraries/api/marketPlaceServiceUtil" hreflang="en"><link data-rh="true" rel="alternate" href="https://bubshurb.github.io/libraries/api/marketPlaceServiceUtil" hreflang="x-default"><link rel="stylesheet" href="/libraries/assets/css/styles.e1adec2f.css">
-<link rel="preload" href="/libraries/assets/js/runtime~main.1a581ae3.js" as="script">
-<link rel="preload" href="/libraries/assets/js/main.a5a89970.js" as="script">
+<link rel="preload" href="/libraries/assets/js/runtime~main.876b4dcc.js" as="script">
+<link rel="preload" href="/libraries/assets/js/main.8cd9f51d.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -61,7 +61,59 @@
 	<span class="token function">print</span><span class="token punctuation">(</span>errorMessage<span class="token punctuation">)</span>
 <span class="token keyword">end</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="activeAssetProductInfoWhichPlayerOwns"><code style="text-decoration:none">activeAssetProductInfoWhichPlayerOwns</code><a href="#activeAssetProductInfoWhichPlayerOwns" class="hash-link" aria-label="Direct link to activeAssetProductInfoWhichPlayerOwns" title="Direct link to activeAssetProductInfoWhichPlayerOwns">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/marketPlaceServiceUtil/init.luau#L115"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>marketPlaceServiceUtil<!-- -->.</code><code class="green_DgR4">activeAssetProductInfoWhichPlayerOwns</code><code>(</code><div class="inset_uKQm"><div><code>playerUserId<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>assetId<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="subscriptionInfoProductAsync"><code style="text-decoration:none">subscriptionInfoProductAsync</code><a href="#subscriptionInfoProductAsync" class="hash-link" aria-label="Direct link to subscriptionInfoProductAsync" title="Direct link to subscriptionInfoProductAsync">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/marketPlaceServiceUtil/init.luau#L128"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>marketPlaceServiceUtil<!-- -->.</code><code class="green_DgR4">subscriptionInfoProductAsync</code><code>(</code><code>subscriptionId<!-- -->: </code><code class="blue_P4bS">string</code><code>) → </code><code class="blue_P4bS">Promise</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">SubscriptionInfo</code><code class="op_lSLc">&gt;</code></div><div>
+<p>
+  Returns a <a href="https://eryn.io/roblox-lua-promise/" target="_blank">promise</a> which is resolved with the info
+  of the given subscription id.
+</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> wasSucessfull<span class="token punctuation">,</span> subscriptionInfo <span class="token operator">=</span> marketPlaceServiceUtil<span class="token punctuation">.</span><span class="token function">subscriptionInfoProductAsync</span><span class="token punctuation">(</span>subscriptionId<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token function">await</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> wasSucessfull <span class="token keyword">then</span>
+	<span class="token function">print</span><span class="token punctuation">(</span>subscriptionInfo<span class="token punctuation">)</span>
+<span class="token keyword">else</span>
+	<span class="token function">print</span><span class="token punctuation">(</span><span class="token function">tostring</span><span class="token punctuation">(</span>subscriptionInfo<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">-- Error</span>
+<span class="token keyword">end</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="userSubscriptionDetailsAsync"><code style="text-decoration:none">userSubscriptionDetailsAsync</code><a href="#userSubscriptionDetailsAsync" class="hash-link" aria-label="Direct link to userSubscriptionDetailsAsync" title="Direct link to userSubscriptionDetailsAsync">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/marketPlaceServiceUtil/init.luau#L151"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>marketPlaceServiceUtil<!-- -->.</code><code class="green_DgR4">userSubscriptionDetailsAsync</code><code>(</code><div class="inset_uKQm"><div><code>player<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Player" target="_blank" rel="noopener noreferrer">Player<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code></div><div><code>subscriptionId<!-- -->: </code><code class="blue_P4bS">string</code></div></div><code>) → </code><code class="blue_P4bS">Promise</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">UserSubscriptionDetails</code><code class="op_lSLc">&gt;</code></div><div>
+<p>
+  Returns a <a href="https://eryn.io/roblox-lua-promise/" target="_blank">promise</a> which is resolved with the
+  user subscription details.
+</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> wasSucessfull<span class="token punctuation">,</span> userSubscriptionDetails <span class="token operator">=</span> marketPlaceServiceUtil<span class="token punctuation">.</span><span class="token function">GetUserSubscriptionDetailsAsync</span><span class="token punctuation">(</span>player<span class="token punctuation">,</span> subscriptionId<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token function">await</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> wasSucessfull <span class="token keyword">then</span>
+	<span class="token function">print</span><span class="token punctuation">(</span>userSubscriptionDetails<span class="token punctuation">)</span>
+<span class="token keyword">else</span>
+	<span class="token function">print</span><span class="token punctuation">(</span><span class="token function">tostring</span><span class="token punctuation">(</span>userSubscriptionDetails<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">-- Error</span>
+<span class="token keyword">end</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="userSubscriptionPaymentHistoryAsync"><code style="text-decoration:none">userSubscriptionPaymentHistoryAsync</code><a href="#userSubscriptionPaymentHistoryAsync" class="hash-link" aria-label="Direct link to userSubscriptionPaymentHistoryAsync" title="Direct link to userSubscriptionPaymentHistoryAsync">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/marketPlaceServiceUtil/init.luau#L174"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>marketPlaceServiceUtil<!-- -->.</code><code class="green_DgR4">userSubscriptionPaymentHistoryAsync</code><code>(</code><div class="inset_uKQm"><div><code>player<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Player" target="_blank" rel="noopener noreferrer">Player<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code></div><div><code>subscriptionId<!-- -->: </code><code class="blue_P4bS">string</code></div></div><code>) → </code><code class="blue_P4bS">Promise</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">UserSubscriptionPaymentHistory</code><code class="op_lSLc">&gt;</code></div><div>
+<p>
+  Returns a <a href="https://eryn.io/roblox-lua-promise/" target="_blank">promise</a> which is resolved with the
+  user subscription payment history.
+</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> wasSucessfull<span class="token punctuation">,</span> userSubscriptionPaymentHistory <span class="token operator">=</span> marketPlaceServiceUtil<span class="token punctuation">.</span><span class="token function">userSubscriptionPaymentHistoryAsync</span><span class="token punctuation">(</span>player<span class="token punctuation">,</span> subscriptionId<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token function">await</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> wasSucessfull <span class="token keyword">then</span>
+	<span class="token function">print</span><span class="token punctuation">(</span>userSubscriptionPaymentHistory<span class="token punctuation">)</span>
+<span class="token keyword">else</span>
+	<span class="token function">print</span><span class="token punctuation">(</span><span class="token function">tostring</span><span class="token punctuation">(</span>userSubscriptionPaymentHistory<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">-- Error</span>
+<span class="token keyword">end</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="userSubscriptionStatusAsync"><code style="text-decoration:none">userSubscriptionStatusAsync</code><a href="#userSubscriptionStatusAsync" class="hash-link" aria-label="Direct link to userSubscriptionStatusAsync" title="Direct link to userSubscriptionStatusAsync">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/marketPlaceServiceUtil/init.luau#L200"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>marketPlaceServiceUtil<!-- -->.</code><code class="green_DgR4">userSubscriptionStatusAsync</code><code>(</code><div class="inset_uKQm"><div><code>player<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Player" target="_blank" rel="noopener noreferrer">Player<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code></div><div><code>subscriptionId<!-- -->: </code><code class="blue_P4bS">string</code></div></div><code>) → </code><code class="blue_P4bS">Promise</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">UserSubscriptionStatus</code><code class="op_lSLc">&gt;</code></div><div>
+<p>
+  Returns a <a href="https://eryn.io/roblox-lua-promise/" target="_blank">promise</a> which is resolved with the
+  user subscription payment history.
+</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> wasSucessfull<span class="token punctuation">,</span> userSubscriptionStatus <span class="token operator">=</span> marketPlaceServiceUtil<span class="token punctuation">.</span><span class="token function">userSubscriptionStatusAsync</span><span class="token punctuation">(</span>player<span class="token punctuation">,</span> subscriptionId<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token function">await</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> wasSucessfull <span class="token keyword">then</span>
+	<span class="token function">print</span><span class="token punctuation">(</span>userSubscriptionStatus<span class="token punctuation">)</span>
+<span class="token keyword">else</span>
+	<span class="token function">print</span><span class="token punctuation">(</span><span class="token function">tostring</span><span class="token punctuation">(</span>userSubscriptionStatus<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">-- Error</span>
+<span class="token keyword">end</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="activeAssetProductInfoWhichPlayerOwns"><code style="text-decoration:none">activeAssetProductInfoWhichPlayerOwns</code><a href="#activeAssetProductInfoWhichPlayerOwns" class="hash-link" aria-label="Direct link to activeAssetProductInfoWhichPlayerOwns" title="Direct link to activeAssetProductInfoWhichPlayerOwns">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/marketPlaceServiceUtil/init.luau#L210"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>marketPlaceServiceUtil<!-- -->.</code><code class="green_DgR4">activeAssetProductInfoWhichPlayerOwns</code><code>(</code><div class="inset_uKQm"><div><code>playerUserId<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>assetId<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code>(</code><code>)</code></div><div>
 <p>Retrieves the asset product info that belongs to a player of userid <code>playerUserId</code>.</p>
 </div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
     &quot;functions&quot;: [
@@ -174,6 +226,109 @@
             }
         },
         {
+            &quot;name&quot;: &quot;subscriptionInfoProductAsync&quot;,
+            &quot;desc&quot;: &quot;Returns a [promise](https://eryn.io/roblox-lua-promise/) which is resolved with the info\nof the given subscription id.\n\n```lua\nlocal wasSucessfull, subscriptionInfo = marketPlaceServiceUtil.subscriptionInfoProductAsync(subscriptionId):await()\n\nif wasSucessfull then\n\tprint(subscriptionInfo)\nelse\n\tprint(tostring(subscriptionInfo)) -- Error\nend\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;subscriptionId&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Promise&lt;SubscriptionInfo&gt;&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 128,
+                &quot;path&quot;: &quot;src/marketPlaceServiceUtil/init.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;userSubscriptionDetailsAsync&quot;,
+            &quot;desc&quot;: &quot;Returns a [promise](https://eryn.io/roblox-lua-promise/) which is resolved with the\nuser subscription details.\n\n```lua\nlocal wasSucessfull, userSubscriptionDetails = marketPlaceServiceUtil.GetUserSubscriptionDetailsAsync(player, subscriptionId):await()\n\nif wasSucessfull then\n\tprint(userSubscriptionDetails)\nelse\n\tprint(tostring(userSubscriptionDetails)) -- Error\nend\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;player&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Player&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;subscriptionId&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Promise&lt;UserSubscriptionDetails&gt;&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 151,
+                &quot;path&quot;: &quot;src/marketPlaceServiceUtil/init.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;userSubscriptionPaymentHistoryAsync&quot;,
+            &quot;desc&quot;: &quot;Returns a [promise](https://eryn.io/roblox-lua-promise/) which is resolved with the\nuser subscription payment history.\n\n```lua\nlocal wasSucessfull, userSubscriptionPaymentHistory = marketPlaceServiceUtil.userSubscriptionPaymentHistoryAsync(player, subscriptionId):await()\n\nif wasSucessfull then\n\tprint(userSubscriptionPaymentHistory)\nelse\n\tprint(tostring(userSubscriptionPaymentHistory)) -- Error\nend\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;player&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Player&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;subscriptionId&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;string\r\n&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Promise&lt;UserSubscriptionPaymentHistory&gt;&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 174,
+                &quot;path&quot;: &quot;src/marketPlaceServiceUtil/init.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;userSubscriptionStatusAsync&quot;,
+            &quot;desc&quot;: &quot;Returns a [promise](https://eryn.io/roblox-lua-promise/) which is resolved with the\nuser subscription payment history.\n\n```lua\nlocal wasSucessfull, userSubscriptionStatus = marketPlaceServiceUtil.userSubscriptionStatusAsync(player, subscriptionId):await()\n\nif wasSucessfull then\n\tprint(userSubscriptionStatus)\nelse\n\tprint(tostring(userSubscriptionStatus)) -- Error\nend\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;player&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Player&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;subscriptionId&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Promise&lt;UserSubscriptionStatus&gt;&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 200,
+                &quot;path&quot;: &quot;src/marketPlaceServiceUtil/init.luau&quot;
+            }
+        },
+        {
             &quot;name&quot;: &quot;activeAssetProductInfoWhichPlayerOwns&quot;,
             &quot;desc&quot;: &quot; \nRetrieves the asset product info that belongs to a player of userid `playerUserId`.&quot;,
             &quot;params&quot;: [
@@ -191,7 +346,7 @@
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 115,
+                &quot;line&quot;: 210,
                 &quot;path&quot;: &quot;src/marketPlaceServiceUtil/init.luau&quot;
             }
         }
@@ -204,8 +359,8 @@
         &quot;line&quot;: 6,
         &quot;path&quot;: &quot;src/marketPlaceServiceUtil/init.luau&quot;
     }
-}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#activeAssetProductInfoWhichPlayerOwns" class="table-of-contents__link toc-highlight">.activeAssetProductInfoWhichPlayerOwns</a></li><li><a href="#playerOwnsAsset" class="table-of-contents__link toc-highlight">.playerOwnsAsset</a></li><li><a href="#playerOwnsBundle" class="table-of-contents__link toc-highlight">.playerOwnsBundle</a></li><li><a href="#productInfo" class="table-of-contents__link toc-highlight">.productInfo</a></li><li><a href="#userOwnsGamepassAsync" class="table-of-contents__link toc-highlight">.userOwnsGamepassAsync</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 bubshurb. Built with Moonwave and Docusaurus</div></div></div></footer></div>
-<script src="/libraries/assets/js/runtime~main.1a581ae3.js"></script>
-<script src="/libraries/assets/js/main.a5a89970.js"></script>
+}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#activeAssetProductInfoWhichPlayerOwns" class="table-of-contents__link toc-highlight">.activeAssetProductInfoWhichPlayerOwns</a></li><li><a href="#playerOwnsAsset" class="table-of-contents__link toc-highlight">.playerOwnsAsset</a></li><li><a href="#playerOwnsBundle" class="table-of-contents__link toc-highlight">.playerOwnsBundle</a></li><li><a href="#productInfo" class="table-of-contents__link toc-highlight">.productInfo</a></li><li><a href="#subscriptionInfoProductAsync" class="table-of-contents__link toc-highlight">.subscriptionInfoProductAsync</a></li><li><a href="#userOwnsGamepassAsync" class="table-of-contents__link toc-highlight">.userOwnsGamepassAsync</a></li><li><a href="#userSubscriptionDetailsAsync" class="table-of-contents__link toc-highlight">.userSubscriptionDetailsAsync</a></li><li><a href="#userSubscriptionPaymentHistoryAsync" class="table-of-contents__link toc-highlight">.userSubscriptionPaymentHistoryAsync</a></li><li><a href="#userSubscriptionStatusAsync" class="table-of-contents__link toc-highlight">.userSubscriptionStatusAsync</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 bubshurb. Built with Moonwave and Docusaurus</div></div></div></footer></div>
+<script src="/libraries/assets/js/runtime~main.876b4dcc.js"></script>
+<script src="/libraries/assets/js/main.8cd9f51d.js"></script>
 </body>
 </html>
