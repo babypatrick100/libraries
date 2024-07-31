@@ -30,8 +30,8 @@ end)
 
 property:set(10) 
 ```"><link data-rh="true" rel="icon" href="/libraries/icon.ico"><link data-rh="true" rel="canonical" href="https://bubshurb.github.io/libraries/api/Property"><link data-rh="true" rel="alternate" href="https://bubshurb.github.io/libraries/api/Property" hreflang="en"><link data-rh="true" rel="alternate" href="https://bubshurb.github.io/libraries/api/Property" hreflang="x-default"><link rel="stylesheet" href="/libraries/assets/css/styles.e1adec2f.css">
-<link rel="preload" href="/libraries/assets/js/runtime~main.876b4dcc.js" as="script">
-<link rel="preload" href="/libraries/assets/js/main.8cd9f51d.js" as="script">
+<link rel="preload" href="/libraries/assets/js/runtime~main.71590502.js" as="script">
+<link rel="preload" href="/libraries/assets/js/main.7054e5d9.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -51,14 +51,33 @@ property<span class="token punctuation">:</span><span class="token function">set
   A <a href="https://sleitnick.github.io/RbxUtil/api/Signal/" target="_blank">signal</a> which is fired whenever the value of the property is
   set to a new one. The signal is only passed the new value as the only argument.
 </p>
-</div><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="new"><code style="text-decoration:none">new</code><a href="#new" class="hash-link" aria-label="Direct link to new" title="Direct link to new">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/Property/init.luau#L50"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->.</code><code class="green_DgR4">new</code><code>(</code><code>initialValue<!-- -->: </code><code class="blue_P4bS">T?</code><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/libraries/api/Property#Property">Property</a></code></div><div>
+</div><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="new"><code style="text-decoration:none">new</code><a href="#new" class="hash-link" aria-label="Direct link to new" title="Direct link to new">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/Property/init.luau#L54"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->.</code><code class="green_DgR4">new</code><code>(</code><code>initialValue<!-- -->: </code><code class="blue_P4bS">T?</code><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/libraries/api/Property#Property">Property</a></code></div><div>
 <p>
   A constructor method that creates a new property object, with <code>initialValue</code> as the current value
   of the property.
 </p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="is"><code style="text-decoration:none">is</code><a href="#is" class="hash-link" aria-label="Direct link to is" title="Direct link to is">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/Property/init.luau#L69"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->.</code><code class="green_DgR4">is</code><code>(</code><code>self<!-- -->: </code><code class="blue_P4bS">any</code><code>) → </code><code class="blue_P4bS">boolean</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="is"><code style="text-decoration:none">is</code><a href="#is" class="hash-link" aria-label="Direct link to is" title="Direct link to is">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/Property/init.luau#L73"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->.</code><code class="green_DgR4">is</code><code>(</code><code>self<!-- -->: </code><code class="blue_P4bS">any</code><code>) → </code><code class="blue_P4bS">boolean</code></div><div>
 <p>A method that returns a boolean indicating if <code>self</code> is a property or not.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="bindToRobloxProperty"><code style="text-decoration:none">bindToRobloxProperty</code><a href="#bindToRobloxProperty" class="hash-link" aria-label="Direct link to bindToRobloxProperty" title="Direct link to bindToRobloxProperty">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/Property/init.luau#L94"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->:</code><code class="green_DgR4">bindToRobloxProperty</code><code>(</code><div class="inset_uKQm"><div><code>instance<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code></div><div><code>property<!-- -->: </code><code class="blue_P4bS">string</code></div></div><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="clone"><code style="text-decoration:none">clone</code><a href="#clone" class="hash-link" aria-label="Direct link to clone" title="Direct link to clone">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/Property/init.luau#L99"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->:</code><code class="green_DgR4">clone</code><code>(</code><code>mapper<!-- -->: </code><code class="purple_ieR2">(</code><div class="inset_uKQm"><code>newValue<!-- -->: </code><code class="blue_P4bS">any</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>oldValue<!-- -->: </code><code class="blue_P4bS">any</code></div><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="blue_P4bS">any</code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>
+  Creates a new property and binds it to the current property, and returns the new
+  property. The new property will operate on the value of the current property, however
+  you may specify a <code>mapper</code> function for more control. The <code>mapper</code> function will be
+  passed the new value and the old value of the current property (and when the current
+  property is updated), the return value of the mapper will be the new value of the new
+  property.
+</p>
+<p>The new property will be automatically destroyed once the current prpoerty is destroyed.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> property <span class="token operator">=</span> Property<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
+<span class="token keyword">local</span> anotherProperty <span class="token operator">=</span> property<span class="token punctuation">:</span><span class="token function">clone</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>number<span class="token punctuation">)</span>
+	<span class="token keyword">return</span> number <span class="token operator">+</span> <span class="token number">5</span>
+<span class="token keyword">end</span><span class="token punctuation">)</span>
+
+<span class="token function">print</span><span class="token punctuation">(</span>anotherProperty<span class="token punctuation">:</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 10</span>
+property<span class="token punctuation">:</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+<span class="token function">print</span><span class="token punctuation">(</span>anotherProperty<span class="token punctuation">:</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 15</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="bindToRobloxProperty"><code style="text-decoration:none">bindToRobloxProperty</code><a href="#bindToRobloxProperty" class="hash-link" aria-label="Direct link to bindToRobloxProperty" title="Direct link to bindToRobloxProperty">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/Property/init.luau#L132"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->:</code><code class="green_DgR4">bindToRobloxProperty</code><code>(</code><div class="inset_uKQm"><div><code>instance<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code></div><div><code>property<!-- -->: </code><code class="blue_P4bS">string</code></div></div><code>) → </code><code>(</code><code>)</code></div><div>
 <p>
   Binds the property to a property of the given Roblox instance. When the instance is destroyed,
   the property is automatically destroyed as well.
@@ -77,7 +96,7 @@ workspace<span class="token punctuation">.</span>Baseplate<span class="token pun
 <span class="token comment">-- Deferred signal behavior: (Roblox instance-signals are not immediately fired)</span>
 <span class="token function">print</span><span class="token punctuation">(</span>property<span class="token punctuation">.</span>onUpdate<span class="token punctuation">:</span><span class="token function">Wait</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 1</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="bindToInstanceAttribute"><code style="text-decoration:none">bindToInstanceAttribute</code><a href="#bindToInstanceAttribute" class="hash-link" aria-label="Direct link to bindToInstanceAttribute" title="Direct link to bindToInstanceAttribute">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/Property/init.luau#L118"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->:</code><code class="green_DgR4">bindToInstanceAttribute</code><code>(</code><div class="inset_uKQm"><div><code>instance<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code></div><div><code>attribute<!-- -->: </code><code class="blue_P4bS">string</code></div></div><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="bindToInstanceAttribute"><code style="text-decoration:none">bindToInstanceAttribute</code><a href="#bindToInstanceAttribute" class="hash-link" aria-label="Direct link to bindToInstanceAttribute" title="Direct link to bindToInstanceAttribute">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/Property/init.luau#L156"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->:</code><code class="green_DgR4">bindToInstanceAttribute</code><code>(</code><div class="inset_uKQm"><div><code>instance<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code></div><div><code>attribute<!-- -->: </code><code class="blue_P4bS">string</code></div></div><code>) → </code><code>(</code><code>)</code></div><div>
 <p>
   Binds the property to an attribute of the given Roblox instance. When the instance is destroyed,
   the property is automatically destroyed as well.
@@ -91,7 +110,7 @@ workspace<span class="token punctuation">.</span>Baseplate<span class="token pun
 
 <span class="token function">print</span><span class="token punctuation">(</span>property<span class="token punctuation">:</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 5</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="bindToInstance"><code style="text-decoration:none">bindToInstance</code><a href="#bindToInstance" class="hash-link" aria-label="Direct link to bindToInstance" title="Direct link to bindToInstance">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/Property/init.luau#L144"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->:</code><code class="green_DgR4">bindToInstance</code><code>(</code><code>instance<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="bindToInstance"><code style="text-decoration:none">bindToInstance</code><a href="#bindToInstance" class="hash-link" aria-label="Direct link to bindToInstance" title="Direct link to bindToInstance">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/Property/init.luau#L182"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->:</code><code class="green_DgR4">bindToInstance</code><code>(</code><code>instance<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>) → </code><code>(</code><code>)</code></div><div>
 <p>
   Binds the property to an instance so that once the instance is destroyed,
   the property will be destroyed too.
@@ -107,15 +126,15 @@ task<span class="token punctuation">.</span><span class="token function">wait</s
 
 <span class="token function">print</span><span class="token punctuation">(</span>Property<span class="token punctuation">.</span><span class="token function">is</span><span class="token punctuation">(</span>property<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> false</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="set"><code style="text-decoration:none">set</code><a href="#set" class="hash-link" aria-label="Direct link to set" title="Direct link to set">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/Property/init.luau#L154"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->:</code><code class="green_DgR4">set</code><code>(</code><code>value<!-- -->: </code><code class="blue_P4bS">any</code><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="set"><code style="text-decoration:none">set</code><a href="#set" class="hash-link" aria-label="Direct link to set" title="Direct link to set">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/Property/init.luau#L192"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->:</code><code class="green_DgR4">set</code><code>(</code><code>value<!-- -->: </code><code class="blue_P4bS">any</code><code>) → </code><code>(</code><code>)</code></div><div>
 <p>Sets the value of the property to <code>value</code>, if this new value isn't the same as the previous value.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="observe"><code style="text-decoration:none">observe</code><a href="#observe" class="hash-link" aria-label="Direct link to observe" title="Direct link to observe">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/Property/init.luau#L175"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->:</code><code class="green_DgR4">observe</code><code>(</code><code>callback<!-- -->: </code><code class="purple_ieR2">(</code><div class="inset_uKQm"><code>newValue<!-- -->: </code><code class="blue_P4bS">any</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>oldValue<!-- -->: </code><code class="blue_P4bS">any</code></div><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="observe"><code style="text-decoration:none">observe</code><a href="#observe" class="hash-link" aria-label="Direct link to observe" title="Direct link to observe">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/Property/init.luau#L213"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->:</code><code class="green_DgR4">observe</code><code>(</code><code>callback<!-- -->: </code><code class="purple_ieR2">(</code><div class="inset_uKQm"><code>newValue<!-- -->: </code><code class="blue_P4bS">any</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>oldValue<!-- -->: </code><code class="blue_P4bS">any</code></div><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><code>) → </code><code>(</code><code>)</code></div><div>
 <p>Observes the value of the property.</p>
 <pre class="language-lua"><code class="language-lua">property<span class="token punctuation">:</span><span class="token function">observe</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>newValue<span class="token punctuation">,</span> oldValue<span class="token punctuation">)</span>
 
 <span class="token keyword">end</span><span class="token punctuation">)</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="valuePromise"><code style="text-decoration:none">valuePromise</code><a href="#valuePromise" class="hash-link" aria-label="Direct link to valuePromise" title="Direct link to valuePromise">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/Property/init.luau#L216"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->:</code><code class="green_DgR4">valuePromise</code><code>(</code><code>valuePredicate<!-- -->: </code><code class="purple_ieR2">(</code><code class="green_DgR4">(</code><div class="inset_uKQm"><code>newValue<!-- -->: </code><code class="blue_P4bS">any</code><code class="green_DgR4">,</code></div><div class="inset_uKQm"><code>oldValue<!-- -->: </code><code class="blue_P4bS">any</code></div><code class="green_DgR4">)</code><code class="green_DgR4"> → </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">)</code><code class="blue_P4bS">?</code><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="valuePromise"><code style="text-decoration:none">valuePromise</code><a href="#valuePromise" class="hash-link" aria-label="Direct link to valuePromise" title="Direct link to valuePromise">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/Property/init.luau#L254"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->:</code><code class="green_DgR4">valuePromise</code><code>(</code><code>valuePredicate<!-- -->: </code><code class="purple_ieR2">(</code><code class="green_DgR4">(</code><div class="inset_uKQm"><code>newValue<!-- -->: </code><code class="blue_P4bS">any</code><code class="green_DgR4">,</code></div><div class="inset_uKQm"><code>oldValue<!-- -->: </code><code class="blue_P4bS">any</code></div><code class="green_DgR4">)</code><code class="green_DgR4"> → </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">)</code><code class="blue_P4bS">?</code><code>) → </code><code>(</code><code>)</code></div><div>
 <p>
   Returns a promise which is resolved with a non-nil value of the property, given that
   <code>valuePredicate</code> is not passed as an argument.
@@ -142,7 +161,7 @@ property<span class="token punctuation">:</span><span class="token function">set
 property<span class="token punctuation">:</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> 
 <span class="token comment">--> 10</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="forceSet"><code style="text-decoration:none">forceSet</code><a href="#forceSet" class="hash-link" aria-label="Direct link to forceSet" title="Direct link to forceSet">​</a></h3><span class="docTag__6UZ" style="border-color:#2b8ab6;color:#2b8ab6">Property Instance</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/Property/init.luau#L255"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->:</code><code class="green_DgR4">forceSet</code><code>(</code><code>value<!-- -->: </code><code class="blue_P4bS">any</code><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="forceSet"><code style="text-decoration:none">forceSet</code><a href="#forceSet" class="hash-link" aria-label="Direct link to forceSet" title="Direct link to forceSet">​</a></h3><span class="docTag__6UZ" style="border-color:#2b8ab6;color:#2b8ab6">Property Instance</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/Property/init.luau#L293"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->:</code><code class="green_DgR4">forceSet</code><code>(</code><code>value<!-- -->: </code><code class="blue_P4bS">any</code><code>) → </code><code>(</code><code>)</code></div><div>
 <p>Works the same as <a href="/libraries/api/Property#Property#set">Property:set</a> except that values aren't checked for equality, for e.g:</p>
 <pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> property <span class="token operator">=</span> Property<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
@@ -157,9 +176,9 @@ property<span class="token punctuation">:</span><span class="token function">for
 <span class="token comment">--> 2</span>
 <span class="token comment">--> "a"</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="bulkSet"><code style="text-decoration:none">bulkSet</code><a href="#bulkSet" class="hash-link" aria-label="Direct link to bulkSet" title="Direct link to bulkSet">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/Property/init.luau#L265"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->:</code><code class="green_DgR4">bulkSet</code><code>(</code><code>value<!-- -->: </code><code class="blue_P4bS">any</code><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="bulkSet"><code style="text-decoration:none">bulkSet</code><a href="#bulkSet" class="hash-link" aria-label="Direct link to bulkSet" title="Direct link to bulkSet">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/Property/init.luau#L303"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->:</code><code class="green_DgR4">bulkSet</code><code>(</code><code>value<!-- -->: </code><code class="blue_P4bS">any</code><code>) → </code><code>(</code><code>)</code></div><div>
 <p>Works almost the same as <a href="/libraries/api/Property#Property#set">Property:set</a>, but never fires off the <a href="/libraries/api/Property#Property#onUpdate">Property.onUpdate</a> signal.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="get"><code style="text-decoration:none">get</code><a href="#get" class="hash-link" aria-label="Direct link to get" title="Direct link to get">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/Property/init.luau#L282"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->:</code><code class="green_DgR4">get</code><code>(</code><code>) → </code><code class="blue_P4bS">any</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="get"><code style="text-decoration:none">get</code><a href="#get" class="hash-link" aria-label="Direct link to get" title="Direct link to get">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/Property/init.luau#L320"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->:</code><code class="green_DgR4">get</code><code>(</code><code>) → </code><code class="blue_P4bS">any</code></div><div>
 <p>Returns a shallow copy of the current value of the property.</p>
 <pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> property <span class="token operator">=</span> Property<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
@@ -167,7 +186,7 @@ property<span class="token punctuation">:</span><span class="token function">for
 property<span class="token punctuation">:</span><span class="token function">set</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span>
 <span class="token function">print</span><span class="token punctuation">(</span>property<span class="token punctuation">:</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> t<span class="token punctuation">)</span> <span class="token comment">--> false</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="destroy"><code style="text-decoration:none">destroy</code><a href="#destroy" class="hash-link" aria-label="Direct link to destroy" title="Direct link to destroy">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/Property/init.luau#L290"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->:</code><code class="green_DgR4">destroy</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="destroy"><code style="text-decoration:none">destroy</code><a href="#destroy" class="hash-link" aria-label="Direct link to destroy" title="Direct link to destroy">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/bubshurb/libraries/blob/main/src/Property/init.luau#L328"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->:</code><code class="green_DgR4">destroy</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
 <p>Destroys the property and renders it unusable.</p>
 </div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
     &quot;functions&quot;: [
@@ -189,7 +208,7 @@ property<span class="token punctuation">:</span><span class="token function">set
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 50,
+                &quot;line&quot;: 54,
                 &quot;path&quot;: &quot;src/Property/init.luau&quot;
             }
         },
@@ -211,7 +230,24 @@ property<span class="token punctuation">:</span><span class="token function">set
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 69,
+                &quot;line&quot;: 73,
+                &quot;path&quot;: &quot;src/Property/init.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;clone&quot;,
+            &quot;desc&quot;: &quot;Creates a new property and binds it to the current property, and returns the new\nproperty. The new property will operate on the value of the current property, however\nyou may specify a `mapper` function for more control. The `mapper` function will be \npassed the new value and the old value of the current property (and when the current\nproperty is updated), the return value of the mapper will be the new value of the new\nproperty.\n\nThe new property will be automatically destroyed once the current prpoerty is destroyed.\n\n```lua\nlocal property = Property.new(5)\nlocal anotherProperty = property:clone(function(number)\n\treturn number + 5\nend)\n\nprint(anotherProperty:get()) --&gt; 10\nproperty:set(10)\nprint(anotherProperty:get()) --&gt; 15\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;mapper&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;(newValue: any, oldValue: any) -&gt; any&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 99,
                 &quot;path&quot;: &quot;src/Property/init.luau&quot;
             }
         },
@@ -233,7 +269,7 @@ property<span class="token punctuation">:</span><span class="token function">set
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 94,
+                &quot;line&quot;: 132,
                 &quot;path&quot;: &quot;src/Property/init.luau&quot;
             }
         },
@@ -255,7 +291,7 @@ property<span class="token punctuation">:</span><span class="token function">set
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 118,
+                &quot;line&quot;: 156,
                 &quot;path&quot;: &quot;src/Property/init.luau&quot;
             }
         },
@@ -272,7 +308,7 @@ property<span class="token punctuation">:</span><span class="token function">set
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 144,
+                &quot;line&quot;: 182,
                 &quot;path&quot;: &quot;src/Property/init.luau&quot;
             }
         },
@@ -289,7 +325,7 @@ property<span class="token punctuation">:</span><span class="token function">set
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 154,
+                &quot;line&quot;: 192,
                 &quot;path&quot;: &quot;src/Property/init.luau&quot;
             }
         },
@@ -306,7 +342,7 @@ property<span class="token punctuation">:</span><span class="token function">set
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 175,
+                &quot;line&quot;: 213,
                 &quot;path&quot;: &quot;src/Property/init.luau&quot;
             }
         },
@@ -323,7 +359,7 @@ property<span class="token punctuation">:</span><span class="token function">set
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 216,
+                &quot;line&quot;: 254,
                 &quot;path&quot;: &quot;src/Property/init.luau&quot;
             }
         },
@@ -343,7 +379,7 @@ property<span class="token punctuation">:</span><span class="token function">set
                 &quot;Property Instance&quot;
             ],
             &quot;source&quot;: {
-                &quot;line&quot;: 255,
+                &quot;line&quot;: 293,
                 &quot;path&quot;: &quot;src/Property/init.luau&quot;
             }
         },
@@ -360,7 +396,7 @@ property<span class="token punctuation">:</span><span class="token function">set
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 265,
+                &quot;line&quot;: 303,
                 &quot;path&quot;: &quot;src/Property/init.luau&quot;
             }
         },
@@ -376,7 +412,7 @@ property<span class="token punctuation">:</span><span class="token function">set
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 282,
+                &quot;line&quot;: 320,
                 &quot;path&quot;: &quot;src/Property/init.luau&quot;
             }
         },
@@ -387,7 +423,7 @@ property<span class="token punctuation">:</span><span class="token function">set
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 290,
+                &quot;line&quot;: 328,
                 &quot;path&quot;: &quot;src/Property/init.luau&quot;
             }
         },
@@ -399,7 +435,7 @@ property<span class="token punctuation">:</span><span class="token function">set
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;private&quot;: true,
             &quot;source&quot;: {
-                &quot;line&quot;: 299,
+                &quot;line&quot;: 337,
                 &quot;path&quot;: &quot;src/Property/init.luau&quot;
             }
         }
@@ -437,8 +473,8 @@ property<span class="token punctuation">:</span><span class="token function">set
         &quot;line&quot;: 17,
         &quot;path&quot;: &quot;src/Property/init.luau&quot;
     }
-}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a><ul><li><a href="#Property" class="table-of-contents__link toc-highlight">Property</a></li></ul></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a><ul><li><a href="#onUpdate" class="table-of-contents__link toc-highlight">onUpdate</a></li></ul></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#bindToInstance" class="table-of-contents__link toc-highlight">:bindToInstance</a></li><li><a href="#bindToInstanceAttribute" class="table-of-contents__link toc-highlight">:bindToInstanceAttribute</a></li><li><a href="#bindToRobloxProperty" class="table-of-contents__link toc-highlight">:bindToRobloxProperty</a></li><li><a href="#bulkSet" class="table-of-contents__link toc-highlight">:bulkSet</a></li><li><a href="#destroy" class="table-of-contents__link toc-highlight">:destroy</a></li><li><a href="#forceSet" class="table-of-contents__link toc-highlight">:forceSet</a></li><li><a href="#get" class="table-of-contents__link toc-highlight">:get</a></li><li><a href="#observe" class="table-of-contents__link toc-highlight">:observe</a></li><li><a href="#set" class="table-of-contents__link toc-highlight">:set</a></li><li><a href="#valuePromise" class="table-of-contents__link toc-highlight">:valuePromise</a></li><li><a href="#is" class="table-of-contents__link toc-highlight">.is</a></li><li><a href="#new" class="table-of-contents__link toc-highlight">.new</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 bubshurb. Built with Moonwave and Docusaurus</div></div></div></footer></div>
-<script src="/libraries/assets/js/runtime~main.876b4dcc.js"></script>
-<script src="/libraries/assets/js/main.8cd9f51d.js"></script>
+}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a><ul><li><a href="#Property" class="table-of-contents__link toc-highlight">Property</a></li></ul></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a><ul><li><a href="#onUpdate" class="table-of-contents__link toc-highlight">onUpdate</a></li></ul></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#bindToInstance" class="table-of-contents__link toc-highlight">:bindToInstance</a></li><li><a href="#bindToInstanceAttribute" class="table-of-contents__link toc-highlight">:bindToInstanceAttribute</a></li><li><a href="#bindToRobloxProperty" class="table-of-contents__link toc-highlight">:bindToRobloxProperty</a></li><li><a href="#bulkSet" class="table-of-contents__link toc-highlight">:bulkSet</a></li><li><a href="#clone" class="table-of-contents__link toc-highlight">:clone</a></li><li><a href="#destroy" class="table-of-contents__link toc-highlight">:destroy</a></li><li><a href="#forceSet" class="table-of-contents__link toc-highlight">:forceSet</a></li><li><a href="#get" class="table-of-contents__link toc-highlight">:get</a></li><li><a href="#observe" class="table-of-contents__link toc-highlight">:observe</a></li><li><a href="#set" class="table-of-contents__link toc-highlight">:set</a></li><li><a href="#valuePromise" class="table-of-contents__link toc-highlight">:valuePromise</a></li><li><a href="#is" class="table-of-contents__link toc-highlight">.is</a></li><li><a href="#new" class="table-of-contents__link toc-highlight">.new</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 bubshurb. Built with Moonwave and Docusaurus</div></div></div></footer></div>
+<script src="/libraries/assets/js/runtime~main.71590502.js"></script>
+<script src="/libraries/assets/js/main.7054e5d9.js"></script>
 </body>
 </html>
