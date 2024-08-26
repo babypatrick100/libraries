@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v2.3.1">
 <title data-rh="true">instanceAttributeUtil | libraries</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://babypatrick100.github.io/libraries/api/instanceAttributeUtil"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="instanceAttributeUtil | libraries"><meta data-rh="true" name="description" content="A utility module for working with instance attributes."><meta data-rh="true" property="og:description" content="A utility module for working with instance attributes."><link data-rh="true" rel="icon" href="/libraries/icon.ico"><link data-rh="true" rel="canonical" href="https://babypatrick100.github.io/libraries/api/instanceAttributeUtil"><link data-rh="true" rel="alternate" href="https://babypatrick100.github.io/libraries/api/instanceAttributeUtil" hreflang="en"><link data-rh="true" rel="alternate" href="https://babypatrick100.github.io/libraries/api/instanceAttributeUtil" hreflang="x-default"><link rel="stylesheet" href="/libraries/assets/css/styles.e1adec2f.css">
-<link rel="preload" href="/libraries/assets/js/runtime~main.f9823d20.js" as="script">
-<link rel="preload" href="/libraries/assets/js/main.9ce858a6.js" as="script">
+<link rel="preload" href="/libraries/assets/js/runtime~main.e35b97e4.js" as="script">
+<link rel="preload" href="/libraries/assets/js/main.44a1fa9c.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -76,6 +76,11 @@ instance<span class="token punctuation">:</span><span class="token function">Set
 instance<span class="token punctuation">:</span><span class="token function">SetAttribute</span><span class="token punctuation">(</span><span class="token string">"SomeAttribute"</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
 instance<span class="token punctuation">:</span><span class="token function">SetAttribute</span><span class="token punctuation">(</span><span class="token string">"SomeAttribute"</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
 </code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="instanceAttributesPromise"><code style="text-decoration:none">instanceAttributesPromise</code><a href="#instanceAttributesPromise" class="hash-link" aria-label="Direct link to instanceAttributesPromise" title="Direct link to instanceAttributesPromise">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/instanceAttributeUtil/init.luau#L214"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>instanceAttributeUtil<!-- -->.</code><code class="green_DgR4">instanceAttributesPromise</code><code>(</code><div class="inset_uKQm"><div><code>instance<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code></div><div><code>attributes<!-- -->: </code><code class="purple_ieR2">{</code><code class="blue_P4bS">string</code><code class="purple_ieR2">}</code></div></div><code>) → </code><code class="blue_P4bS">Promise</code><code class="op_lSLc">&lt;</code><code class="op_lSLc">&gt;</code></div><div>
+<p>
+  Calls <a href="/libraries/api/instanceAttributeUtil#instanceAttributePromise">instanceAttributeUtil.instanceAttributePromise</a> for every attribute in <code>attributes</code>, and saves
+  the promise internally. Returns a promise that is reolved once all internal promises have been resolved.
+</p>
 </div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
     &quot;functions&quot;: [
         {
@@ -258,6 +263,33 @@ instance<span class="token punctuation">:</span><span class="token function">Set
                 &quot;line&quot;: 169,
                 &quot;path&quot;: &quot;src/instanceAttributeUtil/init.luau&quot;
             }
+        },
+        {
+            &quot;name&quot;: &quot;instanceAttributesPromise&quot;,
+            &quot;desc&quot;: &quot;Calls [instanceAttributeUtil.instanceAttributePromise] for every attribute in `attributes`, and saves\nthe promise internally. Returns a promise that is reolved once all internal promises have been resolved.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;instance&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Instance&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;attributes&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;{ string }&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Promise&lt;&gt;&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 214,
+                &quot;path&quot;: &quot;src/instanceAttributeUtil/init.luau&quot;
+            }
         }
     ],
     &quot;properties&quot;: [],
@@ -268,8 +300,8 @@ instance<span class="token punctuation">:</span><span class="token function">Set
         &quot;line&quot;: 8,
         &quot;path&quot;: &quot;src/instanceAttributeUtil/init.luau&quot;
     }
-}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#all" class="table-of-contents__link toc-highlight">.all</a></li><li><a href="#instanceAttributePromise" class="table-of-contents__link toc-highlight">.instanceAttributePromise</a></li><li><a href="#new" class="table-of-contents__link toc-highlight">.new</a></li><li><a href="#observe" class="table-of-contents__link toc-highlight">.observe</a></li><li><a href="#observeMany" class="table-of-contents__link toc-highlight">.observeMany</a></li><li><a href="#removed" class="table-of-contents__link toc-highlight">.removed</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 babypatrick100. Built with Moonwave and Docusaurus</div></div></div></footer></div>
-<script src="/libraries/assets/js/runtime~main.f9823d20.js"></script>
-<script src="/libraries/assets/js/main.9ce858a6.js"></script>
+}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#all" class="table-of-contents__link toc-highlight">.all</a></li><li><a href="#instanceAttributePromise" class="table-of-contents__link toc-highlight">.instanceAttributePromise</a></li><li><a href="#instanceAttributesPromise" class="table-of-contents__link toc-highlight">.instanceAttributesPromise</a></li><li><a href="#new" class="table-of-contents__link toc-highlight">.new</a></li><li><a href="#observe" class="table-of-contents__link toc-highlight">.observe</a></li><li><a href="#observeMany" class="table-of-contents__link toc-highlight">.observeMany</a></li><li><a href="#removed" class="table-of-contents__link toc-highlight">.removed</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 babypatrick100. Built with Moonwave and Docusaurus</div></div></div></footer></div>
+<script src="/libraries/assets/js/runtime~main.e35b97e4.js"></script>
+<script src="/libraries/assets/js/main.44a1fa9c.js"></script>
 </body>
 </html>
