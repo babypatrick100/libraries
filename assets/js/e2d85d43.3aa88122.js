@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[228],{7522:e=>{e.exports=JSON.parse('{"functions":[],"properties":[],"types":[],"name":"evLightning","desc":"Evaera\'s evLighning module ported to wally.","source":{"line":6,"path":"src/evLightning/init.luau"}}')}}]);
