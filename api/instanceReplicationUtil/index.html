@@ -36,10 +36,9 @@ instanceReplicationUtil.instanceSnaphot(workspace.Model):andThen(function()
 end)
 ```
 
-:::note Possible deprecation
-This module is superseded by [StreamingEnabled](https://create.roblox.com/docs/workspace/streaming) (if used properly) 
-- you can set the `ModelStreamingMode` of models to `Atomic` to ensure all their descendants are loaded once the main model
-is loaded into the client.
+:::warning Superseded by Streaming Enabled
+This module is superseded by [StreamingEnabled](https://create.roblox.com/docs/workspace/streaming) and has therefore being deprecated as of 8/30/2024:
+    - You can set the `ModelStreamingMode` of models to `Atomic` to ensure all their descendants are loaded once the main model is loaded into the client.
 :::"><meta data-rh="true" property="og:description" content=" 
 
 An utility module for working with instance replication.
@@ -73,13 +72,12 @@ instanceReplicationUtil.instanceSnaphot(workspace.Model):andThen(function()
 end)
 ```
 
-:::note Possible deprecation
-This module is superseded by [StreamingEnabled](https://create.roblox.com/docs/workspace/streaming) (if used properly) 
-- you can set the `ModelStreamingMode` of models to `Atomic` to ensure all their descendants are loaded once the main model
-is loaded into the client.
+:::warning Superseded by Streaming Enabled
+This module is superseded by [StreamingEnabled](https://create.roblox.com/docs/workspace/streaming) and has therefore being deprecated as of 8/30/2024:
+    - You can set the `ModelStreamingMode` of models to `Atomic` to ensure all their descendants are loaded once the main model is loaded into the client.
 :::"><link data-rh="true" rel="icon" href="/libraries/icon.ico"><link data-rh="true" rel="canonical" href="https://babypatrick100.github.io/libraries/api/instanceReplicationUtil"><link data-rh="true" rel="alternate" href="https://babypatrick100.github.io/libraries/api/instanceReplicationUtil" hreflang="en"><link data-rh="true" rel="alternate" href="https://babypatrick100.github.io/libraries/api/instanceReplicationUtil" hreflang="x-default"><link rel="stylesheet" href="/libraries/assets/css/styles.e1adec2f.css">
-<link rel="preload" href="/libraries/assets/js/runtime~main.949d80a0.js" as="script">
-<link rel="preload" href="/libraries/assets/js/main.e7a7b5ce.js" as="script">
+<link rel="preload" href="/libraries/assets/js/runtime~main.0dc89997.js" as="script">
+<link rel="preload" href="/libraries/assets/js/main.a59466d0.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -112,29 +110,25 @@ instanceReplicationUtil<span class="token punctuation">.</span><span class="toke
     <span class="token function">print</span><span class="token punctuation">(</span>workspace<span class="token punctuation">.</span>Model<span class="token punctuation">.</span>Part1<span class="token punctuation">)</span>
 <span class="token keyword">end</span><span class="token punctuation">)</span>
 </code></pre>
-<div class="admonition admonition-note alert alert--secondary">
+<div class="admonition admonition-warning alert alert--danger">
   <div class="admonition-heading">
-    <h5><span class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16">
-          <path d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path>
-        </svg></span>Possible deprecation</h5>
+    <h5><span class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16">
+          <path d="M5.05.31c.81 2.17.41 3.38-.52 4.31C3.55 5.67 1.98 6.45.9 7.98c-1.45 2.05-1.7 6.53 3.53 7.7-2.2-1.16-2.67-4.52-.3-6.61-.61 2.03.53 3.33 1.94 2.86 1.39-.47 2.3.53 2.27 1.67-.02.78-.31 1.44-1.13 1.81 3.42-.59 4.78-3.42 4.78-5.56 0-2.84-2.53-3.22-1.25-5.61-1.52.13-2.03 1.13-1.89 2.75.09 1.08-1.02 1.8-1.86 1.33-.67-.41-.66-1.19-.06-1.78C8.18 5.31 8.68 2.45 5.05.32L5.03.3l.02.01z"></path>
+        </svg></span>Superseded by Streaming Enabled</h5>
   </div>
   <div class="admonition-content">
-    <p>This module is superseded by <a href="https://create.roblox.com/docs/workspace/streaming" target="_blank">StreamingEnabled</a> (if used properly)</p>
-    <ul>
-      <li>
-        you can set the <code>ModelStreamingMode</code> of models to <code>Atomic</code> to ensure all their descendants are loaded once the main model
-        is loaded into the client.
-      </li>
-    </ul>
+    <p>This module is superseded by <a href="https://create.roblox.com/docs/workspace/streaming" target="_blank">StreamingEnabled</a> and has therefore being deprecated as of 8/30/2024:</p>
+    <pre><code>- You can set the `ModelStreamingMode` of models to `Atomic` to ensure all their descendants are loaded once the main model is loaded into the client.
+</code></pre>
   </div>
 </div>
-</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="storeInstanceSnapshot"><code style="text-decoration:none">storeInstanceSnapshot</code><a href="#storeInstanceSnapshot" class="hash-link" aria-label="Direct link to storeInstanceSnapshot" title="Direct link to storeInstanceSnapshot">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/instanceReplicationUtil/init.luau#L73"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>instanceReplicationUtil<!-- -->.</code><code class="green_DgR4">storeInstanceSnapshot</code><code>(</code><code>instance<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>) → </code><code>(</code><code>)</code></div><div>
+</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="storeInstanceSnapshot"><code style="text-decoration:none">storeInstanceSnapshot</code><a href="#storeInstanceSnapshot" class="hash-link" aria-label="Direct link to storeInstanceSnapshot" title="Direct link to storeInstanceSnapshot">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/instanceReplicationUtil/init.luau#L72"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>instanceReplicationUtil<!-- -->.</code><code class="green_DgR4">storeInstanceSnapshot</code><code>(</code><code>instance<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>) → </code><code>(</code><code>)</code></div><div>
 <p>
   This method will capture the "snapshot" of <code>instance</code> and store it within
   the instance it self via attributes. This method is to be used in conjuction with
   <a href="/libraries/api/instanceReplicationUtil#instanceSnaphot">instanceReplicationUtil.instanceSnaphot</a>.
 </p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="instanceSnaphot"><code style="text-decoration:none">instanceSnaphot</code><a href="#instanceSnaphot" class="hash-link" aria-label="Direct link to instanceSnaphot" title="Direct link to instanceSnaphot">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/instanceReplicationUtil/init.luau#L131"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>instanceReplicationUtil<!-- -->.</code><code class="green_DgR4">instanceSnaphot</code><code>(</code><code>instance<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>) → </code><code class="blue_P4bS">Promise</code><code class="op_lSLc">&lt;</code><code class="op_lSLc">&gt;</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="instanceSnaphot"><code style="text-decoration:none">instanceSnaphot</code><a href="#instanceSnaphot" class="hash-link" aria-label="Direct link to instanceSnaphot" title="Direct link to instanceSnaphot">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/instanceReplicationUtil/init.luau#L130"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>instanceReplicationUtil<!-- -->.</code><code class="green_DgR4">instanceSnaphot</code><code>(</code><code>instance<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>) → </code><code class="blue_P4bS">Promise</code><code class="op_lSLc">&lt;</code><code class="op_lSLc">&gt;</code></div><div>
 <p>Returns a <a href="https://eryn.io/roblox-lua-promise/" target="_blank">promise</a> which is resolved once <code>instance</code> has it's snapshot available.</p>
 <div class="admonition admonition-warning alert alert--danger">
   <div class="admonition-heading">
@@ -213,7 +207,7 @@ instanceReplicationUtil<span class="token punctuation">.</span><span class="toke
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 73,
+                &quot;line&quot;: 72,
                 &quot;path&quot;: &quot;src/instanceReplicationUtil/init.luau&quot;
             }
         },
@@ -235,7 +229,7 @@ instanceReplicationUtil<span class="token punctuation">.</span><span class="toke
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 131,
+                &quot;line&quot;: 130,
                 &quot;path&quot;: &quot;src/instanceReplicationUtil/init.luau&quot;
             }
         }
@@ -243,13 +237,13 @@ instanceReplicationUtil<span class="token punctuation">.</span><span class="toke
     &quot;properties&quot;: [],
     &quot;types&quot;: [],
     &quot;name&quot;: &quot;instanceReplicationUtil&quot;,
-    &quot;desc&quot;: &quot; \n\nAn utility module for working with instance replication.\n \n```lua\n-- GOAL: Create a model with a part, and ensure that the model is fully\n-- replicated to the client by the time the client accesses it.\n\n-- Server:\nlocal Workspace = game:GetService(\&quot;Workspace\&quot;)\n\nlocal model = Instance.new(\&quot;Model\&quot;)\nlocal part1 = Instance.new(\&quot;Part\&quot;)\npart1.Name = \&quot;Part1\&quot;\npart1.Parent = model\nmodel.Parent = Workspace\n\n-- storeInstanceSnapshot will capture the \&quot;snapshot\&quot; of the model and \n-- store it within the model it self via attributes.\ninstanceReplicationUtil.storeInstanceSnapshot(model)\n\n-- Client:\n\n-- instanceSnaphot will return a [promise](https://eryn.io/roblox-lua-promise/) which will be resolved once\n-- the model&#x27;s snapshot (stored within the model by storeInstanceSnapshot)\n-- is ready.\ninstanceReplicationUtil.instanceSnaphot(workspace.Model):andThen(function()\n    -- Safely access the part without worrying if it has successfuly replicated\n    -- or not!\n    print(workspace.Model.Part1)\nend)\n```\n\n:::note Possible deprecation\nThis module is superseded by [StreamingEnabled](https://create.roblox.com/docs/workspace/streaming) (if used properly) \n- you can set the `ModelStreamingMode` of models to `Atomic` to ensure all their descendants are loaded once the main model\nis loaded into the client.\n:::&quot;,
+    &quot;desc&quot;: &quot; \n\nAn utility module for working with instance replication.\n \n```lua\n-- GOAL: Create a model with a part, and ensure that the model is fully\n-- replicated to the client by the time the client accesses it.\n\n-- Server:\nlocal Workspace = game:GetService(\&quot;Workspace\&quot;)\n\nlocal model = Instance.new(\&quot;Model\&quot;)\nlocal part1 = Instance.new(\&quot;Part\&quot;)\npart1.Name = \&quot;Part1\&quot;\npart1.Parent = model\nmodel.Parent = Workspace\n\n-- storeInstanceSnapshot will capture the \&quot;snapshot\&quot; of the model and \n-- store it within the model it self via attributes.\ninstanceReplicationUtil.storeInstanceSnapshot(model)\n\n-- Client:\n\n-- instanceSnaphot will return a [promise](https://eryn.io/roblox-lua-promise/) which will be resolved once\n-- the model&#x27;s snapshot (stored within the model by storeInstanceSnapshot)\n-- is ready.\ninstanceReplicationUtil.instanceSnaphot(workspace.Model):andThen(function()\n    -- Safely access the part without worrying if it has successfuly replicated\n    -- or not!\n    print(workspace.Model.Part1)\nend)\n```\n\n:::warning Superseded by Streaming Enabled\nThis module is superseded by [StreamingEnabled](https://create.roblox.com/docs/workspace/streaming) and has therefore being deprecated as of 8/30/2024:\n    - You can set the `ModelStreamingMode` of models to `Atomic` to ensure all their descendants are loaded once the main model is loaded into the client.\n:::&quot;,
     &quot;source&quot;: {
-        &quot;line&quot;: 41,
+        &quot;line&quot;: 40,
         &quot;path&quot;: &quot;src/instanceReplicationUtil/init.luau&quot;
     }
 }</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#instanceSnaphot" class="table-of-contents__link toc-highlight">.instanceSnaphot</a></li><li><a href="#storeInstanceSnapshot" class="table-of-contents__link toc-highlight">.storeInstanceSnapshot</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 babypatrick100. Built with Moonwave and Docusaurus</div></div></div></footer></div>
-<script src="/libraries/assets/js/runtime~main.949d80a0.js"></script>
-<script src="/libraries/assets/js/main.e7a7b5ce.js"></script>
+<script src="/libraries/assets/js/runtime~main.0dc89997.js"></script>
+<script src="/libraries/assets/js/main.a59466d0.js"></script>
 </body>
 </html>
