@@ -18,8 +18,8 @@ An utility module for working with instances.
 instanceUtil.setInstanceAttributes(workspace.Baseplate, {IsCool = true})
 print(workspace.Baseplate:GetAttributes()) --&gt; {IsCool = true}
 ```"><link data-rh="true" rel="icon" href="/libraries/icon.ico"><link data-rh="true" rel="canonical" href="https://babypatrick100.github.io/libraries/api/instanceUtil"><link data-rh="true" rel="alternate" href="https://babypatrick100.github.io/libraries/api/instanceUtil" hreflang="en"><link data-rh="true" rel="alternate" href="https://babypatrick100.github.io/libraries/api/instanceUtil" hreflang="x-default"><link rel="stylesheet" href="/libraries/assets/css/styles.e1adec2f.css">
-<link rel="preload" href="/libraries/assets/js/runtime~main.7341f144.js" as="script">
-<link rel="preload" href="/libraries/assets/js/main.478009c4.js" as="script">
+<link rel="preload" href="/libraries/assets/js/runtime~main.01f67c63.js" as="script">
+<link rel="preload" href="/libraries/assets/js/main.294fa405.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -210,7 +210,7 @@ instanceUtil<span class="token punctuation">.</span><span class="token function"
                 {
                     &quot;name&quot;: &quot;tweenInfo&quot;,
                     &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;TweenInfo?\r\n&quot;
+                    &quot;lua_type&quot;: &quot;TweenInfo?\n&quot;
                 }
             ],
             &quot;returns&quot;: [],
@@ -237,7 +237,7 @@ instanceUtil<span class="token punctuation">.</span><span class="token function"
                 {
                     &quot;name&quot;: &quot;observer&quot;,
                     &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;(newValue: any, oldValue: any) -&gt; ()\r\n&quot;
+                    &quot;lua_type&quot;: &quot;(newValue: any, oldValue: any) -&gt; ()\n&quot;
                 }
             ],
             &quot;returns&quot;: [],
@@ -386,7 +386,7 @@ instanceUtil<span class="token punctuation">.</span><span class="token function"
                 {
                     &quot;name&quot;: &quot;physicalProperties&quot;,
                     &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;PhysicalProperties\r\n&quot;
+                    &quot;lua_type&quot;: &quot;PhysicalProperties\n&quot;
                 }
             ],
             &quot;returns&quot;: [],
@@ -426,7 +426,7 @@ instanceUtil<span class="token punctuation">.</span><span class="token function"
             &quot;returns&quot;: [
                 {
                     &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;{ top: { Vector3 }, bottom: { Vector3 } }\r\n&quot;
+                    &quot;lua_type&quot;: &quot;{ top: { Vector3 }, bottom: { Vector3 } }\n&quot;
                 }
             ],
             &quot;function_type&quot;: &quot;static&quot;,
@@ -452,13 +452,13 @@ instanceUtil<span class="token punctuation">.</span><span class="token function"
                 {
                     &quot;name&quot;: &quot;depth&quot;,
                     &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number?\r\n&quot;
+                    &quot;lua_type&quot;: &quot;number?\n&quot;
                 }
             ],
             &quot;returns&quot;: [
                 {
                     &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;Enum.Material\r\n&quot;
+                    &quot;lua_type&quot;: &quot;Enum.Material\n&quot;
                 }
             ],
             &quot;function_type&quot;: &quot;static&quot;,
@@ -502,7 +502,7 @@ instanceUtil<span class="token punctuation">.</span><span class="token function"
             &quot;returns&quot;: [
                 {
                     &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;Player?\r\n&quot;
+                    &quot;lua_type&quot;: &quot;Player?\n&quot;
                 }
             ],
             &quot;function_type&quot;: &quot;static&quot;,
@@ -521,7 +521,7 @@ instanceUtil<span class="token punctuation">.</span><span class="token function"
         &quot;path&quot;: &quot;src/instanceUtil/init.luau&quot;
     }
 }</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#addTagsToInstance" class="table-of-contents__link toc-highlight">.addTagsToInstance</a></li><li><a href="#addTagsToInstance" class="table-of-contents__link toc-highlight">.addTagsToInstance</a></li><li><a href="#instanceCorners" class="table-of-contents__link toc-highlight">.instanceCorners</a></li><li><a href="#instanceFloorMaterial" class="table-of-contents__link toc-highlight">.instanceFloorMaterial</a></li><li><a href="#observeProperty" class="table-of-contents__link toc-highlight">.observeProperty</a></li><li><a href="#removeTagsFromInstance" class="table-of-contents__link toc-highlight">.removeTagsFromInstance</a></li><li><a href="#resetInstancePhysicalProperties" class="table-of-contents__link toc-highlight">.resetInstancePhysicalProperties</a></li><li><a href="#resetInstancePhysicsCollisionGroup" class="table-of-contents__link toc-highlight">.resetInstancePhysicsCollisionGroup</a></li><li><a href="#safeInstanceNetworkOwner" class="table-of-contents__link toc-highlight">.safeInstanceNetworkOwner</a></li><li><a href="#safeSetInstanceNetworkOwner" class="table-of-contents__link toc-highlight">.safeSetInstanceNetworkOwner</a></li><li><a href="#setInstanceAttributes" class="table-of-contents__link toc-highlight">.setInstanceAttributes</a></li><li><a href="#setInstancePhysicalProperties" class="table-of-contents__link toc-highlight">.setInstancePhysicalProperties</a></li><li><a href="#setInstancePhysicsCollisionGroup" class="table-of-contents__link toc-highlight">.setInstancePhysicsCollisionGroup</a></li><li><a href="#setInstanceProperties" class="table-of-contents__link toc-highlight">.setInstanceProperties</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 babypatrick100. Built with Moonwave and Docusaurus</div></div></div></footer></div>
-<script src="/libraries/assets/js/runtime~main.7341f144.js"></script>
-<script src="/libraries/assets/js/main.478009c4.js"></script>
+<script src="/libraries/assets/js/runtime~main.01f67c63.js"></script>
+<script src="/libraries/assets/js/main.294fa405.js"></script>
 </body>
 </html>
