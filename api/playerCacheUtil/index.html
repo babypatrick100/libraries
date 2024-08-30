@@ -22,8 +22,8 @@ cache.test = 1
 
 print(cache.test) --&gt; 1 
 ```"><link data-rh="true" rel="icon" href="/libraries/icon.ico"><link data-rh="true" rel="canonical" href="https://babypatrick100.github.io/libraries/api/playerCacheUtil"><link data-rh="true" rel="alternate" href="https://babypatrick100.github.io/libraries/api/playerCacheUtil" hreflang="en"><link data-rh="true" rel="alternate" href="https://babypatrick100.github.io/libraries/api/playerCacheUtil" hreflang="x-default"><link rel="stylesheet" href="/libraries/assets/css/styles.e1adec2f.css">
-<link rel="preload" href="/libraries/assets/js/runtime~main.0dc89997.js" as="script">
-<link rel="preload" href="/libraries/assets/js/main.a59466d0.js" as="script">
+<link rel="preload" href="/libraries/assets/js/runtime~main.34f0c0a5.js" as="script">
+<link rel="preload" href="/libraries/assets/js/main.7347ce7b.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -35,7 +35,7 @@ cache<span class="token punctuation">.</span>test <span class="token operator">=
 <span class="token function">print</span><span class="token punctuation">(</span>cache<span class="token punctuation">.</span>test<span class="token punctuation">)</span> <span class="token comment">--> 1 </span>
 </code></pre>
 </div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="cacheForPlayer"><code style="text-decoration:none">cacheForPlayer</code><a href="#cacheForPlayer" class="hash-link" aria-label="Direct link to cacheForPlayer" title="Direct link to cacheForPlayer">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/playerCacheUtil/init.luau#L48"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>playerCacheUtil<!-- -->.</code><code class="green_DgR4">cacheForPlayer</code><code>(</code><code>player<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Player" target="_blank" rel="noopener noreferrer">Player<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>) → </code><code>(</code><code>)</code></div><div>
-<p>Returns the cache for the given player.</p>
+<p>Returns the cache for the given player, which is automatically cleaned up once <code>player</code> leaves the game.</p>
 <div class="admonition admonition-tip alert alert--success">
   <div class="admonition-heading">
     <h5><span class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16">
@@ -76,7 +76,7 @@ cache<span class="token punctuation">.</span>opper <span class="token operator">
     &quot;functions&quot;: [
         {
             &quot;name&quot;: &quot;cacheForPlayer&quot;,
-            &quot;desc&quot;: &quot;Returns the cache for the given player. \n\n:::tip Uniqueness\nPlayer caches are stored per each player, uniquely keyed by script names. This means a player&#x27;s cache \nwill always be unique when accessed from different scripts.\n\nFor e.g:\n\n```lua\n-- Script 1:\nlocal cache = playerCacheUtil.cacheForPlayer(player)  \ncache.test = 1\n\nprint(cache) --&gt; {test = 1}\n\n\n-- Script 2:\nlocal cache = playerCacheUtil.cacheForPlayer(player)  \ncache.opper = 5\nprint(cache) --&gt; {opper = 5} \n```\n:::\n\n:::warning Potential error\nThis method will throw an error if `player` is not present in game.\n:::&quot;,
+            &quot;desc&quot;: &quot;Returns the cache for the given player, which is automatically cleaned up once `player` leaves the game.\n\n:::tip Uniqueness\nPlayer caches are stored per each player, uniquely keyed by script names. This means a player&#x27;s cache \nwill always be unique when accessed from different scripts.\n\nFor e.g:\n\n```lua\n-- Script 1:\nlocal cache = playerCacheUtil.cacheForPlayer(player)  \ncache.test = 1\n\nprint(cache) --&gt; {test = 1}\n\n\n-- Script 2:\nlocal cache = playerCacheUtil.cacheForPlayer(player)  \ncache.opper = 5\nprint(cache) --&gt; {opper = 5} \n```\n:::\n\n:::warning Potential error\nThis method will throw an error if `player` is not present in game.\n:::&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;player&quot;,
@@ -101,7 +101,7 @@ cache<span class="token punctuation">.</span>opper <span class="token operator">
         &quot;path&quot;: &quot;src/playerCacheUtil/init.luau&quot;
     }
 }</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#cacheForPlayer" class="table-of-contents__link toc-highlight">.cacheForPlayer</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 babypatrick100. Built with Moonwave and Docusaurus</div></div></div></footer></div>
-<script src="/libraries/assets/js/runtime~main.0dc89997.js"></script>
-<script src="/libraries/assets/js/main.a59466d0.js"></script>
+<script src="/libraries/assets/js/runtime~main.34f0c0a5.js"></script>
+<script src="/libraries/assets/js/main.7347ce7b.js"></script>
 </body>
 </html>
