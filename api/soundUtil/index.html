@@ -59,9 +59,9 @@ soundUtil.registerSoundCleanupCallback(someSound, function(sound, deltaTime)
 end)
 
 soundUtil.playSound(someSound)
-```"><link data-rh="true" rel="icon" href="/libraries/icon.ico"><link data-rh="true" rel="canonical" href="https://babypatrick100.github.io/libraries/api/soundUtil"><link data-rh="true" rel="alternate" href="https://babypatrick100.github.io/libraries/api/soundUtil" hreflang="en"><link data-rh="true" rel="alternate" href="https://babypatrick100.github.io/libraries/api/soundUtil" hreflang="x-default"><link rel="stylesheet" href="/libraries/assets/css/styles.e1adec2f.css">
-<link rel="preload" href="/libraries/assets/js/runtime~main.01f67c63.js" as="script">
-<link rel="preload" href="/libraries/assets/js/main.7974b773.js" as="script">
+```"><link data-rh="true" rel="icon" href="/libraries/icon.ico"><link data-rh="true" rel="canonical" href="https://babypatrick100.github.io/libraries/api/soundUtil"><link data-rh="true" rel="alternate" href="https://babypatrick100.github.io/libraries/api/soundUtil" hreflang="en"><link data-rh="true" rel="alternate" href="https://babypatrick100.github.io/libraries/api/soundUtil" hreflang="x-default"><link rel="stylesheet" href="/libraries/assets/css/styles.de7b7a73.css">
+<link rel="preload" href="/libraries/assets/js/runtime~main.a70d37d8.js" as="script">
+<link rel="preload" href="/libraries/assets/js/main.36a1f862.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -242,7 +242,7 @@ someSoundUtil<span class="token punctuation">.</span><span class="token function
 
 soundUtil<span class="token punctuation">.</span><span class="token function">playSound</span><span class="token punctuation">(</span>someSound<span class="token punctuation">)</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="registerSoundIdHeartbeatCallback"><code style="text-decoration:none">registerSoundIdHeartbeatCallback</code><a href="#registerSoundIdHeartbeatCallback" class="hash-link" aria-label="Direct link to registerSoundIdHeartbeatCallback" title="Direct link to registerSoundIdHeartbeatCallback">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/soundUtil/init.luau#L390"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>soundUtil<!-- -->.</code><code class="green_DgR4">registerSoundIdHeartbeatCallback</code><code>(</code><div class="inset_uKQm"><div><code>soundId<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code></div><div><code>heartbeatCallback<!-- -->: </code><code class="purple_ieR2">(</code><code class="green_DgR4">(</code><div class="inset_uKQm"><code>soundId<!-- -->: </code><code class="blue_P4bS">string</code><code class="green_DgR4">,</code></div><div class="inset_uKQm"><code>deltaTime<!-- -->: </code><code class="blue_P4bS">number</code></div><code class="green_DgR4">)</code><code class="green_DgR4"> → </code><code class="green_DgR4">(</code><code class="green_DgR4">)</code><code class="purple_ieR2">)</code></div></div><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="registerSoundIdHeartbeatCallback"><code style="text-decoration:none">registerSoundIdHeartbeatCallback</code><a href="#registerSoundIdHeartbeatCallback" class="hash-link" aria-label="Direct link to registerSoundIdHeartbeatCallback" title="Direct link to registerSoundIdHeartbeatCallback">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/soundUtil/init.luau#L387"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>soundUtil<!-- -->.</code><code class="green_DgR4">registerSoundIdHeartbeatCallback</code><code>(</code><div class="inset_uKQm"><div><code>soundId<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code></div><div><code>heartbeatCallback<!-- -->: </code><code class="purple_ieR2">(</code><div class="inset_uKQm"><code>soundId<!-- -->: </code><code class="blue_P4bS">string</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>deltaTime<!-- -->: </code><code class="blue_P4bS">number</code></div><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code></div></div><code>) → </code><code>(</code><code>)</code></div><div>
 <p>
   Registers the given callback as a heartbeat callback for the given <strong>sound id</strong>. It
   will be called every <a href="https://create.roblox.com/docs/reference/engine/classes/RunService#Heartbeat" target="_blank">Heartbeat</a>
@@ -265,7 +265,7 @@ soundUtil<span class="token punctuation">.</span><span class="token function">pl
 
 soundUtil<span class="token punctuation">.</span><span class="token function">playSoundId</span><span class="token punctuation">(</span>someSoundId<span class="token punctuation">)</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="registerSoundIdCleanupCallback"><code style="text-decoration:none">registerSoundIdCleanupCallback</code><a href="#registerSoundIdCleanupCallback" class="hash-link" aria-label="Direct link to registerSoundIdCleanupCallback" title="Direct link to registerSoundIdCleanupCallback">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/soundUtil/init.luau#L440"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>soundUtil<!-- -->.</code><code class="green_DgR4">registerSoundIdCleanupCallback</code><code>(</code><div class="inset_uKQm"><div><code>soundId<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code></div><div><code>cleanupPredicate<!-- -->: </code><code class="purple_ieR2">(</code><code class="green_DgR4">(</code><div class="inset_uKQm"><code>soundId<!-- -->: </code><code class="blue_P4bS">string</code><code class="green_DgR4">,</code></div><div class="inset_uKQm"><code>deltaTime<!-- -->: </code><code class="blue_P4bS">number</code></div><code class="green_DgR4">)</code><code class="green_DgR4"> → </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">)</code><code class="blue_P4bS">?</code></div></div><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="registerSoundIdCleanupCallback"><code style="text-decoration:none">registerSoundIdCleanupCallback</code><a href="#registerSoundIdCleanupCallback" class="hash-link" aria-label="Direct link to registerSoundIdCleanupCallback" title="Direct link to registerSoundIdCleanupCallback">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/soundUtil/init.luau#L437"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>soundUtil<!-- -->.</code><code class="green_DgR4">registerSoundIdCleanupCallback</code><code>(</code><div class="inset_uKQm"><div><code>soundId<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code></div><div><code>cleanupPredicate<!-- -->: </code><code class="purple_ieR2">(</code><code class="green_DgR4">(</code><div class="inset_uKQm"><code>soundId<!-- -->: </code><code class="blue_P4bS">string</code><code class="green_DgR4">,</code></div><div class="inset_uKQm"><code>deltaTime<!-- -->: </code><code class="blue_P4bS">number</code></div><code class="green_DgR4">)</code><code class="green_DgR4"> → </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">)</code><code class="blue_P4bS">?</code></div></div><code>) → </code><code>(</code><code>)</code></div><div>
 <p>
   Registers the given callback as a cleanup callback for the given <strong>sound id</strong>. The callback will be
   called every <a href="https://create.roblox.com/docs/reference/engine/classes/RunService#Heartbeat" target="_blank">Heartbeat</a> when the
@@ -513,7 +513,7 @@ someSoundUtil<span class="token punctuation">.</span><span class="token function
                 {
                     &quot;name&quot;: &quot;heartbeatCallback&quot;,
                     &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;(\n\t\tsound: Sound,\n\t\tdeltaTime: number\n\t) -&gt; ()\n&quot;
+                    &quot;lua_type&quot;: &quot;(sound: Sound, deltaTime: number) -&gt; ()\n&quot;
                 }
             ],
             &quot;returns&quot;: [],
@@ -535,13 +535,13 @@ someSoundUtil<span class="token punctuation">.</span><span class="token function
                 {
                     &quot;name&quot;: &quot;heartbeatCallback&quot;,
                     &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;((\n\t\tsoundId: string,\n\t\tdeltaTime: number\n\t) -&gt; ())\n&quot;
+                    &quot;lua_type&quot;: &quot;(\n\t\tsoundId: string,\n\t\tdeltaTime: number\n\t) -&gt; ()\n&quot;
                 }
             ],
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 390,
+                &quot;line&quot;: 387,
                 &quot;path&quot;: &quot;src/soundUtil/init.luau&quot;
             }
         },
@@ -563,7 +563,7 @@ someSoundUtil<span class="token punctuation">.</span><span class="token function
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 440,
+                &quot;line&quot;: 437,
                 &quot;path&quot;: &quot;src/soundUtil/init.luau&quot;
             }
         }
@@ -591,7 +591,7 @@ someSoundUtil<span class="token punctuation">.</span><span class="token function
         &quot;path&quot;: &quot;src/soundUtil/init.luau&quot;
     }
 }</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a><ul><li><a href="#onSoundCleanup" class="table-of-contents__link toc-highlight">onSoundCleanup</a></li></ul></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#playingSounds" class="table-of-contents__link toc-highlight">.playingSounds</a></li><li><a href="#playSound" class="table-of-contents__link toc-highlight">.playSound</a></li><li><a href="#playSound3D" class="table-of-contents__link toc-highlight">.playSound3D</a></li><li><a href="#playSoundCloneAndCleanup" class="table-of-contents__link toc-highlight">.playSoundCloneAndCleanup</a></li><li><a href="#playSoundId" class="table-of-contents__link toc-highlight">.playSoundId</a></li><li><a href="#registerSoundCleanupCallback" class="table-of-contents__link toc-highlight">.registerSoundCleanupCallback</a></li><li><a href="#registerSoundHeartbeatCallback" class="table-of-contents__link toc-highlight">.registerSoundHeartbeatCallback</a></li><li><a href="#registerSoundIdCleanupCallback" class="table-of-contents__link toc-highlight">.registerSoundIdCleanupCallback</a></li><li><a href="#registerSoundIdHeartbeatCallback" class="table-of-contents__link toc-highlight">.registerSoundIdHeartbeatCallback</a></li><li><a href="#stopAll" class="table-of-contents__link toc-highlight">.stopAll</a></li><li><a href="#stopAllSoundsOfSoundId" class="table-of-contents__link toc-highlight">.stopAllSoundsOfSoundId</a></li><li><a href="#stopSound" class="table-of-contents__link toc-highlight">.stopSound</a></li><li><a href="#stopSoundId" class="table-of-contents__link toc-highlight">.stopSoundId</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 babypatrick100. Built with Moonwave and Docusaurus</div></div></div></footer></div>
-<script src="/libraries/assets/js/runtime~main.01f67c63.js"></script>
-<script src="/libraries/assets/js/main.7974b773.js"></script>
+<script src="/libraries/assets/js/runtime~main.a70d37d8.js"></script>
+<script src="/libraries/assets/js/main.36a1f862.js"></script>
 </body>
 </html>
