@@ -30,8 +30,8 @@ end)
 
 property:set(10) 
 ```"><link data-rh="true" rel="icon" href="/libraries/icon.ico"><link data-rh="true" rel="canonical" href="https://babypatrick100.github.io/libraries/api/Property"><link data-rh="true" rel="alternate" href="https://babypatrick100.github.io/libraries/api/Property" hreflang="en"><link data-rh="true" rel="alternate" href="https://babypatrick100.github.io/libraries/api/Property" hreflang="x-default"><link rel="stylesheet" href="/libraries/assets/css/styles.de7b7a73.css">
-<link rel="preload" href="/libraries/assets/js/runtime~main.65fe0a70.js" as="script">
-<link rel="preload" href="/libraries/assets/js/main.ec304e76.js" as="script">
+<link rel="preload" href="/libraries/assets/js/runtime~main.84fe3220.js" as="script">
+<link rel="preload" href="/libraries/assets/js/main.b60ab64f.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -171,7 +171,7 @@ property<span class="token punctuation">:</span><span class="token function">set
     <p>The returned promise will be cancelled as soon as the property object is destroyed.</p>
   </div>
 </div>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="forceSet"><code style="text-decoration:none">forceSet</code><a href="#forceSet" class="hash-link" aria-label="Direct link to forceSet" title="Direct link to forceSet">​</a></h3><span class="docTag__6UZ" style="border-color:#2b8ab6;color:#2b8ab6">Property Instance</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/Property/init.luau#L300"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->:</code><code class="green_DgR4">forceSet</code><code>(</code><code>value<!-- -->: </code><code class="blue_P4bS">any</code><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="forceSet"><code style="text-decoration:none">forceSet</code><a href="#forceSet" class="hash-link" aria-label="Direct link to forceSet" title="Direct link to forceSet">​</a></h3><span class="docTag__6UZ" style="border-color:#2b8ab6;color:#2b8ab6">Property Instance</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/Property/init.luau#L317"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->:</code><code class="green_DgR4">forceSet</code><code>(</code><code>value<!-- -->: </code><code class="blue_P4bS">any</code><code>) → </code><code>(</code><code>)</code></div><div>
 <p>Works the same as <a href="/libraries/api/Property#Property#set">Property:set</a> except that values aren't checked for equality, for e.g:</p>
 <pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> property <span class="token operator">=</span> Property<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
@@ -186,9 +186,9 @@ property<span class="token punctuation">:</span><span class="token function">for
 <span class="token comment">--> 2</span>
 <span class="token comment">--> "a"</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="silentSet"><code style="text-decoration:none">silentSet</code><a href="#silentSet" class="hash-link" aria-label="Direct link to silentSet" title="Direct link to silentSet">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/Property/init.luau#L310"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->:</code><code class="green_DgR4">silentSet</code><code>(</code><code>value<!-- -->: </code><code class="blue_P4bS">any</code><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="silentSet"><code style="text-decoration:none">silentSet</code><a href="#silentSet" class="hash-link" aria-label="Direct link to silentSet" title="Direct link to silentSet">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/Property/init.luau#L327"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->:</code><code class="green_DgR4">silentSet</code><code>(</code><code>value<!-- -->: </code><code class="blue_P4bS">any</code><code>) → </code><code>(</code><code>)</code></div><div>
 <p>Works almost the same as <a href="/libraries/api/Property#Property#set">Property:set</a>, but never fires off the <a href="/libraries/api/Property#Property#onUpdate">Property.onUpdate</a> signal.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="get"><code style="text-decoration:none">get</code><a href="#get" class="hash-link" aria-label="Direct link to get" title="Direct link to get">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/Property/init.luau#L326"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->:</code><code class="green_DgR4">get</code><code>(</code><code>) → </code><code class="blue_P4bS">any</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="get"><code style="text-decoration:none">get</code><a href="#get" class="hash-link" aria-label="Direct link to get" title="Direct link to get">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/Property/init.luau#L343"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->:</code><code class="green_DgR4">get</code><code>(</code><code>) → </code><code class="blue_P4bS">any</code></div><div>
 <p>Returns a shallow copy of the current value of the property.</p>
 <pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> property <span class="token operator">=</span> Property<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
@@ -196,7 +196,7 @@ property<span class="token punctuation">:</span><span class="token function">for
 property<span class="token punctuation">:</span><span class="token function">set</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span>
 <span class="token function">print</span><span class="token punctuation">(</span>property<span class="token punctuation">:</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> t<span class="token punctuation">)</span> <span class="token comment">--> false</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="destroy"><code style="text-decoration:none">destroy</code><a href="#destroy" class="hash-link" aria-label="Direct link to destroy" title="Direct link to destroy">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/Property/init.luau#L334"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->:</code><code class="green_DgR4">destroy</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="destroy"><code style="text-decoration:none">destroy</code><a href="#destroy" class="hash-link" aria-label="Direct link to destroy" title="Direct link to destroy">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/Property/init.luau#L351"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Property<!-- -->:</code><code class="green_DgR4">destroy</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
 <p>Destroys the property and renders it unusable.</p>
 </div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
     &quot;functions&quot;: [
@@ -394,7 +394,7 @@ property<span class="token punctuation">:</span><span class="token function">set
                 &quot;Property Instance&quot;
             ],
             &quot;source&quot;: {
-                &quot;line&quot;: 300,
+                &quot;line&quot;: 317,
                 &quot;path&quot;: &quot;src/Property/init.luau&quot;
             }
         },
@@ -411,7 +411,7 @@ property<span class="token punctuation">:</span><span class="token function">set
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 310,
+                &quot;line&quot;: 327,
                 &quot;path&quot;: &quot;src/Property/init.luau&quot;
             }
         },
@@ -427,7 +427,7 @@ property<span class="token punctuation">:</span><span class="token function">set
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 326,
+                &quot;line&quot;: 343,
                 &quot;path&quot;: &quot;src/Property/init.luau&quot;
             }
         },
@@ -438,7 +438,7 @@ property<span class="token punctuation">:</span><span class="token function">set
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 334,
+                &quot;line&quot;: 351,
                 &quot;path&quot;: &quot;src/Property/init.luau&quot;
             }
         }
@@ -477,7 +477,7 @@ property<span class="token punctuation">:</span><span class="token function">set
         &quot;path&quot;: &quot;src/Property/init.luau&quot;
     }
 }</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a><ul><li><a href="#Property" class="table-of-contents__link toc-highlight">Property</a></li></ul></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a><ul><li><a href="#onUpdate" class="table-of-contents__link toc-highlight">onUpdate</a></li></ul></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#bindToInstance" class="table-of-contents__link toc-highlight">:bindToInstance</a></li><li><a href="#bindToInstanceAttribute" class="table-of-contents__link toc-highlight">:bindToInstanceAttribute</a></li><li><a href="#bindToInstanceProperty" class="table-of-contents__link toc-highlight">:bindToInstanceProperty</a></li><li><a href="#clone" class="table-of-contents__link toc-highlight">:clone</a></li><li><a href="#destroy" class="table-of-contents__link toc-highlight">:destroy</a></li><li><a href="#forceSet" class="table-of-contents__link toc-highlight">:forceSet</a></li><li><a href="#get" class="table-of-contents__link toc-highlight">:get</a></li><li><a href="#observe" class="table-of-contents__link toc-highlight">:observe</a></li><li><a href="#set" class="table-of-contents__link toc-highlight">:set</a></li><li><a href="#silentSet" class="table-of-contents__link toc-highlight">:silentSet</a></li><li><a href="#valuePromise" class="table-of-contents__link toc-highlight">:valuePromise</a></li><li><a href="#is" class="table-of-contents__link toc-highlight">.is</a></li><li><a href="#new" class="table-of-contents__link toc-highlight">.new</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 babypatrick100. Built with Moonwave and Docusaurus</div></div></div></footer></div>
-<script src="/libraries/assets/js/runtime~main.65fe0a70.js"></script>
-<script src="/libraries/assets/js/main.ec304e76.js"></script>
+<script src="/libraries/assets/js/runtime~main.84fe3220.js"></script>
+<script src="/libraries/assets/js/main.b60ab64f.js"></script>
 </body>
 </html>
