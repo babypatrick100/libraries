@@ -23,9 +23,9 @@ contentProviderQueue:addInstances({sound1, sound2, sound3})
 print(#contentProviderQueue:pendingInstances()) --&gt; 3
 contentProviderQueue:fullyProgressed():await() -- ensure all pending instances are preloaded
 print(#contentProviderQueue:pendingInstances()) --&gt; 0
-```"><link data-rh="true" rel="icon" href="/libraries/icon.ico"><link data-rh="true" rel="canonical" href="https://babypatrick100.github.io/libraries/api/ContentProviderQueue"><link data-rh="true" rel="alternate" href="https://babypatrick100.github.io/libraries/api/ContentProviderQueue" hreflang="en"><link data-rh="true" rel="alternate" href="https://babypatrick100.github.io/libraries/api/ContentProviderQueue" hreflang="x-default"><link rel="stylesheet" href="/libraries/assets/css/styles.de7b7a73.css">
-<link rel="preload" href="/libraries/assets/js/runtime~main.fecccfc5.js" as="script">
-<link rel="preload" href="/libraries/assets/js/main.c7898962.js" as="script">
+```"><link data-rh="true" rel="icon" href="/libraries/icon.ico"><link data-rh="true" rel="canonical" href="https://babypatrick100.github.io/libraries/api/ContentProviderQueue"><link data-rh="true" rel="alternate" href="https://babypatrick100.github.io/libraries/api/ContentProviderQueue" hreflang="en"><link data-rh="true" rel="alternate" href="https://babypatrick100.github.io/libraries/api/ContentProviderQueue" hreflang="x-default"><link rel="stylesheet" href="/libraries/assets/css/styles.e1adec2f.css">
+<link rel="preload" href="/libraries/assets/js/runtime~main.b220181c.js" as="script">
+<link rel="preload" href="/libraries/assets/js/main.b0bbe86c.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -82,30 +82,30 @@ contentProviderQueue<span class="token punctuation">:</span><span class="token f
 contentProviderQueue<span class="token punctuation">:</span><span class="token function">remove</span><span class="token punctuation">(</span>sound1<span class="token punctuation">)</span>
 <span class="token function">print</span><span class="token punctuation">(</span>pendingInstancescontentProviderQueue<span class="token punctuation">:</span><span class="token function">pendingInstances</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 0</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="progress"><code style="text-decoration:none">progress</code><a href="#progress" class="hash-link" aria-label="Direct link to progress" title="Direct link to progress">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/ContentProviderQueue/init.luau#L179"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">progress</code><code>(</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="progress"><code style="text-decoration:none">progress</code><a href="#progress" class="hash-link" aria-label="Direct link to progress" title="Direct link to progress">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/ContentProviderQueue/init.luau#L183"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">progress</code><code>(</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
 <p>
   Returns a number from <code>0</code> to <code>1</code> indicating the progress of the content provider queue (i.e ratio
   of how many instances have been preloaded versus how many instances are <em>yet</em> to be preloaded).
 </p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="fullyProgressed"><code style="text-decoration:none">fullyProgressed</code><a href="#fullyProgressed" class="hash-link" aria-label="Direct link to fullyProgressed" title="Direct link to fullyProgressed">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/ContentProviderQueue/init.luau#L198"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">fullyProgressed</code><code>(</code><code>) → </code><code class="blue_P4bS">Promise</code><code class="op_lSLc">&lt;</code><code class="op_lSLc">&gt;</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="fullyProgressed"><code style="text-decoration:none">fullyProgressed</code><a href="#fullyProgressed" class="hash-link" aria-label="Direct link to fullyProgressed" title="Direct link to fullyProgressed">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/ContentProviderQueue/init.luau#L202"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">fullyProgressed</code><code>(</code><code>) → </code><code class="blue_P4bS">Promise</code><code class="op_lSLc">&lt;</code><code class="op_lSLc">&gt;</code></div><div>
 <p>
   Returns a <a href="https://eryn.io/roblox-lua-promise/" target="_blank">promise</a> which is resolved once the content provider queue
   has fully progressed, i.e there are no more instances to preload.
 </p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="paused"><code style="text-decoration:none">paused</code><a href="#paused" class="hash-link" aria-label="Direct link to paused" title="Direct link to paused">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/ContentProviderQueue/init.luau#L212"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">paused</code><code>(</code><code>) → </code><code class="blue_P4bS">boolean</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="paused"><code style="text-decoration:none">paused</code><a href="#paused" class="hash-link" aria-label="Direct link to paused" title="Direct link to paused">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/ContentProviderQueue/init.luau#L216"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">paused</code><code>(</code><code>) → </code><code class="blue_P4bS">boolean</code></div><div>
 <p>Returns a boolean indicating if the content provider queue is paused or not.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="resume"><code style="text-decoration:none">resume</code><a href="#resume" class="hash-link" aria-label="Direct link to resume" title="Direct link to resume">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/ContentProviderQueue/init.luau#L220"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">resume</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="resume"><code style="text-decoration:none">resume</code><a href="#resume" class="hash-link" aria-label="Direct link to resume" title="Direct link to resume">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/ContentProviderQueue/init.luau#L224"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">resume</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
 <p>Resumes the content provider queue.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="pause"><code style="text-decoration:none">pause</code><a href="#pause" class="hash-link" aria-label="Direct link to pause" title="Direct link to pause">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/ContentProviderQueue/init.luau#L229"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">pause</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="pause"><code style="text-decoration:none">pause</code><a href="#pause" class="hash-link" aria-label="Direct link to pause" title="Direct link to pause">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/ContentProviderQueue/init.luau#L233"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">pause</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
 <p>
   Pauses the content provider queue. If any more instances are to be preloaded, they won't be
   until the content provider object is resumed back.
 </p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="removeAll"><code style="text-decoration:none">removeAll</code><a href="#removeAll" class="hash-link" aria-label="Direct link to removeAll" title="Direct link to removeAll">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/ContentProviderQueue/init.luau#L237"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">removeAll</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="removeAll"><code style="text-decoration:none">removeAll</code><a href="#removeAll" class="hash-link" aria-label="Direct link to removeAll" title="Direct link to removeAll">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/ContentProviderQueue/init.luau#L241"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">removeAll</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
 <p>Clears all instances to be preloaded from the content provider queue, via <a href="/libraries/api/ContentProviderQueue#ContentProviderQueue#remove">ContentProviderQueue:remove</a>.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="pendingInstances"><code style="text-decoration:none">pendingInstances</code><a href="#pendingInstances" class="hash-link" aria-label="Direct link to pendingInstances" title="Direct link to pendingInstances">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/ContentProviderQueue/init.luau#L247"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">pendingInstances</code><code>(</code><code>) → </code><code class="purple_ieR2">{</code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="purple_ieR2">}</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="pendingInstances"><code style="text-decoration:none">pendingInstances</code><a href="#pendingInstances" class="hash-link" aria-label="Direct link to pendingInstances" title="Direct link to pendingInstances">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/ContentProviderQueue/init.luau#L251"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">pendingInstances</code><code>(</code><code>) → </code><code class="purple_ieR2">{</code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="purple_ieR2">}</code></div><div>
 <p>Returns a read only array of all instances, yet to be preloaded in the content provider queue.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="destroy"><code style="text-decoration:none">destroy</code><a href="#destroy" class="hash-link" aria-label="Direct link to destroy" title="Direct link to destroy">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/ContentProviderQueue/init.luau#L256"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">destroy</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="destroy"><code style="text-decoration:none">destroy</code><a href="#destroy" class="hash-link" aria-label="Direct link to destroy" title="Direct link to destroy">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/ContentProviderQueue/init.luau#L260"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ContentProviderQueue<!-- -->:</code><code class="green_DgR4">destroy</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
 <p>
   Destroys the content provider queue, empties it through <a href="/libraries/api/ContentProviderQueue#ContentProviderQueue#empty">ContentProviderQueue:empty</a> and renders
   it unusable.
@@ -236,7 +236,7 @@ contentProviderQueue<span class="token punctuation">:</span><span class="token f
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 179,
+                &quot;line&quot;: 183,
                 &quot;path&quot;: &quot;src/ContentProviderQueue/init.luau&quot;
             }
         },
@@ -252,7 +252,7 @@ contentProviderQueue<span class="token punctuation">:</span><span class="token f
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 198,
+                &quot;line&quot;: 202,
                 &quot;path&quot;: &quot;src/ContentProviderQueue/init.luau&quot;
             }
         },
@@ -268,7 +268,7 @@ contentProviderQueue<span class="token punctuation">:</span><span class="token f
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 212,
+                &quot;line&quot;: 216,
                 &quot;path&quot;: &quot;src/ContentProviderQueue/init.luau&quot;
             }
         },
@@ -279,7 +279,7 @@ contentProviderQueue<span class="token punctuation">:</span><span class="token f
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 220,
+                &quot;line&quot;: 224,
                 &quot;path&quot;: &quot;src/ContentProviderQueue/init.luau&quot;
             }
         },
@@ -290,7 +290,7 @@ contentProviderQueue<span class="token punctuation">:</span><span class="token f
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 229,
+                &quot;line&quot;: 233,
                 &quot;path&quot;: &quot;src/ContentProviderQueue/init.luau&quot;
             }
         },
@@ -301,7 +301,7 @@ contentProviderQueue<span class="token punctuation">:</span><span class="token f
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 237,
+                &quot;line&quot;: 241,
                 &quot;path&quot;: &quot;src/ContentProviderQueue/init.luau&quot;
             }
         },
@@ -317,7 +317,7 @@ contentProviderQueue<span class="token punctuation">:</span><span class="token f
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 247,
+                &quot;line&quot;: 251,
                 &quot;path&quot;: &quot;src/ContentProviderQueue/init.luau&quot;
             }
         },
@@ -328,7 +328,7 @@ contentProviderQueue<span class="token punctuation">:</span><span class="token f
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 256,
+                &quot;line&quot;: 260,
                 &quot;path&quot;: &quot;src/ContentProviderQueue/init.luau&quot;
             }
         }
@@ -409,7 +409,7 @@ contentProviderQueue<span class="token punctuation">:</span><span class="token f
         &quot;path&quot;: &quot;src/ContentProviderQueue/init.luau&quot;
     }
 }</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a><ul><li><a href="#ContentProviderQueue" class="table-of-contents__link toc-highlight">ContentProviderQueue</a></li></ul></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a><ul><li><a href="#onInstanceAdded" class="table-of-contents__link toc-highlight">onInstanceAdded</a></li><li><a href="#onInstancePreloaded" class="table-of-contents__link toc-highlight">onInstancePreloaded</a></li><li><a href="#onInstancePreloading" class="table-of-contents__link toc-highlight">onInstancePreloading</a></li><li><a href="#onInstanceRemoved" class="table-of-contents__link toc-highlight">onInstanceRemoved</a></li></ul></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#add" class="table-of-contents__link toc-highlight">:add</a></li><li><a href="#addInstances" class="table-of-contents__link toc-highlight">:addInstances</a></li><li><a href="#destroy" class="table-of-contents__link toc-highlight">:destroy</a></li><li><a href="#fullyProgressed" class="table-of-contents__link toc-highlight">:fullyProgressed</a></li><li><a href="#pause" class="table-of-contents__link toc-highlight">:pause</a></li><li><a href="#paused" class="table-of-contents__link toc-highlight">:paused</a></li><li><a href="#pendingInstances" class="table-of-contents__link toc-highlight">:pendingInstances</a></li><li><a href="#progress" class="table-of-contents__link toc-highlight">:progress</a></li><li><a href="#remove" class="table-of-contents__link toc-highlight">:remove</a></li><li><a href="#removeAll" class="table-of-contents__link toc-highlight">:removeAll</a></li><li><a href="#resume" class="table-of-contents__link toc-highlight">:resume</a></li><li><a href="#setUpdateInterval" class="table-of-contents__link toc-highlight">:setUpdateInterval</a></li><li><a href="#is" class="table-of-contents__link toc-highlight">.is</a></li><li><a href="#new" class="table-of-contents__link toc-highlight">.new</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 babypatrick100. Built with Moonwave and Docusaurus</div></div></div></footer></div>
-<script src="/libraries/assets/js/runtime~main.fecccfc5.js"></script>
-<script src="/libraries/assets/js/main.c7898962.js"></script>
+<script src="/libraries/assets/js/runtime~main.b220181c.js"></script>
+<script src="/libraries/assets/js/main.b0bbe86c.js"></script>
 </body>
 </html>

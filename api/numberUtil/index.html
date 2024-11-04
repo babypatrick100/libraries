@@ -17,9 +17,9 @@ An utility module for working with numbers.
 ```lua
 print(numberUtil.e) --&gt; 2.7182818284590
 print(numberUtil.nan(3)) --&gt; false
-```"><link data-rh="true" rel="icon" href="/libraries/icon.ico"><link data-rh="true" rel="canonical" href="https://babypatrick100.github.io/libraries/api/numberUtil"><link data-rh="true" rel="alternate" href="https://babypatrick100.github.io/libraries/api/numberUtil" hreflang="en"><link data-rh="true" rel="alternate" href="https://babypatrick100.github.io/libraries/api/numberUtil" hreflang="x-default"><link rel="stylesheet" href="/libraries/assets/css/styles.de7b7a73.css">
-<link rel="preload" href="/libraries/assets/js/runtime~main.fecccfc5.js" as="script">
-<link rel="preload" href="/libraries/assets/js/main.c7898962.js" as="script">
+```"><link data-rh="true" rel="icon" href="/libraries/icon.ico"><link data-rh="true" rel="canonical" href="https://babypatrick100.github.io/libraries/api/numberUtil"><link data-rh="true" rel="alternate" href="https://babypatrick100.github.io/libraries/api/numberUtil" hreflang="en"><link data-rh="true" rel="alternate" href="https://babypatrick100.github.io/libraries/api/numberUtil" hreflang="x-default"><link rel="stylesheet" href="/libraries/assets/css/styles.e1adec2f.css">
+<link rel="preload" href="/libraries/assets/js/runtime~main.b220181c.js" as="script">
+<link rel="preload" href="/libraries/assets/js/main.b0bbe86c.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -46,68 +46,25 @@ print(numberUtil.nan(3)) --&gt; false
   A mathematical constant (also known as Euler's constant - <strong>not</strong> to be confused with Euler's <em>number</em> i.e <code>e</code>
   which approximately equals to <code>2.718</code>).
 </p>
-</div><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="cosec"><code style="text-decoration:none">cosec</code><a href="#cosec" class="hash-link" aria-label="Direct link to cosec" title="Direct link to cosec">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/cosec.luau#L10"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">cosec</code><code>(</code><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
-<p>Returns the reciprocal of <code>math.sign(number)</code>.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">cosec</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 1.1883951057781212</span>
+</div><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="average"><code style="text-decoration:none">average</code><a href="#average" class="hash-link" aria-label="Direct link to average" title="Direct link to average">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/average.luau#L10"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">average</code><code>(</code><div class="inset_uKQm"><div><code>sum<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>...<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Returns the average of <code>...</code> numbers against <code>sum</code>.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">average</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 0.75</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="minutesToHours"><code style="text-decoration:none">minutesToHours</code><a href="#minutesToHours" class="hash-link" aria-label="Direct link to minutesToHours" title="Direct link to minutesToHours">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/minutesToHours.luau#L12"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">minutesToHours</code><code>(</code><code>minutes<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
-<p>Returns a number which is <code>minutes</code> converted to hours.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">minutesToHours</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 1</span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="secant"><code style="text-decoration:none">secant</code><a href="#secant" class="hash-link" aria-label="Direct link to secant" title="Direct link to secant">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/secant.luau#L10"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">secant</code><code>(</code><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>The ratio of the hypotenuse to the shorter side adjacent to an acute angle (in a right-angled triangle); the reciprocal of a cosine.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">secant</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 1.8508157176809255</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="toHM"><code style="text-decoration:none">toHM</code><a href="#toHM" class="hash-link" aria-label="Direct link to toHM" title="Direct link to toHM">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/toHM.luau#L10"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">toHM</code><code>(</code><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">string</code></div><div>
-<p>Returns a string which is just <code>number</code> formatted to the HM (Hour, Minutes) format.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">toHM</span><span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">*</span> <span class="token number">3600</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 02:00</span>
-</code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="minutesToSeconds"><code style="text-decoration:none">minutesToSeconds</code><a href="#minutesToSeconds" class="hash-link" aria-label="Direct link to minutesToSeconds" title="Direct link to minutesToSeconds">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/minutesToSeconds.luau#L12"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">minutesToSeconds</code><code>(</code><code>minutes<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
-<p>Returns a number which is <code>minutes</code> converted to seconds.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">minutesToSeconds</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 60</span>
-</code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mode"><code style="text-decoration:none">mode</code><a href="#mode" class="hash-link" aria-label="Direct link to mode" title="Direct link to mode">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/mode.luau#L11"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">mode</code><code>(</code><code>...<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number?</code></div><div>
-<p>From a set of numbers <code>...</code>, returns the number which is the most frequent.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">mode</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 3</span>
-<span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">mode</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> nil (no numbers repeat)</span>
-</code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="comb"><code style="text-decoration:none">comb</code><a href="#comb" class="hash-link" aria-label="Direct link to comb" title="Direct link to comb">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/comb.luau#L16"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">comb</code><code>(</code><div class="inset_uKQm"><div><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>k<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
-<p>Returns the number of ways picking <code>k</code> unordered outcomes from <code>number</code> possibilities, without repetition.</p>
-<div class="admonition admonition-note alert alert--secondary">
-  <div class="admonition-heading">
-    <h5><span class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16">
-          <path d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path>
-        </svg></span>note</h5>
-  </div>
-  <div class="admonition-content">
-    <p>If the value of <code>k</code> is greater than <code>number</code>, then the method will return <code>0</code>.</p>
-  </div>
-</div>
-<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">comb</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 2</span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="factorial"><code style="text-decoration:none">factorial</code><a href="#factorial" class="hash-link" aria-label="Direct link to factorial" title="Direct link to factorial">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/factorial.luau#L10"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">factorial</code><code>(</code><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Returns the factorial of <code>number</code>.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">factorial</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 6</span>
 </code></pre>
 </div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="commas"><code style="text-decoration:none">commas</code><a href="#commas" class="hash-link" aria-label="Direct link to commas" title="Direct link to commas">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/commas.luau#L10"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">commas</code><code>(</code><code>target<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">string</code></div><div>
 <p>Returns a string formatted with commas.</p>
 <pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">commas</span><span class="token punctuation">(</span><span class="token number">15000</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 15,000</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="average"><code style="text-decoration:none">average</code><a href="#average" class="hash-link" aria-label="Direct link to average" title="Direct link to average">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/average.luau#L10"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">average</code><code>(</code><div class="inset_uKQm"><div><code>sum<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>...<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
-<p>Returns the average of <code>...</code> numbers against <code>sum</code>.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">average</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 0.75</span>
-</code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="secondsToHours"><code style="text-decoration:none">secondsToHours</code><a href="#secondsToHours" class="hash-link" aria-label="Direct link to secondsToHours" title="Direct link to secondsToHours">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/secondsToHours.luau#L12"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">secondsToHours</code><code>(</code><code>seconds<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
-<p>Returns a number which is <code>seconds</code> converted to hours.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">secondsToHours</span><span class="token punctuation">(</span><span class="token number">3600</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 1</span>
-</code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="secondsToMinutes"><code style="text-decoration:none">secondsToMinutes</code><a href="#secondsToMinutes" class="hash-link" aria-label="Direct link to secondsToMinutes" title="Direct link to secondsToMinutes">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/secondsToMinutes.luau#L12"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">secondsToMinutes</code><code>(</code><code>seconds<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
-<p>Returns a number which is <code>seconds</code> converted to minutes.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">secondsToMinutes</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 1</span>
-</code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="close"><code style="text-decoration:none">close</code><a href="#close" class="hash-link" aria-label="Direct link to close" title="Direct link to close">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/close.luau#L15"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">close</code><code>(</code><div class="inset_uKQm"><div><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>to<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>eplison<!-- -->: </code><code class="blue_P4bS">number?</code></div></div><code>) → </code><code class="blue_P4bS">boolean</code></div><div>
-<p>Returns a boolean indicating if the difference between <code>number</code> and <code>to</code> is lower than or equal to <code>eplsion</code>.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token number">0.1</span> <span class="token operator">+</span> <span class="token number">0.2</span><span class="token punctuation">,</span> <span class="token number">0.3</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> true</span>
-<span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token number">0.1</span> <span class="token operator">+</span> <span class="token number">0.2</span><span class="token punctuation">,</span> <span class="token number">0.3</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> false</span>
-</code></pre>
-<ul>
-  <li>If <code>eplison</code> is not specified, then it will default to <code>1e-2</code>.</li>
-</ul>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="toHMS"><code style="text-decoration:none">toHMS</code><a href="#toHMS" class="hash-link" aria-label="Direct link to toHMS" title="Direct link to toHMS">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/toHMS.luau#L10"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">toHMS</code><code>(</code><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">string</code></div><div>
-<p>Returns a string which is just <code>number</code> formatted to the HMS (Hour, Minutes, Seconds) format.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">toHMS</span><span class="token punctuation">(</span><span class="token number">21600</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 06:00:00</span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="toMS"><code style="text-decoration:none">toMS</code><a href="#toMS" class="hash-link" aria-label="Direct link to toMS" title="Direct link to toMS">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/toMS.luau#L10"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">toMS</code><code>(</code><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">string</code></div><div>
+<p>Returns a string which is just <code>number</code> formatted to the MS (Minutes, Seconds) format.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">toMS</span><span class="token punctuation">(</span><span class="token number">21600</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 10:00</span>
 </code></pre>
 </div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="suffix"><code style="text-decoration:none">suffix</code><a href="#suffix" class="hash-link" aria-label="Direct link to suffix" title="Direct link to suffix">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/suffix.luau#L45"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">suffix</code><code>(</code><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">string</code></div><div>
 <p>Return a string as the formatted version of <code>number</code>.</p>
@@ -126,81 +83,80 @@ print(numberUtil.nan(3)) --&gt; false
 <pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">suffix</span><span class="token punctuation">(</span><span class="token number">1650</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> "1.65K"</span>
 </code></pre>
 <p>Additionally, if <code>number</code> is lower than <code>1</code>, then this method will just return <code>number</code> (stringified).</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="quadraticLerp"><code style="text-decoration:none">quadraticLerp</code><a href="#quadraticLerp" class="hash-link" aria-label="Direct link to quadraticLerp" title="Direct link to quadraticLerp">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/quadraticLerp.luau#L10"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">quadraticLerp</code><code>(</code><div class="inset_uKQm"><div><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>goal<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>alpha<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
-<p>Quadraticly interpolates <code>number</code> to <code>goal</code>, with <code>alpha</code> being the multiplier.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">quadraticLerp</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">0.7</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 4.1</span>
-</code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="sphericalLerp"><code style="text-decoration:none">sphericalLerp</code><a href="#sphericalLerp" class="hash-link" aria-label="Direct link to sphericalLerp" title="Direct link to sphericalLerp">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/sphericalLerp.luau#L10"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">sphericalLerp</code><code>(</code><div class="inset_uKQm"><div><code>t<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>w0<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>x0<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>y0<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>z0<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>w1<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>x1<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>y1<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>z1<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>d<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
-<p>Returns a result on based on <a href="https://en.wikipedia.org/wiki/Slerp" target="_blank">spherical linear interpolation</a>.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">sphericalLerp</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 2.3</span>
-</code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="exponentialLerp"><code style="text-decoration:none">exponentialLerp</code><a href="#exponentialLerp" class="hash-link" aria-label="Direct link to exponentialLerp" title="Direct link to exponentialLerp">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/exponentialLerp.luau#L9"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">exponentialLerp</code><code>(</code><div class="inset_uKQm"><div><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>goal<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>alpha<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
-<p>Exponentially lerps <code>number</code> to <code>goal</code>, with <code>alpha</code> being the multiplier.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">exponentialLerp</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 125</span>
-</code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="secondsToDays"><code style="text-decoration:none">secondsToDays</code><a href="#secondsToDays" class="hash-link" aria-label="Direct link to secondsToDays" title="Direct link to secondsToDays">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/secondsToDays.luau#L12"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">secondsToDays</code><code>(</code><code>seconds<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
-<p>Returns a number which is <code>seconds</code> converted to days.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">secondsToDays</span><span class="token punctuation">(</span><span class="token number">86400</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 1</span>
-</code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="cubicBezier"><code style="text-decoration:none">cubicBezier</code><a href="#cubicBezier" class="hash-link" aria-label="Direct link to cubicBezier" title="Direct link to cubicBezier">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/cubicBezier.luau#L10"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">cubicBezier</code><code>(</code><div class="inset_uKQm"><div><code>t<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>p0<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>p1<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>p2<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>p3<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
-<p>Returns the cubic bezier from the arguments.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span><span class="token function">cubicBezier</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">0.15</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0.1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> -1.35</span>
-</code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="min"><code style="text-decoration:none">min</code><a href="#min" class="hash-link" aria-label="Direct link to min" title="Direct link to min">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/min.luau#L9"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">min</code><code>(</code><code>...<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
-<p>Returns the minimum value.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">min</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 1</span>
-</code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="logarithmicLerp"><code style="text-decoration:none">logarithmicLerp</code><a href="#logarithmicLerp" class="hash-link" aria-label="Direct link to logarithmicLerp" title="Direct link to logarithmicLerp">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/logarithmicLerp.luau#L10"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">logarithmicLerp</code><code>(</code><div class="inset_uKQm"><div><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>goal<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>alpha<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
-<p>Logarithmicly lerps <code>number</code> to <code>goal</code>, with <code>alpha</code> being the multiplier.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">logarithmicLerp</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 0.125</span>
-</code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="factorial"><code style="text-decoration:none">factorial</code><a href="#factorial" class="hash-link" aria-label="Direct link to factorial" title="Direct link to factorial">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/factorial.luau#L10"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">factorial</code><code>(</code><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
-<p>Returns the factorial of <code>number</code>.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">factorial</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 6</span>
-</code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="max"><code style="text-decoration:none">max</code><a href="#max" class="hash-link" aria-label="Direct link to max" title="Direct link to max">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/max.luau#L9"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">max</code><code>(</code><code>...<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
-<p>Returns the maximum value.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 10</span>
-</code></pre>
 </div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="root"><code style="text-decoration:none">root</code><a href="#root" class="hash-link" aria-label="Direct link to root" title="Direct link to root">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/root.luau#L11"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">root</code><code>(</code><div class="inset_uKQm"><div><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>numberRoot<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
 <p>Returns the <code>root</code> of <code>number</code>.</p>
 <pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">root</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 1.2599210498948732 (same as cube root of 2)</span>
 <span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">root</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 1.4142135623730951 (same as square root of 2)</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="cotan"><code style="text-decoration:none">cotan</code><a href="#cotan" class="hash-link" aria-label="Direct link to cotan" title="Direct link to cotan">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/cotan.luau#L11"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">cotan</code><code>(</code><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
-<p>
-  A trigonometric function that in a right-angled triangle is the ratio of the length of the adjacent side to
-  that of the opposite side; the reciprocal of tangent.
-</p>
-<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">cotan</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 0.6420926159343306</span>
-</code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="quadraticBezier"><code style="text-decoration:none">quadraticBezier</code><a href="#quadraticBezier" class="hash-link" aria-label="Direct link to quadraticBezier" title="Direct link to quadraticBezier">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/quadraticBezier.luau#L9"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">quadraticBezier</code><code>(</code><div class="inset_uKQm"><div><code>t<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>p0<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>p1<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>p2<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
-<p>Returns the quadratic bezier from the arguments.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">quadraticBezier</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0.5</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 0.5</span>
-</code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="nan"><code style="text-decoration:none">nan</code><a href="#nan" class="hash-link" aria-label="Direct link to nan" title="Direct link to nan">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/nan.luau#L10"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">nan</code><code>(</code><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">boolean</code></div><div>
-<p>Returns a boolean indicating if <code>number</code> is NaN (Not A Number).</p>
-<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">nan</span><span class="token punctuation">(</span><span class="token number">0</span> <span class="token operator">/</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> true</span>
-</code></pre>
 </div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="map"><code style="text-decoration:none">map</code><a href="#map" class="hash-link" aria-label="Direct link to map" title="Direct link to map">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/map.luau#L10"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">map</code><code>(</code><div class="inset_uKQm"><div><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>inMin<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>inMax<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>outMin<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>outMax<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
 <p>Maps <code>number</code> between <code>inMin</code> and <code>inMax</code>, and <code>outMin</code> and <code>outMax</code>.</p>
 <pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 3</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="to12H"><code style="text-decoration:none">to12H</code><a href="#to12H" class="hash-link" aria-label="Direct link to to12H" title="Direct link to to12H">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/to12H.luau#L11"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">to12H</code><code>(</code><code>hour<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Returns the given hour formatted to the 12 hour clock.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">to12H</span><span class="token punctuation">(</span><span class="token number">24</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 12</span>
+<span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">to12H</span><span class="token punctuation">(</span><span class="token number">17</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 5</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="sphericalLerp"><code style="text-decoration:none">sphericalLerp</code><a href="#sphericalLerp" class="hash-link" aria-label="Direct link to sphericalLerp" title="Direct link to sphericalLerp">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/sphericalLerp.luau#L10"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">sphericalLerp</code><code>(</code><div class="inset_uKQm"><div><code>t<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>w0<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>x0<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>y0<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>z0<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>w1<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>x1<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>y1<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>z1<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>d<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Returns a result on based on <a href="https://en.wikipedia.org/wiki/Slerp" target="_blank">spherical linear interpolation</a>.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">sphericalLerp</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 2.3</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="min"><code style="text-decoration:none">min</code><a href="#min" class="hash-link" aria-label="Direct link to min" title="Direct link to min">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/min.luau#L9"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">min</code><code>(</code><code>...<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Returns the minimum value.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">min</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 1</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="cosec"><code style="text-decoration:none">cosec</code><a href="#cosec" class="hash-link" aria-label="Direct link to cosec" title="Direct link to cosec">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/cosec.luau#L10"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">cosec</code><code>(</code><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Returns the reciprocal of <code>math.sign(number)</code>.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">cosec</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 1.1883951057781212</span>
 </code></pre>
 </div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="lerp"><code style="text-decoration:none">lerp</code><a href="#lerp" class="hash-link" aria-label="Direct link to lerp" title="Direct link to lerp">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/lerp.luau#L10"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">lerp</code><code>(</code><div class="inset_uKQm"><div><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>goal<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>alpha<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
 <p>Interpolates <code>number</code> to <code>goal</code>, with <code>alpha</code> being the multiplier.</p>
 <pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">lerp</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">0.7</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 4.1</span>
 </code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="secondsToDays"><code style="text-decoration:none">secondsToDays</code><a href="#secondsToDays" class="hash-link" aria-label="Direct link to secondsToDays" title="Direct link to secondsToDays">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/secondsToDays.luau#L12"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">secondsToDays</code><code>(</code><code>seconds<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Returns a number which is <code>seconds</code> converted to days.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">secondsToDays</span><span class="token punctuation">(</span><span class="token number">86400</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 1</span>
+</code></pre>
 </div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="factors"><code style="text-decoration:none">factors</code><a href="#factors" class="hash-link" aria-label="Direct link to factors" title="Direct link to factors">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/factors.luau#L10"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">factors</code><code>(</code><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="purple_ieR2">{</code><code class="blue_P4bS">number</code><code class="purple_ieR2">}</code></div><div>
 <p>Returns a read only array of all factors of <code>number</code>.</p>
 <pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">factors</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> {1, 2}</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="secant"><code style="text-decoration:none">secant</code><a href="#secant" class="hash-link" aria-label="Direct link to secant" title="Direct link to secant">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/secant.luau#L10"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">secant</code><code>(</code><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
-<p>The ratio of the hypotenuse to the shorter side adjacent to an acute angle (in a right-angled triangle); the reciprocal of a cosine.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">secant</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 1.8508157176809255</span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mode"><code style="text-decoration:none">mode</code><a href="#mode" class="hash-link" aria-label="Direct link to mode" title="Direct link to mode">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/mode.luau#L11"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">mode</code><code>(</code><code>...<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number?</code></div><div>
+<p>From a set of numbers <code>...</code>, returns the number which is the most frequent.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">mode</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 3</span>
+<span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">mode</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> nil (no numbers repeat)</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="median"><code style="text-decoration:none">median</code><a href="#median" class="hash-link" aria-label="Direct link to median" title="Direct link to median">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/median.luau#L9"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">median</code><code>(</code><code>...<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
-<p>Returns the median of the set of numbers <code>...</code>.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">median</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 4</span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="nan"><code style="text-decoration:none">nan</code><a href="#nan" class="hash-link" aria-label="Direct link to nan" title="Direct link to nan">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/nan.luau#L10"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">nan</code><code>(</code><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">boolean</code></div><div>
+<p>Returns a boolean indicating if <code>number</code> is NaN (Not A Number).</p>
+<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">nan</span><span class="token punctuation">(</span><span class="token number">0</span> <span class="token operator">/</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> true</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="secondsToHours"><code style="text-decoration:none">secondsToHours</code><a href="#secondsToHours" class="hash-link" aria-label="Direct link to secondsToHours" title="Direct link to secondsToHours">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/secondsToHours.luau#L12"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">secondsToHours</code><code>(</code><code>seconds<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Returns a number which is <code>seconds</code> converted to hours.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">secondsToHours</span><span class="token punctuation">(</span><span class="token number">3600</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 1</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="quadraticBezier"><code style="text-decoration:none">quadraticBezier</code><a href="#quadraticBezier" class="hash-link" aria-label="Direct link to quadraticBezier" title="Direct link to quadraticBezier">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/quadraticBezier.luau#L9"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">quadraticBezier</code><code>(</code><div class="inset_uKQm"><div><code>t<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>p0<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>p1<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>p2<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Returns the quadratic bezier from the arguments.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">quadraticBezier</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0.5</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 0.5</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="toHM"><code style="text-decoration:none">toHM</code><a href="#toHM" class="hash-link" aria-label="Direct link to toHM" title="Direct link to toHM">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/toHM.luau#L10"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">toHM</code><code>(</code><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">string</code></div><div>
+<p>Returns a string which is just <code>number</code> formatted to the HM (Hour, Minutes) format.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">toHM</span><span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">*</span> <span class="token number">3600</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 02:00</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="secondsToMinutes"><code style="text-decoration:none">secondsToMinutes</code><a href="#secondsToMinutes" class="hash-link" aria-label="Direct link to secondsToMinutes" title="Direct link to secondsToMinutes">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/secondsToMinutes.luau#L12"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">secondsToMinutes</code><code>(</code><code>seconds<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Returns a number which is <code>seconds</code> converted to minutes.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">secondsToMinutes</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 1</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="toHMS"><code style="text-decoration:none">toHMS</code><a href="#toHMS" class="hash-link" aria-label="Direct link to toHMS" title="Direct link to toHMS">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/toHMS.luau#L10"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">toHMS</code><code>(</code><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">string</code></div><div>
+<p>Returns a string which is just <code>number</code> formatted to the HMS (Hour, Minutes, Seconds) format.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">toHMS</span><span class="token punctuation">(</span><span class="token number">21600</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 06:00:00</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="minutesToHours"><code style="text-decoration:none">minutesToHours</code><a href="#minutesToHours" class="hash-link" aria-label="Direct link to minutesToHours" title="Direct link to minutesToHours">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/minutesToHours.luau#L12"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">minutesToHours</code><code>(</code><code>minutes<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Returns a number which is <code>minutes</code> converted to hours.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">minutesToHours</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 1</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="clampTo"><code style="text-decoration:none">clampTo</code><a href="#clampTo" class="hash-link" aria-label="Direct link to clampTo" title="Direct link to clampTo">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/clampTo.luau#L10"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">clampTo</code><code>(</code><div class="inset_uKQm"><div><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>min<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>max<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>clamp<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Clamps <code>number</code> to <code>clamp</code>, if <code>number</code> is greater than <code>max</code> or lower than <code>min</code>.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">clampTo</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">150</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 150</span>
 </code></pre>
 </div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="inverseLerp"><code style="text-decoration:none">inverseLerp</code><a href="#inverseLerp" class="hash-link" aria-label="Direct link to inverseLerp" title="Direct link to inverseLerp">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/inverseLerp.luau#L11"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">inverseLerp</code><code>(</code><div class="inset_uKQm"><div><code>min<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>max<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>alpha<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
 <p>
@@ -208,22 +164,6 @@ print(numberUtil.nan(3)) --&gt; false
   based on its output.
 </p>
 <pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">inverseLerp</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">0.7</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> -0.43333333333333335</span>
-</code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mean"><code style="text-decoration:none">mean</code><a href="#mean" class="hash-link" aria-label="Direct link to mean" title="Direct link to mean">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/mean.luau#L9"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">mean</code><code>(</code><code>...<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
-<p>Returns the mean of the set of numbers <code>...</code>.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">mode</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 2.3</span>
-</code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="hoursToMinutes"><code style="text-decoration:none">hoursToMinutes</code><a href="#hoursToMinutes" class="hash-link" aria-label="Direct link to hoursToMinutes" title="Direct link to hoursToMinutes">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/hoursToMinutes.luau#L12"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">hoursToMinutes</code><code>(</code><code>hours<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
-<p>Returns a number which is <code>hours</code> converted to minutes.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">hoursToMinutes</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 60</span>
-</code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="clampTo"><code style="text-decoration:none">clampTo</code><a href="#clampTo" class="hash-link" aria-label="Direct link to clampTo" title="Direct link to clampTo">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/clampTo.luau#L10"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">clampTo</code><code>(</code><div class="inset_uKQm"><div><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>min<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>max<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>clamp<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
-<p>Clamps <code>number</code> to <code>clamp</code>, if <code>number</code> is greater than <code>max</code> or lower than <code>min</code>.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">clampTo</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">150</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 150</span>
-</code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="toMS"><code style="text-decoration:none">toMS</code><a href="#toMS" class="hash-link" aria-label="Direct link to toMS" title="Direct link to toMS">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/toMS.luau#L10"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">toMS</code><code>(</code><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">string</code></div><div>
-<p>Returns a string which is just <code>number</code> formatted to the MS (Minutes, Seconds) format.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">toMS</span><span class="token punctuation">(</span><span class="token number">21600</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 10:00</span>
 </code></pre>
 </div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="to24H"><code style="text-decoration:none">to24H</code><a href="#to24H" class="hash-link" aria-label="Direct link to to24H" title="Direct link to to24H">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/to24H.luau#L17"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">to24H</code><code>(</code><div class="inset_uKQm"><div><code>hour<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>preset<!-- -->: </code><code class="blue_P4bS">&quot;am&quot;</code><code class="op_lSLc"> | </code><code class="blue_P4bS">&quot;pm&quot;</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
 <p>Returns the given hour formatted to the 12 hour clock.</p>
@@ -233,172 +173,73 @@ print(numberUtil.nan(3)) --&gt; false
 <span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">to24H</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">,</span> <span class="token string">"pm"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 23</span>
 <span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">to24H</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">,</span> <span class="token string">"am"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 11</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="to12H"><code style="text-decoration:none">to12H</code><a href="#to12H" class="hash-link" aria-label="Direct link to to12H" title="Direct link to to12H">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/to12H.luau#L11"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">to12H</code><code>(</code><code>hour<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code>(</code><code>)</code></div><div>
-<p>Returns the given hour formatted to the 12 hour clock.</p>
-<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">to12H</span><span class="token punctuation">(</span><span class="token number">24</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 12</span>
-<span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">to12H</span><span class="token punctuation">(</span><span class="token number">17</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 5</span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="close"><code style="text-decoration:none">close</code><a href="#close" class="hash-link" aria-label="Direct link to close" title="Direct link to close">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/close.luau#L15"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">close</code><code>(</code><div class="inset_uKQm"><div><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>to<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>eplison<!-- -->: </code><code class="blue_P4bS">number?</code></div></div><code>) → </code><code class="blue_P4bS">boolean</code></div><div>
+<p>Returns a boolean indicating if the difference between <code>number</code> and <code>to</code> is lower than or equal to <code>eplsion</code>.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token number">0.1</span> <span class="token operator">+</span> <span class="token number">0.2</span><span class="token punctuation">,</span> <span class="token number">0.3</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> true</span>
+<span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token number">0.1</span> <span class="token operator">+</span> <span class="token number">0.2</span><span class="token punctuation">,</span> <span class="token number">0.3</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> false</span>
+</code></pre>
+<ul>
+  <li>If <code>eplison</code> is not specified, then it will default to <code>1e-2</code>.</li>
+</ul>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mean"><code style="text-decoration:none">mean</code><a href="#mean" class="hash-link" aria-label="Direct link to mean" title="Direct link to mean">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/mean.luau#L9"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">mean</code><code>(</code><code>...<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Returns the mean of the set of numbers <code>...</code>.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">mode</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 2.3</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="max"><code style="text-decoration:none">max</code><a href="#max" class="hash-link" aria-label="Direct link to max" title="Direct link to max">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/max.luau#L9"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">max</code><code>(</code><code>...<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Returns the maximum value.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 10</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="median"><code style="text-decoration:none">median</code><a href="#median" class="hash-link" aria-label="Direct link to median" title="Direct link to median">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/median.luau#L9"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">median</code><code>(</code><code>...<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Returns the median of the set of numbers <code>...</code>.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">median</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 4</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="exponentialLerp"><code style="text-decoration:none">exponentialLerp</code><a href="#exponentialLerp" class="hash-link" aria-label="Direct link to exponentialLerp" title="Direct link to exponentialLerp">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/exponentialLerp.luau#L9"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">exponentialLerp</code><code>(</code><div class="inset_uKQm"><div><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>goal<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>alpha<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Exponentially lerps <code>number</code> to <code>goal</code>, with <code>alpha</code> being the multiplier.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">exponentialLerp</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 125</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="cubicBezier"><code style="text-decoration:none">cubicBezier</code><a href="#cubicBezier" class="hash-link" aria-label="Direct link to cubicBezier" title="Direct link to cubicBezier">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/cubicBezier.luau#L10"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">cubicBezier</code><code>(</code><div class="inset_uKQm"><div><code>t<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>p0<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>p1<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>p2<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>p3<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Returns the cubic bezier from the arguments.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span><span class="token function">cubicBezier</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">0.15</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0.1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> -1.35</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="quadraticLerp"><code style="text-decoration:none">quadraticLerp</code><a href="#quadraticLerp" class="hash-link" aria-label="Direct link to quadraticLerp" title="Direct link to quadraticLerp">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/quadraticLerp.luau#L10"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">quadraticLerp</code><code>(</code><div class="inset_uKQm"><div><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>goal<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>alpha<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Quadraticly interpolates <code>number</code> to <code>goal</code>, with <code>alpha</code> being the multiplier.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">quadraticLerp</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">0.7</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 4.1</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="logarithmicLerp"><code style="text-decoration:none">logarithmicLerp</code><a href="#logarithmicLerp" class="hash-link" aria-label="Direct link to logarithmicLerp" title="Direct link to logarithmicLerp">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/logarithmicLerp.luau#L10"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">logarithmicLerp</code><code>(</code><div class="inset_uKQm"><div><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>goal<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>alpha<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Logarithmicly lerps <code>number</code> to <code>goal</code>, with <code>alpha</code> being the multiplier.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">logarithmicLerp</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 0.125</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="comb"><code style="text-decoration:none">comb</code><a href="#comb" class="hash-link" aria-label="Direct link to comb" title="Direct link to comb">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/comb.luau#L16"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">comb</code><code>(</code><div class="inset_uKQm"><div><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>k<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Returns the number of ways picking <code>k</code> unordered outcomes from <code>number</code> possibilities, without repetition.</p>
+<div class="admonition admonition-note alert alert--secondary">
+  <div class="admonition-heading">
+    <h5><span class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16">
+          <path d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path>
+        </svg></span>note</h5>
+  </div>
+  <div class="admonition-content">
+    <p>If the value of <code>k</code> is greater than <code>number</code>, then the method will return <code>0</code>.</p>
+  </div>
+</div>
+<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">comb</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 2</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="cotan"><code style="text-decoration:none">cotan</code><a href="#cotan" class="hash-link" aria-label="Direct link to cotan" title="Direct link to cotan">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/cotan.luau#L11"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">cotan</code><code>(</code><code>number<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>
+  A trigonometric function that in a right-angled triangle is the ratio of the length of the adjacent side to
+  that of the opposite side; the reciprocal of tangent.
+</p>
+<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">cotan</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 0.6420926159343306</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="hoursToMinutes"><code style="text-decoration:none">hoursToMinutes</code><a href="#hoursToMinutes" class="hash-link" aria-label="Direct link to hoursToMinutes" title="Direct link to hoursToMinutes">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/hoursToMinutes.luau#L12"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">hoursToMinutes</code><code>(</code><code>hours<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Returns a number which is <code>hours</code> converted to minutes.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">hoursToMinutes</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 60</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="minutesToSeconds"><code style="text-decoration:none">minutesToSeconds</code><a href="#minutesToSeconds" class="hash-link" aria-label="Direct link to minutesToSeconds" title="Direct link to minutesToSeconds">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/babypatrick100/libraries/blob/main/src/numberUtil/methods/minutesToSeconds.luau#L12"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>numberUtil<!-- -->.</code><code class="green_DgR4">minutesToSeconds</code><code>(</code><code>minutes<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Returns a number which is <code>minutes</code> converted to seconds.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token function">print</span><span class="token punctuation">(</span>numberUtil<span class="token punctuation">.</span><span class="token function">minutesToSeconds</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> 60</span>
 </code></pre>
 </div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
     &quot;functions&quot;: [
-        {
-            &quot;name&quot;: &quot;cosec&quot;,
-            &quot;desc&quot;: &quot;Returns the reciprocal of `math.sign(number)`.\n\n```lua\nprint(numberUtil.cosec(1)) --&gt; 1.1883951057781212\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;number&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number\n&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 10,
-                &quot;path&quot;: &quot;src/numberUtil/methods/cosec.luau&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;minutesToHours&quot;,
-            &quot;desc&quot;: &quot;Returns a number which is `minutes` converted to hours.\n\n```lua\nprint(numberUtil.minutesToHours(60)) --&gt; 1\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;minutes&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number\n&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 12,
-                &quot;path&quot;: &quot;src/numberUtil/methods/minutesToHours.luau&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;toHM&quot;,
-            &quot;desc&quot;: &quot;Returns a string which is just `number` formatted to the HM (Hour, Minutes) format.\n\n```lua\nprint(numberUtil.toHM(2 * 3600)) --&gt; 02:00\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;number&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;string\n&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 10,
-                &quot;path&quot;: &quot;src/numberUtil/methods/toHM.luau&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;minutesToSeconds&quot;,
-            &quot;desc&quot;: &quot;Returns a number which is `minutes` converted to seconds.\n\n```lua\nprint(numberUtil.minutesToSeconds(1)) --&gt; 60\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;minutes&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number\n&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 12,
-                &quot;path&quot;: &quot;src/numberUtil/methods/minutesToSeconds.luau&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;mode&quot;,
-            &quot;desc&quot;: &quot;From a set of numbers `...`, returns the number which is the most frequent.\n\n```lua\nprint(numberUtil.mode(1, 2, 3, 3)) --&gt; 3\nprint(numberUtil.mode(1, 2, 3)) --&gt; nil (no numbers repeat)\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;...&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number?\n&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 11,
-                &quot;path&quot;: &quot;src/numberUtil/methods/mode.luau&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;comb&quot;,
-            &quot;desc&quot;: &quot;Returns the number of ways picking `k` unordered outcomes from `number` possibilities, without repetition.\n\n:::note\nIf the value of `k` is greater than `number`, then the method will return `0`.\n:::\n\n```lua\nprint(numberUtil.comb(2, 1)) --&gt; 2\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;number&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;k&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number\n&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 16,
-                &quot;path&quot;: &quot;src/numberUtil/methods/comb.luau&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;commas&quot;,
-            &quot;desc&quot;: &quot;Returns a string formatted with commas.\n\n```lua\nprint(numberUtil.commas(15000)) --&gt; 15,000\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;target&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;string\n&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 10,
-                &quot;path&quot;: &quot;src/numberUtil/methods/commas.luau&quot;
-            }
-        },
         {
             &quot;name&quot;: &quot;average&quot;,
             &quot;desc&quot;: &quot;Returns the average of `...` numbers against `sum`.\n\n```lua\nprint(numberUtil.average(100, 50, 25)) --&gt; 0.75\n```&quot;,
@@ -427,84 +268,74 @@ print(numberUtil.nan(3)) --&gt; false
             }
         },
         {
-            &quot;name&quot;: &quot;secondsToHours&quot;,
-            &quot;desc&quot;: &quot;  \nReturns a number which is `seconds` converted to hours.\n\n```lua\nprint(numberUtil.secondsToHours(3600)) --&gt; 1\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;seconds&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number\n&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 12,
-                &quot;path&quot;: &quot;src/numberUtil/methods/secondsToHours.luau&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;secondsToMinutes&quot;,
-            &quot;desc&quot;: &quot;Returns a number which is `seconds` converted to minutes.\n\n```lua\nprint(numberUtil.secondsToMinutes(60)) --&gt; 1\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;seconds&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number\n&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 12,
-                &quot;path&quot;: &quot;src/numberUtil/methods/secondsToMinutes.luau&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;close&quot;,
-            &quot;desc&quot;: &quot;Returns a boolean indicating if the difference between `number` and `to` is lower than or equal to `eplsion`.\n\n```lua\nprint(numberUtil.close(0.1 + 0.2, 0.3)) --&gt; true\nprint(numberUtil.close(0.1 + 0.2, 0.3, 0)) --&gt; false\n```\n\n- If `eplison` is not specified, then it will default to `1e-2`.&quot;,
+            &quot;name&quot;: &quot;secant&quot;,
+            &quot;desc&quot;: &quot;The ratio of the hypotenuse to the shorter side adjacent to an acute angle (in a right-angled triangle); the reciprocal of a cosine.\n\n```lua\nprint(numberUtil.secant(1)) --&gt; 1.8508157176809255\n```&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;number&quot;,
                     &quot;desc&quot;: &quot;&quot;,
                     &quot;lua_type&quot;: &quot;number&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;to&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;eplison&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number?&quot;
                 }
             ],
             &quot;returns&quot;: [
                 {
                     &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;boolean\n&quot;
+                    &quot;lua_type&quot;: &quot;number\n&quot;
                 }
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 15,
-                &quot;path&quot;: &quot;src/numberUtil/methods/close.luau&quot;
+                &quot;line&quot;: 10,
+                &quot;path&quot;: &quot;src/numberUtil/methods/secant.luau&quot;
             }
         },
         {
-            &quot;name&quot;: &quot;toHMS&quot;,
-            &quot;desc&quot;: &quot;Returns a string which is just `number` formatted to the HMS (Hour, Minutes, Seconds) format.\n\n```lua\nprint(numberUtil.toHMS(21600)) --&gt; 06:00:00\n```&quot;,
+            &quot;name&quot;: &quot;factorial&quot;,
+            &quot;desc&quot;: &quot;Returns the factorial of `number`.\n\n```lua\nprint(numberUtil.factorial(3)) --&gt; 6\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;number&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number\n&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 10,
+                &quot;path&quot;: &quot;src/numberUtil/methods/factorial.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;commas&quot;,
+            &quot;desc&quot;: &quot;Returns a string formatted with commas.\n\n```lua\nprint(numberUtil.commas(15000)) --&gt; 15,000\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;target&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;string\n&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 10,
+                &quot;path&quot;: &quot;src/numberUtil/methods/commas.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;toMS&quot;,
+            &quot;desc&quot;: &quot;Returns a string which is just `number` formatted to the MS (Minutes, Seconds) format.\n\n```lua\nprint(numberUtil.toMS(21600)) --&gt; 10:00\n```&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;number&quot;,
@@ -521,7 +352,7 @@ print(numberUtil.nan(3)) --&gt; false
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
                 &quot;line&quot;: 10,
-                &quot;path&quot;: &quot;src/numberUtil/methods/toHMS.luau&quot;
+                &quot;path&quot;: &quot;src/numberUtil/methods/toMS.luau&quot;
             }
         },
         {
@@ -547,8 +378,8 @@ print(numberUtil.nan(3)) --&gt; false
             }
         },
         {
-            &quot;name&quot;: &quot;quadraticLerp&quot;,
-            &quot;desc&quot;: &quot;Quadraticly interpolates `number` to `goal`, with `alpha` being the multiplier.\n\n```lua\nprint(numberUtil.quadraticLerp(2, 5, 0.7)) --&gt; 4.1\n```&quot;,
+            &quot;name&quot;: &quot;root&quot;,
+            &quot;desc&quot;: &quot;Returns the `root` of `number`.\n\n```lua\nprint(numberUtil.root(2, 3)) --&gt; 1.2599210498948732 (same as cube root of 2)\nprint(numberUtil.root(2, 2)) --&gt; 1.4142135623730951 (same as square root of 2)\n```&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;number&quot;,
@@ -556,12 +387,7 @@ print(numberUtil.nan(3)) --&gt; false
                     &quot;lua_type&quot;: &quot;number&quot;
                 },
                 {
-                    &quot;name&quot;: &quot;goal&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;alpha&quot;,
+                    &quot;name&quot;: &quot;numberRoot&quot;,
                     &quot;desc&quot;: &quot;&quot;,
                     &quot;lua_type&quot;: &quot;number&quot;
                 }
@@ -574,8 +400,67 @@ print(numberUtil.nan(3)) --&gt; false
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
+                &quot;line&quot;: 11,
+                &quot;path&quot;: &quot;src/numberUtil/methods/root.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;map&quot;,
+            &quot;desc&quot;: &quot;Maps `number` between `inMin` and `inMax`, and `outMin` and `outMax`.\n\n```lua\nprint(numberUtil.map(1,2,3,4,5)) --&gt; 3\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;number&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;inMin&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;inMax&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;outMin&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;outMax&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number\n&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number\n&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
                 &quot;line&quot;: 10,
-                &quot;path&quot;: &quot;src/numberUtil/methods/quadraticLerp.luau&quot;
+                &quot;path&quot;: &quot;src/numberUtil/methods/map.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;to12H&quot;,
+            &quot;desc&quot;: &quot;Returns the given hour formatted to the 12 hour clock.\n\n```lua\nprint(numberUtil.to12H(24)) --&gt; 12\nprint(numberUtil.to12H(17)) --&gt; 5\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;hour&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 11,
+                &quot;path&quot;: &quot;src/numberUtil/methods/to12H.luau&quot;
             }
         },
         {
@@ -646,6 +531,511 @@ print(numberUtil.nan(3)) --&gt; false
             }
         },
         {
+            &quot;name&quot;: &quot;min&quot;,
+            &quot;desc&quot;: &quot;Returns the minimum value.\n\n```lua\nprint(numberUtil.min(10,9,8,7,6,5,4,3,2,1)) --&gt; 1\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;...&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number\n&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 9,
+                &quot;path&quot;: &quot;src/numberUtil/methods/min.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;cosec&quot;,
+            &quot;desc&quot;: &quot;Returns the reciprocal of `math.sign(number)`.\n\n```lua\nprint(numberUtil.cosec(1)) --&gt; 1.1883951057781212\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;number&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number\n&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 10,
+                &quot;path&quot;: &quot;src/numberUtil/methods/cosec.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;lerp&quot;,
+            &quot;desc&quot;: &quot;Interpolates `number` to `goal`, with `alpha` being the multiplier.\n\n```lua\nprint(numberUtil.lerp(2, 5, 0.7)) --&gt; 4.1\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;number&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;goal&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;alpha&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number\n&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 10,
+                &quot;path&quot;: &quot;src/numberUtil/methods/lerp.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;secondsToDays&quot;,
+            &quot;desc&quot;: &quot;Returns a number which is `seconds` converted to days.\n\n```lua\nprint(numberUtil.secondsToDays(86400)) --&gt; 1\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;seconds&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number\n&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 12,
+                &quot;path&quot;: &quot;src/numberUtil/methods/secondsToDays.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;factors&quot;,
+            &quot;desc&quot;: &quot;Returns a read only array of all factors of `number`.\n\n```lua\nprint(numberUtil.factors(2)) --&gt; {1, 2}\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;number&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;{ number }\n&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 10,
+                &quot;path&quot;: &quot;src/numberUtil/methods/factors.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;mode&quot;,
+            &quot;desc&quot;: &quot;From a set of numbers `...`, returns the number which is the most frequent.\n\n```lua\nprint(numberUtil.mode(1, 2, 3, 3)) --&gt; 3\nprint(numberUtil.mode(1, 2, 3)) --&gt; nil (no numbers repeat)\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;...&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number?\n&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 11,
+                &quot;path&quot;: &quot;src/numberUtil/methods/mode.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;nan&quot;,
+            &quot;desc&quot;: &quot;Returns a boolean indicating if `number` is NaN (Not A Number). \n\n```lua\nprint(numberUtil.nan(0 / 0)) --&gt; true\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;number&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;boolean\n&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 10,
+                &quot;path&quot;: &quot;src/numberUtil/methods/nan.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;secondsToHours&quot;,
+            &quot;desc&quot;: &quot;  \nReturns a number which is `seconds` converted to hours.\n\n```lua\nprint(numberUtil.secondsToHours(3600)) --&gt; 1\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;seconds&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number\n&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 12,
+                &quot;path&quot;: &quot;src/numberUtil/methods/secondsToHours.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;quadraticBezier&quot;,
+            &quot;desc&quot;: &quot;Returns the quadratic bezier from the arguments.\n\n```lua\nprint(numberUtil.quadraticBezier(0, 0.5, 3, 5)) --&gt; 0.5\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;t&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;p0&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;p1&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;p2&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number\n&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 9,
+                &quot;path&quot;: &quot;src/numberUtil/methods/quadraticBezier.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;toHM&quot;,
+            &quot;desc&quot;: &quot;Returns a string which is just `number` formatted to the HM (Hour, Minutes) format.\n\n```lua\nprint(numberUtil.toHM(2 * 3600)) --&gt; 02:00\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;number&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;string\n&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 10,
+                &quot;path&quot;: &quot;src/numberUtil/methods/toHM.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;secondsToMinutes&quot;,
+            &quot;desc&quot;: &quot;Returns a number which is `seconds` converted to minutes.\n\n```lua\nprint(numberUtil.secondsToMinutes(60)) --&gt; 1\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;seconds&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number\n&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 12,
+                &quot;path&quot;: &quot;src/numberUtil/methods/secondsToMinutes.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;toHMS&quot;,
+            &quot;desc&quot;: &quot;Returns a string which is just `number` formatted to the HMS (Hour, Minutes, Seconds) format.\n\n```lua\nprint(numberUtil.toHMS(21600)) --&gt; 06:00:00\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;number&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;string\n&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 10,
+                &quot;path&quot;: &quot;src/numberUtil/methods/toHMS.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;minutesToHours&quot;,
+            &quot;desc&quot;: &quot;Returns a number which is `minutes` converted to hours.\n\n```lua\nprint(numberUtil.minutesToHours(60)) --&gt; 1\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;minutes&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number\n&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 12,
+                &quot;path&quot;: &quot;src/numberUtil/methods/minutesToHours.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;clampTo&quot;,
+            &quot;desc&quot;: &quot;Clamps `number` to `clamp`, if `number` is greater than `max` or lower than `min`.\n\n```lua\nprint(numberUtil.clampTo(1, 2, 5, 150)) --&gt; 150\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;number&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;min&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;max&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;clamp&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number\n&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 10,
+                &quot;path&quot;: &quot;src/numberUtil/methods/clampTo.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;inverseLerp&quot;,
+            &quot;desc&quot;: &quot;Inverse lerp is the inverse operation of the lerp node. It can be used to determine what the input to a lerp was \nbased on its output. \n\n```lua\nprint(numberUtil.inverseLerp(2, 5, 0.7)) --&gt; -0.43333333333333335\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;min&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;max&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;alpha&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number\n&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 11,
+                &quot;path&quot;: &quot;src/numberUtil/methods/inverseLerp.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;to24H&quot;,
+            &quot;desc&quot;: &quot;Returns the given hour formatted to the 12 hour clock.\n\n```lua\nprint(numberUtil.to24H(12, \&quot;am\&quot;)) --&gt; 0\nprint(numberUtil.to24H(5, \&quot;pm\&quot;)) --&gt; 17\nprint(numberUtil.to24H(12, \&quot;pm\&quot;)) --&gt; 12\nprint(numberUtil.to24H(11, \&quot;pm\&quot;)) --&gt; 23\nprint(numberUtil.to24H(11, \&quot;am\&quot;)) --&gt; 11\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;hour&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;preset&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;\&quot;am\&quot; | \&quot;pm\&quot;&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number\n&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 17,
+                &quot;path&quot;: &quot;src/numberUtil/methods/to24H.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;close&quot;,
+            &quot;desc&quot;: &quot;Returns a boolean indicating if the difference between `number` and `to` is lower than or equal to `eplsion`.\n\n```lua\nprint(numberUtil.close(0.1 + 0.2, 0.3)) --&gt; true\nprint(numberUtil.close(0.1 + 0.2, 0.3, 0)) --&gt; false\n```\n\n- If `eplison` is not specified, then it will default to `1e-2`.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;number&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;to&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;eplison&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number?&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;boolean\n&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 15,
+                &quot;path&quot;: &quot;src/numberUtil/methods/close.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;mean&quot;,
+            &quot;desc&quot;: &quot;Returns the mean of the set of numbers `...`.\n\n```lua\nprint(numberUtil.mode(1, 2, 4)) --&gt; 2.3\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;...&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number\n&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 9,
+                &quot;path&quot;: &quot;src/numberUtil/methods/mean.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;max&quot;,
+            &quot;desc&quot;: &quot;Returns the maximum value.\n\n```lua\nprint(numberUtil.max(10,9,8,7,6,5,4,3,2,1)) --&gt; 10\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;...&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number\n&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 9,
+                &quot;path&quot;: &quot;src/numberUtil/methods/max.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;median&quot;,
+            &quot;desc&quot;: &quot;Returns the median of the set of numbers `...`.\n\n```lua\nprint(numberUtil.median(2, 2)) --&gt; 4\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;...&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number\n&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 9,
+                &quot;path&quot;: &quot;src/numberUtil/methods/median.luau&quot;
+            }
+        },
+        {
             &quot;name&quot;: &quot;exponentialLerp&quot;,
             &quot;desc&quot;: &quot;Exponentially lerps `number` to `goal`, with `alpha` being the multiplier.\n\n```lua\nprint(numberUtil.exponentialLerp(1, 5, 3)) --&gt; 125\n```&quot;,
             &quot;params&quot;: [
@@ -675,28 +1065,6 @@ print(numberUtil.nan(3)) --&gt; false
             &quot;source&quot;: {
                 &quot;line&quot;: 9,
                 &quot;path&quot;: &quot;src/numberUtil/methods/exponentialLerp.luau&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;secondsToDays&quot;,
-            &quot;desc&quot;: &quot;Returns a number which is `seconds` converted to days.\n\n```lua\nprint(numberUtil.secondsToDays(86400)) --&gt; 1\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;seconds&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number\n&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 12,
-                &quot;path&quot;: &quot;src/numberUtil/methods/secondsToDays.luau&quot;
             }
         },
         {
@@ -742,11 +1110,21 @@ print(numberUtil.nan(3)) --&gt; false
             }
         },
         {
-            &quot;name&quot;: &quot;min&quot;,
-            &quot;desc&quot;: &quot;Returns the minimum value.\n\n```lua\nprint(numberUtil.min(10,9,8,7,6,5,4,3,2,1)) --&gt; 1\n```&quot;,
+            &quot;name&quot;: &quot;quadraticLerp&quot;,
+            &quot;desc&quot;: &quot;Quadraticly interpolates `number` to `goal`, with `alpha` being the multiplier.\n\n```lua\nprint(numberUtil.quadraticLerp(2, 5, 0.7)) --&gt; 4.1\n```&quot;,
             &quot;params&quot;: [
                 {
-                    &quot;name&quot;: &quot;...&quot;,
+                    &quot;name&quot;: &quot;number&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;goal&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;alpha&quot;,
                     &quot;desc&quot;: &quot;&quot;,
                     &quot;lua_type&quot;: &quot;number&quot;
                 }
@@ -759,8 +1137,8 @@ print(numberUtil.nan(3)) --&gt; false
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 9,
-                &quot;path&quot;: &quot;src/numberUtil/methods/min.luau&quot;
+                &quot;line&quot;: 10,
+                &quot;path&quot;: &quot;src/numberUtil/methods/quadraticLerp.luau&quot;
             }
         },
         {
@@ -796,52 +1174,8 @@ print(numberUtil.nan(3)) --&gt; false
             }
         },
         {
-            &quot;name&quot;: &quot;factorial&quot;,
-            &quot;desc&quot;: &quot;Returns the factorial of `number`.\n\n```lua\nprint(numberUtil.factorial(3)) --&gt; 6\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;number&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number\n&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 10,
-                &quot;path&quot;: &quot;src/numberUtil/methods/factorial.luau&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;max&quot;,
-            &quot;desc&quot;: &quot;Returns the maximum value.\n\n```lua\nprint(numberUtil.max(10,9,8,7,6,5,4,3,2,1)) --&gt; 10\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;...&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number\n&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 9,
-                &quot;path&quot;: &quot;src/numberUtil/methods/max.luau&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;root&quot;,
-            &quot;desc&quot;: &quot;Returns the `root` of `number`.\n\n```lua\nprint(numberUtil.root(2, 3)) --&gt; 1.2599210498948732 (same as cube root of 2)\nprint(numberUtil.root(2, 2)) --&gt; 1.4142135623730951 (same as square root of 2)\n```&quot;,
+            &quot;name&quot;: &quot;comb&quot;,
+            &quot;desc&quot;: &quot;Returns the number of ways picking `k` unordered outcomes from `number` possibilities, without repetition.\n\n:::note\nIf the value of `k` is greater than `number`, then the method will return `0`.\n:::\n\n```lua\nprint(numberUtil.comb(2, 1)) --&gt; 2\n```&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;number&quot;,
@@ -849,7 +1183,7 @@ print(numberUtil.nan(3)) --&gt; false
                     &quot;lua_type&quot;: &quot;number&quot;
                 },
                 {
-                    &quot;name&quot;: &quot;numberRoot&quot;,
+                    &quot;name&quot;: &quot;k&quot;,
                     &quot;desc&quot;: &quot;&quot;,
                     &quot;lua_type&quot;: &quot;number&quot;
                 }
@@ -862,8 +1196,8 @@ print(numberUtil.nan(3)) --&gt; false
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 11,
-                &quot;path&quot;: &quot;src/numberUtil/methods/root.luau&quot;
+                &quot;line&quot;: 16,
+                &quot;path&quot;: &quot;src/numberUtil/methods/comb.luau&quot;
             }
         },
         {
@@ -889,259 +1223,6 @@ print(numberUtil.nan(3)) --&gt; false
             }
         },
         {
-            &quot;name&quot;: &quot;quadraticBezier&quot;,
-            &quot;desc&quot;: &quot;Returns the quadratic bezier from the arguments.\n\n```lua\nprint(numberUtil.quadraticBezier(0, 0.5, 3, 5)) --&gt; 0.5\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;t&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;p0&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;p1&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;p2&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number\n&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 9,
-                &quot;path&quot;: &quot;src/numberUtil/methods/quadraticBezier.luau&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;nan&quot;,
-            &quot;desc&quot;: &quot;Returns a boolean indicating if `number` is NaN (Not A Number). \n\n```lua\nprint(numberUtil.nan(0 / 0)) --&gt; true\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;number&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;boolean\n&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 10,
-                &quot;path&quot;: &quot;src/numberUtil/methods/nan.luau&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;map&quot;,
-            &quot;desc&quot;: &quot;Maps `number` between `inMin` and `inMax`, and `outMin` and `outMax`.\n\n```lua\nprint(numberUtil.map(1,2,3,4,5)) --&gt; 3\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;number&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;inMin&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;inMax&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;outMin&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;outMax&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number\n&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number\n&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 10,
-                &quot;path&quot;: &quot;src/numberUtil/methods/map.luau&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;lerp&quot;,
-            &quot;desc&quot;: &quot;Interpolates `number` to `goal`, with `alpha` being the multiplier.\n\n```lua\nprint(numberUtil.lerp(2, 5, 0.7)) --&gt; 4.1\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;number&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;goal&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;alpha&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number\n&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 10,
-                &quot;path&quot;: &quot;src/numberUtil/methods/lerp.luau&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;factors&quot;,
-            &quot;desc&quot;: &quot;Returns a read only array of all factors of `number`.\n\n```lua\nprint(numberUtil.factors(2)) --&gt; {1, 2}\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;number&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;{ number }\n&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 10,
-                &quot;path&quot;: &quot;src/numberUtil/methods/factors.luau&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;secant&quot;,
-            &quot;desc&quot;: &quot;The ratio of the hypotenuse to the shorter side adjacent to an acute angle (in a right-angled triangle); the reciprocal of a cosine.\n\n```lua\nprint(numberUtil.secant(1)) --&gt; 1.8508157176809255\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;number&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number\n&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 10,
-                &quot;path&quot;: &quot;src/numberUtil/methods/secant.luau&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;median&quot;,
-            &quot;desc&quot;: &quot;Returns the median of the set of numbers `...`.\n\n```lua\nprint(numberUtil.median(2, 2)) --&gt; 4\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;...&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number\n&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 9,
-                &quot;path&quot;: &quot;src/numberUtil/methods/median.luau&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;inverseLerp&quot;,
-            &quot;desc&quot;: &quot;Inverse lerp is the inverse operation of the lerp node. It can be used to determine what the input to a lerp was \nbased on its output. \n\n```lua\nprint(numberUtil.inverseLerp(2, 5, 0.7)) --&gt; -0.43333333333333335\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;min&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;max&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;alpha&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number\n&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 11,
-                &quot;path&quot;: &quot;src/numberUtil/methods/inverseLerp.luau&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;mean&quot;,
-            &quot;desc&quot;: &quot;Returns the mean of the set of numbers `...`.\n\n```lua\nprint(numberUtil.mode(1, 2, 4)) --&gt; 2.3\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;...&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number\n&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 9,
-                &quot;path&quot;: &quot;src/numberUtil/methods/mean.luau&quot;
-            }
-        },
-        {
             &quot;name&quot;: &quot;hoursToMinutes&quot;,
             &quot;desc&quot;: &quot;Returns a number which is `hours` converted to minutes.\n\n```lua\nprint(numberUtil.hoursToMinutes(1)) --&gt; 60\n```&quot;,
             &quot;params&quot;: [
@@ -1164,26 +1245,11 @@ print(numberUtil.nan(3)) --&gt; false
             }
         },
         {
-            &quot;name&quot;: &quot;clampTo&quot;,
-            &quot;desc&quot;: &quot;Clamps `number` to `clamp`, if `number` is greater than `max` or lower than `min`.\n\n```lua\nprint(numberUtil.clampTo(1, 2, 5, 150)) --&gt; 150\n```&quot;,
+            &quot;name&quot;: &quot;minutesToSeconds&quot;,
+            &quot;desc&quot;: &quot;Returns a number which is `minutes` converted to seconds.\n\n```lua\nprint(numberUtil.minutesToSeconds(1)) --&gt; 60\n```&quot;,
             &quot;params&quot;: [
                 {
-                    &quot;name&quot;: &quot;number&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;min&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;max&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;clamp&quot;,
+                    &quot;name&quot;: &quot;minutes&quot;,
                     &quot;desc&quot;: &quot;&quot;,
                     &quot;lua_type&quot;: &quot;number&quot;
                 }
@@ -1196,74 +1262,8 @@ print(numberUtil.nan(3)) --&gt; false
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 10,
-                &quot;path&quot;: &quot;src/numberUtil/methods/clampTo.luau&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;toMS&quot;,
-            &quot;desc&quot;: &quot;Returns a string which is just `number` formatted to the MS (Minutes, Seconds) format.\n\n```lua\nprint(numberUtil.toMS(21600)) --&gt; 10:00\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;number&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;string\n&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 10,
-                &quot;path&quot;: &quot;src/numberUtil/methods/toMS.luau&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;to24H&quot;,
-            &quot;desc&quot;: &quot;Returns the given hour formatted to the 12 hour clock.\n\n```lua\nprint(numberUtil.to24H(12, \&quot;am\&quot;)) --&gt; 0\nprint(numberUtil.to24H(5, \&quot;pm\&quot;)) --&gt; 17\nprint(numberUtil.to24H(12, \&quot;pm\&quot;)) --&gt; 12\nprint(numberUtil.to24H(11, \&quot;pm\&quot;)) --&gt; 23\nprint(numberUtil.to24H(11, \&quot;am\&quot;)) --&gt; 11\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;hour&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;preset&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;\&quot;am\&quot; | \&quot;pm\&quot;&quot;
-                }
-            ],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number\n&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 17,
-                &quot;path&quot;: &quot;src/numberUtil/methods/to24H.luau&quot;
-            }
-        },
-        {
-            &quot;name&quot;: &quot;to12H&quot;,
-            &quot;desc&quot;: &quot;Returns the given hour formatted to the 12 hour clock.\n\n```lua\nprint(numberUtil.to12H(24)) --&gt; 12\nprint(numberUtil.to12H(17)) --&gt; 5\n```&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;hour&quot;,
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;number&quot;
-                }
-            ],
-            &quot;returns&quot;: [],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 11,
-                &quot;path&quot;: &quot;src/numberUtil/methods/to12H.luau&quot;
+                &quot;line&quot;: 12,
+                &quot;path&quot;: &quot;src/numberUtil/methods/minutesToSeconds.luau&quot;
             }
         }
     ],
@@ -1349,7 +1349,7 @@ print(numberUtil.nan(3)) --&gt; false
         &quot;path&quot;: &quot;src/numberUtil/init.luau&quot;
     }
 }</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a><ul><li><a href="#e" class="table-of-contents__link toc-highlight">e</a></li><li><a href="#ec" class="table-of-contents__link toc-highlight">ec</a></li><li><a href="#g" class="table-of-contents__link toc-highlight">g</a></li><li><a href="#ga" class="table-of-contents__link toc-highlight">ga</a></li><li><a href="#phi" class="table-of-contents__link toc-highlight">phi</a></li><li><a href="#tau" class="table-of-contents__link toc-highlight">tau</a></li></ul></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#average" class="table-of-contents__link toc-highlight">.average</a></li><li><a href="#clampTo" class="table-of-contents__link toc-highlight">.clampTo</a></li><li><a href="#close" class="table-of-contents__link toc-highlight">.close</a></li><li><a href="#comb" class="table-of-contents__link toc-highlight">.comb</a></li><li><a href="#commas" class="table-of-contents__link toc-highlight">.commas</a></li><li><a href="#cosec" class="table-of-contents__link toc-highlight">.cosec</a></li><li><a href="#cotan" class="table-of-contents__link toc-highlight">.cotan</a></li><li><a href="#cubicBezier" class="table-of-contents__link toc-highlight">.cubicBezier</a></li><li><a href="#exponentialLerp" class="table-of-contents__link toc-highlight">.exponentialLerp</a></li><li><a href="#factorial" class="table-of-contents__link toc-highlight">.factorial</a></li><li><a href="#factors" class="table-of-contents__link toc-highlight">.factors</a></li><li><a href="#hoursToMinutes" class="table-of-contents__link toc-highlight">.hoursToMinutes</a></li><li><a href="#inverseLerp" class="table-of-contents__link toc-highlight">.inverseLerp</a></li><li><a href="#lerp" class="table-of-contents__link toc-highlight">.lerp</a></li><li><a href="#logarithmicLerp" class="table-of-contents__link toc-highlight">.logarithmicLerp</a></li><li><a href="#map" class="table-of-contents__link toc-highlight">.map</a></li><li><a href="#max" class="table-of-contents__link toc-highlight">.max</a></li><li><a href="#mean" class="table-of-contents__link toc-highlight">.mean</a></li><li><a href="#median" class="table-of-contents__link toc-highlight">.median</a></li><li><a href="#min" class="table-of-contents__link toc-highlight">.min</a></li><li><a href="#minutesToHours" class="table-of-contents__link toc-highlight">.minutesToHours</a></li><li><a href="#minutesToSeconds" class="table-of-contents__link toc-highlight">.minutesToSeconds</a></li><li><a href="#mode" class="table-of-contents__link toc-highlight">.mode</a></li><li><a href="#nan" class="table-of-contents__link toc-highlight">.nan</a></li><li><a href="#quadraticBezier" class="table-of-contents__link toc-highlight">.quadraticBezier</a></li><li><a href="#quadraticLerp" class="table-of-contents__link toc-highlight">.quadraticLerp</a></li><li><a href="#root" class="table-of-contents__link toc-highlight">.root</a></li><li><a href="#secant" class="table-of-contents__link toc-highlight">.secant</a></li><li><a href="#secondsToDays" class="table-of-contents__link toc-highlight">.secondsToDays</a></li><li><a href="#secondsToHours" class="table-of-contents__link toc-highlight">.secondsToHours</a></li><li><a href="#secondsToMinutes" class="table-of-contents__link toc-highlight">.secondsToMinutes</a></li><li><a href="#sphericalLerp" class="table-of-contents__link toc-highlight">.sphericalLerp</a></li><li><a href="#suffix" class="table-of-contents__link toc-highlight">.suffix</a></li><li><a href="#to12H" class="table-of-contents__link toc-highlight">.to12H</a></li><li><a href="#to24H" class="table-of-contents__link toc-highlight">.to24H</a></li><li><a href="#toHM" class="table-of-contents__link toc-highlight">.toHM</a></li><li><a href="#toHMS" class="table-of-contents__link toc-highlight">.toHMS</a></li><li><a href="#toMS" class="table-of-contents__link toc-highlight">.toMS</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 babypatrick100. Built with Moonwave and Docusaurus</div></div></div></footer></div>
-<script src="/libraries/assets/js/runtime~main.fecccfc5.js"></script>
-<script src="/libraries/assets/js/main.c7898962.js"></script>
+<script src="/libraries/assets/js/runtime~main.b220181c.js"></script>
+<script src="/libraries/assets/js/main.b0bbe86c.js"></script>
 </body>
 </html>
