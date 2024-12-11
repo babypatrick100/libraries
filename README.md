@@ -42,7 +42,7 @@ libraries is a collection of my open Roblox sourced modules. All of them can be 
 | [colorUtil](https://babypatrick100.github.io/libraries/api/colorUtil) | `colorUtil = "bubshurb/colorutil@1.1.2"` | `shared` |
 | [serializerUtil](https://babypatrick100.github.io/libraries/api/serializerUtil) | `serializerUtil = "bubshurb/serializerutil@1.1.0"` | `shared` |
 | [instanceTrackerUtil](https://babypatrick100.github.io/libraries/api/instanceTrackerUtil) | `instanceTrackerUtil = "bubshurb/instancetrackerutil@1.2.2"` | `shared` |
-| [instanceAttributeUtil](https://babypatrick100.github.io/libraries/api/instanceAttributeUtil) | `instanceAttributeUtil = "bubshurb/instanceattributeutil@1.3.0"` | `shared` |
+| [instanceAttributeUtil](https://babypatrick100.github.io/libraries/api/instanceAttributeUtil) | `instanceAttributeUtil = "bubshurb/instanceattributeutil@1.3.1"` | `shared` |
 | [instanceTagUtil](https://babypatrick100.github.io/libraries/api/instanceTagUtil) | `instanceTagUtil = "bubshurb/instancetagutil@1.0.2"` | `shared` |
 | [numberUnitUtil](https://babypatrick100.github.io/libraries/api/numberUnitUtil) | `numberUnitUtil = "bubshurb/numberunitutil@1.0.0"` | `shared` |
 | [playersUtil](https://babypatrick100.github.io/libraries/api/playersUtil) | `playersUtil = "bubshurb/playersutil@1.2.1"` | `shared` |

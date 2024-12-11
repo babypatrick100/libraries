@@ -26,30 +26,27 @@ function instanceAttributeUtil.all(instanceTree: Instance, desiredAttribute: str
 end
 
 --[=[
-	Works similar to [instanceAttributeUtil.observe], but observes an dictionary of 
+	Works similar to [instanceAttributeUtil.observe], but observes an array of 
 	attributes instead of a single attribute. 
 
 	```lua
-	instanceAttributeUtil.observeMany(workspace, workspace:GetAttributes(), function(newAttributes, oldAttributes)
-		...
+	instanceAttributeUtil.observeMany(workspace, {"Number1", "Number2"}, function(newAttributes, oldAttributes)
+		print(newAttributes.Number1 + newAttributes.Number2)
 	end)
 	```
 ]=]
 
 function instanceAttributeUtil.observeMany(
 	instance: Instance,
-	attributesToObserve: { [string]: any },
-	observer: (
-		newAttributeValue: any,
-		oldAttributeValue: any
-	) -> ()
+	attributesToObserve: { string },
+	observer: (newAttributeValue: any, oldAttributeValue: any) -> ()
 ): RBXScriptConnection
 	local attributesToObserveNew = table.clone(attributesToObserve)
 	local attributesToObserveOld = table.clone(attributesToObserve)
 	task.spawn(observer, attributesToObserveNew, nil)
 
 	return instance.AttributeChanged:Connect(function(attribute)
-		if attributesToObserve[attribute] == nil then
+		if table.find(attributesToObserve, attribute) == nil then
 			return
 		end
 
@@ -181,10 +178,7 @@ end
 function instanceAttributeUtil.instanceAttributePromise(
 	instance: Instance,
 	attribute: string,
-	predicate: ((
-		newValue: any,
-		oldValue: any
-	) -> boolean)?
+	predicate: ((newValue: any, oldValue: any) -> boolean)?
 )
 	local promise = Promise.new(function(resolve)
 		if predicate == nil then
@@ -227,10 +221,7 @@ function instanceAttributeUtil.instanceAttributesPromise(instance: Instance, att
 	local instanceAttributePromises = {}
 
 	for _, attribute in attributes do
-		table.insert(
-			instanceAttributePromises,
-			instanceAttributeUtil.instanceAttributePromise(instance, attribute)
-		)
+		table.insert(instanceAttributePromises, instanceAttributeUtil.instanceAttributePromise(instance, attribute))
 	end
 
 	return Promise.all(instanceAttributePromises)
@@ -245,10 +236,7 @@ end
 	```
 ]=]
 
-function instanceAttributeUtil.setInstanceAttributes(
-	instance: Instance,
-	attributes: { [string]: any }
-)
+function instanceAttributeUtil.setInstanceAttributes(instance: Instance, attributes: { [string]: any })
 	for attribute, value in attributes do
 		instance:SetAttribute(attribute, value)
 	end
