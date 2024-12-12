@@ -39,7 +39,10 @@ end
 function instanceAttributeUtil.observeMany(
 	instance: Instance,
 	attributesToObserve: { string },
-	observer: (newAttributeValue: any, oldAttributeValue: any) -> ()
+	observer: (
+		newAttributeValue: any,
+		oldAttributeValue: any
+	) -> ()
 ): RBXScriptConnection
 	local attributesToObserveNew = table.clone(attributesToObserve)
 	local attributesToObserveOld = table.clone(attributesToObserve)
@@ -178,7 +181,10 @@ end
 function instanceAttributeUtil.instanceAttributePromise(
 	instance: Instance,
 	attribute: string,
-	predicate: ((newValue: any, oldValue: any) -> boolean)?
+	predicate: ((
+		newValue: any,
+		oldValue: any
+	) -> boolean)?
 )
 	local promise = Promise.new(function(resolve)
 		if predicate == nil then
@@ -221,7 +227,10 @@ function instanceAttributeUtil.instanceAttributesPromise(instance: Instance, att
 	local instanceAttributePromises = {}
 
 	for _, attribute in attributes do
-		table.insert(instanceAttributePromises, instanceAttributeUtil.instanceAttributePromise(instance, attribute))
+		table.insert(
+			instanceAttributePromises,
+			instanceAttributeUtil.instanceAttributePromise(instance, attribute)
+		)
 	end
 
 	return Promise.all(instanceAttributePromises)
@@ -236,7 +245,10 @@ end
 	```
 ]=]
 
-function instanceAttributeUtil.setInstanceAttributes(instance: Instance, attributes: { [string]: any })
+function instanceAttributeUtil.setInstanceAttributes(
+	instance: Instance,
+	attributes: { [string]: any }
+)
 	for attribute, value in attributes do
 		instance:SetAttribute(attribute, value)
 	end
