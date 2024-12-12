@@ -6,6 +6,7 @@ libraries is a collection of my open Roblox sourced modules. All of them can be 
 | -- | -- | -- |
 | [ViewportModel](https://babypatrick100.github.io/libraries/api/ViewportModel) | `ViewportModel = "bubshurb/viewportmodel@1.1.0` | `shared` |
 | [ZonePlus](https://babypatrick100.github.io/libraries/api/ZonePlus) | `ZonePlus = "bubshurb/zoneplus@1.1.1` | `shared` |
+| [Timer](https://babypatrick100.github.io/libraries/api/Timer) | `Timer = "bubshurb/timer@1.0.0` | `shared` |
 | [ValueMultiplier](https://babypatrick100.github.io/libraries/api/ValueMultiplier) | `ValueMultiplier = "bubshurb/valuemultiplier@1.0.0` | `shared` |
 | [Connection](https://babypatrick100.github.io/libraries/api/Connection) | `Connection = "bubshurb/connection@1.0.0` | `shared` |
 | [Matcher](https://babypatrick100.github.io/libraries/api/Matcher) | `Matcher = "bubshurb/matcher@1.0.0` | `shared` |
