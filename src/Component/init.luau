@@ -206,6 +206,7 @@ local CONSTRUCT_PROMISE = Symbol("CONSTRUCT_PROMISE")
 
 local componentsConstructingPromises = {}
 local globalComponents = {}
+local onGlobalComponentStarted = Signal.new()
 
 local function NextRenderName(): string
 	return "ComponentRender" .. HttpService:GenerateGUID()
@@ -339,6 +340,45 @@ function Component.new(config: ComponentConfig)
 	return customComponent
 end
 
+--[=[
+	@tag Component
+	@return ComponentClass?
+
+	Returns the component instance of the component class bound to the given tag, if found.
+]=]
+
+function Component.fromTag(tag: string, instance: Instance)
+	for _, component in globalComponents do
+		if component.tag ~= tag then
+			continue
+		end
+
+		local componentInstance = component:fromInstance(instance)
+		if componentInstance.instance == instance then
+			return componentInstance
+		end
+	end
+
+	return nil
+end
+
+--[=[
+	@tag Component
+	@return Promise
+
+	Promisified version of [Component.fromTag]
+]=]
+
+function Component.fromTagPromise(tag: string, instance: Instance)
+	return Promise.new(function(resolve)
+		while Component.fromTag(tag, instance) == nil do
+			onGlobalComponentStarted:Wait()
+		end
+
+		resolve(Component.fromTag(tag, instance))
+	end)
+end
+
 function Component:_instantiate(instance: Instance)
 	local component = setmetatable({}, self)
 	component.instance = instance
@@ -353,8 +393,7 @@ function Component:_instantiate(instance: Instance)
 		end)
 	end
 
-	componentsConstructingPromises[component.instance] = componentsConstructingPromises[component.instance]
-		or {}
+	componentsConstructingPromises[component.instance] = componentsConstructingPromises[component.instance] or {}
 	componentsConstructingPromises[component.instance][component] = component
 
 	component[CONSTRUCT_PROMISE]:finally(function()
@@ -402,9 +441,7 @@ function Component:_setup()
 			return
 		end
 
-		debug.setmemorycategory(
-			string.format(COMPONENT_MEM_TAG, tostring(component), component.instance.Name)
-		)
+		debug.setmemorycategory(string.format(COMPONENT_MEM_TAG, tostring(component), component.instance.Name))
 		InvokeExtensionFn(component, self, "starting")
 
 		component[START_PROMISE] = Promise.new(function(resolve)
@@ -412,27 +449,24 @@ function Component:_setup()
 		end)
 			:andThen(function()
 				table.insert(globalComponents, component)
+				onGlobalComponentStarted:Fire(component)
 				InvokeExtensionFn(component, self, "started")
 
 				local hasRenderSteppedUpdate = typeof(component.renderSteppedUpdate) == "function"
 				if hasRenderSteppedUpdate and not IS_SERVER then
 					if component.renderPriority then
 						component._renderName = NextRenderName()
-						RunService:BindToRenderStep(
-							component._renderName,
-							component.renderPriority,
-							function(...)
-								debug.profilebegin(
-									string.format(
-										COMPONENT_LIFECYLE_METHOD_DEBUG,
-										tostring(component),
-										"renderSteppedUpdate"
-									)
+						RunService:BindToRenderStep(component._renderName, component.renderPriority, function(...)
+							debug.profilebegin(
+								string.format(
+									COMPONENT_LIFECYLE_METHOD_DEBUG,
+									tostring(component),
+									"renderSteppedUpdate"
 								)
-								component:renderSteppedUpdate(...)
-								debug.profileend()
-							end
-						)
+							)
+							component:renderSteppedUpdate(...)
+							debug.profileend()
+						end)
 					end
 				end
 
@@ -536,16 +570,13 @@ function Component:_setup()
 			end
 			return false
 		end
-		local ancestryChangedHandle = self[KEY_TROVE]:Connect(
-			instance.AncestryChanged,
-			function(_, parent)
-				if parent and IsInAncestorList() then
-					TryConstructComponent(instance)
-				else
-					TryDeconstructComponent(instance)
-				end
+		local ancestryChangedHandle = self[KEY_TROVE]:Connect(instance.AncestryChanged, function(_, parent)
+			if parent and IsInAncestorList() then
+				TryConstructComponent(instance)
+			else
+				TryDeconstructComponent(instance)
 			end
-		)
+		end)
 		watchingInstances[instance] = ancestryChangedHandle
 		if IsInAncestorList() then
 			TryConstructComponent(instance)
@@ -872,13 +903,7 @@ for callbackIdentifier, event in RUN_SERVICE_EVENTS_TO_CONNECT do
 				continue
 			end
 
-			debug.profilebegin(
-				string.format(
-					COMPONENT_LIFECYLE_METHOD_DEBUG,
-					tostring(component),
-					callbackIdentifier
-				)
-			)
+			debug.profilebegin(string.format(COMPONENT_LIFECYLE_METHOD_DEBUG, tostring(component), callbackIdentifier))
 			component[callbackIdentifier](component, ...)
 			debug.profileend()
 		end
