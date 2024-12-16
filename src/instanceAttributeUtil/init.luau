@@ -40,13 +40,27 @@ function instanceAttributeUtil.observeMany(
 	instance: Instance,
 	attributesToObserve: { string },
 	observer: (
-		newAttributeValue: any,
-		oldAttributeValue: any
+		newAttributes: { [string]: any },
+		oldAttributeValue: { [string]: any }?
 	) -> ()
 ): RBXScriptConnection
-	local attributesToObserveNew = table.clone(attributesToObserve)
-	local attributesToObserveOld = table.clone(attributesToObserve)
-	task.spawn(observer, attributesToObserveNew, nil)
+	local newAttributes = {}
+	local oldAttributes = {}
+
+	local newAttributesCount = 0
+
+	for attribute, value in instance:GetAttributes() do
+		if table.find(attributesToObserve, attribute) == nil then
+			continue
+		end
+
+		newAttributes[attribute] = value
+		newAttributesCount += 1
+	end
+
+	if newAttributesCount == #attributesToObserve then
+		task.spawn(observer, newAttributes, nil)
+	end
 
 	return instance.AttributeChanged:Connect(function(attribute)
 		if table.find(attributesToObserve, attribute) == nil then
@@ -54,10 +68,10 @@ function instanceAttributeUtil.observeMany(
 		end
 
 		local newAttributeValue = instance:GetAttribute(attribute)
-		attributesToObserveNew[attribute] = newAttributeValue
+		newAttributes[attribute] = newAttributeValue
 
-		task.spawn(observer, attributesToObserveNew, attributesToObserveOld)
-		attributesToObserveOld[attribute] = newAttributeValue
+		task.spawn(observer, newAttributes, oldAttributes)
+		oldAttributes[attribute] = newAttributeValue
 	end)
 end
 
@@ -181,10 +195,7 @@ end
 function instanceAttributeUtil.instanceAttributePromise(
 	instance: Instance,
 	attribute: string,
-	predicate: ((
-		newValue: any,
-		oldValue: any
-	) -> boolean)?
+	predicate: ((newValue: any, oldValue: any) -> boolean)?
 )
 	local promise = Promise.new(function(resolve)
 		if predicate == nil then
@@ -227,10 +238,7 @@ function instanceAttributeUtil.instanceAttributesPromise(instance: Instance, att
 	local instanceAttributePromises = {}
 
 	for _, attribute in attributes do
-		table.insert(
-			instanceAttributePromises,
-			instanceAttributeUtil.instanceAttributePromise(instance, attribute)
-		)
+		table.insert(instanceAttributePromises, instanceAttributeUtil.instanceAttributePromise(instance, attribute))
 	end
 
 	return Promise.all(instanceAttributePromises)
@@ -245,10 +253,7 @@ end
 	```
 ]=]
 
-function instanceAttributeUtil.setInstanceAttributes(
-	instance: Instance,
-	attributes: { [string]: any }
-)
+function instanceAttributeUtil.setInstanceAttributes(instance: Instance, attributes: { [string]: any })
 	for attribute, value in attributes do
 		instance:SetAttribute(attribute, value)
 	end

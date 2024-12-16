@@ -115,4 +115,81 @@ function instanceTagUtil.removeTagsFromInstance(instance: Instance, tags: { stri
 	end
 end
 
+--[=[
+	Works similar to [instanceTagUtil.observe], but observes an array of 
+	tags instead of a single tag. 
+
+	@return Connection 
+
+	```lua
+	instanceTagUtil.observeMany(workspace, {"Number1", "Number2"}, function(newTags, oldTags)
+		
+	end)
+	```
+]=]
+
+function instanceTagUtil.observeMany(
+	instance: Instance,
+	tagsToObserve: { string },
+	observer: (newTags: { string }, oldTags: { string }?) -> ()
+): Connection.Connection
+	local newTags = {}
+	local oldTags = {}
+
+	local newTagsCount = 0
+
+	for tag, value in instance:GetTags() do
+		if table.find(tagsToObserve, tag) == nil then
+			continue
+		end
+
+		table.insert(newTags, tag)
+		newTagsCount += 1
+	end
+
+	if newTagsCount == #tagsToObserve then
+		task.spawn(observer, newTags, nil)
+	end
+
+	local connections = {}
+	table.insert(
+		connections,
+		CollectionService.TagAdded:Connect(function(tag)
+			if table.find(tagsToObserve, tag) == nil or table.find(newTags, tag) ~= nil then
+				return
+			end
+
+			if not instance:HasTag(tag) then
+				return
+			end
+
+			oldTags = table.clone(newTags)
+			table.insert(newTags, tag)
+			task.spawn(observer, newTags, oldTags)
+		end)
+	)
+
+	table.insert(
+		connections,
+		CollectionService.TagRemoved:Connect(function(tag)
+			if table.find(tagsToObserve, tag) == nil or table.find(newTags, tag) ~= nil then
+				return
+			end
+
+			local index = table.find(newTags, tag)
+			if index ~= nil then
+				oldTags = table.clone(newTags)
+				table.remove(newTags, index)
+				task.spawn(observer, newTags, oldTags)
+			end
+		end)
+	)
+
+	return Connection.new(function()
+		for _, connection in connections do
+			connection:Disconnect()
+		end
+	end)
+end
+
 return table.freeze(instanceTagUtil)
