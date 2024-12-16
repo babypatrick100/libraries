@@ -34,8 +34,14 @@ Timer.__index = Timer
 ]=]
 
 function Timer.new(interval: number)
-	assert(type(interval) == "number", "Argument #1 to Timer.new must be a number; got " .. type(interval))
-	assert(interval >= 0, "Argument #1 to Timer.new must be greater or equal to 0; got " .. tostring(interval))
+	assert(
+		type(interval) == "number",
+		"Argument #1 to Timer.new must be a number; got " .. type(interval)
+	)
+	assert(
+		interval >= 0,
+		"Argument #1 to Timer.new must be greater or equal to 0; got " .. tostring(interval)
+	)
 
 	local self = setmetatable({
 		ticked = Signal.new(),
@@ -110,7 +116,10 @@ end
 ]=]
 function Timer:stop()
 	self._running = false
-	schedulerUtil.unschedule(schedulerUtil.RunServiceEvent.Heartbeat, self._schedulerCallbackIdentifier)
+	schedulerUtil.unschedule(
+		schedulerUtil.RunServiceEvent.Heartbeat,
+		self._schedulerCallbackIdentifier
+	)
 end
 
 --[=[
