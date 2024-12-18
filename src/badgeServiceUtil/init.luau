@@ -62,7 +62,7 @@ function badgeServiceUtil.badgeInfoPromise(badgeId: number)
 		if wasSuccessful then
 			resolve(response)
 		else
-			reject(DEFAULT_BADGE_INFO, response)
+			reject(table.clone(DEFAULT_BADGE_INFO), response)
 		end
 	end)
 end
