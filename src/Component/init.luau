@@ -354,7 +354,7 @@ function Component.fromTag(tag: string, instance: Instance)
 		end
 
 		local componentInstance = component:fromInstance(instance)
-		if componentInstance.instance == instance then
+		if componentInstance ~= nil and componentInstance.instance == instance then
 			return componentInstance
 		end
 	end
@@ -366,7 +366,7 @@ end
 	@tag Component
 	@return Promise
 
-	Promisified version of [Component.fromTag]
+	Promisified version of [Component.fromTag].
 ]=]
 
 function Component.fromTagPromise(tag: string, instance: Instance)
