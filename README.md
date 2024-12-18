@@ -40,6 +40,7 @@ libraries is a collection of my open Roblox sourced modules. All of them can be 
 | [toolUtil](https://babypatrick100.github.io/libraries/api/toolUtil) | `toolUtil = "bubshurb/tooltil@1.3.0` | `shared` |
 | [soundUtil](https://babypatrick100.github.io/libraries/api/soundUtil) | `soundUtil = "bubshurb/soundutil@1.2.1"` | `shared` |
 | [badgeServiceUtil](https://babypatrick100.github.io/libraries/api/badgeServiceUtil) | `badgeServiceUtil = "bubshurb/badgeserviceutil@1.1.1"` | `shared` |
+| [textServiceUtil](https://babypatrick100.github.io/libraries/api/textServiceUtil) | `textServiceUtil = "bubshurb/textserviceutil@1.0.0"` | `shared` |
 | [colorUtil](https://babypatrick100.github.io/libraries/api/colorUtil) | `colorUtil = "bubshurb/colorutil@1.1.2"` | `shared` |
 | [serializerUtil](https://babypatrick100.github.io/libraries/api/serializerUtil) | `serializerUtil = "bubshurb/serializerutil@1.1.0"` | `shared` |
 | [instanceTrackerUtil](https://babypatrick100.github.io/libraries/api/instanceTrackerUtil) | `instanceTrackerUtil = "bubshurb/instancetrackerutil@1.2.2"` | `shared` |
