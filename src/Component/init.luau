@@ -393,7 +393,8 @@ function Component:_instantiate(instance: Instance)
 		end)
 	end
 
-	componentsConstructingPromises[component.instance] = componentsConstructingPromises[component.instance] or {}
+	componentsConstructingPromises[component.instance] = componentsConstructingPromises[component.instance]
+		or {}
 	componentsConstructingPromises[component.instance][component] = component
 
 	component[CONSTRUCT_PROMISE]:finally(function()
@@ -441,7 +442,9 @@ function Component:_setup()
 			return
 		end
 
-		debug.setmemorycategory(string.format(COMPONENT_MEM_TAG, tostring(component), component.instance.Name))
+		debug.setmemorycategory(
+			string.format(COMPONENT_MEM_TAG, tostring(component), component.instance.Name)
+		)
 		InvokeExtensionFn(component, self, "starting")
 
 		component[START_PROMISE] = Promise.new(function(resolve)
@@ -456,17 +459,21 @@ function Component:_setup()
 				if hasRenderSteppedUpdate and not IS_SERVER then
 					if component.renderPriority then
 						component._renderName = NextRenderName()
-						RunService:BindToRenderStep(component._renderName, component.renderPriority, function(...)
-							debug.profilebegin(
-								string.format(
-									COMPONENT_LIFECYLE_METHOD_DEBUG,
-									tostring(component),
-									"renderSteppedUpdate"
+						RunService:BindToRenderStep(
+							component._renderName,
+							component.renderPriority,
+							function(...)
+								debug.profilebegin(
+									string.format(
+										COMPONENT_LIFECYLE_METHOD_DEBUG,
+										tostring(component),
+										"renderSteppedUpdate"
+									)
 								)
-							)
-							component:renderSteppedUpdate(...)
-							debug.profileend()
-						end)
+								component:renderSteppedUpdate(...)
+								debug.profileend()
+							end
+						)
 					end
 				end
 
@@ -570,13 +577,16 @@ function Component:_setup()
 			end
 			return false
 		end
-		local ancestryChangedHandle = self[KEY_TROVE]:Connect(instance.AncestryChanged, function(_, parent)
-			if parent and IsInAncestorList() then
-				TryConstructComponent(instance)
-			else
-				TryDeconstructComponent(instance)
+		local ancestryChangedHandle = self[KEY_TROVE]:Connect(
+			instance.AncestryChanged,
+			function(_, parent)
+				if parent and IsInAncestorList() then
+					TryConstructComponent(instance)
+				else
+					TryDeconstructComponent(instance)
+				end
 			end
-		end)
+		)
 		watchingInstances[instance] = ancestryChangedHandle
 		if IsInAncestorList() then
 			TryConstructComponent(instance)
@@ -903,7 +913,13 @@ for callbackIdentifier, event in RUN_SERVICE_EVENTS_TO_CONNECT do
 				continue
 			end
 
-			debug.profilebegin(string.format(COMPONENT_LIFECYLE_METHOD_DEBUG, tostring(component), callbackIdentifier))
+			debug.profilebegin(
+				string.format(
+					COMPONENT_LIFECYLE_METHOD_DEBUG,
+					tostring(component),
+					callbackIdentifier
+				)
+			)
 			component[callbackIdentifier](component, ...)
 			debug.profileend()
 		end
