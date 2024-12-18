@@ -116,7 +116,14 @@ function textServiceUtil.filterAndTranslateStringPromise(
 	textContext: Enum.TextFilterContext
 )
 	return Promise.new(function(resolve)
-		resolve(TextService:FilterAndTranslateStringAsync(stringToFilter, fromUserId, targetLocales, textContext))
+		resolve(
+			TextService:FilterAndTranslateStringAsync(
+				stringToFilter,
+				fromUserId,
+				targetLocales,
+				textContext
+			)
+		)
 	end)
 end
 
