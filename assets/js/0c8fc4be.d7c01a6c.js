@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[5045],{91429:e=>{e.exports=JSON.parse('{"functions":[],"properties":[],"types":[],"name":"ZonePlus","desc":" \\n\\nZonePlus by 1ForeverHD, ported to wally.","source":{"line":9,"path":"src/zoneplus/init.luau"}}')}}]);

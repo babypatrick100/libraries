@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[5529],{78327:e=>{e.exports=JSON.parse('{"functions":[],"properties":[],"types":[],"name":"ViewportModel","desc":" \\n\\nEgoMoose\'s viewport model class ported to wally.","source":{"line":6,"path":"src/ViewportModel/init.luau"}}')}}]);
