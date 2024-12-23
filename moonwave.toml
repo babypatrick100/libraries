@@ -1,0 +1,28 @@
+gitSourceBranch = "main"
+
+[home]
+enabled = true
+includeReadme = true
+
+[docusaurus]
+favicon = "/icon.ico"
+
+[footer]
+style = "dark"
+copyright = "Copyright © 2024 babypatrick100. Built with Moonwave and Docusaurus"
+
+[[classOrder]]
+section = "network"
+classes = ["network", "NetworkServer", "RemoteProperty", "RemoteSignal",  "networkClient", "ClientRemoteProperty", "ClientRemoteSignal"]
+
+[[home.features]]
+title = "Faster Development"
+description = "Speed up your development progress by using already battle tested modules like network and queue!"
+
+[[home.features]]
+title = "Better Productivity"
+description = "Each module is actively maintained, so focus on writing code and releasing projects quicker!"
+
+[[home.features]]
+title = "Reusuability & Efficiency"
+description = "Don't waste time writing down systems which have been already created and are actively maintained. Instead, be an efficient programmer and use already well maintained systems."

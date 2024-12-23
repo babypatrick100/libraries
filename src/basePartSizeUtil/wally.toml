@@ -1,0 +1,12 @@
+[package]
+name = "bubshurb/basepartresizeutil"
+description = "A utility module for resizing base parts on specific axes."
+version = "1.1.0"
+license = "MIT"
+authors = ["bubshurb"]
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+Promise = "evaera/promise@4"
+instanceTranslationUtil = "bubshurb/instancetranslationutil@1"

@@ -1,0 +1,8 @@
+[package]
+name = "bubshurb/playereventsutil"
+description = "A simple utility module for working with player events."
+authors = ["bubshurb"]
+version = "1.1.0"
+license = "MIT"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"

@@ -1,0 +1,8 @@
+[package]
+name = "bubshurb/matcher"
+description = "7kayoh's matcher  module ported to wally"
+authors = ["7kayoh"]
+license = "MIT"
+version = "1.0.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"

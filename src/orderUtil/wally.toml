@@ -1,0 +1,8 @@
+[package]
+name = "bubshurb/orderutil"
+description = "A very simple utility module for working with order of numbers."
+authors = ["bubshurb"]
+version = "1.0.1"
+license = "MIT"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"

@@ -1,0 +1,8 @@
+[package]
+name = "bubshurb/evlightning"
+description = "Evaera's evLighning module ported to wally."
+authors = ["evaera"]
+license = "MIT"
+version = "1.0.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"

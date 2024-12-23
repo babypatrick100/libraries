@@ -1,0 +1,9 @@
+
+[package]
+name = "bubshurb/instancedataholder"
+description = "A very simple class for storing data for instances."
+authors = ["bubshurb"]
+license = "MIT"
+version = "1.0.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"

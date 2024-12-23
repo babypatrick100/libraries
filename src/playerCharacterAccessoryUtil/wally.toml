@@ -1,0 +1,9 @@
+
+[package]
+name = "bubshurb/playercharacteraccessoryutil"
+description = "A simple utility module for working with the player's character's accessories."
+authors = ["bubshurb"]
+license = "MIT"
+version = "1.1.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"

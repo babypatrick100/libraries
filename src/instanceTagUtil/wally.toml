@@ -1,0 +1,12 @@
+[package]
+name = "bubshurb/instancetagutil"
+description = "A utility module for working with instance tags."
+authors = ["bubshurb"]
+license = "MIT"
+version = "1.4.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+Promise = "evaera/promise@4"
+Connection = "bubshurb/connection@1"

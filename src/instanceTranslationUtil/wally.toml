@@ -1,0 +1,8 @@
+[package]
+name = "bubshurb/instancetranslationutil"
+description = "A simple utility for translating the `CFrame` property of base parts and model."
+authors = ["bubshurb"]
+license = "MIT"
+version = "1.0.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"

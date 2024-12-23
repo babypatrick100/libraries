@@ -1,0 +1,11 @@
+[package]
+name = "bubshurb/instanceattributeutil"
+description = "A utility module for working with instance attributes."
+authors = ["bubshurb"]
+license = "MIT"
+version = "1.3.2"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+Promise = "evaera/promise@4"

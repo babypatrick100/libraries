@@ -1,0 +1,13 @@
+[package]
+name = "bubshurb/toolutil"
+description = "A simple utility module for working with tools."
+authors = ["bubshurb"]
+version = "1.3.0"
+license = "MIT"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+Connection = "bubshurb/connection@1"
+playersUtil = "bubshurb/playersutil@1"
+playerEventsUtil = "bubshurb/playereventsutil@1"

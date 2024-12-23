@@ -1,0 +1,8 @@
+[package]
+name = "bubshurb/instancepropertyutil"
+description = "An utility module for working with instance properties."
+authors = ["bubshurb"]
+license = "MIT"
+version = "1.0.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"

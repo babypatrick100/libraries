@@ -1,0 +1,9 @@
+
+[package]
+name = "bubshurb/playercharacterutil"
+description = "A simple utility module for working with player characters."
+authors = ["bubshurb"]
+license = "MIT"
+version = "1.0.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"

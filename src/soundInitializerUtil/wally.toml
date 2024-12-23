@@ -1,0 +1,12 @@
+[package]
+name = "bubshurb/soundinitializerutil"
+description = "A simple utility module for initializing sounds used in conjunction with [soundUtil]."
+authors = ["bubshurb"]
+version = "1.0.0"
+license = "MIT"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+numberUtil = "bubshurb/numberutil@1"
+soundUtil = "bubshurb/soundutil@1"

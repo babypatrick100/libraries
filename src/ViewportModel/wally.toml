@@ -1,0 +1,8 @@
+[package]
+name = "bubshurb/viewportmodel"
+description = "EgoMoose's viewport model class ported to wally."
+authors = ["EgoMoose"]
+version = "1.0.0"
+license = "MIT"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"

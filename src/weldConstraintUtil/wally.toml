@@ -1,0 +1,8 @@
+[package]
+name = "bubshurb/weldconstraintutil"
+description = "A simple utility for working with weld constraints.."
+authors = ["bubshurb"]
+version = "1.0.1"
+license = "MIT"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"

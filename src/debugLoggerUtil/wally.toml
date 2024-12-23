@@ -1,0 +1,8 @@
+[package]
+name = "bubshurb/debugloggerutil"
+description = "A simple utility module for debug logging."
+authors = ["bubshurb"]
+license = "MIT"
+version = "1.0.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"

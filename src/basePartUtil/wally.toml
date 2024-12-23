@@ -1,0 +1,8 @@
+[package]
+name = "bubshurb/basepartutil"
+description = "An utility module for working with base parts."
+authors = ["bubshurb"]
+license = "MIT"
+version = "1.2.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"

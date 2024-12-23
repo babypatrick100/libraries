@@ -1,0 +1,8 @@
+[package]
+name = "bubshurb/numberstringutil"
+description = "A simple utility for working with numbers and strings."
+authors = ["bubshurb"]
+license = "MIT"
+version = "1.0.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"

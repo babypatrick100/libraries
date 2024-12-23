@@ -1,0 +1,8 @@
+[package]
+name = "bubshurb/promisecleanuputil"
+description = "An utility module for working with [Promise](https://eryn.io/roblox-lua-promise/) cleanups."
+authors = ["bubshurb"]
+license = "MIT"
+version = "1.2.2"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"

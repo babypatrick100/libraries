@@ -1,0 +1,12 @@
+[package]
+name = "bubshurb/valuemultiplier"
+description = "A very simple class for working with value multipliers."
+authors = ["bubshurb"]
+version = "1.1.0"
+license = "MIT"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+Signal = "sleitnick/signal@2"
+Promise = "evaera/promise@4"

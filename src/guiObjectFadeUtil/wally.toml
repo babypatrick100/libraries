@@ -1,0 +1,8 @@
+[package]
+name = "bubshurb/guiobjectfadeutil"
+description = "A utility which implements fading in and out without dealing with issues like having an object specific transparency value rather than `0` - `1`."
+authors = ["bubshurb"]
+license = "MIT"
+version = "1.0.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"

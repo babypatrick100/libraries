@@ -1,0 +1,10 @@
+{
+  "name": "libraries",
+  "tree": {
+    "$className": "DataModel", 
+    "Workspace": {
+       "$path": "src",
+        "$ignoreUnknownInstances": true
+    }
+  }
+}

@@ -1,0 +1,12 @@
+[package]
+name = "bubshurb/schedulerutil"
+description = "	A simple utility module for scheduling RunService events with minimal performance impacts and with automatic profiling."
+authors = ["bubshurb"]
+version = "1.3.0"
+license = "MIT"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+Connection = "bubshurb/connection@1"
+debugLoggerUtil = "bubshurb/debugloggerutil@1"

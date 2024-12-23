@@ -1,0 +1,8 @@
+[package]
+name = "bubshurb/robuxconversionutil"
+description = "A simple utility module for working with robux related conversions."
+authors = ["bubshurb"]
+version = "1.0.0"
+license = "MIT"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"

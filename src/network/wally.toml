@@ -1,0 +1,17 @@
+[package]
+name = "bubshurb/network"
+description = "An advanced network module for easy server-client communication."
+authors = ["bubshurb"]
+license = "MIT"
+version = "2.4.2"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+Signal = "sleitnick/signal@2"
+Property = "bubshurb/property@2"
+Connection = "bubshurb/connection@1"
+Promise = "evaera/promise@4"
+Trove = "sleitnick/trove@1"
+Sift = "csqrl/sift@0"
+serializerUtil = "bubshurb/serializerutil@1"
