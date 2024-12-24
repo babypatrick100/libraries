@@ -1,7 +1,7 @@
 --[=[ 
-	@class numberStringUtil
+	@class numberFormatUtil
 
-	A simple utility for working with numbers and strings.
+	A simple utility for formatting numbers in human readable format.
 ]=]
 
 local NUMBERS_MAPPED_TO_TUPLES = {
@@ -64,20 +64,44 @@ local NUMBERS_MAPPED_TO_TUPLES = {
 	[10 ^ 60] = "Voguple",
 }
 
-local numberStringUtil = {}
+local numberFormatUtil = {}
 
 --[=[
 	Returns the given `number`'s tuple, if any. Supports up to `57` tuples!
 
 	```lua
-	print(numberStringUtil.numberToTuple(2)) --> "Double"
-	print(numberStringUtil.numberToTuple(3)) --> "Triple"
-	print(numberStringUtil.numberToTuple(4)) --> "Quadruple"
+	print(numberFormatUtil.numberToTuple(2)) --> "Double"
+	print(numberFormatUtil.numberToTuple(3)) --> "Triple"
+	print(numberFormatUtil.numberToTuple(4)) --> "Quadruple"
 	```
 ]=]
 
-function numberStringUtil.numberToTuple(number: number): string?
+function numberFormatUtil.numberToTuple(number: number): string?
 	return NUMBERS_MAPPED_TO_TUPLES[number]
 end
 
-return table.freeze(numberStringUtil)
+--[=[
+    Returns the given number in ordinal format.
+
+    ```lua
+    print(numberFormatUtil.ordinal(24)) --> 24th
+    ```
+]=]
+
+function numberFormatUtil.ordinal(number: number): string
+	local ordinals, digit = { "st", "nd", "rd" }, string.sub(tostring(number), -1)
+
+	if
+		tonumber(digit) > 0
+		and tonumber(digit) <= 3
+		and string.sub(tostring(number), -2) ~= tostring(11)
+		and string.sub(tostring(number), -2) ~= tostring(12)
+		and string.sub(tostring(number), -2) ~= tostring(13)
+	then
+		return number .. ordinals[tonumber(digit) :: number]
+	else
+		return number .. "th"
+	end
+end
+
+return table.freeze(numberFormatUtil)

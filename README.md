@@ -46,7 +46,7 @@ libraries is a collection of my open Roblox sourced modules. All of them can be 
 | [instanceTagUtil](https://babypatrick100.github.io/libraries/api/instanceTagUtil) | `instanceTagUtil = "bubshurb/instancetagutil@1.4.0"` | `shared` |
 | [numberUnitUtil](https://babypatrick100.github.io/libraries/api/numberUnitUtil) | `numberUnitUtil = "bubshurb/numberunitutil@1.0.0"` | `shared` |
 | [playersUtil](https://babypatrick100.github.io/libraries/api/playersUtil) | `playersUtil = "bubshurb/playersutil@1.4.0"` | `shared` |
-| [dateUtil](https://babypatrick100.github.io/libraries/api/dateUtil) | `dateUtil = "bubshurb/dateUtil@1.0.0"` | `shared` |
+| [dateUtil](https://babypatrick100.github.io/libraries/api/dateUtil) | `dateUtil = "bubshurb/dateUtil@1.1.0"` | `shared` |
 | [rain](https://babypatrick100.github.io/libraries/api/rain) | `rain = "bubshurb/rain@2.0.0"` | `shared` |
 | [weldConstraintUtil](https://babypatrick100.github.io/libraries/api/weldConstraintUtil) | `weldConstraintUtil = "bubshurb/weldconstraintutil@1.0.1"` | `shared` |
 | [viewportFrameUtil](https://babypatrick100.github.io/libraries/api/viewportFrameUtil) | `viewportFrameUtil = "bubshurb/viewportframeutil@1.1.0"` | `shared` |
@@ -58,7 +58,7 @@ libraries is a collection of my open Roblox sourced modules. All of them can be 
 | [beamUtil](https://babypatrick100.github.io/libraries/api/beamUtil) | `beamUtil = "bubshurb/beamutil@1.0.0"` | `shared` |
 | [basePartSizeUtil](https://babypatrick100.github.io/libraries/api/basePartSizeUtil) | `basePartSizeUtil = "bubshurb/basepartresizeutil@1.1.0"` | `shared` |
 | [lightingUtil](https://babypatrick100.github.io/libraries/api/basePartSizeUtil) | `lightingUtil = "bubshurb/lightingutil@1.0.0"` | `shared` |
-| [numberStringUtil](https://babypatrick100.github.io/libraries/api/numberStringUtil) | `numberStringUtil = "bubshurb/numberstringutil@1.0.0"` | `shared` |
+| [numberFormatUtil](https://babypatrick100.github.io/libraries/api/numberFormatUtil) | `numberFormatUtil = "bubshurb/numberformatutil@1.1.0"` | `shared` |
 | [robuxConversionUtil](https://babypatrick100.github.io/libraries/api/robuxConversionUtil) | `robuxConversionUtil = "bubshurb/robuxconversionutil@1.0.0"` | `shared` |
 | [infoTypeUtil](https://babypatrick100.github.io/libraries/api/infoTypeUtil) | `infoTypeUtil = "bubshurb/infotypeutil@1.0.0"` | `shared` |
 | [seatUtil](https://babypatrick100.github.io/libraries/api/seatUtil) | `seatUtil = "bubshurb/seatutil@1.0.0"` | `shared` |

@@ -3,7 +3,7 @@
 --[=[
 	@class Matcher
 
-	7kayoh's matcher  module ported to wally.
+	7kayoh's matcher module ported to wally.
 ]=]
 
 -- Matcher.lua
@@ -201,10 +201,13 @@ local function fuzzy_search_pattern(search: string)
 	return pattern
 end
 
---- Creates matches for the specified search
--- @param search_string The search string
--- @return A table of matcher functions, each taking a line as parameter and
--- returning a score (or nil for no match).
+--[[ 
+   Creates matches for the specified search
+   @param search_string The search string
+   @return A table of matcher functions, each taking a line as parameter and
+   returning a score (or nil for no match).
+]]
+
 function Matcher:_matchers_for_search(search_string: string): { (string) -> number? }
 	local fuzzy = self.search_fuzzy
 	local fuzzy_penalty = self.fuzzy_score_penalty
