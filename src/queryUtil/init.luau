@@ -75,8 +75,8 @@ function queryUtil.query<T>(
 	queryAddition: EventLike<T>,
 	queryRemoving: EventLike<T>
 ): (Property.Property, Trove.Trove)
-	assert(elementIsLikeEvent(queryAddition), "Argument #2 'queryAddition must be like an event!")
-	assert(elementIsLikeEvent(queryRemoving), "Argument #3 'queryRemoving must be like an event!")
+	assert(elementIsLikeEvent(queryAddition), "Argument #2 'queryAddition' must be like an event!")
+	assert(elementIsLikeEvent(queryRemoving), "Argument #3 'queryRemoving' must be like an event!")
 
 	local trove = Trove.new()
 	local queryResultsProperty = trove:Add(Property.new(table.clone(queryResults :: any)))
