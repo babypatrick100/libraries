@@ -20,9 +20,9 @@ libraries is a collection of my open Roblox sourced modules. All of them can be 
 | [windLines](https://babypatrick100.github.io/libraries/api/windLines) | `windLines = "bubshurb/windlines@1.0.1"` | `shared` |
 | [matrixUtil](https://babypatrick100.github.io/libraries/api/matrixUtil) | `matrixUtil = "bubshurb/matrixutil@1.0.0"` | `shared` |
 | [basePartUtil](https://babypatrick100.github.io/libraries/api/basePartUtil) | `basePartUtil = "bubshurb/basepartutil@1.0.0"` | `shared` |
-| [numberUtil](https://babypatrick100.github.io/libraries/api/numberUtil) | `numberUtil = "bubshurb/numberutil@2.3.0"` | `shared` |
+| [numberUtil](https://babypatrick100.github.io/libraries/api/numberUtil) | `numberUtil = "bubshurb/numberutil@2.4.0"` | `shared` |
 | [colorSequenceUtil](https://babypatrick100.github.io/libraries/api/colorSequenceUtil) | `colorSequenceUtil = "bubshurb/colorsequenceutil@1.0.0"` | `shared` |
-| [coreGuiUtil](https://babypatrick100.github.io/libraries/api/coreGuiUtil) | `coreGuiUtil = "bubshurb/coreguiutil@1.1.0"` | `shared` |
+| [coreGuiUtil](https://babypatrick100.github.io/libraries/api/coreGuiUtil) | `coreGuiUtil = "bubshurb/coreguiutil@1.2.0"` | `shared` |
 | [playerTroveUtil](https://babypatrick100.github.io/libraries/api/playerTroveUtil) | `playerTroveUtil = "bubshurb/playertroveutil@1.0.1"` | `shared` |
 | [schedulerUtil](https://babypatrick100.github.io/libraries/api/schedulerUtil) | `schedulerUtil = "bubshurb/schedulerutil@1.3.0"` | `shared` |
 | [guiObjectFadeUtil](https://babypatrick100.github.io/libraries/api/guiObjectFadeUtil) | `guiObjectFadeUtil = "bubshurb/guiobjectfadeutil@1.1.1"` | `shared` |
@@ -53,7 +53,7 @@ libraries is a collection of my open Roblox sourced modules. All of them can be 
 | [queryUtil](https://babypatrick100.github.io/libraries/api/queryUtil) | `queryUtil = "bubshurb/queryutil@1.3.1"` | `shared` |
 | [instanceTranslationUtil](https://babypatrick100.github.io/libraries/api/instanceTranslationUtil) | `instanceTranslationUtil = "bubshurb/instancetranslationutil@1.0.0"` | `shared` |
 | [guiObjectFadeUtil](https://babypatrick100.github.io/libraries/api/guiObjectFadeUtil) | `guiObjectFadeUtil = "bubshurb/guiobjectefadeutil@1.0.0"` | `shared` |
-| [clientMouseUtil](https://babypatrick100.github.io/libraries/api/clientMouseUtil) | `clientMouseUtil = "bubshurb/clientmouseutil@1.1.0"` | `shared` |
+| [clientMouseUtil](https://babypatrick100.github.io/libraries/api/clientMouseUtil) | `clientMouseUtil = "bubshurb/clientmouseutil@1.2.0"` | `shared` |
 | [beamUtil](https://babypatrick100.github.io/libraries/api/beamUtil) | `beamUtil = "bubshurb/beamutil@1.0.0"` | `shared` |
 | [basePartSizeUtil](https://babypatrick100.github.io/libraries/api/basePartSizeUtil) | `basePartSizeUtil = "bubshurb/basepartresizeutil@1.1.0"` | `shared` |
 | [lightingUtil](https://babypatrick100.github.io/libraries/api/basePartSizeUtil) | `lightingUtil = "bubshurb/lightingutil@1.0.0"` | `shared` |

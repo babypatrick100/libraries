@@ -14,7 +14,7 @@ local coreGuiUtil = {}
     Returns a [promise](https://eryn.io/roblox-lua-promise/) which is resolved once [StarterGui:SetCore](https://create.roblox.com/docs/reference/engine/classes/StarterGui#SetCore) has successfully executed.
 
     ```lua
-    coreGuiUtil.setCore("AvatarContextMenuTheme", {
+    coreGuiUtil.setCorePromise("AvatarContextMenuTheme", {
         BackgroundImage = "", 
         BackgroundTransparency = 0.5, 
         BackgroundColor = Color3.fromRGB(111, 145, 242),
@@ -32,7 +32,7 @@ local coreGuiUtil = {}
     @return Promise<>
 ]=]
 
-function coreGuiUtil.setCore(coreGuiName: string, ...: any)
+function coreGuiUtil.setCorePromise(coreGuiName: string, ...: any)
 	local args = { ... }
 
 	return Promise.new(function(resolve)

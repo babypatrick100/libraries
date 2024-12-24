@@ -46,8 +46,16 @@ function clientMouseUtil.registerMouseHoverStart(
 		),
 		minActivationDistance = minActivationDistance or 0,
 	}
+
 	table.insert(mouse3DHoverStartCallbacks, callbackData)
-	return Connection.new(mouse3DHoverStartCallbacks, callbackData)
+	return Connection.new(function()
+		local index = table.find(mouse3DHoverStartCallbacks, callbackData)
+		if index == nil then
+			return
+		end
+
+		table.remove(mouse3DHoverStartCallbacks, index)
+	end)
 end
 
 --[=[ 
@@ -62,7 +70,15 @@ function clientMouseUtil.registerMouseHoverEnd(callback: (
 ) -> ()): Connection.Connection
 	local callbackData = { callback = callback, lastInstance = nil }
 	table.insert(mouse3DHoverEndCallbacks, callbackData)
-	return Connection.new(mouse3DHoverEndCallbacks, callbackData)
+
+	return Connection.new(function()
+		local index = table.find(mouse3DHoverEndCallbacks, callbackData)
+		if index == nil then
+			return
+		end
+
+		table.remove(mouse3DHoverStartCallbacks, index)
+	end)
 end
 
 schedulerUtil.schedule(
@@ -72,10 +88,10 @@ schedulerUtil.schedule(
 		local mouseLocation = UserInputService:GetMouseLocation()
 		local raycastResult, unitRay = mousePositionRayResult(mouseLocation)
 
-		if raycastResult then
+		if raycastResult ~= nil then
 			for _, callbackData in mouse3DHoverEndCallbacks do
 				if
-					callbackData.lastInstance
+					callbackData.lastInstance ~= nil 
 					and callbackData.lastInstance ~= raycastResult.Instance
 				then
 					callbackData.callback(callbackData.lastInstance, mouseLocation)

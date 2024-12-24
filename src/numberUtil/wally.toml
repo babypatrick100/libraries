@@ -3,7 +3,7 @@ name = "bubshurb/numberutil"
 description = "An utility module for working with numbers."
 authors = ["bubshurb"]
 license = "MIT"
-version = "2.3.0"
+version = "2.4.0"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 
