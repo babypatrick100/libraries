@@ -20,13 +20,13 @@ libraries is a collection of my open Roblox sourced modules. All of them can be 
 | [windLines](https://babypatrick100.github.io/libraries/api/windLines) | `windLines = "bubshurb/windlines@1.0.1"` | `shared` |
 | [matrixUtil](https://babypatrick100.github.io/libraries/api/matrixUtil) | `matrixUtil = "bubshurb/matrixutil@1.0.0"` | `shared` |
 | [basePartUtil](https://babypatrick100.github.io/libraries/api/basePartUtil) | `basePartUtil = "bubshurb/basepartutil@1.0.0"` | `shared` |
-| [numberUtil](https://babypatrick100.github.io/libraries/api/numberUtil) | `numberUtil = "bubshurb/numberutil@2.1.0"` | `shared` |
+| [numberUtil](https://babypatrick100.github.io/libraries/api/numberUtil) | `numberUtil = "bubshurb/numberutil@2.2.0"` | `shared` |
 | [colorSequenceUtil](https://babypatrick100.github.io/libraries/api/colorSequenceUtil) | `colorSequenceUtil = "bubshurb/colorsequenceutil@1.0.0"` | `shared` |
 | [coreGuiUtil](https://babypatrick100.github.io/libraries/api/coreGuiUtil) | `coreGuiUtil = "bubshurb/coreguiutil@1.1.0"` | `shared` |
 | [playerTroveUtil](https://babypatrick100.github.io/libraries/api/playerTroveUtil) | `playerTroveUtil = "bubshurb/playertroveutil@1.0.1"` | `shared` |
 | [schedulerUtil](https://babypatrick100.github.io/libraries/api/schedulerUtil) | `schedulerUtil = "bubshurb/schedulerutil@1.3.0"` | `shared` |
 | [guiObjectFadeUtil](https://babypatrick100.github.io/libraries/api/guiObjectFadeUtil) | `guiObjectFadeUtil = "bubshurb/guiobjectfadeutil@1.1.1"` | `shared` |
-| [playerPolicyInfoUtil](https://babypatrick100.github.io/libraries/api/playerPolicyInfoUtil) | `playerPolicyInfoUtil = "bubshurb/playerpolicyinfoutil@1.0.0"` | `shared` |
+| [playerPolicyInfoUtil](https://babypatrick100.github.io/libraries/api/playerPolicyInfoUtil) | `playerPolicyInfoUtil = "bubshurb/playerpolicyinfoutil@1.1.0"` | `shared` |
 | [contextActionServiceUtil](https://babypatrick100.github.io/libraries/api/contextActionServiceUtil) | `contextActionServiceUtil = "bubshurb/contextactionserviceutil@1.0.0"` | `shared` |
 | [playerUtil](https://babypatrick100.github.io/libraries/api/playerUtil) | `playerUtil = "bubshurb/playerUtil@1.4.0"` | `shared` |
 | [promiseCleanupUtil](https://babypatrick100.github.io/libraries/api/promiseCleanupUtil) | `promiseCleanupUtil = "bubshurb/promisecleanuputil@1.2.2"` | `shared` |
@@ -50,7 +50,7 @@ libraries is a collection of my open Roblox sourced modules. All of them can be 
 | [rain](https://babypatrick100.github.io/libraries/api/rain) | `rain = "bubshurb/rain@2.0.0"` | `shared` |
 | [weldConstraintUtil](https://babypatrick100.github.io/libraries/api/weldConstraintUtil) | `weldConstraintUtil = "bubshurb/weldconstraintutil@1.0.1"` | `shared` |
 | [viewportFrameUtil](https://babypatrick100.github.io/libraries/api/viewportFrameUtil) | `viewportFrameUtil = "bubshurb/viewportframeutil@1.1.0"` | `shared` |
-| [timeFormatUtil](https://babypatrick100.github.io/libraries/api/timeFormatUtil) | `timeFormatUtil = "bubshurb/timeformatutil@1.0.1"` | `shared` |
+| [timeFormatUtil](https://babypatrick100.github.io/libraries/api/timeFormatUtil) | `timeFormatUtil = "bubshurb/timeformatutil@1.1.0"` | `shared` |
 | [queryUtil](https://babypatrick100.github.io/libraries/api/queryUtil) | `queryUtil = "bubshurb/queryutil@1.3.1"` | `shared` |
 | [instanceTranslationUtil](https://babypatrick100.github.io/libraries/api/instanceTranslationUtil) | `instanceTranslationUtil = "bubshurb/instancetranslationutil@1.0.0"` | `shared` |
 | [guiObjectFadeUtil](https://babypatrick100.github.io/libraries/api/guiObjectFadeUtil) | `guiObjectFadeUtil = "bubshurb/guiobjectefadeutil@1.0.0"` | `shared` |
@@ -59,7 +59,6 @@ libraries is a collection of my open Roblox sourced modules. All of them can be 
 | [basePartSizeUtil](https://babypatrick100.github.io/libraries/api/basePartSizeUtil) | `basePartSizeUtil = "bubshurb/basepartresizeutil@1.1.0"` | `shared` |
 | [lightingUtil](https://babypatrick100.github.io/libraries/api/basePartSizeUtil) | `lightingUtil = "bubshurb/lightingutil@1.0.0"` | `shared` |
 | [numberStringUtil](https://babypatrick100.github.io/libraries/api/numberStringUtil) | `numberStringUtil = "bubshurb/numberstringutil@1.0.0"` | `shared` |
-| [orderUtil](https://babypatrick100.github.io/libraries/api/orderUtil) | `orderUtil = "bubshurb/orderutil@1.0.1"` | `shared` |
 | [robuxConversionUtil](https://babypatrick100.github.io/libraries/api/robuxConversionUtil) | `robuxConversionUtil = "bubshurb/robuxconversionutil@1.0.0"` | `shared` |
 | [infoTypeUtil](https://babypatrick100.github.io/libraries/api/infoTypeUtil) | `infoTypeUtil = "bubshurb/infotypeutil@1.0.0"` | `shared` |
 | [seatUtil](https://babypatrick100.github.io/libraries/api/seatUtil) | `seatUtil = "bubshurb/seatutil@1.0.0"` | `shared` |
@@ -68,7 +67,7 @@ libraries is a collection of my open Roblox sourced modules. All of them can be 
 | [playerCharacterAccessoryUtil](https://babypatrick100.github.io/libraries/api/playerCharacterAccessoryUtil) | `playerCharacterAccessoryUtil = "bubshurb/playercharacteraccessoryUtil@1.0.0"` | `shared` |
 | [evLightning](https://babypatrick100.github.io/libraries/api/evLightning) | `evLightning = "bubshurb/evlightning@1.0.0"` | `shared` |
 | [playerEventsUtil](https://babypatrick100.github.io/libraries/api/playerEventsUtil) | `playerEventsUtil = "bubshurb/playereventsutil@1.1.0"` | `shared` |
-| [soundInitializerUtil](https://babypatrick100.github.io/libraries/api/soundInitializerUtil) | `soundInitializerUtil = "bubshurb/soundinitializerutil@1.0.0"` | `shared` |
+| [soundInitializerUtil](https://babypatrick100.github.io/libraries/api/soundInitializerUtil) | `soundInitializerUtil = "bubshurb/soundinitializerutil@1.1.0"` | `shared` |
 | [clientMovementInputUtil](https://babypatrick100.github.io/libraries/api/clientMovementInputUtil) | `clientMovementInputUtil = "bubshurb/clientmovementinpututil@1.0.0"` | `shared` |
 | [instancePropertyUtil](https://babypatrick100.github.io/libraries/api/instancePropertyUtil) | `instancePropertyUtil = "bubshurb/instancepropertyutil@1.0.0"` | `shared` |
 | [instanceNetworkOwnerUtil](https://babypatrick100.github.io/libraries/api/instanceNetworkOwnerUtil) | `instanceNetworkOwnerUtil = "bubshurb/instancenetworkownerutil@1.0.0"` | `server` |

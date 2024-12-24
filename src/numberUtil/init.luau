@@ -75,7 +75,6 @@ local factors = require(script.methods.factors)
 local inverseLerp = require(script.methods.inverseLerp)
 local lerp = require(script.methods.lerp)
 local logarithmicLerp = require(script.methods.logarithmicLerp)
-local map = require(script.methods.map)
 local mean = require(script.methods.mean)
 local median = require(script.methods.median)
 local mode = require(script.methods.mode)
@@ -88,6 +87,8 @@ local sphericalLerp = require(script.methods.sphericalLerp)
 local suffix = require(script.methods.suffix)
 local to12H = require(script.methods.to12H)
 local to24H = require(script.methods.to24H)
+local hms = require(script.methods.hms)
+local nextOrder = require(script.methods.nextOrder)
 
 local numberUtil = {
 	e = 2.7182818284590,
@@ -118,7 +119,6 @@ return table.freeze(numberUtil) :: typeof(numberUtil) & {
 	inverseLerp: typeof(inverseLerp),
 	lerp: typeof(lerp),
 	logarithmicLerp: typeof(logarithmicLerp),
-	map: typeof(map),
 	mean: typeof(mean),
 	median: typeof(median),
 	mode: typeof(mode),
@@ -131,4 +131,6 @@ return table.freeze(numberUtil) :: typeof(numberUtil) & {
 	suffix: typeof(suffix),
 	to12H: typeof(to12H),
 	to24H: typeof(to24H),
+	hms: typeof(hms),
+	nextOrder: typeof(nextOrder),
 }

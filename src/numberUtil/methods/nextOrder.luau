@@ -1,23 +1,17 @@
---[=[ 
-	@class orderUtil
-
-	A very simple utility module for working with order of numbers. 
-]=]
-
-local orderUtil = {}
-
 --[=[
+	@within numberUtil
+	
 	Returns a function which returns a numerical value, which is always incremented by 1.
 
 	```lua
-	local nextOrder = orderUtil.nextOrder() 
+	local nextOrder = numberUtil.nextOrder() 
 	print(nextOrder()) --> 1
 	print(nextOrder()) --> 2
 	print(nextOrder()) --> 3
 	```
 ]=]
 
-function orderUtil.nextOrder(): () -> number
+local function nextOrder(): () -> number
 	local order = 0
 
 	return function()
@@ -26,4 +20,4 @@ function orderUtil.nextOrder(): () -> number
 	end
 end
 
-return table.freeze(orderUtil)
+return nextOrder

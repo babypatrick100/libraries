@@ -29,4 +29,29 @@ function timeFormatUtil.format12hFormatTo24hFormat(time: string): string
 	)
 end
 
+--[=[ 
+	Formats the given time in seconds to a human friendly text, in HMS format.
+
+	```lua
+	print(timeUtil.formatToHMS(3600)) --> "01:00:00"
+	```
+]=]
+
+function timeFormatUtil.formatToHMS(seconds: number): string
+	return string.format("%02i:%02i:%02i", numberUtil.hms(seconds))
+end
+
+--[=[ 
+	Formats the given time in seconds to a human friendly text, in MS format.
+
+	```lua
+	print(timeUtil.formatToMS(60)) --> "01:00"
+	```
+]=]
+
+function timeFormatUtil.formatToMS(seconds: number): string
+	local _, formattedMinutes, formattedSeconds = numberUtil.hms(seconds)
+	return string.format("%02i:%02i", formattedMinutes, formattedSeconds)
+end
+
 return table.freeze(timeFormatUtil)

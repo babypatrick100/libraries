@@ -9,7 +9,7 @@
         print(playerPolicyInfo.AllowedExternalLinkReferences)
         print(playerPolicyInfo.IsPaidItemTradingAllowed)
         print(playerPolicyInfo.IsSubjectToChinaPolicies)
-    end):catch(function(errorMessage)
+    end):catch(function(defaultPlayerPolicyInfo, errorMessage)
         warn(string.format("Error retrieving player policy info because %s", errorMessage))
     end)    
     ```
@@ -26,13 +26,18 @@
 ]=]
 
 --[=[ 
-    @interface DefaultPlayerPolicyInfo  
+    @interface DEFAULT_PLAYER_POLICY_INFO  
     @within playerPolicyInfoUtil
+    @tag Constant
 
     .ArePaidRandomItemsRestricted false
     .AllowedExternalLinkReferences {}
     .IsPaidItemTradingAllowed false
     .IsSubjectToChinaPolicies false
+
+    :::warning
+    Constant, not accessible within `playerPolicyInfoUtil`.
+    :::
 ]=]
 
 local PolicyService = game:GetService("PolicyService")
@@ -49,14 +54,16 @@ local DEFAULT_PLAYER_POLICY_INFO = {
 local playerPolicyInfoUtil = {}
 
 --[=[
-    Returns a [promise](https://eryn.io/roblox-lua-promise/) which is resolved with the policy info of `player`. If the policy
-    info of the given player couldn't be retrieved, then the promise will reject with [DefaultPlayerPolicyInfo] and an error message.
+    Returns a [promise](https://eryn.io/roblox-lua-promise/) which is resolved with a *read only* policy info
+    dictionary for the given player.
+    
+    If the promise rejects, then the promise will reject with a *read only* copy of [DEFAULT_PLAYER_POLICY_INFO] and an error message.
 
     ```lua
-    playerPolicyInfoUtil.playerPolicyInfo(somePlayer):andThen(function(policyInfo)
+    playerPolicyInfoUtil.playerPolicyInfoPromise(somePlayer):andThen(function(policyInfo)
         print(policyInfo.ArePaidRandomItemsRestricted)
-    end):catch(function(defaultPolicyInfo, errorMessage)
-        warn(tostring(errorMessage))
+    end):catch(function(defaultPlayerPolicyInfo, errorMessage)
+        warn(defaultPlayerPolicyInfo, tostring(errorMessage))
     end)
     ```
 
@@ -67,7 +74,7 @@ local playerPolicyInfoUtil = {}
     @return Promise<PlayerPolicyInfo>
 ]=]
 
-function playerPolicyInfoUtil.playerPolicyInfo(player: Player)
+function playerPolicyInfoUtil.playerPolicyInfoPromise(player: Player)
 	return Promise.new(function(resolve, reject)
 		local playerPolicyInfoSuccessfullyRetrieved, response = pcall(function()
 			return PolicyService:GetPolicyInfoForPlayerAsync(player)
@@ -76,7 +83,7 @@ function playerPolicyInfoUtil.playerPolicyInfo(player: Player)
 		if playerPolicyInfoSuccessfullyRetrieved then
 			resolve(table.freeze(response))
 		else
-			reject(table.clone(table.freeze(DEFAULT_PLAYER_POLICY_INFO)), response)
+			reject(table.freeze(table.clone(DEFAULT_PLAYER_POLICY_INFO)), response)
 		end
 	end)
 end
