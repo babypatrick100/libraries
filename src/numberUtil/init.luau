@@ -65,7 +65,6 @@ local average = require(script.methods.average)
 local clampTo = require(script.methods.clampTo)
 local close = require(script.methods.close)
 local comb = require(script.methods.comb)
-local commas = require(script.methods.commas)
 local cosec = require(script.methods.cosec)
 local cotan = require(script.methods.cotan)
 local cubicBezier = require(script.methods.cubicBezier)
@@ -84,7 +83,6 @@ local quadraticLerp = require(script.methods.quadraticLerp)
 local root = require(script.methods.root)
 local secant = require(script.methods.secant)
 local sphericalLerp = require(script.methods.sphericalLerp)
-local suffix = require(script.methods.suffix)
 local to12H = require(script.methods.to12H)
 local to24H = require(script.methods.to24H)
 local hms = require(script.methods.hms)
@@ -109,7 +107,6 @@ return table.freeze(numberUtil) :: typeof(numberUtil) & {
 	clampTo: typeof(clampTo),
 	close: typeof(close),
 	comb: typeof(comb),
-	commas: typeof(commas),
 	cosec: typeof(cosec),
 	cotan: typeof(cotan),
 	cubicBezier: typeof(cubicBezier),
@@ -128,7 +125,6 @@ return table.freeze(numberUtil) :: typeof(numberUtil) & {
 	root: typeof(root),
 	secant: typeof(secant),
 	sphericalLerp: typeof(sphericalLerp),
-	suffix: typeof(suffix),
 	to12H: typeof(to12H),
 	to24H: typeof(to24H),
 	hms: typeof(hms),

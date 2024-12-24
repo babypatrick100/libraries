@@ -4,6 +4,31 @@
 	A simple utility for formatting numbers in human readable format.
 ]=]
 
+local NUMBER_SUFFIXES = {
+	"K",
+	"M",
+	"B",
+	"t",
+	"q",
+	"Q",
+	"s",
+	"S",
+	"o",
+	"n",
+	"d",
+	"U",
+	"D",
+	"T",
+	"Qt",
+	"Qd",
+	"Sd",
+	"St",
+	"O",
+	"N",
+	"v",
+	"c",
+}
+
 local NUMBERS_MAPPED_TO_TUPLES = {
 	[2] = "Double",
 	[3] = "Triple",
@@ -84,7 +109,7 @@ end
     Returns the given number in ordinal format.
 
     ```lua
-    print(numberFormatUtil.ordinal(24)) --> 24th
+    print(numberFormatUtil.ordinal(24)) --> "24th"
     ```
 ]=]
 
@@ -102,6 +127,74 @@ function numberFormatUtil.ordinal(number: number): string
 	else
 		return number .. "th"
 	end
+end
+
+--[=[
+    Formats `sps` (studs per second) to `mph` (miles per second).
+
+    ```lua
+    print(numberFormatUtil.spsToMph(100, 50, 25)) --> 0.75
+    ```
+]=]
+function numberFormatUtil.spsToMph(sps: number): number
+	return sps * 0.62620743779080167979
+end
+
+--[=[
+    Return a string as the formatted version of `number`. 
+
+    :::warning Cannot format extremely large numbers
+    This method will struggle to format numbers larger than approximately `10^68`. 
+
+    ```lua
+    print(numberFormatUtil.suffix(10^70)) --> 10 (no formatting...)
+    ```
+    :::
+
+    ```lua
+    print(numberFormatUtil.suffix(1650)) --> "1.65K"
+    ```
+
+    Additionally, if `number` is lower than `1`, then this method will just return `number` (stringified).
+]=]
+
+function numberFormatUtil.suffix(number: number): string
+	if number < 1 then
+		return tostring(number)
+	end
+
+	local formattedNumberSuffix = math.floor(math.log(number, 1e3))
+
+	return string.gsub(
+		string.format("%.2f", number / math.pow(10, formattedNumberSuffix * 3)),
+		"%.?0+$",
+		""
+	) .. (NUMBER_SUFFIXES[formattedNumberSuffix] or "")
+end
+
+--[=[
+    @within numberUtil
+    
+    Returns a number stringified, formatted with commas.
+
+    ```lua
+    print(numberFormatUtil.commas(15000)) --> 15,000
+    ```
+]=]
+
+-- http://lua-users.org/wiki/FormattingNumbers
+function numberFormatUtil.commas(target: number): string
+	local targetCommas, k = target, nil
+
+	while true do
+		targetCommas, k = string.gsub(targetCommas, "^(-?%d+)(%d%d%d)", "%1,%2")
+
+		if k == 0 then
+			break
+		end
+	end
+
+	return targetCommas
 end
 
 return table.freeze(numberFormatUtil)
