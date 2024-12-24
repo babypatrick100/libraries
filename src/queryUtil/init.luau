@@ -5,7 +5,7 @@
 ]=]
 
 --[=[ 
-	@type Connection RBXScriptConnection | {Connected: boolean, Disconnected: (self: Connection) -> ()}
+	@type Connection RBXScriptConnection | {Connected: boolean, Disconnect: (self: Connection) -> ()}
 	@within queryUtil
 ]=]
 
