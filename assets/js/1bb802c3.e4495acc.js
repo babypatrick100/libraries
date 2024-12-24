@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[8604],{37238:e=>{e.exports=JSON.parse('{"functions":[],"properties":[],"types":[],"name":"Matcher","desc":"7kayoh\'s matcher module ported to wally.","source":{"line":8,"path":"src/Matcher/init.luau"}}')}}]);
