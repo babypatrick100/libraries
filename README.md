@@ -44,7 +44,7 @@ libraries is a collection of my open Roblox sourced modules. All of them can be 
 | [instanceTrackerUtil](https://babypatrick100.github.io/libraries/api/instanceTrackerUtil) | `instanceTrackerUtil = "bubshurb/instancetrackerutil@1.4.0"` | `shared` |
 | [instanceAttributeUtil](https://babypatrick100.github.io/libraries/api/instanceAttributeUtil) | `instanceAttributeUtil = "bubshurb/instanceattributeutil@1.3.2"` | `shared` |
 | [instanceTagUtil](https://babypatrick100.github.io/libraries/api/instanceTagUtil) | `instanceTagUtil = "bubshurb/instancetagutil@1.4.0"` | `shared` |
-| [numberUnitUtil](https://babypatrick100.github.io/libraries/api/numberUnitUtil) | `numberUnitUtil = "bubshurb/numberunitutil@1.0.0"` | `shared` |
+| [numberUnitUtil](https://babypatrick100.github.io/libraries/api/numberUnitUtil) | `numberUnitUtil = "bubshurb/numberunitutil@1.1.0"` | `shared` |
 | [playersUtil](https://babypatrick100.github.io/libraries/api/playersUtil) | `playersUtil = "bubshurb/playersutil@1.4.0"` | `shared` |
 | [dateUtil](https://babypatrick100.github.io/libraries/api/dateUtil) | `dateUtil = "bubshurb/dateUtil@1.1.0"` | `shared` |
 | [rain](https://babypatrick100.github.io/libraries/api/rain) | `rain = "bubshurb/rain@2.0.0"` | `shared` |
