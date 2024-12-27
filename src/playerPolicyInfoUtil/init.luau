@@ -4,7 +4,7 @@
     A very simple utility module for retrieving a player's policy info safely.
  
     ```lua
-    playerPolicyInfoUtil.playerPolicyInfo(localPlayer):andThen(function(playerPolicyInfo)
+    playerPolicyInfoUtil.playerPolicyInfoPromise(localPlayer):andThen(function(playerPolicyInfo)
         print(playerPolicyInfo.ArePaidRandomItemsRestricted)
         print(playerPolicyInfo.AllowedExternalLinkReferences)
         print(playerPolicyInfo.IsPaidItemTradingAllowed)
