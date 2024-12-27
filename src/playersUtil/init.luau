@@ -18,6 +18,16 @@ local playersUtil = {}
 --[=[ 
 	Returns a [promise](https://eryn.io/roblox-lua-promise/) wrapped over [Players:GetUserThumbnailAsync](https://create.roblox.com/docs/reference/engine/classes/Players#GetUserThumbnailAsync). 
 
+	```lua
+	local PLACE_HOLDER_IMAGE = "rbxassetid://0"
+
+	playersUtil.playerThumbnailPromise(userId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size420x420):andThen(function(content)
+		print(content)
+	end):catch(function(errorMessage)
+		print(PLACE_HOLDER_IMAGE)
+	end)
+	```
+
 	@return Promise<string>
 ]=]
 
@@ -27,23 +37,20 @@ function playersUtil.playerThumbnailPromise(
 	thumbnailSize: Enum.ThumbnailSize
 )
 	return Promise.new(function(resolve)
-		local content, isReady = Players:GetUserThumbnailAsync(userId, thumbnailType, thumbnailSize)
-
-		if isReady then
-			resolve(content)
-		end
+		resolve(Players:GetUserThumbnailAsync(userId, thumbnailType, thumbnailSize))
 	end)
 end
 
 --[=[ 
 	Returns a player from the given instance, if found. This is an efficient
-	wrapper over [Players:GetPlayerFromCharacter](https://create.roblox.com/docs/reference/engine/classes/Players#GetPlayerFromCharacter).
+	wrapper over [Players:GetPlayerFromCharacter](https://create.roblox.com/docs/reference/engine/classes/Players#GetPlayerFromCharacter) as it allows you
+	to get the player object even if the given `instance` is a deep descendant of some player's character.
  
 	```lua
 	laser.Touched:Connect(function(hit)
 		local player = playerUtil.playerFromInstance(hit)
 
-		if player then
+		if player ~= nil then
 			-- Damage the player
 		end
 	end)

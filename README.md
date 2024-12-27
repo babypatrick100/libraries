@@ -28,7 +28,7 @@ libraries is a collection of my open Roblox sourced modules. All of them can be 
 | [guiObjectFadeUtil](https://babypatrick100.github.io/libraries/api/guiObjectFadeUtil) | `guiObjectFadeUtil = "bubshurb/guiobjectfadeutil@1.1.1"` | `shared` |
 | [playerPolicyInfoUtil](https://babypatrick100.github.io/libraries/api/playerPolicyInfoUtil) | `playerPolicyInfoUtil = "bubshurb/playerpolicyinfoutil@1.1.0"` | `shared` |
 | [contextActionServiceUtil](https://babypatrick100.github.io/libraries/api/contextActionServiceUtil) | `contextActionServiceUtil = "bubshurb/contextactionserviceutil@1.0.0"` | `shared` |
-| [playerUtil](https://babypatrick100.github.io/libraries/api/playerUtil) | `playerUtil = "bubshurb/playerUtil@1.4.0"` | `shared` |
+| [playerUtil](https://babypatrick100.github.io/libraries/api/playerUtil) | `playerUtil = "bubshurb/playerUtil@1.4.1"` | `shared` |
 | [promiseCleanupUtil](https://babypatrick100.github.io/libraries/api/promiseCleanupUtil) | `promiseCleanupUtil = "bubshurb/promisecleanuputil@1.2.2"` | `shared` |
 | [playerCharacterUtil](https://babypatrick100.github.io/libraries/api/playerCharacterUtil) | `playerCharacterUtil = "bubshurb/playerCharacterUtil@1.0.0"` | `shared` |
 | [debugLoggerUtil](https://babypatrick100.github.io/libraries/api/debugLoggerUtil) | `debugLoggerUtil = "bubshurb/debugLoggerUtil@1.0.0"` | `shared` |
@@ -44,7 +44,7 @@ libraries is a collection of my open Roblox sourced modules. All of them can be 
 | [instanceTrackerUtil](https://babypatrick100.github.io/libraries/api/instanceTrackerUtil) | `instanceTrackerUtil = "bubshurb/instancetrackerutil@1.4.0"` | `shared` |
 | [instanceAttributeUtil](https://babypatrick100.github.io/libraries/api/instanceAttributeUtil) | `instanceAttributeUtil = "bubshurb/instanceattributeutil@1.3.2"` | `shared` |
 | [instanceTagUtil](https://babypatrick100.github.io/libraries/api/instanceTagUtil) | `instanceTagUtil = "bubshurb/instancetagutil@1.4.0"` | `shared` |
-| [playersUtil](https://babypatrick100.github.io/libraries/api/playersUtil) | `playersUtil = "bubshurb/playersutil@1.4.0"` | `shared` |
+| [playersUtil](https://babypatrick100.github.io/libraries/api/playersUtil) | `playersUtil = "bubshurb/playersutil@1.4.1"` | `shared` |
 | [dateUtil](https://babypatrick100.github.io/libraries/api/dateUtil) | `dateUtil = "bubshurb/dateUtil@1.1.0"` | `shared` |
 | [rain](https://babypatrick100.github.io/libraries/api/rain) | `rain = "bubshurb/rain@2.0.0"` | `shared` |
 | [weldConstraintUtil](https://babypatrick100.github.io/libraries/api/weldConstraintUtil) | `weldConstraintUtil = "bubshurb/weldconstraintutil@1.0.1"` | `shared` |

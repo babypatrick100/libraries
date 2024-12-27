@@ -240,7 +240,7 @@ end
 function playerUtil.safeChatStatusPromise(player: Player)
 	return Promise.new(function(resolve, reject)
 		local playerPolicyInfoRetrievalWasSuccessful, playerPolicyInfo =
-			playerPolicyInfoUtil.playerPolicyInfo(player):await()
+			playerPolicyInfoUtil.playerPolicyInfoPromise(player):await()
 
 		if not playerPolicyInfoRetrievalWasSuccessful then
 			reject(playerUtil.PlayerSafeChatStatus.Unknown, playerPolicyInfo)
