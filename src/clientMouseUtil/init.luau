@@ -91,7 +91,7 @@ schedulerUtil.schedule(
 		if raycastResult ~= nil then
 			for _, callbackData in mouse3DHoverEndCallbacks do
 				if
-					callbackData.lastInstance ~= nil 
+					callbackData.lastInstance ~= nil
 					and callbackData.lastInstance ~= raycastResult.Instance
 				then
 					callbackData.callback(callbackData.lastInstance, mouseLocation)
