@@ -47,18 +47,22 @@ function instanceAttributeUtil.observeMany(
 	local newAttributes = {}
 	local oldAttributes = {}
 
-	local newAttributesCount = 0
+	local function targetAttributesCount()
+		local count = 0
 
-	for attribute, value in instance:GetAttributes() do
-		if table.find(attributesToObserve, attribute) == nil then
-			continue
+		for attribute, value in instance:GetAttributes() do
+			if table.find(attributesToObserve, attribute) == nil then
+				continue
+			end
+
+			newAttributes[attribute] = value
+			count += 1
 		end
 
-		newAttributes[attribute] = value
-		newAttributesCount += 1
+		return count
 	end
 
-	if newAttributesCount == #attributesToObserve then
+	if targetAttributesCount() == #attributesToObserve then
 		task.spawn(observer, newAttributes, nil)
 	end
 
@@ -70,7 +74,10 @@ function instanceAttributeUtil.observeMany(
 		local newAttributeValue = instance:GetAttribute(attribute)
 		newAttributes[attribute] = newAttributeValue
 
-		task.spawn(observer, newAttributes, oldAttributes)
+		if targetAttributesCount() == #attributesToObserve then
+			task.spawn(observer, newAttributes, oldAttributes)
+		end
+
 		oldAttributes[attribute] = newAttributeValue
 	end)
 end
