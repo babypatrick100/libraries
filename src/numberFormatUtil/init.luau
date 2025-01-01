@@ -173,8 +173,6 @@ function numberFormatUtil.suffix(number: number): string
 end
 
 --[=[
-    @within numberUtil
-    
     Returns a number stringified, formatted with commas.
 
     ```lua
@@ -195,6 +193,42 @@ function numberFormatUtil.commas(target: number): string
 	end
 
 	return targetCommas
+end
+
+--[=[
+    Returns the given `seconds` formatted in `HMS` format as a string.
+
+    ```lua
+    print(numberFormatUtil.toHMS(3600)) --> "01:00:00"
+    ```
+]=]
+
+function numberFormatUtil.toHMS(seconds: number): string
+	return string.format("%02i:%02i:%02i", seconds / 60 ^ 2, seconds / 60 % 60, seconds % 60)
+end
+
+--[=[
+    Returns the given `seconds` formatted in `MS` format as a string.
+
+    ```lua
+    print(numberFormatUtil.toHMS(60)) --> "01:00"
+    ```
+]=]
+
+function numberFormatUtil.toMS(seconds: number): string
+	return string.format("%02i:%02i", seconds / 60 % 60, seconds % 60)
+end
+
+--[=[
+    Returns the given `seconds` formatted in `S` format as a string.
+
+    ```lua
+    print(numberFormatUtil.toHMS(60)) --> "1:00"
+    ```
+]=]
+
+function numberFormatUtil.toS(seconds: number): string
+	return string.format("%02i", seconds % 60)
 end
 
 return table.freeze(numberFormatUtil)
