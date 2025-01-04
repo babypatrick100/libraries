@@ -66,7 +66,7 @@ libraries is a collection of my open Roblox sourced modules. All of them can be 
 | [playerCharacterAccessoryUtil](https://babypatrick100.github.io/libraries/api/playerCharacterAccessoryUtil) | `playerCharacterAccessoryUtil = "bubshurb/playercharacteraccessoryUtil@1.0.0"` | `shared` |
 | [evLightning](https://babypatrick100.github.io/libraries/api/evLightning) | `evLightning = "bubshurb/evlightning@1.0.0"` | `shared` |
 | [playerEventsUtil](https://babypatrick100.github.io/libraries/api/playerEventsUtil) | `playerEventsUtil = "bubshurb/playereventsutil@1.1.0"` | `shared` |
-| [soundInitializerUtil](https://babypatrick100.github.io/libraries/api/soundInitializerUtil) | `soundInitializerUtil = "bubshurb/soundinitializerutil@1.1.0"` | `shared` |
+| [soundInitializerUtil](https://babypatrick100.github.io/libraries/api/soundInitializerUtil) | `soundInitializerUtil = "bubshurb/soundinitializerutil@1.2.0"` | `shared` |
 | [clientMovementInputUtil](https://babypatrick100.github.io/libraries/api/clientMovementInputUtil) | `clientMovementInputUtil = "bubshurb/clientmovementinpututil@1.0.0"` | `shared` |
 | [instancePropertyUtil](https://babypatrick100.github.io/libraries/api/instancePropertyUtil) | `instancePropertyUtil = "bubshurb/instancepropertyutil@1.0.0"` | `shared` |
 | [instanceNetworkOwnerUtil](https://babypatrick100.github.io/libraries/api/instanceNetworkOwnerUtil) | `instanceNetworkOwnerUtil = "bubshurb/instancenetworkownerutil@1.0.0"` | `server` |

@@ -2,7 +2,7 @@
 name = "bubshurb/soundinitializerutil"
 description = "A simple utility module for initializing sounds used in conjunction with [soundUtil]."
 authors = ["bubshurb"]
-version = "1.1.0"
+version = "1.2.0"
 license = "MIT"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
