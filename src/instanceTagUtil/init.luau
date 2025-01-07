@@ -116,8 +116,9 @@ function instanceTagUtil.removeTagsFromInstance(instance: Instance, tags: { stri
 end
 
 --[=[
-	Works similar to [instanceTagUtil.observe], but observes an array of 
-	tags instead of a single tag. 
+	Works similar to [instanceTagUtil.observe], but observes an array of tags instead of a single tag. `observer`
+	will be immediately called initially and then called whenever a tag (that exists in `tagsToObserve`) is added
+	or removed.
 
 	@return Connection 
 
@@ -136,20 +137,15 @@ function instanceTagUtil.observeMany(
 	local newTags = {}
 	local oldTags = {}
 
-	local newTagsCount = 0
-
 	for tag in instance:GetTags() do
 		if table.find(tagsToObserve, tag) == nil then
 			continue
 		end
 
 		table.insert(newTags, tag)
-		newTagsCount += 1
 	end
 
-	if newTagsCount == #tagsToObserve then
-		task.spawn(observer, newTags, nil)
-	end
+	task.spawn(observer, newTags, nil)
 
 	local connections = {}
 	table.insert(

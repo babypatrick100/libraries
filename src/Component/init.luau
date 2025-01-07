@@ -370,9 +370,20 @@ end
 ]=]
 
 function Component.fromTagPromise(tag: string, instance: Instance)
-	return Promise.new(function(resolve)
-		while Component.fromTag(tag, instance) == nil do
-			onGlobalComponentStarted:Wait()
+	return Promise.new(function(resolve, _, onCancel)
+		local fromEventPromise = Promise.fromEvent(onGlobalComponentStarted, function()
+			return Component.fromTag(tag, instance) ~= nil
+		end)
+
+		onCancel(function()
+			fromEventPromise:cancel()
+		end)
+
+		if Component.fromTag(tag, instance) == nil then
+			local status = fromEventPromise:awaitStatus()
+			if status == Promise.Status.Cancelled then
+				return
+			end
 		end
 
 		resolve(Component.fromTag(tag, instance))

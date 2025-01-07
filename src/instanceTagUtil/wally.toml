@@ -3,7 +3,7 @@ name = "bubshurb/instancetagutil"
 description = "A utility module for working with instance tags."
 authors = ["bubshurb"]
 license = "MIT"
-version = "1.4.0"
+version = "1.5.0"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 
