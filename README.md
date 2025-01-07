@@ -11,7 +11,7 @@ libraries is a collection of my open Roblox sourced modules. All of them can be 
 | [ValueMultiplier](https://babypatrick100.github.io/libraries/api/ValueMultiplier) | `ValueMultiplier = "bubshurb/valuemultiplier@1.0.0` | `shared` |
 | [Connection](https://babypatrick100.github.io/libraries/api/Connection) | `Connection = "bubshurb/connection@1.0.0` | `shared` |
 | [Matcher](https://babypatrick100.github.io/libraries/api/Matcher) | `Matcher = "bubshurb/matcher@1.0.0` | `shared` |
-| [Component](https://babypatrick100.github.io/libraries/api/Component) | `Component = "bubshurb/component@1.3.1` | `shared` |
+| [Component](https://babypatrick100.github.io/libraries/api/Component) | `Component = "bubshurb/component@1.3.2` | `shared` |
 | [Hover](https://babypatrick100.github.io/libraries/api/Hover) | `Hover = "bubshurb/hover@1.1.0` | `shared` |
 | [ContentProviderQueue](https://babypatrick100.github.io/libraries/api/ContentProviderQueue) | `ContentProviderQueue = "bubshurb/contentproviderqueue@1.1.1"` | `shared` |
 | [CustomAnimator](https://babypatrick100.github.io/libraries/api/CustomAnimator) | `CustomAnimator = "bubshurb/customanimator@1.6.2"` | `shared` |

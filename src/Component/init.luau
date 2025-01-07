@@ -894,7 +894,7 @@ end
 ]=]
 
 function Component:destroy()
-	self[KEY_TROVE]:destroy()
+	self[KEY_TROVE]:Destroy()
 end
 
 for callbackIdentifier, event in RUN_SERVICE_EVENTS_TO_CONNECT do
