@@ -1,18 +1,11 @@
-# https://github.com/babypatrick100/libraries/blob/main/build_readme.py (slightly modified)
+# https://github.com/babypatrick100/libraries/blob/main/build_readme.py (slightly modified by babypatrick100)
 from pathlib import Path
 import os
 import re
 
-force_name = {
-	"pid": "PID"
-}
-
 def pretty_display_name(str: str):
-	if str in force_name:
-		return force_name[str]
 	split = str.split("-")
-
-	split = list(map(lambda s: s[0:1].upper() + s[1:], split))
+	split = list(map(lambda s: s[0:1] + s[1:], split))
 	return "".join(split)
 
 def uppercase_frequency(s):
@@ -20,8 +13,6 @@ def uppercase_frequency(s):
 
 def build():
 	readme = [
-		"[![CI](https://github.com/babypatrick100/libraries/actions/workflows/ci.yaml/badge.svg)](https://github.com/babypatrick100/libraries/actions/workflows/ci.yaml)",
-		"[![Docs](https://github.com/babypatrick100/libraries/actions/workflows/docs.yaml/badge.svg)](https://github.com/babypatrick100/libraries/actions/workflows/docs.yaml)\n",
 		"# libraries\n",
 		"| Module | Dependency | Description |", "| -- | -- | -- |"
 	]
@@ -47,7 +38,7 @@ def build():
 					description = match_description.group(1)
 			match_display_name = display_name_pattern.match(name)
 			display_name = pretty_display_name(match_display_name.group(1))
-			dependency = f"{display_name} = \"{name}@{version}\""
+			dependency = f"{libName} = \"{name}@{version}\""
 			readme.append(f"| [{libName}](https://babypatrick100.github.io/libraries/api/{libName}) | `{dependency}` | {description} |")
 
 	with open("README.md", "w") as readme_file:
