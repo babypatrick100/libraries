@@ -24,7 +24,7 @@ function seatUtil.seatOccupanciesProperty(seats: { Seat | VehicleSeat }): Proper
 	local trove = Trove.new()
 	local property = trove:Add(Property.new({}))
 	local initialSeatOccupants = {} :: { [Seat | VehicleSeat]: Player }?
-	
+
 	for _, seat in seats do
 		if seat.Occupant ~= nil then
 			initialSeatOccupants[seat] = playersUtil.playerFromInstance(seat.Occupant)
