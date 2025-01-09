@@ -36,16 +36,8 @@ end
 	Disconnects the connection *and renders it unusuable*.
 ]=]
 
-function Connection.__index:disconnect()
+function Connection.__index:Disconnect()
 	self:_internalDisconnect()
-end
-
---[=[
-	Alias for [Connection:disconnect].
-]=]
-
-function Connection.__index:destroy()
-	self:disconnect()
 end
 
 function Connection.__index:_internalDisconnect()

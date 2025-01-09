@@ -15,13 +15,13 @@ local instanceTagUtil = {}
 	@return Connection
 	
 	Observes the given [CollectionService](https://create.roblox.com/docs/reference/engine/classes/CollectionService) tag.
-	`callbackAdded` will be automatically called on all instances with the given tag, and `callbackRemoved` (if specified)
-	will be automatically called on an instance whenever it *no longer* has the given tag.
+	`tagAddedCallback` will be automatically called on all instances with the given `tag`, and `tagRemovedCallback` (if specified)
+	will be automatically called, being passed the instance that no *no longer* has the given `tag`.
 
 	```lua
-	instanceTagUtil.observe("SomeTag", function(instanceAdded)
+	instanceTagUtil.observe("SomeTag", function(instanceWithTheTag)
 		
-	end, function(instanceRemoved)
+	end, function(instanceThatHadTheTag)
 		
 	end)
 	```
@@ -29,17 +29,17 @@ local instanceTagUtil = {}
 
 function instanceTagUtil.observe(
 	tag: string,
-	callbackAdded: (instance: Instance) -> (),
-	callbackRemoved: ((instance: Instance) -> ())?
+	tagAddedCallback: (instanceWithTheTag: Instance) -> (),
+	tagRemovedCallback: ((instanceThatHadTheTag: Instance) -> ())?
 )
 	for _, instance in CollectionService:GetTagged(tag) do
-		task.spawn(callbackAdded, instance)
+		task.spawn(tagAddedCallback, instance)
 	end
 
 	local connections = {
-		CollectionService:GetInstanceAddedSignal(tag):Connect(callbackAdded),
-		if callbackRemoved ~= nil
-			then CollectionService:GetInstanceRemovedSignal(tag):Connect(callbackRemoved)
+		CollectionService:GetInstanceAddedSignal(tag):Connect(tagAddedCallback),
+		if tagRemovedCallback ~= nil
+			then CollectionService:GetInstanceRemovedSignal(tag):Connect(tagRemovedCallback)
 			else nil,
 	}
 
@@ -51,25 +51,26 @@ function instanceTagUtil.observe(
 end
 
 --[=[
-	Returns a promise which is resolved when the given instance has the passed tag.
+	Returns a promise which is resolved when the given instance has the given `tag`.
+	
+	:::note
 	The returned promise will be cancelled if `instance` is destroyed.
+	:::
 
 	```lua
 	instanceTagUtil.instanceTagPromise(instance, "SomeTag", function()
-		print(instance.Name, "has tag 'SomeTag'")
+		print(instance.Name, "now has the tag 'SomeTag'")
 	end)
 	```
 ]=]
 
 function instanceTagUtil.instanceTagPromise(instance: Instance, tag: string)
 	local promise = Promise.new(function(resolve)
-		if instance:HasTag(tag) then
-			resolve()
-			return
+		while not instance:HasTag(tag) do
+			CollectionService:GetInstanceAddedSignal(tag):Wait()
 		end
 
-		CollectionService:GetInstanceAddedSignal(instance):Wait()
-		resolve()
+		resolve(instance)
 	end)
 
 	local instanceDestroyingConnection = instance.Destroying:Once(function()
@@ -84,7 +85,7 @@ function instanceTagUtil.instanceTagPromise(instance: Instance, tag: string)
 end
 
 --[=[
-	Adds all tags in `tags` to the given instance as [CollectionService](https://create.roblox.com/docs/reference/engine/classes/CollectionService) tags.
+	Adds all tags in `tags` to the given `instance`.
 
 	```lua
 	instanceTagUtil.addTagsToInstance(workspace.Baseplate, {"Test"})
@@ -99,7 +100,7 @@ function instanceTagUtil.addTagsToInstance(instance: Instance, tags: { string })
 end
 
 --[=[
-	Removes all tags in `tags` (which were tagged to the given instance as [CollectionService](https://create.roblox.com/docs/reference/engine/classes/CollectionService) tags) from the given instance.
+	Removes all tags in `tags` from the given `instance`.
 
 	```lua
 	instanceTagUtil.addTagsToInstance(workspace.Baseplate, {"Test"})
@@ -117,16 +118,28 @@ end
 
 --[=[
 	Works similar to [instanceTagUtil.observe], but observes an array of tags instead of a single tag. `observer`
-	will be immediately called initially and then called whenever a tag (that exists in `tagsToObserve`) is added
-	or removed.
+	will initially be immediately called being passed an array of all the tags (in `tagsToObserve`) that the given
+	`instance` has at that time, and then called again everytime a tag (that exists in `tagsToObserve`) is added or removed
+	from the given `instance`.
 
-	@return Connection 
+	`oldTags` will be initially `nil` the first time `observer` is called. However whenever the `observer` is called again,
+	`oldTags` will be be an array representing the tags the `instance` had during the time when `observer` was *previously*
+	called.
 
 	```lua
-	instanceTagUtil.observeMany(workspace, {"Number1", "Number2"}, function(newTags, oldTags)
-		
+	instanceTagUtil.observeMany(workspace.Part, {"Number1", "Number2"}, function(newTags, oldTags)
+		print(`newTags: {newTags}, oldTags: {oldTags}`) 
 	end)
+
+	workspace.Part:AddTag("Number1")
+	workspace.Part:AddTag("Number2")
+
+	-- OUTPUT:
+	--> {}, nil 
+	--> {"Number1", "Number2"}, {}
 	```
+
+	@return Connection 
 ]=]
 
 function instanceTagUtil.observeMany(

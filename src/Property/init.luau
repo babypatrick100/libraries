@@ -16,7 +16,7 @@
 ]=]
 
 --[=[ 
-	@prop onUpdate Signal <newValue: any, oldValue: any>
+	@prop onUpdate<T> Signal <newValue: T, oldValue: T?>
 	@within Property
 	@readonly
 	@tag Signal
@@ -49,7 +49,7 @@ end
 	of the property.
 ]=]
 
-function Property.new(initialValue: any)
+function Property.new<T>(initialValue: T?)
 	local trove = Trove.new()
 	local self = setmetatable({
 		onUpdate = trove:Add(Signal.new()),
@@ -96,7 +96,7 @@ end
 	```
 ]=]
 
-function Property.__index:clone(mapper: ((newValue: any, oldValue: any) -> any)?)
+function Property.__index:clone<T>(mapper: ((newValue: T, oldValue: T?) -> any)?)
 	mapper = mapper or defaultPropertyValueMapper
 
 	local newProperty = self._trove:Add(Property.new())
@@ -197,7 +197,8 @@ end
 	Sets the value of the property to `value`, if this new value isn't the same as the previous value. 
 ]=]
 
-function Property.__index:set(value: any)
+function Property.__index:set<T>(value: T)
+	self._value = value
 	local oldValue = self._value
 
 	if oldValue == value then
@@ -220,7 +221,7 @@ end
 	```
 ]=]
 
-function Property.__index:observe(callback: (newValue: any, oldValue: any) -> ())
+function Property.__index:observe<T>(callback: (newValue: T, oldValue: T?) -> ())
 	task.defer(function()
 		if not Property.is(self) then
 			return
@@ -273,7 +274,7 @@ end
 	@return Promise 
 ]=]
 
-function Property.__index:valuePromise(valuePredicate: ((newValue: any, oldValue: any) -> boolean)?)
+function Property.__index:valuePromise<T>(valuePredicate: ((newValue: T, oldValue: T?) -> boolean)?)
 	return self._trove:AddPromise(Promise.new(function(resolve)
 		if valuePredicate ~= nil then
 			local lastValue = nil
@@ -329,7 +330,7 @@ end
 	```
 ]=]
 
-function Property.__index:forceSet(value: any)
+function Property.__index:forceSet<T>(value: T)
 	local oldValue = self._value
 	self._value = value
 	self.onUpdate:Fire(value, oldValue)
@@ -341,7 +342,7 @@ end
 	Works almost the same as [Property:set], but never fires off the [Property.onUpdate] signal.
 ]=]
 
-function Property.__index:silentSet(value: any)
+function Property.__index:silentSet<T>(value: T)
 	self._value = value
 end
 
@@ -357,8 +358,12 @@ end
 	```
 ]=]
 
-function Property.__index:get(): any
-	return if typeof(self._value) == "table" then table.clone(self._value) else self._value
+function Property.__index:get<T>(): T
+	if typeof(self._value) == "table" then
+		return table.clone(self._value)
+	end
+
+	return self._value
 end
 
 --[=[
@@ -376,6 +381,6 @@ function Property:__tostring()
 	return string.format("[Property]: (%s)", tostring(self._value))
 end
 
-export type Property = typeof(Property.new())
+export type Property<T> = typeof(Property.new())
 
 return table.freeze(Property)

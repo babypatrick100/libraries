@@ -344,19 +344,16 @@ end
 	@tag Component
 	@return ComponentClass?
 
-	Returns the component instance of the component class bound to the given tag, if found.
+	Returns the component class bound to the given tag, if found.
 ]=]
 
-function Component.fromTag(tag: string, instance: Instance)
+function Component.fromTag(tag: string)
 	for _, component in globalComponents do
 		if component.tag ~= tag then
 			continue
 		end
 
-		local componentInstance = component:fromInstance(instance)
-		if componentInstance ~= nil and componentInstance.instance == instance then
-			return componentInstance
-		end
+		return component
 	end
 
 	return nil
@@ -369,24 +366,24 @@ end
 	Promisified version of [Component.fromTag].
 ]=]
 
-function Component.fromTagPromise(tag: string, instance: Instance)
+function Component.fromTagPromise(tag: string)
 	return Promise.new(function(resolve, _, onCancel)
 		local fromEventPromise = Promise.fromEvent(onGlobalComponentStarted, function()
-			return Component.fromTag(tag, instance) ~= nil
+			return Component.fromTag(tag) ~= nil
 		end)
 
 		onCancel(function()
 			fromEventPromise:cancel()
 		end)
 
-		if Component.fromTag(tag, instance) == nil then
+		if fromEventPromise:getStatus() == Promise.Status.Running then
 			local status = fromEventPromise:awaitStatus()
 			if status == Promise.Status.Cancelled then
 				return
 			end
 		end
 
-		resolve(Component.fromTag(tag, instance))
+		resolve(Component.fromTag(tag))
 	end)
 end
 
@@ -684,12 +681,12 @@ end
 	```lua
 	local MyComponent = require(somewhere.MyComponent)
 
-	MyComponent:waitForInstance(workspace.SomeInstance):andThen(function(myComponentInstance)
+	MyComponent:fromInstancePromise(workspace.SomeInstance):andThen(function(myComponentInstance)
 		-- Do something with the component class
 	end)
 	```
 ]=]
-function Component:waitForInstance(instance: Instance, timeout: number?)
+function Component:fromInstancePromise(instance: Instance, timeout: number?)
 	local componentInstance = self:fromInstance(instance)
 	if componentInstance then
 		return Promise.resolve(componentInstance)
@@ -785,8 +782,7 @@ function Component:stop() end
 	@param componentClass ComponentClass
 	@return Component?
 
-	Retrieves another component instance bound to the same
-	Roblox instance.
+	Retrieves another component instance bound to the same Roblox instance.
 
 	```lua
 	local MyComponent = Component.new({tag = "MyComponent"})

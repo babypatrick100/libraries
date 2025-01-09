@@ -74,7 +74,7 @@ function queryUtil.query<T>(
 	queryResults: T,
 	queryAddition: EventLike<T>,
 	queryRemoving: EventLike<T>
-): (Property.Property, Trove.Trove)
+): (Property.Property<T>, Trove.Trove)
 	assert(elementIsLikeEvent(queryAddition), "Argument #2 'queryAddition' must be like an event!")
 	assert(elementIsLikeEvent(queryRemoving), "Argument #3 'queryRemoving' must be like an event!")
 

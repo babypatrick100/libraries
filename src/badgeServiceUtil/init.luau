@@ -45,8 +45,8 @@ local badgeServiceUtil = {}
 	Returns a [promise](https://eryn.io/roblox-lua-promise/) which is resolved wih the badge info of the given
 	badge id. This is just a wrapper over [BadgeService:GetBadgeInfoAsync](https://create.roblox.com/docs/reference/engine/classes/BadgeService#GetBadgeInfoAsync).
 	
-	If the promise rejects, it will reject with a **copy** of [DEFAULT_BADGE_INFO] (for `badgeInfo)` and an error message,
-	instead of just the error message - allowing your code to adapt easily incase of failure.
+	If the promise rejects, it will reject with a **shallow copy** of [DEFAULT_BADGE_INFO] (for `badgeInfo)` 
+	and an error message.
 
 	```lua
 	badgeServiceUtil.badgeInfoPromise(badgeId):andThen(function(badgeInfo)
@@ -75,8 +75,7 @@ end
 	Returns a [promise](https://eryn.io/roblox-lua-promise/) which is resolved wih an array of badge ids the given player owns.
 	This is just a wrapper over [BadgeService:GetBadgeInfoAsync](https://create.roblox.com/docs/reference/engine/classes/BadgeService#GetBadgeInfoAsync).
 
-	If the promise rejects, it will reject with an empty table (for `playerOwnedBadgeIds`) and an error message,
-	instead of just the error message - allowing your code to adapt easily incase of failure.
+	If the promise rejects, it will reject with an empty table (for `playerOwnedBadgeIds`) and an error message.
 
 	```lua
 	badgeServiceUtil.checkPlayerBadgesPromise(playerUserId, badgeIds):andThen(function(playerOwnedBadgeIds)
@@ -107,8 +106,7 @@ end
 	whether or not the given player has the specified badge or not. This is just a wrapper over 
 	[BadgeService:UserHasBadgeAsync](https://create.roblox.com/docs/reference/engine/classes/BadgeService#UserHasBadgeAsync).
 
-	If the promise rejects, it will reject with `false` (for `playerHasBadge`) and an error message,
-	instead of just the error message - allowing your code to adapt easily incase of failure.
+	If the promise rejects, it will reject with `false` (for `playerHasBadge`) and an error message.
 
 	```lua
 	badgeServiceUtil.playerHasBadgePromise(playerUserId, badgeId):andThen(function(playerHasBadge)
@@ -147,8 +145,7 @@ end
 	end)
 	```
 	
-	If the promise rejects, it will reject with `false` (for `playerWasAwardedBadge`) and an error message,\
-	instead of just the error message - allowing your code to adapt easily incase of failure.
+	If the promise rejects, it will reject with `false` (for `playerWasAwardedBadge`) and an error message.
 
 	@return Promise<boolean>
 ]=]

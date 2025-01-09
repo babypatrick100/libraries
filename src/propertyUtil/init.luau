@@ -25,7 +25,7 @@ end
     Increments the given `property`'s value by 1.
 ]=]
 
-function propertyUtil.increment(property: Property.Property)
+function propertyUtil.increment(property: Property.Property<number>)
 	-- Incase the property has been destroyed (usually in an edgecase).
 	if not Property.is(property) then
 		return
@@ -40,7 +40,7 @@ end
     that it does not become less than `0`.
 ]=]
 
-function propertyUtil.decrement(property: Property.Property)
+function propertyUtil.decrement(property: Property.Property<number>)
 	-- Incase the property has been destroyed (usually in an edgecase).
 	if not Property.is(property) then
 		return

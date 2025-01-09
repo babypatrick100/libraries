@@ -9,16 +9,16 @@ local numberUtil = require(script.Parent.numberUtil)
 local timeFormatUtil = {}
 
 --[=[ 
-	Formats a time format in `12`h format to `24`h format.
+	Formats the given `timeString` in `12`h format to `24`h format.
 
 	```lua
-	print(timeUtil.format12hFormatTo24hFormat("1:56 AM")) --> "01:56"
+	print(timeUtil.formatTimeTo24hFormat("11:56 PM")) --> "23:56"
 	```
 ]=]
 
-function timeFormatUtil.format12hFormatTo24hFormat(time: string): string
-	local usingPM = string.split(time, " ")[2] == "PM"
-	local split = string.split(string.split(time, " ")[1], ":")
+function timeFormatUtil.formatTimeTo24hFormat(timeString: string): string
+	local usingPM = string.split(timeString, " ")[2] == "PM"
+	local split = string.split(string.split(timeString, " ")[1], ":")
 	local hours = tonumber(split[1])
 	local minutes = tonumber(split[2])
 
@@ -30,28 +30,20 @@ function timeFormatUtil.format12hFormatTo24hFormat(time: string): string
 end
 
 --[=[ 
-	Formats the given time in seconds to a human friendly text, in HMS format.
+	Formats the given `timeString` in `24`h format to `12`h format.
 
 	```lua
-	print(timeUtil.formatToHMS(3600)) --> "01:00:00"
+	print(timeUtil.formatTimeTo12hFormat("00:41")) --> "12:41" AM
 	```
 ]=]
 
-function timeFormatUtil.formatToHMS(seconds: number): string
-	return string.format("%02i:%02i:%02i", numberUtil.hms(seconds))
-end
+function timeFormatUtil.formatTimeTo12hFormat(timeString: string): string
+	local split = string.split(string.split(timeString, " ")[1], ":")
+	local hours = tonumber(split[1])
+	local minutes = tonumber(split[2])
+	local pmOrAm = if hours >= 12 then "PM" else "AM"
 
---[=[ 
-	Formats the given time in seconds to a human friendly text, in MS format.
-
-	```lua
-	print(timeUtil.formatToMS(60)) --> "01:00"
-	```
-]=]
-
-function timeFormatUtil.formatToMS(seconds: number): string
-	local _, formattedMinutes, formattedSeconds = numberUtil.hms(seconds)
-	return string.format("%02i:%02i", formattedMinutes, formattedSeconds)
+	return `{string.format("%02i:%02i", numberUtil.to12H(hours), minutes)} {pmOrAm}`
 end
 
 return table.freeze(timeFormatUtil)

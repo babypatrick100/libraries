@@ -10,14 +10,14 @@ local instanceAttributeUtil = {}
 
 --[=[
 	Returns a read only array of all descendants in `instanceTree` which have the
-	`desiredAttribute` attribute.
+	`targetAttribute` attribute.
 ]=]
 
-function instanceAttributeUtil.all(instanceTree: Instance, desiredAttribute: string): { Instance }
+function instanceAttributeUtil.all(instanceTree: Instance, targetAttribute: string): { Instance }
 	local captured = {}
 
 	for _, descendant in instanceTree:GetDescendants() do
-		if descendant:GetAttribute(desiredAttribute) ~= nil then
+		if descendant:GetAttribute(targetAttribute) ~= nil then
 			table.insert(captured, descendant)
 		end
 	end
@@ -26,11 +26,11 @@ function instanceAttributeUtil.all(instanceTree: Instance, desiredAttribute: str
 end
 
 --[=[
-	Works similar to [instanceAttributeUtil.observe], but observes an array of 
-	attributes instead of a single attribute. 
+	Works similar to [instanceAttributeUtil.observe], but observes an array of  attributes instead of
+	a single attribute. 
 
 	```lua
-	instanceAttributeUtil.observeMany(workspace, {"Number1", "Number2"}, function(newAttributes, oldAttributes)
+	instanceAttributeUtil.observeMany(workspace.Part, {"Number1", "Number2"}, function(newAttributes, oldAttributes)
 		print(newAttributes.Number1 + newAttributes.Number2)
 	end)
 	```
@@ -84,62 +84,66 @@ end
 
 --[=[
 	Sets up an event connection which listens to any descendant added to `instanceTree`, if it has the
-	`desiredAttribute` atribute, then `callback` will be called. 
+	`targetAttribute` atribute, then `targetAttribute` will be called. 
 
-	This method will also capture initial descendants of the given `instanceTree` as well.
+	This method will also capture the initial descendants of the given `instanceTree` as well.
 
 	```lua
-	instanceAttributeUtil.new(workspace, "Test", function(instance)
+	instanceAttributeUtil.observeDescendantAdding(workspace, "Test", function(instance)
 		print(instance)
 	end)
 	```
 ]=]
 
-function instanceAttributeUtil.new(
+function instanceAttributeUtil.observeDescendantAdding(
 	instanceTree: Instance,
-	desiredAttribute: string,
-	callback: (descendant: Instance) -> ()
+	targetAttribute: string,
+	descendantAddedCallback: (descendant: Instance) -> ()
 ): RBXScriptConnection
 	for _, descendant in instanceTree:GetDescendants() do
-		if descendant:GetAttribute(desiredAttribute) ~= nil then
-			task.spawn(callback, descendant)
+		if descendant:GetAttribute(targetAttribute) ~= nil then
+			task.spawn(descendantAddedCallback, descendant)
 		end
 	end
 
 	return instanceTree.DescendantAdded:Connect(function(descendant)
-		if descendant:GetAttribute(desiredAttribute) ~= nil then
-			callback(descendant)
+		if descendant:GetAttribute(targetAttribute) ~= nil then
+			descendantAddedCallback(descendant)
 		end
 	end)
 end
 
 --[=[
 	Sets up an event connection which listens to any descendant removed from `instanceTree`, if it has the
-	`desiredAttribute` atribute, then `callback` will be called. Returns a [RBXScriptConnection](https://create.roblox.com/docs/reference/engine/datatypes/RBXScriptConnection) object.
+	`targetAttribute` atribute, then `callback` will be called. Returns a [RBXScriptConnection](https://create.roblox.com/docs/reference/engine/datatypes/RBXScriptConnection) object.
 
 	```lua
-	instanceAttributeUtil.removed(workspace, "Test", function(instance)
+	instanceAttributeUtil.observeDescendantRemoving(workspace, "Test", function(instance)
 		print(instance)
 	end)
 	```
 ]=]
 
-function instanceAttributeUtil.removed(
+function instanceAttributeUtil.observeDescendantRemoving(
 	instanceTree: Instance,
-	desiredAttribute: string,
+	targetAttribute: string,
 	callback: (descendant: Instance) -> ()
 ): RBXScriptConnection
 	return instanceTree.DescendantRemoving:Connect(function(descendant)
-		if descendant:GetAttribute(desiredAttribute) ~= nil then
+		if descendant:GetAttribute(targetAttribute) ~= nil then
 			callback(descendant)
 		end
 	end)
 end
 
 --[=[
-	Observes the value of attribute `desiredAttribute` in `instance`, so `observer` is called
-	every time the attribute updates. Returns a [RBXScriptConnection](https://create.roblox.com/docs/reference/engine/datatypes/RBXScriptConnection) object, 
-	as well a promise that is resolved when `observer` is called for the first time and has finished running.
+	Observes the value of the attribute `targetAttribute` in `instance`. `observer` will initially be immediately called if `targetAttribute`
+	exists in `instance`, being passed the attribute value as the only argument (`newAttributeValue`), whereas `oldAttributeValue` will be `nil`
+	during this time. Additionally from this point onwards, everytime `targetAttribute` in `instance` is updated, the `observer` will be called
+	being passed the new attribute value (as `newValue`) and the old attribute value during the time when the `observer` was *previously* called,
+	as (`oldValue`).
+
+	Returns a [RBXScriptConnection](https://create.roblox.com/docs/reference/engine/datatypes/RBXScriptConnection) object.
 
 	```lua
 	instanceAttributeUtil.observe(workspace, "SomeAttribute", function(newValue, oldValue)
@@ -147,29 +151,26 @@ end
 	end)
 	```
 
-	@return RBXScriptConnection, Promise<>
+	@return RBXScriptConnection
 ]=]
 
 function instanceAttributeUtil.observe(
 	instance: Instance,
-	desiredAttribute: string,
+	targetAttribute: string,
 	observer: (newAttributeValue: any, oldAttributeValue: any) -> ()
 ): (RBXScriptConnection, any)
-	local oldAttributeValue = instance:GetAttribute(desiredAttribute)
-	local promise = Promise.new(function(resolve)
-		if oldAttributeValue ~= nil then
-			observer(oldAttributeValue, nil)
-		end
+	local oldAttributeValue = instance:GetAttribute(targetAttribute)
 
-		resolve()
+	if oldAttributeValue ~= nil then
+		task.spawn(observer, oldAttributeValue, nil)
+	end
+
+	local connection = instance:GetAttributeChangedSignal(targetAttribute):Connect(function()
+		task.spawn(observer, instance:GetAttribute(targetAttribute), oldAttributeValue)
+		oldAttributeValue = instance:GetAttribute(targetAttribute)
 	end)
 
-	local connection = instance:GetAttributeChangedSignal(desiredAttribute):Connect(function()
-		task.spawn(observer, instance:GetAttribute(desiredAttribute), oldAttributeValue)
-		oldAttributeValue = instance:GetAttribute(desiredAttribute)
-	end)
-
-	return connection, promise
+	return connection
 end
 
 --[=[
@@ -242,8 +243,18 @@ function instanceAttributeUtil.instanceAttributePromise(
 end
 
 --[=[
-	Calls [instanceAttributeUtil.instanceAttributePromise] for every attribute in `attributes`, and saves
-	the promise internally. Returns a promise that is reolved once all internal promises have been resolved.
+	Calls [instanceAttributeUtil.instanceAttributePromise] for every attribute in `attributes`. 
+	Returns a promise that is resolved once attributes in `instance` are non-nil.
+
+	```lua
+	instanceAttributeUtil.instanceAttributesPromise(workspace.Part, {"Effect", "Target"}):andThen(function()
+		print(workspace.Part:GetAttribute("Effect")) --> "Fire"
+		print(workspace.Part:GetAttribute("Target")) --> "Player1"
+	end)
+
+	workspace.Part:SetAttribute("Effect", "Fire")
+	workspace.Part:SetAttribute("Target", "Player1")
+	```
 
 	@return Promise<>
 ]=]
@@ -265,8 +276,8 @@ end
 	Sets the attributes of `instance` from the `attributes` table.
 
 	```lua
-	instanceAttributeUtil.setInstanceAttributes(workspace.Baseplate, {IsMayoSauce = true})
-	print(workspace.Baseplate:GetAttribute("IsMayoSauce")) --> true
+	instanceAttributeUtil.setInstanceAttributes(workspace.Baseplate, {IsMayoSauce = true, Test = 123})
+	print(workspace.Baseplate:GetAttributes()) --> {IsMayoSauce = true, Test = 123}
 	```
 ]=]
 

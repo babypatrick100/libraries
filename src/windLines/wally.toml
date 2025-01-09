@@ -2,7 +2,7 @@
 name = "bubshurb/windlines"
 description = "A module for creating wind line effects."
 authors = ["bubshurb", "boatbomber"]
-version = "1.0.1"
+version = "2.0.0"
 license = "MIT"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"

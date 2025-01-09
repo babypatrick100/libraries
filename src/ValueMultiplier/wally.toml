@@ -2,7 +2,7 @@
 name = "bubshurb/valuemultiplier"
 description = "A very simple class for working with value multipliers."
 authors = ["bubshurb"]
-version = "1.1.0"
+version = "2.0.0"
 license = "MIT"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"

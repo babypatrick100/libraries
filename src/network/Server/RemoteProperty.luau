@@ -361,8 +361,8 @@ local RemoteProperty = {
 	- If the 3rd parameter `remotePropertyConfig` is not specified, then it will default to [DefaultRemotePropertyConfig] instead. 
 ]=]
 
-function RemoteProperty.new(
-	initialValue: any,
+function RemoteProperty.new<T>(
+	initialValue: T?,
 	middleware: {
 		clientSet: { (remoteProperty: RemoteProperty, client: Player, value: any) -> any }?,
 		clientGet: { (remoteProperty: RemoteProperty, client: Player) -> any }?,
@@ -415,13 +415,13 @@ end
 	Returns a shallow copy of the current value set for the remote property.
 ]=]
 
-function RemoteProperty.__index:get(): any
+function RemoteProperty.__index:get<T>(): T
 	return self._property:get()
 end
 
 --[=[
 	@tag RemoteProperty instance
-	@return Promise<any>
+	@return Promise<T>
 	
 	Returns a promise which is resolved with a non-nil value of the remote property, given
 	that `valuePredicate` is not passed as an argument.
@@ -449,9 +449,7 @@ end
 	```
 ]=]
 
-function RemoteProperty.__index:valuePromise(
-	valuePredicate: (newValue: any, oldValue: any?) -> boolean
-)
+function RemoteProperty.__index:valuePromise<T>(valuePredicate: (T: any, oldValue: T?) -> boolean)
 	return self._property:valuePromise(valuePredicate)
 end
 
@@ -496,7 +494,7 @@ end
 	Calls [RemoteProperty:setForClient] for all clients in `clients`.
 ]=]
 
-function RemoteProperty.__index:setForClients(clients: { Player }, value: T)
+function RemoteProperty.__index:setForClients<T>(clients: { Player }, value: T)
 	for _, client in clients do
 		self:setForClient(client, value)
 	end
@@ -523,7 +521,7 @@ end
 	:::
 ]=]
 
-function RemoteProperty.__index:setForClient(client: Player, value: any)
+function RemoteProperty.__index:setForClient<T>(client: Player, value: T)
 	if not client:IsDescendantOf(Players) then
 		error(
 			string.format(
@@ -590,12 +588,11 @@ end
 
 --[=[
 	@tag RemoteProperty instance
-	@return any 
-	
+
 	Returns a shallow copy of value stored *specifically* for `client` in the remote property. 
 ]=]
 
-function RemoteProperty.__index:clientValue(client: Player)
+function RemoteProperty.__index:clientValue<T>(client: Player): T?
 	local clientProperty = self._clientProperties[client]
 	return if clientProperty then clientProperty:get() else nil
 end
@@ -632,9 +629,9 @@ end
 	```
 ]=]
 
-function RemoteProperty.__index:clientValuePromise(
+function RemoteProperty.__index:clientValuePromise<T>(
 	client: Player,
-	valuePredicate: (newValue: any, oldValue: any?) -> boolean
+	valuePredicate: (newValue: T, oldValue: T?) -> boolean
 )
 	local clientProperty = self:_clientProperty(client)
 	return clientProperty:valuePromise(valuePredicate)
@@ -647,7 +644,7 @@ end
 	will not be informed of this new value of this remote property.
 ]=]
 
-function RemoteProperty.__index:set(value: any)
+function RemoteProperty.__index:set<T>(value: T)
 	self._property:set(value)
 end
 
@@ -690,9 +687,9 @@ end
 	```
 ]=]
 
-function RemoteProperty.__index:observeClientValue(
+function RemoteProperty.__index:observeClientValue<T>(
 	client: Player,
-	callback: (newValue: any, oldValue: any?) -> ()
+	callback: (newValue: T, oldValue: T?) -> ()
 )
 	local clientValueProperty = self:_clientProperty(client)
 	return clientValueProperty:observe(callback)
@@ -716,7 +713,7 @@ end
 	```
 ]=]
 
-function RemoteProperty.__index:observe(callback: (newValue: any, oldValue: any?) -> ())
+function RemoteProperty.__index:observe<T>(callback: (newValue: T, oldValue: T?) -> ())
 	return self._property:observe(callback)
 end
 
@@ -734,10 +731,10 @@ end
 	```
 ]=]
 
-function RemoteProperty.__index:observeClientsValue(observer: (
+function RemoteProperty.__index:observeClientsValue<T>(observer: (
 	player: Player,
-	newValue: any,
-	oldValue: any?
+	newValue: T,
+	oldValue: T?
 ) -> ()): Connection.Connection
 	table.insert(self._clientsValueObservers, observer)
 
@@ -936,6 +933,6 @@ Players.PlayerRemoving:Connect(function(player)
 	end
 end)
 
-export type RemoteProperty = typeof(RemoteProperty.new(nil))
+export type RemoteProperty<T> = typeof(RemoteProperty.new(nil))
 
 return table.freeze(RemoteProperty)

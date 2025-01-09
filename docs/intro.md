@@ -19,7 +19,7 @@ registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 
 [dependencies]
-numberUtil = "bubshurb/numberutil@2"
+numberUtil = "bubshurb/numberutil@3"
 ```
 
 Now, to install these dependencies, run `wally install` within your project. [Wally](https://wally.run/) will then create a package folder in your directory with the installed dependencies. Then use [Rojo](https://rojo.space/) to sync in the package folder to Studio.

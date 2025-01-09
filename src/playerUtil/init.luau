@@ -57,8 +57,8 @@ local playerUtil = {
 --[=[
 	@return Promise<number>
 
-	Returns a [promise](https://eryn.io/roblox-lua-promise/) which is resolved with the group rank of the player in the given group. If the group rank couldn't be retrieved,
-	then the promise will reject with [DefaultGroupRank] and with the error message.
+	Returns a [promise](https://eryn.io/roblox-lua-promise/) which is resolved with the group rank of the player in the given group. If the group rank
+	couldn't be retrieved, then the promise will reject with [DefaultGroupRank], along with the error message.
 
 	```lua
 	playerUtil.playerGroupRankPromise(2981707497, 1):andThen(function(groupRank)
@@ -89,8 +89,8 @@ end
 --[=[ 
 	@return Promise<boolean>
 
-	Returns a [promise](https://eryn.io/roblox-lua-promise/) which is resolved with a boolean indicating whether or not
-	the given player is friends with the given `userId`. This is a wrapper over [Player:IsFriendsWith](https://create.roblox.com/docs/reference/engine/classes/Player#IsFriendsWith).
+	A promisified wrapper over [Player:IsFriendsWith](https://create.roblox.com/docs/reference/engine/classes/Player#IsFriendsWith).
+	If the promise rejects, it will reject with (`isFriends` as `false`), along with the error message.
 
 	```lua
 	playerUtil.playerIsFriendsWithPromise(2981707497, 27842645):andThen(function(isFriends)
@@ -116,14 +116,8 @@ end
 --[=[ 
 	@return Promise<{[string]: any}>
 
-	Returns a [promise](https://eryn.io/roblox-lua-promise/) which is resolved with an array of fields of info
-	regarding the given player's friends. This is a wrapper over 
-	[Player:GetFriendsOnline](https://create.roblox.com/docs/reference/engine/classes/Player#GetFriendsOnline).
-
-	:::tip Promise rejection with default data
-	The promise will reject with `{}` for `friends` and an error message, instead of just the error message - allowing your code to adapt
-	easily incase of failure.
-	:::
+	A promisified wrapper over [Player:GetFriendsOnline](https://create.roblox.com/docs/reference/engine/classes/Player#GetFriendsOnline).
+	If the promise rejects, it will reject with (`friends` as an empty array i.e `{}`), along with the error message.
 
 	```lua
 	playerUtil.playerFriendsOnlinePromise(player, 15):andThen(function(friends)
@@ -152,13 +146,8 @@ end
 --[=[ 
 	@return Promise<string>
 
-	Returns a [promise](https://eryn.io/roblox-lua-promise/) which is resolved with the group role of the player in the given group. If the group role couldn't be retrieved,
-	then the promise will reject with [DefaultGroupRole] and with the error message.
-
-	:::tip Promise rejection with default data
-	The promise will reject with [PlayerGroupRole] and an error message, instead of just the error message - allowing your code to adapt
-	easily incase of failure.
-	:::
+	Returns a [promise](https://eryn.io/roblox-lua-promise/) which is resolved with the group role of the player in the given group. 
+	If the promise rejects, it will reject with (`groupRole` as [DefaultGroupRole]), along with the error message.
 
 	```lua
 	playerUtil.playerGroupRolePromise(2981707497, 1):andThen(function(groupRole)
@@ -190,16 +179,12 @@ end
 	@return Promise<boolean>
 
 	Returns a [promise](https://eryn.io/roblox-lua-promise/) which is resolved with a boolean indicating if the given player is in the given group or not. 
-
-	:::tip Promise rejection with default data
-	The promise will reject with `false` for `playerIsInGroupPromise` and an error message, instead of just the error message - allowing your code to adapt
-	easily incase of failure.
-	:::
+	If the promise rejects, it will reject with (`playerIsInGroup` as `false`), along with the error message.
 
 	```lua
-	playerUtil.playerIsInGroupPromise(2981707497, 1):andThen(function(playerIsInGroupPromise)
-		print(playerIsInGroupPromise)
-	end):catch(function(playerIsInGroupPromise, errorMessage)
+	playerUtil.playerIsInGroupPromise(2981707497, 1):andThen(function(playerIsInGroup)
+		print(playerIsInGroup)
+	end):catch(function(playerIsInGroup, errorMessage)
 		-- playerIsInGroupPromise will always be false here
 		print(playerIsInGroupPromise, tostring(errorMessage))
 	end)
@@ -223,16 +208,11 @@ end
 	@return Promise<PlayerSafeChatStatus>
 	
 	Returns a [promise](https://eryn.io/roblox-lua-promise/) which is resolved with the safe chat status of the given player.
-
-	
-	:::tip Promise rejection with default data
-	The promise will reject with `PlayerSafeChatStatus.Unknown` as the player safe chat status and an error message, instead of
-	just the error message - allowing your code to adapt easily incase of failure.
-	:::
+	If the promise rejects, it will reject with (`safeChatStatus` as `playerUtil.PlayerSafeChatStatus.Unknown`), along with the error message.
 
 	```lua
-	playerUtil.safeChatStatusPromise(player):andThen(function(safeChatStatusPromise)
-		print(safeChatStatusPromise == playerUtil.PlayerSafeChatStatus.On)
+	playerUtil.safeChatStatusPromise(player):andThen(function(safeChatStatus)
+		print(safeChatStatus == playerUtil.PlayerSafeChatStatus.On)
 	end)
 	```
 ]=]

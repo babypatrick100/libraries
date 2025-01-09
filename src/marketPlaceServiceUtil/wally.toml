@@ -2,7 +2,7 @@
 name = "bubshurb/marketplaceserviceutil"
 description = "An utility module for working with [MarketplaceService](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService)."
 authors = ["bubshurb"]
-version = "1.2.0"
+version = "2.0.0"
 license = "MIT"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"

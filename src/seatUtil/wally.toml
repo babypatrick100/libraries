@@ -2,13 +2,13 @@
 name = "bubshurb/seatutil"
 description = "A utility module for working with seats."
 authors = ["bubshurb"]
-version = "1.0.0"
+version = "2.0.0"
 license = "MIT"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 
 [dependencies]
-Property = "bubshurb/property@2"
+Property = "bubshurb/property@3"
 Sift = "csqrl/sift@0"
 Trove = "sleitnick/trove@1"
-playersUtil = "bubshurb/playersutil@1"
+playersUtil = "bubshurb/playersutil@2"

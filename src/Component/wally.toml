@@ -1,7 +1,7 @@
 [package]
 name = "bubshurb/component"
-description = "Component class by Sleitnick, modified by babypatrick100."
-version = "1.3.3"
+description = "Component class by Sleitnick, heavily modified by babypatrick100."
+version = "1.4.0"
 license = "MIT"
 authors = ["bubshurb"]
 registry = "https://github.com/UpliftGames/wally-index"

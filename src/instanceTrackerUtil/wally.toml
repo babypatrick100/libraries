@@ -3,10 +3,10 @@ name = "bubshurb/instancetrackerutil"
 description = "A simple utility module for working with instances and their properties."
 authors = ["bubshurb"]
 license = "MIT"
-version = "1.4.0"
+version = "2.0.0"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 
 [dependencies]
-Property = "bubshurb/property@2"
-Connection = "bubshurb/connection@1"
+Property = "bubshurb/property@3"
+Connection = "bubshurb/connection@2"

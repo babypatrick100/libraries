@@ -329,32 +329,6 @@ end
 
 --[=[
 	Returns a [promise](https://eryn.io/roblox-lua-promise/) which is wrapped around
-	[Players:GetCharacterAppearanceInfoAsync](https://create.roblox.com/docs/reference/engine/classes/Players#GetCharacterAppearanceInfoAsync).
-
-	@return Promise<>
-]=]
-
-function playersUtil.characterAppearanceInfoPromise(userId: number)
-	return Promise.new(function(resolve)
-		resolve(Players:GetCharacterAppearanceInfoAsync(userId))
-	end)
-end
-
---[=[
-	Returns a [promise](https://eryn.io/roblox-lua-promise/) which is wrapped around
-	[Players:GetHumanoidDescriptionFromOutfitId](https://create.roblox.com/docs/reference/engine/classes/Players#GetHumanoidDescriptionFromOutfitId).
-
-	@return Promise<>
-]=]
-
-function playersUtil.humanoidDescriptionFromOutfitIdPromise(userId: number)
-	return Promise.new(function(resolve)
-		resolve(Players:GetHumanoidDescriptionFromOutfitId(userId))
-	end)
-end
-
---[=[
-	Returns a [promise](https://eryn.io/roblox-lua-promise/) which is wrapped around
 	[Players:GetHumanoidDescriptionFromUserId](https://create.roblox.com/docs/reference/engine/classes/Players#GetHumanoidDescriptionFromUserId).
 
 	@return Promise<>

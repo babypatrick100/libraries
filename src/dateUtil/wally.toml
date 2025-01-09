@@ -3,6 +3,6 @@ name = "bubshurb/dateutil"
 description = "An utility module for working with dates."
 authors = ["bubshurb"]
 license = "MIT"
-version = "1.1.0"
+version = "2.0.0"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"

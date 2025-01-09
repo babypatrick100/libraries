@@ -61,13 +61,12 @@ end
 
 --[=[
 	@tag ClientRemoteProperty instance
-	@return any
 
 	Returns the value of the client stored in the remote property. If there is no value stored specifically for the client, 
 	then the remote property's current value will be returned instead.
 ]=]
 
-function ClientRemoteProperty.__index:get()
+function ClientRemoteProperty.__index:get<T>(): T
 	return self._property:get()
 end
 
@@ -83,7 +82,7 @@ end
 	```
 ]=]
 
-function ClientRemoteProperty.__index:observe(callback: (newValue: any, oldValue: any) -> ())
+function ClientRemoteProperty.__index:observe<T>(callback: (newValue: T, oldValue: T?) -> ())
 	return self._property:observe(callback)
 end
 
@@ -120,8 +119,8 @@ end
 	```
 ]=]
 
-function ClientRemoteProperty.__index:valuePromise(
-	valuePredicate: ((newValue: any, oldValue: any) -> boolean)?
+function ClientRemoteProperty.__index:valuePromise<T>(
+	valuePredicate: ((newValue: T, oldValue: T?) -> boolean)?
 )
 	return self._property:valuePromise(valuePredicate)
 end
@@ -164,7 +163,7 @@ end
 	:::
 ]=]
 
-function ClientRemoteProperty.__index:set(value: any)
+function ClientRemoteProperty.__index:set<T>(value: T)
 	warn(
 		string.format(
 			"[ClientRemoteProperty:setPromise] has been deprecated as of 8/29/2024. \n\t%s",
@@ -182,7 +181,7 @@ end
 --[=[
 	@tag ClientRemoteProperty instance
 	@tag Deprecated
-	@return Promise<any>
+	@return Promise<T>
 
 	Works the same as [ClientRemoteProperty:set], but returns a [promise](https://eryn.io/roblox-lua-promise/) which is resolved **when**
 	the server has set the value for the client to `value`, or else rejects with a `nil value`. Additionally, the returned promise 
@@ -217,7 +216,7 @@ end
 	:::
 ]=]
 
-function ClientRemoteProperty.__index:setPromise(value: any)
+function ClientRemoteProperty.__index:setPromise<T>(value: T)
 	warn(
 		string.format(
 			"[ClientRemoteProperty:setPromise] has been deprecated as of 8/29/2024. \n\t%s",
