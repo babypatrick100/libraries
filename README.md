@@ -10,7 +10,7 @@
 | [clientMovementInputUtil](https://babypatrick100.github.io/libraries/api/clientMovementInputUtil) | `clientMovementInputUtil = "bubshurb/clientmovementinpututil@1.0.0"` | A simple utility module which wraps `PlayerModule` and `PlayerModule.ControlModule`. |
 | [colorSequenceUtil](https://babypatrick100.github.io/libraries/api/colorSequenceUtil) | `colorSequenceUtil = "bubshurb/colorsequenceutil@1.0.0"` | A simple utility module for working with color sequences. |
 | [colorUtil](https://babypatrick100.github.io/libraries/api/colorUtil) | `colorUtil = "bubshurb/colorutil@2.0.0"` | A simple utility module for working with colors. |
-| [Component](https://babypatrick100.github.io/libraries/api/Component) | `Component = "bubshurb/component@1.4.0"` | Component class by Sleitnick, heavily modified by babypatrick100. |
+| [Component](https://babypatrick100.github.io/libraries/api/Component) | `Component = "bubshurb/component@2.0.0"` | Component class by Sleitnick, heavily modified by babypatrick100. |
 | [Connection](https://babypatrick100.github.io/libraries/api/Connection) | `Connection = "bubshurb/connection@2.0.0"` | A simple class for mimicking [RBXConnection](https://create.roblox.com/docs/reference/engine/datatypes/RBXScriptConnection) objects. |
 | [ContentProviderQueue](https://babypatrick100.github.io/libraries/api/ContentProviderQueue) | `ContentProviderQueue = "bubshurb/contentproviderqueue@2.0.0"` | A simple class for working with ContentProvider. |
 | [contextActionServiceUtil](https://babypatrick100.github.io/libraries/api/contextActionServiceUtil) | `contextActionServiceUtil = "bubshurb/contextactionserviceutil@1.0.0"` | A simple utility module for working with ContextActionService. |
@@ -48,7 +48,7 @@
 | [promiseCleanupUtil](https://babypatrick100.github.io/libraries/api/promiseCleanupUtil) | `promiseCleanupUtil = "bubshurb/promisecleanuputil@1.3.0"` | An utility module for working with [Promise](https://eryn.io/roblox-lua-promise/) cleanups. |
 | [Property](https://babypatrick100.github.io/libraries/api/Property) | `Property = "bubshurb/property@3.0.0"` | A class for wrapping values around setters and getters. |
 | [propertyUtil](https://babypatrick100.github.io/libraries/api/propertyUtil) | `propertyUtil = "bubshurb/propertyutil@1.1.0"` | A utility module for working with the [Property](https://babypatrick100.github.io/libraries/api/Property/) class. |
-| [queryUtil](https://babypatrick100.github.io/libraries/api/queryUtil) | `queryUtil = "bubshurb/queryutil@1.4.0"` | A utility for basic query operations. |
+| [queryUtil](https://babypatrick100.github.io/libraries/api/queryUtil) | `queryUtil = "bubshurb/queryutil@2.0.0"` | A utility for basic query operations. |
 | [rain](https://babypatrick100.github.io/libraries/api/rain) | `rain = "bubshurb/rain@1.1.0"` | Rain module by builthomas, heavily modified and refactored by bubshurb. |
 | [robuxConversionUtil](https://babypatrick100.github.io/libraries/api/robuxConversionUtil) | `robuxConversionUtil = "bubshurb/robuxconversionutil@2.0.0"` | A simple utility module for working with robux related conversions. |
 | [schedulerUtil](https://babypatrick100.github.io/libraries/api/schedulerUtil) | `schedulerUtil = "bubshurb/schedulerutil@2.0.0"` | 	A simple utility module for scheduling RunService events with minimal performance impacts and with automatic profiling. |
