@@ -49,7 +49,7 @@
 | [Property](https://babypatrick100.github.io/libraries/api/Property) | `Property = "bubshurb/property@3.0.0"` | A class for wrapping values around setters and getters. |
 | [propertyUtil](https://babypatrick100.github.io/libraries/api/propertyUtil) | `propertyUtil = "bubshurb/propertyutil@1.1.0"` | A utility module for working with the [Property](https://babypatrick100.github.io/libraries/api/Property/) class. |
 | [queryUtil](https://babypatrick100.github.io/libraries/api/queryUtil) | `queryUtil = "bubshurb/queryutil@2.0.0"` | A utility for basic query operations. |
-| [rain](https://babypatrick100.github.io/libraries/api/rain) | `rain = "bubshurb/rain@1.1.0"` | Rain module by builthomas, heavily modified and refactored by bubshurb. |
+| [rain](https://babypatrick100.github.io/libraries/api/rain) | `rain = "bubshurb/rain@2.0.0"` | Rain module by builthomas, heavily modified and refactored by bubshurb. |
 | [robuxConversionUtil](https://babypatrick100.github.io/libraries/api/robuxConversionUtil) | `robuxConversionUtil = "bubshurb/robuxconversionutil@2.0.0"` | A simple utility module for working with robux related conversions. |
 | [schedulerUtil](https://babypatrick100.github.io/libraries/api/schedulerUtil) | `schedulerUtil = "bubshurb/schedulerutil@2.0.0"` | 	A simple utility module for scheduling RunService events with minimal performance impacts and with automatic profiling. |
 | [seatUtil](https://babypatrick100.github.io/libraries/api/seatUtil) | `seatUtil = "bubshurb/seatutil@2.0.0"` | A utility module for working with seats. |
