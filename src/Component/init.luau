@@ -376,7 +376,7 @@ function Component.fromTagPromise(tag: string)
 			fromEventPromise:cancel()
 		end)
 
-		if fromEventPromise:getStatus() == Promise.Status.Running then
+		if fromEventPromise:getStatus() == Promise.Status.Started then
 			local status = fromEventPromise:awaitStatus()
 			if status == Promise.Status.Cancelled then
 				return

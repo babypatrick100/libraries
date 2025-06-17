@@ -10,7 +10,7 @@
 | [clientMovementInputUtil](https://babypatrick100.github.io/libraries/api/clientMovementInputUtil) | `clientMovementInputUtil = "bubshurb/clientmovementinpututil@1.0.0"` | A simple utility module which wraps `PlayerModule` and `PlayerModule.ControlModule`. |
 | [colorSequenceUtil](https://babypatrick100.github.io/libraries/api/colorSequenceUtil) | `colorSequenceUtil = "bubshurb/colorsequenceutil@1.0.0"` | A simple utility module for working with color sequences. |
 | [colorUtil](https://babypatrick100.github.io/libraries/api/colorUtil) | `colorUtil = "bubshurb/colorutil@2.0.0"` | A simple utility module for working with colors. |
-| [Component](https://babypatrick100.github.io/libraries/api/Component) | `Component = "bubshurb/component@2.0.0"` | Component class by Sleitnick, heavily modified by babypatrick100. |
+| [Component](https://babypatrick100.github.io/libraries/api/Component) | `Component = "bubshurb/component@2.0.1"` | Component class by Sleitnick, heavily modified by babypatrick100. |
 | [Connection](https://babypatrick100.github.io/libraries/api/Connection) | `Connection = "bubshurb/connection@2.0.0"` | A simple class for mimicking [RBXConnection](https://create.roblox.com/docs/reference/engine/datatypes/RBXScriptConnection) objects. |
 | [ContentProviderQueue](https://babypatrick100.github.io/libraries/api/ContentProviderQueue) | `ContentProviderQueue = "bubshurb/contentproviderqueue@2.0.0"` | A simple class for working with ContentProvider. |
 | [contextActionServiceUtil](https://babypatrick100.github.io/libraries/api/contextActionServiceUtil) | `contextActionServiceUtil = "bubshurb/contextactionserviceutil@1.0.0"` | A simple utility module for working with ContextActionService. |
