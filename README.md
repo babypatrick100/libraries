@@ -46,7 +46,7 @@
 | [playerUtil](https://babypatrick100.github.io/libraries/api/playerUtil) | `playerUtil = "bubshurb/playerutil@2.0.0"` | An utility module for working with players. |
 | [positionUtil](https://babypatrick100.github.io/libraries/api/positionUtil) | `positionUtil = "bubshurb/positionutil@1.0.0"` | An utility module for working with position. |
 | [promiseCleanupUtil](https://babypatrick100.github.io/libraries/api/promiseCleanupUtil) | `promiseCleanupUtil = "bubshurb/promisecleanuputil@1.3.0"` | An utility module for working with [Promise](https://eryn.io/roblox-lua-promise/) cleanups. |
-| [Property](https://babypatrick100.github.io/libraries/api/Property) | `Property = "bubshurb/property@3.0.0"` | A class for wrapping values around setters and getters. |
+| [Property](https://babypatrick100.github.io/libraries/api/Property) | `Property = "bubshurb/property@3.0.1"` | A class for wrapping values around setters and getters. |
 | [propertyUtil](https://babypatrick100.github.io/libraries/api/propertyUtil) | `propertyUtil = "bubshurb/propertyutil@1.1.0"` | A utility module for working with the [Property](https://babypatrick100.github.io/libraries/api/Property/) class. |
 | [queryUtil](https://babypatrick100.github.io/libraries/api/queryUtil) | `queryUtil = "bubshurb/queryutil@2.0.0"` | A utility for basic query operations. |
 | [rain](https://babypatrick100.github.io/libraries/api/rain) | `rain = "bubshurb/rain@2.0.0"` | Rain module by builthomas, heavily modified and refactored by bubshurb. |

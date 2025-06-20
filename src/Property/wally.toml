@@ -2,7 +2,7 @@
 name = "bubshurb/property"
 description = "A class for wrapping values around setters and getters."
 authors = ["bubshurb"]
-version = "3.0.0"
+version = "3.0.1"
 license = "MIT"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"

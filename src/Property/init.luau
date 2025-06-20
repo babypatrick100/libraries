@@ -198,9 +198,7 @@ end
 ]=]
 
 function Property.__index:set<T>(value: T)
-	self._value = value
 	local oldValue = self._value
-
 	if oldValue == value then
 		return
 	end
